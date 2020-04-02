@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: registrar
+  namespace: spire
+spec:
+  ports:
+    - name: registrar
+      protocol: TCP
+      port: 443
+      targetPort: registrar
+  selector:
+    cluster: spire.server
