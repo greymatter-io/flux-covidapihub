@@ -20,8 +20,6 @@ spec:
     spec:
       serviceAccountName: server
       shareProcessNamespace: true
-      securityContext:
-        runAsGroup: 0
       initContainers:
         - name: templar
           image: docker.io/deciphernow/templar:v0.1.0-dev
