@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: RoleBinding
+metadata:
+  name: proxier
+  namespace: kubeseal
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: proxier
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:authenticated
