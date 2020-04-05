@@ -1,0 +1,93 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: objectives
+    cluster: sense.objectives
+  name: objectives
+  namespace: sense
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: objectives
+      cluster: sense.objectives
+  template:
+    metadata:
+      labels:
+        app: objectives
+        cluster: sense.objectives
+    spec:
+      serviceAccountName: objectives
+      containers:
+        - name: sidecar
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+              protocol: TCP
+            - name: sidecar
+              containerPort: 8443
+              protocol: TCP
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+        - name: dashboard
+          image: docker.production.deciphernow.com/deciphernow/gm-slo:1.1.2
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: POSTGRES_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: objectives-postgres
+                  key: username
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: objectives-postgres
+                  key: password
+            - name: POSTGRES_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: objectives-postgres
+                  key: host
+            - name: POSTGRES_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: objectives-postgres
+                  key: port
+            - name: POSTGRES_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: objectives-postgres
+                  key: database
+            - name: DATABASE_URI
+              value: postgres://$(POSTGRES_USERNAME):$(POSTGRES_PASSWORD)@$(POSTGRES_HOST):$(POSTGRES_PORT)/$(POSTGRES_DATABASE)
+            - name: SERVICE_PORT
+              value: "1337"
+          ports:
+            - name: objectives
+              containerPort: 1337
+              protocol: TCP
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      volumes:
+        - name: sidecar-config
+          configMap:
+            name: objectives-sidecar
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate

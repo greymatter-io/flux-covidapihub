@@ -1,0 +1,109 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: prometheus
+    cluster: sense.prometheus
+  name: prometheus
+  namespace: sense
+spec:
+  replicas: 1
+  updateStrategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: prometheus
+      cluster: sense.prometheus
+  serviceName: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+        cluster: sense.prometheus
+    spec:
+      serviceAccountName: prometheus
+      containers:
+        - name: sidecar
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+              protocol: TCP
+            - name: sidecar
+              containerPort: 8443
+              protocol: TCP
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+        - name: prometheus
+          image: "prom/prometheus:v2.16.0"
+          imagePullPolicy: "IfNotPresent"
+          args:
+            - --storage.tsdb.retention.time=15d
+            - --config.file=/etc/prometheus/prometheus.yaml
+            - --storage.tsdb.path=/data
+            - --web.console.libraries=/etc/prometheus/console_libraries
+            - --web.console.templates=/etc/prometheus/consoles
+            - --web.enable-lifecycle
+            - --web.enable-admin-api
+            - --web.external-url=https://services.greymatter.io/prometheus/latest
+            - --web.route-prefix=/
+            - --web.listen-address=127.0.0.1:10080
+          ports:
+            - name: http
+              containerPort: 10080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: "2"
+              memory: 8Gi
+            requests:
+              cpu: "1"
+              memory: 4Gi
+          volumeMounts:
+            - name: prometheus-config
+              mountPath: /etc/prometheus
+            - name: prometheus-data
+              mountPath: /data
+              subPath: ""
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      securityContext:
+        fsGroup: 65534
+        runAsGroup: 0
+        runAsNonRoot: true
+        runAsUser: 65534
+      volumes:
+        - name: prometheus-config
+          configMap:
+            defaultMode: 420
+            name: prometheus-config
+        - name: sidecar-config
+          configMap:
+            name: prometheus-sidecar
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+  volumeClaimTemplates:
+    - metadata:
+        name: prometheus-data
+        namespace: greymatter
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 500Gi
