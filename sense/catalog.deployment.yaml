@@ -174,7 +174,7 @@ spec:
             - name: SERVICE_3_RUNTIME
               value: "GO"
             - name: SERVICE_3_DOCUMENTATION
-              value: "https://services.greymatter.io/api/latest"
+              value: "https://covidapihub.io/api/latest"
             - name: SERVICE_3_PROMETHEUS_JOB
               value: fabric.api
             - name: SERVICE_3_MAX_INSTANCES
