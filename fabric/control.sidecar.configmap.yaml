@@ -78,7 +78,7 @@ data:
               tls_context:
                 common_tls_context:
                   tls_certificate_sds_secret_configs:
-                    - name: "spiffe://production.greymatter.io/ns/fabric/sa/control"
+                    - name: "spiffe://covidapihub.io/ns/fabric/sa/control"
                       sds_config:
                         api_config_source:
                           api_type: GRPC
@@ -89,7 +89,7 @@ data:
                     ecdh_curves:
                       - X25519:P-256:P-521:P-384
                   validation_context_sds_secret_config:
-                    name: "spiffe://production.greymatter.io"
+                    name: "spiffe://covidapihub.io"
                     sds_config:
                       api_config_source:
                         api_type: GRPC
@@ -113,7 +113,7 @@ data:
           tls_context:
             common_tls_context:
               tls_certificate_sds_secret_configs:
-                - name: "spiffe://production.greymatter.io/ns/fabric/sa/control"
+                - name: "spiffe://covidapihub.io/ns/fabric/sa/control"
                   sds_config:
                     api_config_source:
                       api_type: GRPC
@@ -124,7 +124,7 @@ data:
                 ecdh_curves:
                   - X25519:P-256:P-521:P-384
               validation_context_sds_secret_config:
-                name: "spiffe://production.greymatter.io"
+                name: "spiffe://covidapihub.io"
                 sds_config:
                   api_config_source:
                     api_type: GRPC
