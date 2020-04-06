@@ -23,7 +23,7 @@ spec:
               memory: 2Gi
             requests:
               cpu: 100m
-              memory: 1Gi
+              memory: 512Mi
           ports:
             - containerPort: 9200
               name: rest
@@ -46,7 +46,7 @@ spec:
             - name: cluster.initial_master_nodes
               value: 'es-cluster-0,es-cluster-1,es-cluster-2'
             - name: ES_JAVA_OPTS
-              value: '-Xms512m -Xmx512m'
+              value: '-Xms512m -Xmx2048m'
       initContainers:
         - name: fix-permissions
           image: busybox
