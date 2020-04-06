@@ -11,7 +11,7 @@ kubectl create secret generic word -n dictionary -o yaml --from-literal=value=bi
 Then generate a sealed secret from this secret using the public key in the root of this repository:
 
 ```
-kubeseal --cert ./.kubeseal.pem < ./word.secret.yaml > ./word.sealedsecret.yaml
+kubeseal -o yaml --cert ./.kubeseal.pem < ./word.secret.yaml > ./word.sealedsecret.yaml
 ```
 
 The content of `./word.sealedsecret.yaml` is suitable for commiting into the repository and will be decrypted to match the content of `./word.secret.yaml` in the cluster.
