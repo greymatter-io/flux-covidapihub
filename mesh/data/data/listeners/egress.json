@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "listener_key": "data.egress.listener",
+    "domain_keys": [
+        "data.egress.domain"
+    ],
+    "name": "egress",
+    "ip": "127.0.0.1",
+    "port": 10909,
+    "protocol": "http_auto",
+    "secret": null,
+    "tracing_config": null
+}

@@ -1,0 +1,28 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "public.ingress.domain",
+    "name": "*",
+    "port": 8443,
+    "redirects": [],
+    "gzip_enabled": false,
+    "ssl_config": {
+        "cert_key_pairs": [
+            {
+                "certificate_path": "/etc/tls/public.ingress.svc.crt",
+                "key_path": "/etc/tls/public.ingress.svc.key"
+            }
+        ],
+        "trust_file": "/etc/tls/ca.crt",
+        "require_client_certs": false,
+        "protocols": [
+            "SSLv3",
+            "SSLv2",
+            "TLSv1",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
+    },
+    "cors_config": null,
+    "aliases": null,
+    "force_https": true
+}

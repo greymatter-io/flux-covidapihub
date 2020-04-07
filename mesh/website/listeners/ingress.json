@@ -1,0 +1,23 @@
+{
+    "zone_key": "default.zone",
+    "listener_key": "website.listener",
+    "domain_keys": [
+        "website.wildcard.domain"
+    ],
+    "name": "website",
+    "ip": "0.0.0.0",
+    "port": 8443,
+    "protocol": "http_auto",
+    "secret": {
+        "secret_key": "website.identity",
+        "secret_name": "spiffe://production.greymatter.io/ns/website/sa/website",
+        "secret_validation_name": "spiffe://production.greymatter.io",
+        "subject_names": [
+            "spiffe://production.greymatter.io/ns/ingress/sa/public"
+        ],
+        "ecdh_curves": [
+            "X25519:P-256:P-521:P-384"
+        ]
+    },
+    "tracing_config": null
+}

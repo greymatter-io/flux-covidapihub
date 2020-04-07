@@ -1,0 +1,21 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "catalog.control.cluster",
+    "name": "fabric.control",
+    "instances": [],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true,
+    "secret": {
+        "secret_key": "catalog.identity",
+        "secret_name": "spiffe://production.greymatter.io/ns/sense/sa/catalog",
+        "secret_validation_name": "spiffe://production.greymatter.io",
+        "subject_names": [
+            "spiffe://production.greymatter.io/ns/fabric/sa/control"
+        ],
+        "ecdh_curves": [
+            "X25519:P-256:P-521:P-384"
+        ]
+    }
+}

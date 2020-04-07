@@ -1,0 +1,21 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "private.objectives.cluster",
+    "name": "sense.objectives",
+    "instances": [],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true,
+    "secret": {
+        "secret_key": "private.identity",
+        "secret_name": "spiffe://production.greymatter.io/ns/ingress/sa/private",
+        "secret_validation_name": "spiffe://production.greymatter.io",
+        "subject_names": [
+            "spiffe://production.greymatter.io/ns/sense/sa/objectives"
+        ],
+        "ecdh_curves": [
+            "X25519:P-256:P-521:P-384"
+        ]
+    }
+}

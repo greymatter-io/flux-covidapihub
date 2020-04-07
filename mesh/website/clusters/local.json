@@ -1,0 +1,14 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "website.local.cluster",
+    "name": "website.local",
+    "instances": [
+        {
+            "host": "127.0.0.1",
+            "port": 3000
+        }
+    ],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": []
+}

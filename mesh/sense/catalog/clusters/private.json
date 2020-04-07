@@ -1,0 +1,11 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "catalog.private.cluster",
+    "name": "ingress.private",
+    "instances": [],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true,
+    "secret": null
+}

@@ -1,0 +1,15 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "kibana.local.cluster",
+    "name": "local",
+    "instances": [
+        {
+            "host": "vpc-production-observables-hjuo6nx6vvl2rx6crwxw4dqeui.us-east-1.es.amazonaws.com",
+            "port": 443
+        }
+    ],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true
+}
