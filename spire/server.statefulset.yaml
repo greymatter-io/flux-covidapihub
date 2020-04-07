@@ -99,7 +99,7 @@ spec:
             - name: server-data
               mountPath: /run/spire/data
               readOnly: false
-            - name: server-authority
+            - name: server-ca
               mountPath: /run/spire/authority
               readOnly: true
             - name: server-socket
@@ -119,9 +119,9 @@ spec:
         - name: server-socket
           emptyDir:
             medium: Memory
-        - name: server-authority
+        - name: server-ca
           secret:
-            secretName: server-authority
+            secretName: server-ca
         - name: server-config
           emptyDir:
             medium: Memory
