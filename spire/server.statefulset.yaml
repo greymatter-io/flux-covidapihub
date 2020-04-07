@@ -36,27 +36,27 @@ spec:
             - name: POSTGRESQL_HOST
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: host
             - name: POSTGRESQL_PORT
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: port
             - name: POSTGRESQL_DATABASE
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: database
             - name: POSTGRESQL_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: username
             - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: password
           volumeMounts:
             - name: server-config
