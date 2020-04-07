@@ -1,0 +1,11 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: tcp
+  namespace: ingress
+  labels:
+    app.kubernetes.io/name: ingress
+    app.kubernetes.io/part-of: ingress
+data:
+#  389: "openldap/openldap:8389"
