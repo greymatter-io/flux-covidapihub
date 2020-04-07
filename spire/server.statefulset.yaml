@@ -1,0 +1,143 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    cluster: spire.server
+  name: server
+  namespace: spire
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      cluster: spire.server
+  serviceName: server
+  template:
+    metadata:
+      labels:
+        cluster: spire.server
+      name: server
+      namespace: spire
+    spec:
+      serviceAccountName: server
+      shareProcessNamespace: true
+      initContainers:
+        - name: templar
+          image: docker.io/deciphernow/templar:v0.1.0-dev
+          args:
+            - render
+            - --environment=POSTGRESQL_HOST
+            - --environment=POSTGRESQL_PORT
+            - --environment=POSTGRESQL_DATABASE
+            - --environment=POSTGRESQL_USERNAME
+            - --environment=POSTGRESQL_PASSWORD
+            - "/tmp/templates/server.conf.tpl:/run/spire/config/server.conf:0400"
+            - "/tmp/templates/registrar.conf.tpl:/run/spire/config/registrar.conf:0400"
+          env:
+            - name: POSTGRESQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: host
+            - name: POSTGRESQL_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: port
+            - name: POSTGRESQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: database
+            - name: POSTGRESQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: username
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: password
+          volumeMounts:
+            - name: server-config
+              mountPath: /run/spire/config
+              readOnly: false
+            - name: server-templates
+              mountPath: /tmp/templates
+              readOnly: true
+      containers:
+        - name: registrar
+          image: gcr.io/spiffe-io/k8s-workload-registrar:0.9.2
+          args:
+            - -config
+            - /run/spire/config/registrar.conf
+          ports:
+            - name: registrar
+              containerPort: 9443
+          volumeMounts:
+            - name: server-config
+              mountPath: /run/spire/config
+              readOnly: true
+            - name: server-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+            - name: server-tls
+              mountPath: /run/spire/tls
+              readOnly: true
+        - name: server
+          image: gcr.io/spiffe-io/spire-server:0.9.2
+          args:
+            - -config
+            - /run/spire/config/server.conf
+          ports:
+            - name: server
+              containerPort: 8443
+          volumeMounts:
+            - name: server-config
+              mountPath: /run/spire/config
+              readOnly: true
+            - name: server-data
+              mountPath: /run/spire/data
+              readOnly: false
+            - name: server-authority
+              mountPath: /run/spire/authority
+              readOnly: true
+            - name: server-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+          livenessProbe:
+            exec:
+              command:
+                - /opt/spire/bin/spire-server
+                - healthcheck
+                - --registrationUDSPath=/run/spire/sockets/registration.sock
+            failureThreshold: 2
+            initialDelaySeconds: 15
+            periodSeconds: 60
+            timeoutSeconds: 3
+      volumes:
+        - name: server-socket
+          emptyDir:
+            medium: Memory
+        - name: server-authority
+          secret:
+            secretName: server-authority
+        - name: server-config
+          emptyDir:
+            medium: Memory
+        - name: server-templates
+          configMap:
+            name: server-templates
+        - name: server-tls
+          secret:
+            secretName: server-tls
+  volumeClaimTemplates:
+    - metadata:
+        name: server-data
+        namespace: spire
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
