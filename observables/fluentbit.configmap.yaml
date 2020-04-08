@@ -58,3 +58,7 @@ data:
             AWS_Auth On
             AWS_Region us-east-1
             tls On
+
+        [OUTPUT]
+            Name stdout
+            Match *
