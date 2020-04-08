@@ -43,7 +43,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
             - name: agent-token
-              mountPath: /run/spire/token
+              mountPath: /run/spire/tokens
               readOnly: false
           livenessProbe:
             exec:
