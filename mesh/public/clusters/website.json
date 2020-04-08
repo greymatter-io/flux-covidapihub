@@ -9,10 +9,10 @@
     "require_tls": true,
     "secret": {
         "secret_key": "public.identity",
-        "secret_name": "spiffe://production.greymatter.io/ns/ingress/sa/public",
-        "secret_validation_name": "spiffe://production.greymatter.io",
+        "secret_name": "spiffe://covidapihub.io/ns/ingress/sa/public",
+        "secret_validation_name": "spiffe://covidapihub.io",
         "subject_names": [
-            "spiffe://production.greymatter.io/ns/website/sa/website"
+            "spiffe://covidapihub.io/ns/website/sa/website"
         ],
         "ecdh_curves": [
             "X25519:P-256:P-521:P-384"
