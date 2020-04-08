@@ -1,0 +1,236 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: catalog
+    cluster: sense.catalog
+  name: catalog
+  namespace: sense
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catalog
+      cluster: sense.catalog
+  template:
+    metadata:
+      labels:
+        app: catalog
+        cluster: sense.catalog
+    spec:
+      serviceAccountName: catalog
+      containers:
+        - name: sidecar
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+              protocol: TCP
+            - name: sidecar
+              containerPort: 8443
+              protocol: TCP
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+        - name: catalog
+          image: docker.production.deciphernow.com/deciphernow/gm-catalog:1.0.5
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: CONFIG_SOURCE
+              value: env
+            - name: CONTROL_SERVER_0_ADDRESS
+              value: 127.0.0.1:9081
+            - name: CONTROL_SERVER_0_REQUEST_CLUSTER_NAME
+              value: sense.catalog
+            - name: CONTROL_SERVER_0_ZONE_NAME
+              value: default.zone
+            - name: INSTANCE_MAX_SILENCE
+              value: 15s
+            - name: INSTANCE_POLLING_INTERVAL
+              value: 5s
+            - name: METRICS_MAX_RETRIES
+              value: "3"
+            - name: METRICS_REQUEST_TIMEOUT
+              value: 15s
+            - name: METRICS_RETRY_DELAY
+              value: 10s
+            - name: PORT
+              value: "10080"
+            - name: DEBUG
+              value: "true"
+            - name: SERVICE_0_CLUSTER_NAME
+              value: ingress.private
+            - name: SERVICE_0_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_0_NAME
+              value: Edge (Private)
+            - name: SERVICE_0_VERSION
+              value: 1.1.1
+            - name: SERVICE_0_OWNER
+              value: Decipher
+            - name: SERVICE_0_CAPABILITY
+              value: Ingress
+            - name: SERVICE_0_RUNTIME
+              value: ""
+            - name: SERVICE_0_DOCUMENTATION
+              value: ""
+            - name: SERVICE_0_PROMETHEUS_JOB
+              value: ingress.private
+            - name: SERVICE_0_MAX_INSTANCES
+              value: "5"
+            - name: SERVICE_0_MIN_INSTANCES
+              value: "3"
+            - name: SERVICE_0_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_0_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_0_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_0_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_1_CLUSTER_NAME
+              value: ingress.public
+            - name: SERVICE_1_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_1_NAME
+              value: Edge (Public)
+            - name: SERVICE_1_VERSION
+              value: 1.1.1
+            - name: SERVICE_1_OWNER
+              value: Decipher
+            - name: SERVICE_1_CAPABILITY
+              value: Ingress
+            - name: SERVICE_1_RUNTIME
+              value: ""
+            - name: SERVICE_1_DOCUMENTATION
+              value: ""
+            - name: SERVICE_1_PROMETHEUS_JOB
+              value: ingress.public
+            - name: SERVICE_1_MAX_INSTANCES
+              value: "5"
+            - name: SERVICE_1_MIN_INSTANCES
+              value: "3"
+            - name: SERVICE_1_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_1_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_1_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_1_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_2_CLUSTER_NAME
+              value: fabric.control
+            - name: SERVICE_2_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_2_NAME
+              value: Control
+            - name: SERVICE_2_VERSION
+              value: 1.1.0
+            - name: SERVICE_2_OWNER
+              value: Decipher
+            - name: SERVICE_2_CAPABILITY
+              value: Grey Matter Fabric
+            - name: SERVICE_2_RUNTIME
+              value: "GO"
+            - name: SERVICE_2_DOCUMENTATION
+              value: ""
+            - name: SERVICE_2_PROMETHEUS_JOB
+              value: fabric.control
+            - name: SERVICE_2_MAX_INSTANCES
+              value: "1"
+            - name: SERVICE_2_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_2_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_2_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_2_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_2_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_3_CLUSTER_NAME
+              value: fabric.api
+            - name: SERVICE_3_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_3_NAME
+              value: Control API
+            - name: SERVICE_3_VERSION
+              value: 1.1.0
+            - name: SERVICE_3_OWNER
+              value: Decipher
+            - name: SERVICE_3_CAPABILITY
+              value: Grey Matter Fabric
+            - name: SERVICE_3_RUNTIME
+              value: "GO"
+            - name: SERVICE_3_DOCUMENTATION
+              value: "https://services.covidapihub.io/api/latest"
+            - name: SERVICE_3_PROMETHEUS_JOB
+              value: fabric.api
+            - name: SERVICE_3_MAX_INSTANCES
+              value: "1"
+            - name: SERVICE_3_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_3_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_3_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_3_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_3_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_4_CLUSTER_NAME
+              value: website.website
+            - name: SERVICE_4_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_4_NAME
+              value: Website
+            - name: SERVICE_4_VERSION
+              value: latest
+            - name: SERVICE_4_OWNER
+              value: Decipher
+            - name: SERVICE_4_CAPABILITY
+              value: Website
+            - name: SERVICE_4_RUNTIME
+              value: "Node"
+            - name: SERVICE_4_DOCUMENTATION
+              value: ""
+            - name: SERVICE_4_PROMETHEUS_JOB
+              value: website.website
+            - name: SERVICE_4_MAX_INSTANCES
+              value: "1"
+            - name: SERVICE_4_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_4_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_4_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_4_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_4_METRICS_PORT
+              value: "8080"
+          ports:
+            - name: catalog
+              containerPort: 10080
+              protocol: TCP
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      volumes:
+        - name: sidecar-config
+          configMap:
+            name: catalog-sidecar
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
