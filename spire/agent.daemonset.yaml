@@ -26,12 +26,6 @@ spec:
             - "-t"
             - "30"
             - "server:8443"
-        - name: init-registrar
-          image: gcr.io/spiffe-io/wait-for-it
-          args:
-            - "-t"
-            - "30"
-            - "registrar:9443"
       containers:
         - name: agent
           image: gcr.io/spiffe-io/spire-agent:0.9.2
@@ -49,7 +43,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
             - name: agent-token
-              mountPath: /run/spire/token
+              mountPath: /run/spire/tokens
               readOnly: false
           livenessProbe:
             exec:
