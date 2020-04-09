@@ -13,14 +13,7 @@
             }
         ],
         "trust_file": "/etc/tls/ca.crt",
-        "require_client_certs": false,
-        "protocols": [
-            "SSLv3",
-            "SSLv2",
-            "TLSv1",
-            "TLSv1.1",
-            "TLSv1.2"
-        ]
+        "require_client_certs": false
     },
     "cors_config": null,
     "aliases": null,
