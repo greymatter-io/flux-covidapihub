@@ -18,4 +18,4 @@ The content of `./word.sealedsecret.yaml` is suitable for commiting into the rep
 
 ## Running Locally with K3D
 
-Run `make k3d` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.
+Run `make k3d` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.  It will apply the various yamls and create secrets for local development.  Part of the secret creation includes using [acert](https://github.com/deciphernow/acert) so that needs to be installed before running the script.
