@@ -1,0 +1,17 @@
+---
+# Source: data/charts/data/templates/mongo-service.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: data-mongo
+  namespace: data
+spec:
+  ports:
+    - name: mongo
+      port: 27017
+      protocol: TCP
+      targetPort: 27017
+  selector:
+    gmproxy: data-mongo
+  sessionAffinity: None
+  type: ClusterIP
