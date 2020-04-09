@@ -22,7 +22,7 @@ spec:
       serviceAccountName: public
       containers:
         - name: edge
-          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.1.1-alpine"
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
