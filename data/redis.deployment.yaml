@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: redis
-          image: centos/redis-32-centos7
+          image: docker.io/centos/redis-32-centos7
           env:
             - name: REDIS_PASSWORD
               valueFrom:

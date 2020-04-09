@@ -56,50 +56,20 @@ spec:
           value: "127.0.0.1"
         - name: CLIENT_JWT_ENDPOINT_ADDRESS
           value: "localhost"
-        - name: CLIENT_JWT_ENDPOINT_CERT
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.cert.pem
-        - name: CLIENT_JWT_ENDPOINT_KEY
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.key.pem
         - name: CLIENT_JWT_ENDPOINT_PORT
           value: "10909"
         - name: CLIENT_JWT_ENDPOINT_PREFIX
           value: "/jwt"
-        - name: CLIENT_JWT_ENDPOINT_TRUST
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.trust.pem
         - name: CLIENT_JWT_ENDPOINT_USE_TLS
           value: "false"
         - name: CLIENT_JWT_PREFIX
           value: "/jwt"
         - name: CLIENT_PREFIX
           value: "/services/data/1.0.0"
-        - name: GMDATA_CERT
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: server.cert.pem
-        - name: GMDATA_KEY
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: server.key.pem
         - name: GMDATA_NAMESPACE
           value: "home"
         - name: GMDATA_NAMESPACE_USERFIELD
           value: "email"
-        - name: GMDATA_TRUST
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: server.trust.pem
         - name: GMDATA_USE_TLS
           value: "false"
         - name: JWT_API_KEY
