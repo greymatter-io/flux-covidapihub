@@ -1,0 +1,20 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: data-mongo-init
+  namespace: data
+data:
+  gmdata.js: |-
+    db.auth("mongo", "mongo")
+    db = db.getSiblingDB("gmdata")
+    db.createUser({
+        user: "gmdata-user",
+        pwd: "mongopassword",
+        roles: [
+        {
+            role: 'root',
+            db: 'admin',
+        },
+        ],
+    });

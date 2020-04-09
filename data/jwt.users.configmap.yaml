@@ -1,0 +1,95 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: jwt-users
+  namespace: data
+data:
+  users.json: |-
+    {
+      "users": [
+          {
+        "label": "CN=quickstart,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US",
+        "values": {
+          "email": [
+            "quickstart@deciphernow.com"
+          ],
+          "org": [
+            "www.deciphernow.com"
+          ],
+          "privilege": [
+            "root"
+          ]
+        }
+      },
+      {
+        "label": "CN=localuser,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "values": {
+          "email": [
+            "localuser@deciphernow.com"
+          ],
+          "org": [
+            "www.deciphernow.com"
+          ],
+          "privilege": [
+            "root"
+          ]
+        }
+      },
+      {
+        "label": "CN=gm-control,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "values": {
+          "email": [
+              "gm-control@deciphernow.com"
+          ],
+          "org": [
+              "www.deciphernow.com"
+          ],
+          "privilege": [
+              "root"
+          ]
+        }
+      },
+      {
+        "label": "CN=gm-catalog,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "values": {
+          "email": [
+              "engineering@deciphernow.com"
+          ],
+          "org": [
+              "www.deciphernow.com"
+          ],
+          "privilege": [
+              "root"
+          ]
+        }
+      },
+      {
+        "label": "CN=greymatter,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US",
+        "values": {
+          "email": [
+              "engineering@deciphernow.com"
+          ],
+          "org": [
+              "www.deciphernow.com"
+          ],
+          "privilege": [
+              "root"
+          ]
+        }
+      },
+      {
+        "label": "O=SPIRE,C=US",
+        "values": {
+          "email": [
+              "engineering@deciphernow.com"
+          ],
+          "org": [
+              "www.deciphernow.com"
+          ],
+          "privilege": [
+              "root"
+          ]
+        }
+      }]
+    }
