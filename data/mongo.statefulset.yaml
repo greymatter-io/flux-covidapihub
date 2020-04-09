@@ -1,0 +1,87 @@
+---
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  labels:
+    gmproxy: data-mongo
+  name: data-mongo
+  namespace: data
+spec:
+  serviceName:  data-mongo
+  podManagementPolicy: Parallel
+  replicas: 1
+  selector:
+    matchLabels:
+      gmproxy: data-mongo
+  serviceName: data-mongo
+  template:
+    metadata:
+      labels:
+        gmproxy: data-mongo
+    spec:
+      containers:
+      - env:
+        - name: MONGO_CN
+          value: "localhost"
+        - name: MONGO_INITDB_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: database
+        - name: MONGO_USE_TLS
+          value: "false"
+        - name: MONGODB_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: gmdata_password
+        - name: MONGODB_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: database
+        - name: MONGODB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: root_password
+        - name: MONGODB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: root_username
+        image: "docker.io/deciphernow/mongo:4.0.3"
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 200m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        name: mongo
+        ports:
+        - containerPort: 27017
+          name: mongo
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /data/db
+          name: data
+        - mountPath: /docker-entrypoint-initdb.d/
+          name: mongo-init
+      volumes:
+        - name: mongo-init
+          configMap:
+            name: data-mongo-init
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 40Gi
