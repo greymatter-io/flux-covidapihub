@@ -1,0 +1,175 @@
+---
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  name: data
+  namespace: data
+spec:
+  serviceName: data
+  replicas: 1
+  updateStrategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      gmproxy: data
+  template:
+    metadata:
+      labels:
+        gmproxy: data
+    spec:
+      serviceAccountName: data
+      containers:
+      - name: data
+        image: "docker.production.deciphernow.com/deciphernow/gm-data:1.0.2"
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 250m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: data-secrets
+              key: aws_access_key_id
+        - name: AWS_REGION
+          valueFrom:
+            secretKeyRef:
+              name: data-secrets
+              key: aws_region
+        - name: AWS_S3_BUCKET
+          valueFrom:
+            secretKeyRef:
+              name: data-secrets
+              key: aws_s3_bucket
+        - name: AWS_S3_PARTITION
+          value: "data"
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: data-secrets
+              key: aws_secret_access_key
+        - name: BIND_ADDRESS
+          value: "127.0.0.1"
+        - name: CLIENT_JWT_ENDPOINT_ADDRESS
+          value: "localhost"
+        - name: CLIENT_JWT_ENDPOINT_CERT
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.cert.pem
+        - name: CLIENT_JWT_ENDPOINT_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.key.pem
+        - name: CLIENT_JWT_ENDPOINT_PORT
+          value: "10909"
+        - name: CLIENT_JWT_ENDPOINT_PREFIX
+          value: "/jwt"
+        - name: CLIENT_JWT_ENDPOINT_TRUST
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.trust.pem
+        - name: CLIENT_JWT_ENDPOINT_USE_TLS
+          value: "false"
+        - name: CLIENT_JWT_PREFIX
+          value: "/jwt"
+        - name: CLIENT_PREFIX
+          value: "/services/data/1.0.0"
+        - name: GMDATA_CERT
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: server.cert.pem
+        - name: GMDATA_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: server.key.pem
+        - name: GMDATA_NAMESPACE
+          value: "home"
+        - name: GMDATA_NAMESPACE_USERFIELD
+          value: "email"
+        - name: GMDATA_TRUST
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: server.trust.pem
+        - name: GMDATA_USE_TLS
+          value: "false"
+        - name: JWT_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.api_key
+        - name: JWT_PUB
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.pub
+        - name: LESS_CHATTY_INFO
+          value: "false"
+        - name: MASTERKEY
+          valueFrom:
+            secretKeyRef:
+              name: data-secrets
+              key: master_key
+        - name: MONGODB
+          valueFrom:
+            secretKeyRef:
+              name: mongo-password
+              key: database
+        - name: MONGOHOST
+          value: "data-mongo-0.data-mongo.default.svc:27017"
+        - name: USES3
+          value: "false"
+        volumeMounts:
+          - name: data-pvc
+            mountPath: /app/buckets/decipher-quickstart-helm/data
+      - name: sidecar
+        image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: metrics
+          containerPort: 8080
+          protocol: TCP
+        - name: sidecar
+          containerPort: 8443
+          protocol: TCP
+        volumeMounts:
+        - name: spire-socket
+          mountPath: /run/spire/sockets
+          readOnly: false
+        - name: sidecar-config
+          mountPath: /etc/greymatter
+          readOnly: true
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      volumes:
+      - name: spire-socket
+        hostPath:
+          path: /run/spire/sockets
+          type: DirectoryOrCreate
+      - name: sidecar-config
+        configMap:
+          name: data-sidecar
+      - name: data
+        secret:
+          secretName: data-secrets
+      - name: jwt-security
+        secret:
+          secretName: jwt-security
+  volumeClaimTemplates:
+  - metadata:
+      name: data-pvc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 40Gi
