@@ -11,10 +11,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - services.greymatter.io
-      secretName: wildcard.greymatter.io
+        - services.covidapihub.io
+      secretName: wildcard.covidapihub.io
   rules:
-    - host: services.greymatter.io
+    - host: services.covidapihub.io
       http:
         paths:
           - path: /

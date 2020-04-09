@@ -41,7 +41,7 @@ data:
           tls_context:
             common_tls_context:
               tls_certificate_sds_secret_configs:
-                - name: "spiffe://production.greymatter.io/ns/ingress/sa/private"
+                - name: "spiffe://covidapihub.io/ns/ingress/sa/private"
                   sds_config:
                     api_config_source:
                       api_type: GRPC
@@ -54,9 +54,9 @@ data:
               combined_validation_context:
                 default_validation_context:
                   verify_subject_alt_name:
-                    - "spiffe://production.greymatter.io/ns/fabric/sa/control"
+                    - "spiffe://covidapihub.io/ns/fabric/sa/control"
                 validation_context_sds_secret_config:
-                  name: "spiffe://production.greymatter.io"
+                  name: "spiffe://covidapihub.io"
                   sds_config:
                     api_config_source:
                       api_type: GRPC

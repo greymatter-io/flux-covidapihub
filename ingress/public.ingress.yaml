@@ -11,34 +11,18 @@ metadata:
 spec:
   tls:
     - hosts:
-        - deciphernow.com
-        - www.deciphernow.com
-        - greymatter.io
-        - www.greymatter.io
-      secretName: wildcard.greymatter.io
+        - covidapihub.io
+        - www.covidapihub.io
+      secretName: wildcard.covidapihub.io
   rules:
-    - host: deciphernow.com
+    - host: covidapihub.io
       http:
         paths:
           - path: /
             backend:
               serviceName: public
               servicePort: 8443
-    - host: greymatter.io
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: public
-              servicePort: 8443
-    - host: www.deciphernow.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: public
-              servicePort: 8443
-    - host: www.greymatter.io
+    - host: www.covidapihub.io
       http:
         paths:
           - path: /
