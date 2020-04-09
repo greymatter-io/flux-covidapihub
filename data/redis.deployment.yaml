@@ -1,0 +1,52 @@
+# Source: data/charts/jwt/templates/redis.yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    gmproxy: redis
+  name: redis
+  namespace: data
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      gmproxy: redis
+      deployment: redis
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        gmproxy: redis
+        deployment: redis
+    spec:
+      containers:
+        - name: redis
+          image: centos/redis-32-centos7
+          env:
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: redis-password
+                  key: password
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 200m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

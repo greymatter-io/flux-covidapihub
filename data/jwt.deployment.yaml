@@ -1,0 +1,112 @@
+---
+# Source: data/charts/jwt/templates/jwt.yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: jwt-security
+    namespace: data
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      gmproxy: jwt-security
+      deployment: jwt-security
+  template:
+    metadata:
+      labels:
+        gmproxy: jwt-security
+        deployment: jwt-security
+    spec:
+      containers:
+      - name: jwt-security
+        image: "docker.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 200m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        command:
+        - /bin/sh
+        args:
+        - -c
+        - if [[ ! -d ./certs ]]; then mkdir -p ./certs; fi && if [[ ! -d ./etc ]]; then mkdir
+          -p ./certs; fi && /gm-jwt-security/gm-jwt-security
+
+        env:
+        - name: ENABLE_TLS
+          value: "false"
+        - name: HTTP_PORT
+          value: "3000"
+        - name: JWT_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.api_key
+        - name: PRIVATE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.key
+        - name: REDIS_DB
+          value: "0"
+        - name: REDIS_HOST
+          value: "redis.default.svc"
+        - name: REDIS_PASS
+          valueFrom:
+            secretKeyRef:
+              name: redis-password
+              key: password
+        - name: REDIS_PORT
+          value: "6379"
+        - name: SERVER_CERT
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.cert.pem
+        - name: SERVER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.key.pem
+        - name: SERVER_TRUST
+          valueFrom:
+            secretKeyRef:
+              name: jwt-certs
+              key: jwt.trust.pem
+        - name: TOKEN_EXP_TIME
+          value: "300"
+        - name: ZEROLOG_LEVEL
+          value: "info"
+        volumeMounts:
+        - name: jwt-users
+          mountPath: /gm-jwt-security/etc
+
+      - name: sidecar
+        image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 10808
+          name: proxy
+          protocol: TCP
+        - containerPort: 8081
+          name: metrics
+          protocol: TCP
+        volumeMounts:
+        - name: spire-socket
+          mountPath: /run/spire/socket
+          readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      volumes:
+      - name: spire-socket
+        hostPath:
+          path: /run/spire/socket
+          type: DirectoryOrCreate
+      - name: jwt-users
+        configMap:
+          name: jwt-users
