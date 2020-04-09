@@ -1,5 +1,4 @@
 ---
-# Source: data/charts/data/templates/data.yaml
 kind: StatefulSet
 apiVersion: apps/v1
 metadata:
@@ -18,7 +17,7 @@ spec:
       labels:
         gmproxy: data
     spec:
-      serviceAccountName: waiter-sa
+      serviceAccountName: data
       containers:
       - name: data
         image: "docker.production.deciphernow.com/deciphernow/gm-data:latest"
@@ -136,11 +135,11 @@ spec:
         image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 10808
-          name: proxy
+        - name: metrics
+          containerPort: 8080
           protocol: TCP
-        - containerPort: 8081
-          name: metrics
+        - name: sidecar
+          containerPort: 8443
           protocol: TCP
         volumeMounts:
         - name: spire-socket

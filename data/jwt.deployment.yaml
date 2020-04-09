@@ -18,6 +18,7 @@ spec:
         gmproxy: jwt-security
         deployment: jwt-security
     spec:
+      serviceAccountName: jwt
       containers:
       - name: jwt-security
         image: "docker.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
@@ -74,11 +75,11 @@ spec:
         image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 10808
-          name: proxy
+        - name: metrics
+          containerPort: 8080
           protocol: TCP
-        - containerPort: 8081
-          name: metrics
+        - name: sidecar
+          containerPort: 8443
           protocol: TCP
         volumeMounts:
           - name: sidecar-config
