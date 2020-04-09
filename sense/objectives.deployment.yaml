@@ -43,7 +43,7 @@ spec:
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
-        - name: dashboard
+        - name: slo
           image: docker.production.deciphernow.com/deciphernow/gm-slo:1.1.2
           imagePullPolicy: IfNotPresent
           env:
