@@ -62,21 +62,6 @@ spec:
               key: password
         - name: REDIS_PORT
           value: "6379"
-        - name: SERVER_CERT
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.cert.pem
-        - name: SERVER_KEY
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.key.pem
-        - name: SERVER_TRUST
-          valueFrom:
-            secretKeyRef:
-              name: jwt-certs
-              key: jwt.trust.pem
         - name: TOKEN_EXP_TIME
           value: "300"
         - name: ZEROLOG_LEVEL
