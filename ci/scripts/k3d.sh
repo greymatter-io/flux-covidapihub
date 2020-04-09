@@ -28,14 +28,13 @@ export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 echo "Cluster is connected"
 
 # Apply kubernetes yaml files in order
-for folder in kubeseal spire fabric sense
+for folder in spire fabric sense
 do
     kubectl apply -f $folder/namespace.yaml
-    find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
 done
 
 echo ""
-echo "files applied"
+echo "namespaces applied"
 echo ""
 
 # Apply secrets
@@ -78,4 +77,13 @@ kubectl create secret generic objectives-postgres --namespace "sense" --from-lit
 
 echo ""
 echo "secrets applied"
+echo ""
+
+for folder in spire fabric sense
+do
+    find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+done
+
+echo ""
+echo "files applied"
 echo ""
