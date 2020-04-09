@@ -1,5 +1,4 @@
 ---
-# Source: data/charts/jwt/templates/jwt.yaml
 kind: Deployment
 apiVersion: apps/v1
 metadata:

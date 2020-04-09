@@ -1,4 +1,4 @@
-# Source: data/charts/jwt/templates/redis.yaml
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
