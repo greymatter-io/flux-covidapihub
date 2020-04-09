@@ -20,7 +20,7 @@ spec:
       serviceAccountName: data
       containers:
       - name: data
-        image: "docker.production.deciphernow.com/deciphernow/gm-data:latest"
+        image: "docker.production.deciphernow.com/deciphernow/gm-data:1.0.2"
         imagePullPolicy: IfNotPresent
         resources:
           limits:
