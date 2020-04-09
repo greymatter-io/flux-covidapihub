@@ -144,16 +144,22 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: spire-socket
-          mountPath: /run/spire/socket
+          mountPath: /run/spire/sockets
           readOnly: false
+        - name: sidecar-config
+          mountPath: /etc/greymatter
+          readOnly: true
       imagePullSecrets:
         - name: docker.production.deciphernow.com
         - name: index.docker.io
       volumes:
       - name: spire-socket
         hostPath:
-          path: /run/spire/socket
+          path: /run/spire/sockets
           type: DirectoryOrCreate
+      - name: sidecar-config
+        configMap:
+          name: data-sidecar
       - name: data
         secret:
           secretName: data-secrets
