@@ -20,12 +20,18 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       serviceAccountName: agent
       initContainers:
-        - name: init
+        - name: init-server
           image: gcr.io/spiffe-io/wait-for-it
           args:
             - "-t"
             - "30"
             - "server:8443"
+        - name: init-registrar
+          image: gcr.io/spiffe-io/wait-for-it
+          args:
+            - "-t"
+            - "30"
+            - "registrar:443"
       containers:
         - name: agent
           image: gcr.io/spiffe-io/spire-agent:0.9.2
@@ -41,6 +47,9 @@ spec:
               readOnly: true
             - name: agent-socket
               mountPath: /run/spire/sockets
+              readOnly: false
+            - name: agent-token
+              mountPath: /run/spire/tokens
               readOnly: false
           livenessProbe:
             exec:
@@ -64,3 +73,10 @@ spec:
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
+        - name: agent-token
+          projected:
+            sources:
+              - serviceAccountToken:
+                  path: agent
+                  expirationSeconds: 7200
+                  audience: server

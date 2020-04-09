@@ -36,27 +36,27 @@ spec:
             - name: POSTGRESQL_HOST
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: host
             - name: POSTGRESQL_PORT
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: port
             - name: POSTGRESQL_DATABASE
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: database
             - name: POSTGRESQL_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: username
             - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: server-postgres
+                  name: postgres
                   key: password
           volumeMounts:
             - name: server-config
@@ -99,7 +99,7 @@ spec:
             - name: server-data
               mountPath: /run/spire/data
               readOnly: false
-            - name: server-authority
+            - name: server-ca
               mountPath: /run/spire/authority
               readOnly: true
             - name: server-socket
@@ -119,9 +119,9 @@ spec:
         - name: server-socket
           emptyDir:
             medium: Memory
-        - name: server-authority
+        - name: server-ca
           secret:
-            secretName: server-authority
+            secretName: server-ca
         - name: server-config
           emptyDir:
             medium: Memory
