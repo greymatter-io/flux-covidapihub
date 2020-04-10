@@ -58,7 +58,7 @@ data:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent-dev
+  name: spire-dev:agent-dev
   annotations:
     fluxcd.io/ignore: "true"
 rules:
@@ -75,7 +75,7 @@ rules:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent-dev
+  name: spire-dev:agent-dev
   annotations:
     fluxcd.io/ignore: "true"
 subjects:
@@ -84,7 +84,7 @@ subjects:
     namespace: spire-dev
 roleRef:
   kind: ClusterRole
-  name: spire:agent-dev
+  name: spire-dev:agent-dev
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: agent/templates/daemonset.yaml
@@ -94,23 +94,23 @@ metadata:
   name: agent-dev
   namespace: spire-dev
   labels:
-    app: agent
-    cluster: spire-dev.agent
+    app: agent-dev
+    cluster: spire-dev.agent-dev
   annotations:
     fluxcd.io/ignore: "true"
 spec:
   selector:
     matchLabels:
-      app: agent
-      gmproxy: agent
-      cluster: spire-dev.agent
+      app: agent-dev
+      gmproxy: agent-dev
+      cluster: spire-dev.agent-dev
   template:
     metadata:
       namespace: spire-dev
       labels:
-        gmproxy: agent
-        app: agent
-        cluster: spire-dev.agent
+        gmproxy: agent-dev
+        app: agent-dev
+        cluster: spire-dev.agent-dev
     spec:
       hostPID: true
       hostNetwork: true
