@@ -1,0 +1,156 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: website-featured-data
+  namespace: website
+data:
+  featured-data.json: |-
+    {
+      "apis": [
+        {
+          "name": "WHO News",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "State Government Twitter Search",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "Italy Ministry of Health",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "Taiwan CDC",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        }
+      ],
+      "visualizations": [
+        {
+          "name": "European Centre for Disease Prevention and Control (ECDC) Viz",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "Hospital capacities and supplies on hand",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "Asia COVID-19 Stats",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "WHO News Viz",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "updates": ["Weekly", "Realtime"]
+        }
+      ],
+      "datasets": [
+        {
+          "name": "WHO News Dataset 1",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "WHO News Dataset 2",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "WHO News Dataset 3",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        },
+        {
+          "name": "WHO News Dataset 4",
+          "url": "http://cdc.gov/api",
+          "description": "Gets the actual number of tested, infected and recovered people",
+          "source": "World Health Organization",
+          "contentType": ["News", "Governance", "Health stats", "Other"],
+          "homePage": "http://cdc.gov",
+          "thumbnail": "https://logos-download.com/wp-content/uploads/2016/12/World_Health_Organization_logo_WHO.png",
+          "coverage": ["US", "Italy"],
+          "format": ["CSV", "JSON", "XML"],
+          "updates": ["Weekly", "Realtime"]
+        }
+      ]
+    }
