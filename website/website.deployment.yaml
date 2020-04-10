@@ -1,0 +1,77 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: website
+    cluster: website.website
+  name: website
+  namespace: website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: website
+      cluster: website.website
+  template:
+    metadata:
+      labels:
+        app: website
+        cluster: website.website
+      namespace: website
+    spec:
+      serviceAccountName: website
+      containers:
+        - name: website
+          image: docker.io/covidapihub/covidapihub-site:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3001
+              name: http
+              protocol: TCP
+          volumeMounts:
+            - name: mock-init
+              mountPath: /usr/src/app
+              readOnly: true
+          env:
+          - name: DATA_SOURCE
+            value: /usr/src/app/featured-data.json
+          - name: API_HUB_ENDPOINT
+            value: /services/dashboard/latest
+        - name: sidecar
+          image: docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+          env:
+          - name: METRICS_KEY_FUNCTION
+            value: depth
+      imagePullSecrets:
+        - name: index.docker.io
+        - name: docker.production.deciphernow.com
+      volumes:
+        - name: sidecar-config
+          configMap:
+            name: website-sidecar
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+        - name: mock-init
+          configMap:
+            name: website-featured-data
