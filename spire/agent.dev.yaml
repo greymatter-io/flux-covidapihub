@@ -122,13 +122,13 @@ spec:
           args:
             - "-t"
             - "30"
-            - "server:8443"
+            - "server-dev:8443"
         - name: init-registrar
           image: gcr.io/spiffe-io/wait-for-it
           args:
             - "-t"
             - "30"
-            - "registrar:8444"
+            - "registrar-dev:8444"
       containers:
         - name: agent
           image: gcr.io/spiffe-io/spire-agent:0.9.3

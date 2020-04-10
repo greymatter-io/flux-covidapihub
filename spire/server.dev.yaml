@@ -120,6 +120,7 @@ data:
 
       Notifier "k8sbundle" {
         plugin_data {
+          namespace = "spire-dev"
           config_map = "server-bundle-dev"
         }
       }
