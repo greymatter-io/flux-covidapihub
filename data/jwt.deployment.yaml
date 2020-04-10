@@ -1,0 +1,103 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: jwt-security
+    namespace: data
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      gmproxy: jwt-security
+      deployment: jwt-security
+  template:
+    metadata:
+      labels:
+        gmproxy: jwt-security
+        deployment: jwt-security
+    spec:
+      serviceAccountName: jwt
+      containers:
+      - name: jwt-security
+        image: "docker.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 200m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        command:
+        - /bin/sh
+        args:
+        - -c
+        - if [[ ! -d ./certs ]]; then mkdir -p ./certs; fi && if [[ ! -d ./etc ]]; then mkdir
+          -p ./certs; fi && /gm-jwt-security/gm-jwt-security
+
+        env:
+        - name: ENABLE_TLS
+          value: "false"
+        - name: HTTP_PORT
+          value: "3000"
+        - name: JWT_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.api_key
+        - name: PRIVATE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: jwt-security
+              key: jwt.key
+        - name: REDIS_DB
+          value: "0"
+        - name: REDIS_HOST
+          value: "redis.data.svc"
+        - name: REDIS_PASS
+          valueFrom:
+            secretKeyRef:
+              name: redis-password
+              key: password
+        - name: REDIS_PORT
+          value: "6379"
+        - name: TOKEN_EXP_TIME
+          value: "300"
+        - name: ZEROLOG_LEVEL
+          value: "info"
+        volumeMounts:
+        - name: jwt-users
+          mountPath: /gm-jwt-security/etc
+
+      - name: sidecar
+        image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: metrics
+          containerPort: 8080
+          protocol: TCP
+        - name: sidecar
+          containerPort: 8443
+          protocol: TCP
+        volumeMounts:
+          - name: sidecar-config
+            mountPath: /etc/greymatter
+            readOnly: true
+          - name: spire-socket
+            mountPath: /run/spire/sockets
+            readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+        - name: index.docker.io
+      volumes:
+      - name: spire-socket
+        hostPath:
+          path: /run/spire/sockets
+          type: DirectoryOrCreate
+      - name: sidecar-config
+        configMap:
+          name: jwt-sidecar
+      - name: jwt-users
+        configMap:
+          name: jwt-users
