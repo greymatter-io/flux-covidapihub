@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        cluster: sense.catalog
+        cluster: data.data
     spec:
       serviceAccountName: data
       containers:
@@ -97,7 +97,7 @@ spec:
         - name: MONGOHOST
           value: "data-mongo-0.data-mongo.data.svc:27017"
         - name: USES3
-          value: "true"
+          value: "false"
         volumeMounts:
           - name: data-pvc
             mountPath: /app/buckets/decipher-quickstart-helm/data
