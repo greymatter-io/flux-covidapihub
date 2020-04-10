@@ -3,25 +3,25 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: agent
-  namespace: spire
+  name: agent-dev
+  namespace: spire-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 ---
 # Source: agent/templates/config-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: agent-config
-  namespace: spire
+  name: agent-config-dev
+  namespace: spire-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 data:
   agent.conf: |-
     agent {
       data_dir = "/run/spire"
       log_level = "info"
-      server_address = "server"
+      server_address = "server-dev"
       server_port = "8443"
       socket_path = "/run/spire/sockets/agent.sock"
       trust_bundle_path = "/run/spire/bundle/bundle.crt"
@@ -58,9 +58,9 @@ data:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent
+  name: spire:agent-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 rules:
   - apiGroups:
       - ""
@@ -75,60 +75,60 @@ rules:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent
+  name: spire:agent-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
-    name: agent
-    namespace: spire
+    name: agent-dev
+    namespace: spire-dev
 roleRef:
   kind: ClusterRole
-  name: spire:agent
+  name: spire:agent-dev
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: agent/templates/daemonset.yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: agent
-  namespace: spire
+  name: agent-dev
+  namespace: spire-dev
   labels:
     app: agent
-    cluster: spire.agent
+    cluster: spire-dev.agent
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 spec:
   selector:
     matchLabels:
       app: agent
       gmproxy: agent
-      cluster: spire.agent
+      cluster: spire-dev.agent
   template:
     metadata:
-      namespace: spire
+      namespace: spire-dev
       labels:
         gmproxy: agent
         app: agent
-        cluster: spire.agent
+        cluster: spire-dev.agent
     spec:
       hostPID: true
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
-      serviceAccountName: agent
+      serviceAccountName: agent-dev
       initContainers:
         - name: init-server
           image: gcr.io/spiffe-io/wait-for-it
           args:
             - "-t"
             - "30"
-            - "server:8443"
+            - "server-dev:8443"
         - name: init-registrar
           image: gcr.io/spiffe-io/wait-for-it
           args:
             - "-t"
             - "30"
-            - "registrar:8444"
+            - "registrar-dev:8444"
       containers:
         - name: agent
           image: gcr.io/spiffe-io/spire-agent:0.9.3
@@ -162,18 +162,18 @@ spec:
       volumes:
         - name: agent-config
           configMap:
-            name: agent-config
+            name: agent-config-dev
         - name: agent-socket
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
         - name: server-bundle
           configMap:
-            name: server-bundle
+            name: server-bundle-dev
         - name: agent-token
           projected:
             sources:
               - serviceAccountToken:
                   path: agent
                   expirationSeconds: 7200
-                  audience: server
+                  audience: server-dev
