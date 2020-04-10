@@ -4,7 +4,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: agent-dev
-  namespace: spire
+  namespace: spire-dev
   annotations:
     fluxcd.io/ignore: "true"
 ---
@@ -13,7 +13,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: agent-config-dev
-  namespace: spire
+  namespace: spire-dev
   annotations:
     fluxcd.io/ignore: "true"
 data:
@@ -81,7 +81,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: agent
-    namespace: spire
+    namespace: spire-dev
 roleRef:
   kind: ClusterRole
   name: spire:agent
@@ -92,7 +92,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: agent-dev
-  namespace: spire
+  namespace: spire-dev
   labels:
     app: agent
     cluster: spire.agent
@@ -106,7 +106,7 @@ spec:
       cluster: spire.agent
   template:
     metadata:
-      namespace: spire
+      namespace: spire-dev
       labels:
         gmproxy: agent
         app: agent
