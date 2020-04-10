@@ -39,32 +39,11 @@ echo ""
 
 # Apply secrets
 
-export AUTHORITY_FINGERPRINT="$(acert authorities create -n 'Quickstart' -o 'Grey Matter')"
-
-ServerCaIntermediateCrt="$(acert authorities export ${AUTHORITY_FINGERPRINT} -t certificate -f pem)"
-ServerCaIntermediateKey="$(acert authorities export ${AUTHORITY_FINGERPRINT} -t key -f pem)"
-ServerCaRootCrt="$(acert authorities export ${AUTHORITY_FINGERPRINT} -t authority -f pem)"
-
-export REGISTRAR_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'registrar.spire.svc')
-
-ServerTlsCaCrt="$(acert leaves export ${REGISTRAR_FINGERPRINT} -t authority -f pem)"
-ServerTlsRegistrarSpireSvcCrt="$(acert leaves export ${REGISTRAR_FINGERPRINT} -t certificate -f pem)"
-ServerTlsRegistrarSpireSvcKey="$(acert leaves export ${REGISTRAR_FINGERPRINT} -t key -f pem)"
-
 ObjectivesPostgresDatabase="greymatter"
 ObjectivesPostgresHost=""
 ObjectivesPostgresUsername="greymatter"
 ObjectivesPostgresPassword="greymatter"
 ObjectivesPostgresPort="5432"
-
-
-kubectl create secret generic server-ca --namespace "spire" --from-literal=intermediate.crt="$ServerCaIntermediateCrt" --from-literal=intermediate.key="$ServerCaIntermediateKey" --from-literal=root.crt="$ServerCaRootCrt"
-
-kubectl create secret generic server-tls --namespace "spire" --from-literal=ca.crt="$ServerTlsCaCrt" --from-literal=registrar.spire.svc.crt="$ServerTlsRegistrarSpireSvcCrt" --from-literal=registrar.spire.svc.key="$ServerTlsRegistrarSpireSvcKey"
-
-sed "s/caBundle: .*/caBundle: $(acert leaves export ${REGISTRAR_FINGERPRINT} -t authority -f pem | base64)/" spire/registrar.validatingwebhookconfiguration.yaml > spire/overlay.registrar.validatingwebhookconfiguration.yaml
-kubectl apply  -f spire/overlay.registrar.validatingwebhookconfiguration.yaml
-rm spire/overlay.registrar.validatingwebhookconfiguration.yaml
 
 
 for folder in fabric sense
@@ -79,7 +58,17 @@ echo ""
 echo "secrets applied"
 echo ""
 
-for folder in spire fabric sense
+
+kubectl apply -f spire/server.dev.yaml
+sleep 60
+kubectl apply -f spire/agent.dev.yaml
+
+    
+echo ""
+echo "spire applied"
+echo ""
+
+for folder in fabric sense
 do
     find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
 done
