@@ -97,7 +97,7 @@ spec:
         - name: MONGOHOST
           value: "data-mongo-0.data-mongo.data.svc:27017"
         - name: USES3
-          value: "false"
+          value: "true"
         volumeMounts:
           - name: data-pvc
             mountPath: /app/buckets/decipher-quickstart-helm/data
