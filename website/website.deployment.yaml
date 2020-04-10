@@ -74,4 +74,4 @@ spec:
             type: DirectoryOrCreate
         - name: mock-init
           configMap:
-            name: website-mock
+            name: website-featured-data
