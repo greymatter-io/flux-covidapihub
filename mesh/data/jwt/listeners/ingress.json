@@ -1,0 +1,24 @@
+{
+    "zone_key": "default.zone",
+    "listener_key": "jwt.ingress.listener",
+    "domain_keys": [
+        "jwt.ingress.domain"
+    ],
+    "name": "ingress",
+    "ip": "0.0.0.0",
+    "port": 8443,
+    "protocol": "http_auto",
+    "secret": {
+        "secret_key": "jwt.identity",
+        "secret_name": "spiffe://covidapihub.io/ns/data/sa/jwt",
+        "secret_validation_name": "spiffe://covidapihub.io",
+        "subject_names": [
+            "spiffe://covidapihub.io/ns/ingress/sa/private",
+            "spiffe://covidapihub.io/ns/data/sa/data"
+        ],
+        "ecdh_curves": [
+            "X25519:P-256:P-521:P-384"
+        ]
+    },
+    "tracing_config": null
+}
