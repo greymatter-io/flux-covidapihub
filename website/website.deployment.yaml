@@ -30,12 +30,12 @@ spec:
               name: http
               protocol: TCP
           volumeMounts:
-            - name: mock-init
-              mountPath: /usr/src/app
+            - name: feature-data
+              mountPath: /usr/src/data
               readOnly: true
           env:
           - name: DATA_SOURCE
-            value: /usr/src/app/featured-data.json
+            value: /usr/src/data/featured-data.json
           - name: API_HUB_ENDPOINT
             value: /services/dashboard/latest
         - name: sidecar
@@ -72,6 +72,6 @@ spec:
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
-        - name: mock-init
+        - name: feature-data
           configMap:
             name: website-featured-data
