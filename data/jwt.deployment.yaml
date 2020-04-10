@@ -87,6 +87,9 @@ spec:
           - name: spire-socket
             mountPath: /run/spire/sockets
             readOnly: false
+        env:
+        - name: METRICS_KEY_FUNCTION
+          value: depth
       imagePullSecrets:
         - name: docker.production.deciphernow.com
         - name: index.docker.io
