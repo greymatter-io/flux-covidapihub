@@ -43,6 +43,9 @@ spec:
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
+          env:
+          - name: METRICS_KEY_FUNCTION
+            value: depth
         - name: catalog
           image: docker.production.deciphernow.com/deciphernow/gm-catalog:1.0.5
           imagePullPolicy: IfNotPresent
