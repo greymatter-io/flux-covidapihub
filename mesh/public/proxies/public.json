@@ -28,8 +28,8 @@
         },
         "gm_observables": {
             "emitFullResponse": false,
-            "useKafka": true,
-            "useKafkaTLS": true,
+            "useKafka": false,
+            "useKafkaTLS": false,
             "eventTopic": "observables",
             "enforceAudit": false,
             "topic": "public",

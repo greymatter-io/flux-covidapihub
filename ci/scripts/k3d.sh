@@ -19,7 +19,7 @@ if [[ "$(k3d list)" == *"greymatter"* ]]; then
 fi
 
 # Create 4 workers for a greymatter cluster
-k3d create --workers 4 --name greymatter --publish 30000:10808
+k3d create --workers 4 --name greymatter --publish 30000:8443
 while [[ $(k3d get-kubeconfig --name='greymatter') != *kubeconfig.yaml ]]; do echo "echo waiting for k3d cluster to start up" && sleep 10; done
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"

@@ -25,7 +25,7 @@
         },
         "gm_observables": {
             "emitFullResponse": false,
-            "useKafka": true,
+            "useKafka": false,
             "useKafkaTLS": true,
             "eventTopic": "observables",
             "enforceAudit": false,
