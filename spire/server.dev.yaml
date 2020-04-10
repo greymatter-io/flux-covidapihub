@@ -3,18 +3,18 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: spire
+  name: spire-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 ---
 # Source: server/templates/server-sa.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: server
+  name: server-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 ---
 # Source: server/templates/server.ca.secret.yaml
 apiVersion: v1
@@ -25,13 +25,13 @@ data:
 kind: Secret
 metadata:
   creationTimestamp: "2020-04-07T20:03:05Z"
-  name: server-ca
+  name: server-ca-dev
   namespace: spire
   resourceVersion: "7764"
   selfLink: /api/v1/namespaces/spire/secrets/server-ca
   uid: 1a92fa6e-c892-4e67-8fa1-3fcf58d1342c
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 type: Opaque
 ---
 # Source: server/templates/server.tls.secret.yaml
@@ -43,23 +43,23 @@ data:
 kind: Secret
 metadata:
   creationTimestamp: "2020-04-07T20:03:50Z"
-  name: server-tls
+  name: server-tls-dev
   namespace: spire
   resourceVersion: "7796"
   selfLink: /api/v1/namespaces/spire/secrets/server-tls
   uid: 032b92c1-d282-43a3-9b44-830a924b7d48
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 type: Opaque
 ---
 # Source: server/templates/config-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: server-config
+  name: server-config-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 data:
   registrar.conf: |-
     log_level = "info"
@@ -137,18 +137,18 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: server-bundle
+  name: server-bundle-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 ---
 # Source: server/templates/server-clusterrole.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: spire:server
+  name: spire:server-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 rules:
   - apiGroups:
       - authentication.k8s.io
@@ -168,9 +168,9 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: spire:server
+  name: spire:server-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
     name: server
@@ -184,10 +184,10 @@ roleRef:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: server
+  name: server-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 rules:
   - apiGroups:
       - ""
@@ -202,10 +202,10 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: server
+  name: server-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
     name: server
@@ -219,10 +219,10 @@ roleRef:
 apiVersion: v1
 kind: Service
 metadata:
-  name: registrar
+  name: registrar-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 spec:
   ports:
     - name: registrar
@@ -236,10 +236,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: server
+  name: server-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 spec:
   type: NodePort
   ports:
@@ -257,10 +257,10 @@ metadata:
   labels:
     app: server
     cluster: spire.server
-  name: server
+  name: server-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 spec:
   replicas: 1
   selector:
@@ -273,7 +273,7 @@ spec:
       labels:
         app: server
         cluster: spire.server
-      name: server
+      name: server-dev
       namespace: spire
     spec:
       serviceAccountName: server
@@ -356,9 +356,9 @@ spec:
 apiVersion: admissionregistration.k8s.io/v1beta1
 kind: ValidatingWebhookConfiguration
 metadata:
-  name: registrar
+  name: registrar-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 webhooks:
   - name: registrar.spire.svc.cluster.local
     clientConfig:

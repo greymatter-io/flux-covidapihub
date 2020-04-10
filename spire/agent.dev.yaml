@@ -3,19 +3,19 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: agent
+  name: agent-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 ---
 # Source: agent/templates/config-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: agent-config
+  name: agent-config-dev
   namespace: spire
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 data:
   agent.conf: |-
     agent {
@@ -58,9 +58,9 @@ data:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent
+  name: spire:agent-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 rules:
   - apiGroups:
       - ""
@@ -75,9 +75,9 @@ rules:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: spire:agent
+  name: spire:agent-dev
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
     name: agent
@@ -91,13 +91,13 @@ roleRef:
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: agent
+  name: agent-dev
   namespace: spire
   labels:
     app: agent
     cluster: spire.agent
   annotations:
-    fluxcd.io/ignore: true
+    fluxcd.io/ignore: "true"
 spec:
   selector:
     matchLabels:
