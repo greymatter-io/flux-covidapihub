@@ -15,3 +15,9 @@ kubeseal -o yaml --cert ./.kubeseal.pem < ./word.secret.yaml > ./word.sealedsecr
 ```
 
 The content of `./word.sealedsecret.yaml` is suitable for commiting into the repository and will be decrypted to match the content of `./word.secret.yaml` in the cluster.
+
+## Running Locally with K3D
+
+Run `make k3d` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.  It will apply the various yamls and create secrets for local development.  Part of the secret creation includes using [acert](https://github.com/deciphernow/acert) so that needs to be installed before running the script.
+
+Run `export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"` to use the kubeconfig for that cluster and be able to use `kubectl` commands.
