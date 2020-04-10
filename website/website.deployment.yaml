@@ -26,7 +26,7 @@ spec:
           image: docker.io/covidapihub/covidapihub-site:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
               name: http
               protocol: TCP
         - name: sidecar
