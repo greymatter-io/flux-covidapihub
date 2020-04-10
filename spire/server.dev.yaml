@@ -101,7 +101,7 @@ data:
         plugin_data {
           clusters = {
             "covidapihub" = {
-              service_account_whitelist = ["spire:agent-dev"]
+              service_account_whitelist = ["spire-dev:agent-dev"]
               audience = ["server-dev"]
             }
           }
