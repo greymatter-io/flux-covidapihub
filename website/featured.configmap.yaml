@@ -5,7 +5,7 @@ metadata:
   name: website-featured-data
   namespace: website
 data:
-  mock.json: |-
+  featured-data.json: |-
     {
       "apis": [
         {
