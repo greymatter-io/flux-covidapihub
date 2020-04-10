@@ -29,6 +29,15 @@ spec:
             - containerPort: 3001
               name: http
               protocol: TCP
+          volumeMounts:
+            - name: mock-init
+              mountPath: /usr/src/app
+              readOnly: true
+          env:
+          - name: DATA_SOURCE
+            value: /usr/src/app/mock.json
+          - name: API_HUB_ENDPOINT
+            value: /services/dashboard/latest
         - name: sidecar
           image: docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
           imagePullPolicy: IfNotPresent
@@ -63,3 +72,6 @@ spec:
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
+        - name: mock-init
+          configMap:
+            name: website-mock
