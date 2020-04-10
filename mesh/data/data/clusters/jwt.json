@@ -1,7 +1,7 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "data.jwt.cluster",
-    "name": "data.jwt",
+    "cluster_key": "data.jwt-security.cluster",
+    "name": "data.jwt-security",
     "instances": [],
     "circuit_breakers": null,
     "outlier_detection": null,

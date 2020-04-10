@@ -1,11 +1,11 @@
 {
     "zone_key": "default.zone",
     "domain_key": "data.egress.domain",
-    "route_key": "data.jwt.route",
+    "route_key": "data.jwt-security.route",
     "path": "",
     "prefix_rewrite": "/",
     "redirects": null,
-    "shared_rules_key": "data.jwt.rules",
+    "shared_rules_key": "data.jwt-security.rules",
     "rules": null,
     "response_data": {},
     "cohort_seed": null,

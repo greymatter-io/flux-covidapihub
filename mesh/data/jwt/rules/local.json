@@ -1,12 +1,12 @@
 {
     "zone_key": "default.zone",
-    "shared_rules_key": "jwt.local.rules",
+    "shared_rules_key": "jwt-security.local.rules",
     "name": "local",
     "default": {
         "light": [
             {
                 "constraint_key": "",
-                "cluster_key": "jwt.local.cluster",
+                "cluster_key": "jwt-security.local.cluster",
                 "metadata": null,
                 "properties": null,
                 "response_data": {},

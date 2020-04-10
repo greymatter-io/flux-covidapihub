@@ -12,6 +12,6 @@ spec:
       protocol: TCP
       targetPort: 27017
   selector:
-    gmproxy: data-mongo
+    cluster: data.data-mongo
   sessionAffinity: None
   type: ClusterIP
