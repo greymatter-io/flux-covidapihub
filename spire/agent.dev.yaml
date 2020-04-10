@@ -21,7 +21,7 @@ data:
     agent {
       data_dir = "/run/spire"
       log_level = "info"
-      server_address = "server"
+      server_address = "server-dev"
       server_port = "8443"
       socket_path = "/run/spire/sockets/agent.sock"
       trust_bundle_path = "/run/spire/bundle/bundle.crt"
@@ -80,11 +80,11 @@ metadata:
     fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
-    name: agent
+    name: agent-dev
     namespace: spire-dev
 roleRef:
   kind: ClusterRole
-  name: spire:agent
+  name: spire:agent-dev
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: agent/templates/daemonset.yaml
@@ -95,7 +95,7 @@ metadata:
   namespace: spire-dev
   labels:
     app: agent
-    cluster: spire.agent
+    cluster: spire-dev.agent
   annotations:
     fluxcd.io/ignore: "true"
 spec:
@@ -103,19 +103,19 @@ spec:
     matchLabels:
       app: agent
       gmproxy: agent
-      cluster: spire.agent
+      cluster: spire-dev.agent
   template:
     metadata:
       namespace: spire-dev
       labels:
         gmproxy: agent
         app: agent
-        cluster: spire.agent
+        cluster: spire-dev.agent
     spec:
       hostPID: true
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
-      serviceAccountName: agent
+      serviceAccountName: agent-dev
       initContainers:
         - name: init-server
           image: gcr.io/spiffe-io/wait-for-it
@@ -162,18 +162,18 @@ spec:
       volumes:
         - name: agent-config
           configMap:
-            name: agent-config
+            name: agent-config-dev
         - name: agent-socket
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
         - name: server-bundle
           configMap:
-            name: server-bundle
+            name: server-bundle-dev
         - name: agent-token
           projected:
             sources:
               - serviceAccountToken:
-                  path: agent
+                  path: agent-dev
                   expirationSeconds: 7200
-                  audience: server
+                  audience: server-dev

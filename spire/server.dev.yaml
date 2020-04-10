@@ -101,8 +101,8 @@ data:
         plugin_data {
           clusters = {
             "covidapihub" = {
-              service_account_whitelist = ["spire:agent"]
-              audience = ["server"]
+              service_account_whitelist = ["spire:agent-dev"]
+              audience = ["server-dev"]
             }
           }
         }
@@ -120,7 +120,7 @@ data:
 
       Notifier "k8sbundle" {
         plugin_data {
-          config_map = "server-bundle"
+          config_map = "server-bundle-dev"
         }
       }
 
@@ -147,6 +147,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: spire:server-dev
+  namespace: spire-dev
   annotations:
     fluxcd.io/ignore: "true"
 rules:
@@ -169,15 +170,16 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: spire:server-dev
+  namespace: spire-dev
   annotations:
     fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
-    name: server
+    name: server-dev
     namespace: spire-dev
 roleRef:
   kind: ClusterRole
-  name: spire:server
+  name: spire:server-dev
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: server/templates/server-role.yaml
@@ -208,11 +210,11 @@ metadata:
     fluxcd.io/ignore: "true"
 subjects:
   - kind: ServiceAccount
-    name: server
+    name: server-dev
     namespace: spire-dev
 roleRef:
   kind: Role
-  name: server
+  name: server-dev
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: server/templates/registrar-service.yaml
@@ -256,7 +258,7 @@ kind: StatefulSet
 metadata:
   labels:
     app: server
-    cluster: spire.server
+    cluster: spire-dev.server
   name: server-dev
   namespace: spire-dev
   annotations:
@@ -266,17 +268,17 @@ spec:
   selector:
     matchLabels:
       app: server
-      cluster: spire.server
+      cluster: spire-dev.server
   serviceName: server
   template:
     metadata:
       labels:
         app: server
-        cluster: spire.server
+        cluster: spire-dev.server
       name: server-dev
       namespace: spire-dev
     spec:
-      serviceAccountName: server
+      serviceAccountName: server-dev
       shareProcessNamespace: true
       containers:
         - name: registrar
@@ -334,13 +336,13 @@ spec:
             medium: Memory
         - name: server-ca
           secret:
-            secretName: server-ca
+            secretName: server-ca-dev
         - name: server-config
           configMap:
-            name: server-config
+            name: server-config-dev
         - name: server-tls
           secret:
-            secretName: server-tls
+            secretName: server-tls-dev
   volumeClaimTemplates:
     - metadata:
         name: server-data
@@ -360,10 +362,10 @@ metadata:
   annotations:
     fluxcd.io/ignore: "true"
 webhooks:
-  - name: registrar.spire.svc.cluster.local
+  - name: registrar.spire-dev.svc.cluster.local
     clientConfig:
       service:
-        name: registrar
+        name: registrar-dev
         namespace: spire-dev
         path: "/validate"
         port: 8444
