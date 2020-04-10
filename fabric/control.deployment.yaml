@@ -43,6 +43,9 @@ spec:
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
+          env:
+          - name: METRICS_KEY_FUNCTION
+            value: depth
         - name: control
           image: "docker.production.deciphernow.com/deciphernow/gm-control:1.2.3"
           imagePullPolicy: IfNotPresent

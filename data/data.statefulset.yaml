@@ -118,6 +118,9 @@ spec:
         - name: sidecar-config
           mountPath: /etc/greymatter
           readOnly: true
+        env:
+        - name: METRICS_KEY_FUNCTION
+          value: depth
       imagePullSecrets:
         - name: docker.production.deciphernow.com
         - name: index.docker.io
