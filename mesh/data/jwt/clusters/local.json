@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "jwt.local.cluster",
+    "cluster_key": "jwt-security.local.cluster",
     "name": "local",
     "instances": [
         {

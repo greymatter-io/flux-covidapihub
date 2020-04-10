@@ -11,6 +11,6 @@ spec:
       protocol: TCP
       targetPort: 6379
   selector:
-    gmproxy: redis
+    cluster: data.redis
   sessionAffinity: None
   type: ClusterIP

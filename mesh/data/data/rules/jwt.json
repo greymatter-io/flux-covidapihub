@@ -1,12 +1,12 @@
 {
     "zone_key": "default.zone",
-    "shared_rules_key": "data.jwt.rules",
-    "name": "jwt",
+    "shared_rules_key": "data.jwt-security.rules",
+    "name": "jwt-security",
     "default": {
         "light": [
             {
                 "constraint_key": "",
-                "cluster_key": "data.jwt.cluster",
+                "cluster_key": "data.jwt-security.cluster",
                 "metadata": null,
                 "properties": null,
                 "response_data": {},

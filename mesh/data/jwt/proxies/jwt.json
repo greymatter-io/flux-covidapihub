@@ -1,13 +1,13 @@
 {
     "zone_key": "default.zone",
-    "proxy_key": "jwt.proxy",
+    "proxy_key": "jwt-security.proxy",
     "domain_keys": [
-        "jwt.ingress.domain"
+        "jwt-security.ingress.domain"
     ],
     "listener_keys": [
-        "jwt.ingress.listener"
+        "jwt-security.ingress.listener"
     ],
-    "name": "data.jwt",
+    "name": "data.jwt-security",
     "listeners": null,
     "active_proxy_filters": [
         "gm.metrics"

@@ -11,11 +11,11 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      gmproxy: data
+      cluster: data.data
   template:
     metadata:
       labels:
-        gmproxy: data
+        cluster: sense.catalog
     spec:
       serviceAccountName: data
       containers:

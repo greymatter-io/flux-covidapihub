@@ -9,12 +9,12 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      gmproxy: jwt-security
+      cluster: data.jwt-security
       deployment: jwt-security
   template:
     metadata:
       labels:
-        gmproxy: jwt-security
+        cluster: data.jwt-security
         deployment: jwt-security
     spec:
       serviceAccountName: jwt
