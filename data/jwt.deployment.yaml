@@ -2,19 +2,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-    name: jwt-security
-    namespace: data
+  name: jwt-security
+  namespace: data
 spec:
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      gmproxy: jwt-security
+      cluster: data.jwt-security
       deployment: jwt-security
   template:
     metadata:
       labels:
-        gmproxy: jwt-security
+        cluster: data.jwt-security
         deployment: jwt-security
     spec:
       serviceAccountName: jwt
@@ -54,7 +54,7 @@ spec:
         - name: REDIS_DB
           value: "0"
         - name: REDIS_HOST
-          value: "redis.default.svc"
+          value: "redis.data.svc"
         - name: REDIS_PASS
           valueFrom:
             secretKeyRef:
@@ -87,6 +87,9 @@ spec:
           - name: spire-socket
             mountPath: /run/spire/sockets
             readOnly: false
+        env:
+        - name: METRICS_KEY_FUNCTION
+          value: depth
       imagePullSecrets:
         - name: docker.production.deciphernow.com
         - name: index.docker.io

@@ -11,11 +11,11 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      gmproxy: data
+      cluster: data.data
   template:
     metadata:
       labels:
-        gmproxy: data
+        cluster: data.data
     spec:
       serviceAccountName: data
       containers:
@@ -95,9 +95,9 @@ spec:
               name: mongo-password
               key: database
         - name: MONGOHOST
-          value: "data-mongo-0.data-mongo.default.svc:27017"
+          value: "data-mongo-0.data-mongo.data.svc:27017"
         - name: USES3
-          value: "false"
+          value: "true"
         volumeMounts:
           - name: data-pvc
             mountPath: /app/buckets/decipher-quickstart-helm/data
@@ -118,6 +118,9 @@ spec:
         - name: sidecar-config
           mountPath: /etc/greymatter
           readOnly: true
+        env:
+        - name: METRICS_KEY_FUNCTION
+          value: depth
       imagePullSecrets:
         - name: docker.production.deciphernow.com
         - name: index.docker.io

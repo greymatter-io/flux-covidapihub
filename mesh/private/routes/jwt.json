@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "private.ingress.domain",
+    "route_key": "private.jwt-security.route",
+    "path": "/jwt-security/latest/",
+    "prefix_rewrite": "/",
+    "redirects": null,
+    "shared_rules_key": "private.jwt-security.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

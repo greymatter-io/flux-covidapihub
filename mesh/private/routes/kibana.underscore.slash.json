@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "private.ingress.domain",
+    "route_key": "private.kibana.underscore.slash.route",
+    "path": "/_plubin/kibana",
+    "prefix_rewrite": "/_plubin/kibana/",
+    "redirects": null,
+    "shared_rules_key": "private.kibana.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

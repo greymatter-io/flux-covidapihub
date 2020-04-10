@@ -46,6 +46,9 @@ spec:
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
+          env:
+          - name: METRICS_KEY_FUNCTION
+            value: depth
         - name: prometheus
           image: "prom/prometheus:v2.16.0"
           imagePullPolicy: "IfNotPresent"
