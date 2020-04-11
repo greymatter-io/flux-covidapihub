@@ -3,9 +3,17 @@
     "domain_key": "sample-api.apis.domain",
     "name": "*",
     "port": 8443,
-    "redirects": null,
     "gzip_enabled": false,
     "cors_config": null,
     "aliases": null,
-    "force_https": true
+    "force_https": true,
+    "redirects": [
+        {
+          "name": "redirect-to-bing",
+          "from": "/",
+          "to": "https://www.bing.com/covid",
+          "redirect_type": "temporary",
+          "header_constraints": null
+        }
+      ]
 }

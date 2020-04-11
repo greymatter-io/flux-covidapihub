@@ -43,9 +43,6 @@ spec:
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
-          env:
-          - name: METRICS_KEY_FUNCTION
-            value: depth
         - name: dashboard
           image: docker.production.deciphernow.com/deciphernow/gm-dashboard:3.3.2
           imagePullPolicy: IfNotPresent

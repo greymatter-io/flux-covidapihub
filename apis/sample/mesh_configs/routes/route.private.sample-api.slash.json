@@ -1,9 +1,9 @@
 {
     "zone_key": "default.zone",
     "domain_key": "private.ingress.domain",
-    "route_key": "private.sample-api.route",
-    "path": "/apis/bing/",
-    "prefix_rewrite": "/",
+    "route_key": "private.sample-api.slash.route",
+    "path": "/apis/bing",
+    "prefix_rewrite": "/apis/bing/",
     "redirects": null,
     "shared_rules_key": "private.sample-api.rules",
     "rules": null,
