@@ -24,7 +24,3 @@ spec:
       port: 443
       targetPort: https
       protocol: TCP
-    - name: ldaps
-      port: 389
-      targetPort: ldaps
-      protocol: TCP

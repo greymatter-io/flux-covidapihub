@@ -60,9 +60,6 @@ spec:
             - name: https
               containerPort: 443
               protocol: TCP
-            - name: ldaps
-              containerPort: 389
-              protocol: TCP
           livenessProbe:
             failureThreshold: 3
             httpGet:
