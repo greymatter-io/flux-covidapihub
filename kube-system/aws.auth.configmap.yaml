@@ -27,3 +27,7 @@ data:
       username: hiromi.suenaga
       groups:
         - system:masters
+    - userarn: arn:aws:iam::153757265334:user/zoe.mccormick
+      username: zoe.mccormick
+      groups:
+        - system:masters
