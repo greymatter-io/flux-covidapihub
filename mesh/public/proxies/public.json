@@ -8,33 +8,5 @@
         "public.ingress.listener"
     ],
     "name": "ingress.public",
-    "listeners": null,
-    "active_proxy_filters": [
-        "gm.metrics",
-        "gm.observables"
-    ],
-    "proxy_filters": {
-        "gm_inheaders": {
-            "debug": false
-        },
-        "gm_metrics": {
-            "metrics_port": 8080,
-            "metrics_host": "0.0.0.0",
-            "metrics_dashboard_uri_path": "/metrics",
-            "metrics_prometheus_uri_path": "/prometheus",
-            "metrics_ring_buffer_size": 4096,
-            "prometheus_system_metrics_interval_seconds": 15,
-            "metrics_key_function": "depth"
-        },
-        "gm_observables": {
-            "emitFullResponse": false,
-            "useKafka": true,
-            "useKafkaTLS": true,
-            "eventTopic": "observables",
-            "enforceAudit": false,
-            "topic": "public",
-            "kafkaZKDiscover": false,
-            "kafkaServerConnection": "b-3.production-observables.5b3bmo.c4.kafka.us-east-1.amazonaws.com:9094,b-2.production-observables.5b3bmo.c4.kafka.us-east-1.amazonaws.com:9094,b-1.production-observables.5b3bmo.c4.kafka.us-east-1.amazonaws.com:9094"
-        }
-    }
+    "listeners": null
 }

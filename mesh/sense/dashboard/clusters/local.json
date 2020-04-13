@@ -5,7 +5,7 @@
     "instances": [
         {
             "host": "127.0.0.1",
-            "port": 1337
+            "port": 10080
         }
     ],
     "circuit_breakers": null,

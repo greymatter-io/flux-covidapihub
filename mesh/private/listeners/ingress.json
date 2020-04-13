@@ -8,5 +8,28 @@
     "ip": "0.0.0.0",
     "port": 8443,
     "protocol": "http_auto",
-    "tracing_config": null
+    "tracing_config": null,
+    "active_http_filters": ["gm.metrics", "gm.oauth", "gm.observables"],
+    "http_filters": {
+        "gm_inheaders": {},
+        "gm_metrics": {
+          "metrics_port": 8081,
+          "metrics_host": "0.0.0.0",
+          "metrics_dashboard_uri_path": "/metrics",
+          "metrics_prometheus_uri_path": "/prometheus",
+          "metrics_ring_buffer_size": 4096,
+          "prometheus_system_metrics_interval_seconds": 15,
+          "metrics_key_function": "depth",
+          "metrics_key_depth": "5"
+        },
+        "gm_oauth": {
+            "provider": "https://accounts.google.com",
+            "client_id": "REDACTED",
+            "client_secret": "REDACTED",
+            "server_name": "services.greymatter.io",
+            "session_secret": "REDACTED",
+            "domain": "greymatter.io"
+        },
+        "gm_observables": {}
+    }
 }
