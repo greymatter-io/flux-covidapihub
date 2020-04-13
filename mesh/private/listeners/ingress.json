@@ -29,12 +29,12 @@
           "accessToken": {
             "location": "cookie",
             "key": "access_token",
-            "cookieOptions": { "httpOnly": true, "maxAge": "10000h", "path": "/" }
+            "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
           },
           "idToken": {
             "location": "cookie",
             "key": "id_token",
-            "cookieOptions": { "httpOnly": true, "maxAge": "10000h", "path": "/" }
+            "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
           },
           "serviceUrl": "https://covidapihub.io",
           "callbackPath": "/oauth",
