@@ -13,7 +13,7 @@ spec:
   tls:
     - hosts:
         - services.covidapihub.io
-      secretName: wildcard.covidapihub.io
+      secretName: services.covidapihub.io
   rules:
     - host: services.covidapihub.io
       http:
