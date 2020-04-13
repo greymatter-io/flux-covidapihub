@@ -12,7 +12,6 @@
     "active_http_filters": [
         "gm.oidc-validation",
         "gm.oidc-authentication",
-        "gm.ensure-variables",
         "envoy.jwt_authn",
         "envoy.rbac"
       ],
@@ -32,7 +31,7 @@
             "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
           },
           "idToken": {
-            "location": "cookie",
+            "location": "header",
             "key": "id_token",
             "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
           },
@@ -42,15 +41,6 @@
           "clientId": "REDACTED",
           "clientSecret": "REDACTED",
           "additionalScopes": ["profile", "email"]
-        },
-        "gm_ensure-variables": {
-          "rules": [
-            {
-              "location": "cookie",
-              "key": "id_token",
-              "copyTo": [{ "location": "header", "key": "id_token" }]
-            }
-          ]
         },
         "envoy_jwt_authn": {
           "providers": {
