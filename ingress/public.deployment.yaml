@@ -1,0 +1,60 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: public
+    cluster: ingress.public
+  name: public
+  namespace: ingress
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: public
+      cluster: ingress.public
+  template:
+    metadata:
+      labels:
+        app: public
+        cluster: ingress.public
+    spec:
+      serviceAccountName: public
+      containers:
+        - name: edge
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: sidecar-tls
+              mountPath: /etc/tls
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+      volumes:
+        - name: sidecar-config
+          configMap:
+            name: public-sidecar
+        - name: sidecar-tls
+          secret:
+            secretName: public.ingress.svc
+
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
