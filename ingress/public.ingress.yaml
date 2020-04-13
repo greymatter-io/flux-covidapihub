@@ -19,7 +19,7 @@ spec:
     - host: covidapihub.io
       http:
         paths:
-          - path: /
+          - path: /(.*)
             backend:
               serviceName: public
               servicePort: 8443
