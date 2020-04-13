@@ -9,7 +9,7 @@
     "port": 8443,
     "protocol": "http_auto",
     "tracing_config": null,
-    "active_http_filters": ["gm.metrics", "gm.oauth"],
+    "active_http_filters": ["gm.metrics", "gm.oauth", "gm.observables"],
     "http_filters": {
         "gm_inheaders": {},
         "gm_metrics": {
@@ -29,6 +29,7 @@
             "server_name": "services.greymatter.io",
             "session_secret": "REDACTED",
             "domain": "greymatter.io"
-        }
+        },
+        "gm_observables": {}
     }
 }
