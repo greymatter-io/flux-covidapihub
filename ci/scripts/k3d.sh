@@ -26,8 +26,10 @@ export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 
 echo "Cluster is connected"
 
+folders=(fabric sense data website)
+
 # Apply kubernetes yaml files in order
-for folder in fabric sense data; do
+for folder in "${folders[@]}"; do
     kubectl apply -f $folder/namespace.yaml
 done
 
@@ -43,7 +45,7 @@ ObjectivesPostgresUsername="greymatter"
 ObjectivesPostgresPassword="greymatter"
 ObjectivesPostgresPort="5432"
 
-for folder in fabric sense data; do
+for folder in "${folders[@]}"; do
     kubectl create secret docker-registry docker.production.deciphernow.com --namespace $folder --docker-server=docker.production.deciphernow.com --docker-username=$DockerProductionUsername --docker-password=$DockerProductionPassword
     kubectl create secret docker-registry index.docker.io --namespace $folder --docker-server=index.docker.io --docker-username=$IndexDockerUsername --docker-password=$IndexDockerPassword --docker-email=$IndexDockerUsername
 done
@@ -62,7 +64,7 @@ echo ""
 echo "spire applied"
 echo ""
 
-for folder in fabric sense data; do
+for folder in "${folders[@]}"; do
     find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
 done
 
