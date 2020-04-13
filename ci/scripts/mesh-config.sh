@@ -22,6 +22,7 @@ create_or_update() {
     # If response from the api is null, try editing the object
     if [ -z "$resp" ]; then
         echo "Object already exists! Editing $file"
+	#exit 1
         greymatter edit $1 _ <$file
     fi
 
@@ -30,13 +31,13 @@ create_or_update() {
 
 delay=0.01
 objects="domains clusters listeners proxies rules routes"
-meshfolders=(mesh/private mesh/public mesh/kibana mesh/website mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/promtheus) 
+meshfolders=(mesh/private mesh/public mesh/kibana mesh/website mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus) 
 for meshfolder in "${meshfolders[@]}"
 do
     cd $meshfolder
     for folder in $objects
     do
-	echo "Found folder: $folder"
+	echo "Found folder: $meshfolder/$folder"
 	for file in $folder/*
 	do
 	    object="${folder%?}"
@@ -47,6 +48,7 @@ do
 	    sleep $delay
 	done
     done
+    cd -
 done
 
 
