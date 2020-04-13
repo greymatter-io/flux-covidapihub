@@ -8,8 +8,8 @@
     "ssl_config": {
         "cert_key_pairs": [
             {
-                "certificate_path": "/etc/tls/private.ingress.svc.crt",
-                "key_path": "/etc/tls/private.ingress.svc.key"
+                "certificate_path": "/etc/tls/server.crt",
+                "key_path": "/etc/tls/server.key"
             }
         ],
         "trust_file": "/etc/tls/ca.crt",

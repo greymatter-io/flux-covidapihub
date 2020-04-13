@@ -9,7 +9,7 @@
     "port": 8443,
     "protocol": "http_auto",
     "tracing_config": null,
-    "active_http_filters": ["gm.metrics", "gm.oauth"],
+    "active_http_filters": ["gm.metrics"],
     "http_filters": {
         "gm_inheaders": {},
         "gm_metrics": {

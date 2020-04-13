@@ -48,15 +48,15 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: FABRIC_SERVER
-              value: https://services.covidapihub.io/catalog/latest/
+              value: https://localhost:30000/catalog/latest/
             - name: CONFIG_SERVER
-              value: https://services.covidapihub.io/api/latest/v1.0/
+              value: https://localhost:30000/api/latest/
             - name: USE_PROMETHEUS
               value: "true"
             - name: OBJECTIVES_SERVER
-              value: https://services.covidapihub.io/objectives/latest/
+              value: https://localhost:30000/objectives/latest/
             - name: PROMETHEUS_SERVER
-              value: https://services.covidapihub.io/prometheus/latest/api/v1/
+              value: https://localhost:30000/prometheus/latest/api/
             - name: BASE_URL
               value: /
             - name: PORT
