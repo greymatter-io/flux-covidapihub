@@ -14,7 +14,7 @@ spec:
     - hosts:
         - covidapihub.io
         - www.covidapihub.io
-      secretName:covidapihub.io
+      secretName: covidapihub.io
   rules:
     - host: covidapihub.io
       http:
