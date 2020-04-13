@@ -5,3 +5,7 @@ SHELL := /bin/bash
 .PHONY: k3d
 k3d:
 	./ci/scripts/k3d.sh
+
+.PHONY: mesh
+mesh:
+	./ci/scripts/mesh-config.sh
