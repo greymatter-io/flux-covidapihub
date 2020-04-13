@@ -4,6 +4,9 @@ greymatter version
 
 source ./ci/scripts/mesh-env.sh
 
+kubectl port-forward api-0 -n fabric 10080:10080 &
+sleep 5
+
 echo "Starting mesh configuration ..."
 
 echo "Creating service configuration objects..."
