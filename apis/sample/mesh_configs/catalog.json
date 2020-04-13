@@ -1,0 +1,17 @@
+{
+ "clusterName": "bing.covid",
+ "zoneName": "default.zone",
+ "name": "Bing/Covid",
+ "version": "1.0",
+ "owner": "Decipher",
+ "capability": "Tutorial",
+ "runtime": "GO",
+ "documentation": "/apis/bing/",
+ "prometheusJob": "Bing/Covid",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8081
+ }
