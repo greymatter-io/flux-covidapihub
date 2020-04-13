@@ -13,7 +13,8 @@
         "secret_name": "spiffe://covidapihub.io/ns/website/sa/website",
         "secret_validation_name": "spiffe://covidapihub.io",
         "subject_names": [
-            "spiffe://covidapihub.io/ns/ingress/sa/public"
+            "spiffe://covidapihub.io/ns/ingress/sa/public",
+            "spiffe://covidapihub.io/ns/ingress/sa/private"
         ],
         "ecdh_curves": [
             "X25519:P-256:P-521:P-384"
