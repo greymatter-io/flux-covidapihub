@@ -104,6 +104,11 @@ spec:
       - name: sidecar
         image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
         imagePullPolicy: IfNotPresent
+        args:
+          - -c
+          - /etc/greymatter/config.yaml
+        command:
+          - /app/gm-proxy
         ports:
         - name: metrics
           containerPort: 8080
