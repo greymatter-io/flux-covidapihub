@@ -2,7 +2,7 @@
 
 greymatter version
 
-sh ./ci/scripts/mesh-env.sh
+source ./ci/scripts/mesh-env.sh
 
 echo "Starting mesh configuration ..."
 
