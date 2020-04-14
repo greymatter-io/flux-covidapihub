@@ -25,7 +25,7 @@ data:
     static_resources:
       clusters:
         - name: xds_cluster
-          connect_timeout: 0.25s
+          connect_timeout: 5s
           http2_protocol_options: {}
           type: STRICT_DNS
           lb_policy: ROUND_ROBIN
@@ -64,7 +64,7 @@ data:
                         envoy_grpc:
                           cluster_name: spire_agent
         - name: spire_agent
-          connect_timeout: 0.25s
+          connect_timeout: 5s
           http2_protocol_options: {}
           type: STATIC
           lb_policy: ROUND_ROBIN
