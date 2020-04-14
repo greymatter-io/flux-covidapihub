@@ -52,7 +52,7 @@ spec:
             name: public-sidecar
         - name: sidecar-tls
           secret:
-            secretName: greymatter-edge-ingress
+            secretName: private.ingress.svc
 
         - name: spire-socket
           hostPath:
