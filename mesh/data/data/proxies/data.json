@@ -2,10 +2,12 @@
     "zone_key": "default.zone",
     "proxy_key": "data.proxy",
     "domain_keys": [
-        "data.ingress.domain"
+        "data.ingress.domain",
+        "data.egress.domain"
     ],
     "listener_keys": [
-        "data.ingress.listener"
+        "data.ingress.listener",
+        "data.egress.listener"
     ],
     "name": "data.data",
     "listeners": null,
