@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: catalog
-          image: docker.production.deciphernow.com/deciphernow/gm-catalog:1.0.5
+          image: docker.production.deciphernow.com/deciphernow/gm-catalog:1.0.6
           imagePullPolicy: IfNotPresent
           env:
             - name: CONFIG_SOURCE
