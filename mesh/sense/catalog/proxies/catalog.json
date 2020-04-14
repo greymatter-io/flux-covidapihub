@@ -10,5 +10,32 @@
         "catalog.ingress.listener"
     ],
     "name": "sense.catalog",
-    "listeners": null
+    "listeners": null,
+    "active_proxy_filters": [
+      "envoy.rbac"
+    ],
+    "proxy_filters": {
+	"envoy_rbac": {
+            "rules": {
+		"action": 0,
+		"policies": {
+		    "0": {
+			"permissions": [
+			    {
+				"header": {
+				    "name": ":method",
+				    "exact_match": "GET"
+				}
+			    }
+			],
+			"principals": [
+			    {
+				"any": true
+			    }
+			]
+		    }
+		}
+	    }
+	}
+    }
 }
