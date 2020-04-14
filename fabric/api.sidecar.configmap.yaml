@@ -68,7 +68,7 @@ data:
                       - X25519:P-256:P-521:P-384
       clusters:
         - name: local
-          connect_timeout: 0.25s
+          connect_timeout: 5s
           type: STATIC
           lb_policy: ROUND_ROBIN
           load_assignment:
@@ -81,7 +81,7 @@ data:
                         address: 127.0.0.1
                         port_value: 10080 
         - name: spire
-          connect_timeout: 0.25s
+          connect_timeout: 5s
           http2_protocol_options: {}
           type: STATIC
           lb_policy: ROUND_ROBIN

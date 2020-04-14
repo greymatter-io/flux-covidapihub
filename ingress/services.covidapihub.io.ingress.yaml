@@ -1,0 +1,24 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: private
+  namespace: ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/backend-protocol: "https"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  tls:
+    - hosts:
+        - services.covidapihub.io
+      secretName: services.covidapihub.io
+  rules:
+    - host: services.covidapihub.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: private
+              servicePort: 8443

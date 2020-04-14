@@ -1,14 +1,26 @@
 #!/bin/bash
 
-echo decipher email:
-read DockerProductionUsername
-echo docker production password:
-read -s DockerProductionPassword
+if [ ! -f ci/scripts/credentials.sh ]
+then
+    echo decipher email:
+    read DockerProductionUsername
+    echo docker production password:
+    read -s DockerProductionPassword
+    
+    echo index.docker.io username:
+    read IndexDockerUsername
+    echo index.docker.io password:
+    read -s IndexDockerPassword
 
-echo index.docker.io username:
-read IndexDockerUsername
-echo index.docker.io password:
-read -s IndexDockerPassword
+    TEMPLATE=ci/scripts/credentials.template
+    cp $TEMPLATE ci/scripts/credentials.sh
+    sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" ci/scripts/credentials.sh
+    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g"  ci/scripts/credentials.sh
+    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g"  ci/scripts/credentials.sh
+    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  ci/scripts/credentials.sh
+fi
+
+source ./ci/scripts/credentials.sh
 
 # install k3d 1.7.0
 curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | TAG=v1.7.0 bash
