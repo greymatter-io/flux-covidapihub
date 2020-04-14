@@ -25,7 +25,6 @@ data:
           - role: pod
             namespaces:
               names:
-                - demonstration
                 - fabric
                 - ingress
                 - sense
@@ -44,7 +43,6 @@ data:
           - role: pod
             namespaces:
               names:
-                - demonstration
                 - fabric
                 - greymatter
                 - ingress
