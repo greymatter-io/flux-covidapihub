@@ -7,7 +7,7 @@
     ],
     "listener_keys": [
         "data.ingress.listener",
-        "data.ingress.domain"
+        "data.egress.listener"
     ],
     "name": "data.data",
     "listeners": null
