@@ -1,14 +1,8 @@
 {
-    "zone_key": "default.zone",
-    "proxy_key": "catalog.proxy",
-    "domain_keys": [
-        "catalog.egress.domain",
-        "catalog.ingress.domain"
-    ],
-    "listener_keys": [
-        "catalog.egress.listener",
-        "catalog.ingress.listener"
-    ],
-    "name": "sense.catalog",
-    "listeners": null
+  "zone_key": "default.zone",
+  "proxy_key": "catalog.proxy",
+  "domain_keys": ["catalog.egress.domain", "catalog.ingress.domain"],
+  "listener_keys": ["catalog.egress.listener", "catalog.ingress.listener"],
+  "name": "sense.catalog",
+  "listeners": null
 }

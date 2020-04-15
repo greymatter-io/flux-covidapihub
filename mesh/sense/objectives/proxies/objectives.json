@@ -1,12 +1,8 @@
 {
-    "zone_key": "default.zone",
-    "proxy_key": "objectives.proxy",
-    "domain_keys": [
-        "objectives.ingress.domain"
-    ],
-    "listener_keys": [
-        "objectives.ingress.listener"
-    ],
-    "name": "sense.objectives",
-    "listeners": null
+  "zone_key": "default.zone",
+  "proxy_key": "objectives.proxy",
+  "domain_keys": ["objectives.ingress.domain"],
+  "listener_keys": ["objectives.ingress.listener"],
+  "name": "sense.objectives",
+  "listeners": null
 }
