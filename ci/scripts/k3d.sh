@@ -111,8 +111,7 @@ echo "files applied"
 echo ""
 
 
-kubectl apply -f ci/resources/dev.ingress.yaml
-# kubectl apply -f private.ingress.yaml
+kubectl apply -f ci/resources/edge.ingress.yaml
 
 echo ""
 echo "ingress applied"
