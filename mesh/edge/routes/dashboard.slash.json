@@ -1,0 +1,14 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.dashboard.slash.route",
+    "path": "/dashboard",
+    "prefix_rewrite": "/dashboard/",
+    "redirects": null,
+    "shared_rules_key": "edge.dashboard.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+  }
+  
