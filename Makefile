@@ -9,3 +9,7 @@ k3d:
 .PHONY: mesh
 mesh:
 	./ci/scripts/mesh-config.sh
+
+.PHONY: new-api
+new-api:
+	./ci/scripts/new-api.sh
