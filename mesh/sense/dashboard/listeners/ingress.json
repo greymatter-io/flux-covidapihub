@@ -20,7 +20,8 @@
         ]
     },
     "active_http_filters": [
-        "gm.metrics"
+        "gm.metrics",
+        "gm.observables"
     ],
     "http_filters": {
         "gm_metrics": {
@@ -31,7 +32,8 @@
             "metrics_ring_buffer_size": 4096,
             "prometheus_system_metrics_interval_seconds": 15,
             "metrics_key_function": "depth"
-        }
+        },
+        "gm_observables": {}
     },
     "tracing_config": null
 }
