@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: edge.simple
-  namespace: ingress
+  namespace: edge
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: https
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"

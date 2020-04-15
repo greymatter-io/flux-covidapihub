@@ -38,7 +38,7 @@ export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 
 echo "Cluster is connected"
 
-folders=(ingress fabric sense data website)
+folders=(edge fabric sense data website)
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -52,17 +52,17 @@ echo ""
 # Apply secrets
 
 export AUTHORITY_FINGERPRINT=$(acert authorities create -n "Covid API Hub" -o "Decipher Technology Studios" -c "US")
-export EDGE_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.ingress.svc')
+export EDGE_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.svc')
 
 EdgeCaCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t authority -f pem)"
 EdgeCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t certificate -f pem)"
 EdgeKey="$(acert leaves export ${EDGE_FINGERPRINT} -t key -f pem)"
 
 kubectl create secret generic edge.ingress.svc \
-    --namespace "ingress" \
+    --namespace "edge" \
     --from-literal=ca.crt="$EdgeCaCrt" \
-    --from-literal=edge.ingress.svc.crt="$EdgeCrt" \
-    --from-literal=edge.ingress.svc.key="$EdgeKey"
+    --from-literal=edge.svc.crt="$EdgeCrt" \
+    --from-literal=edge.svc.key="$EdgeKey"
 
 ObjectivesPostgresDatabase="greymatter"
 ObjectivesPostgresHost=""
@@ -92,12 +92,12 @@ echo ""
 
 for folder in "${folders[@]}"; do
     echo "================================== $folder"
-    if [[ $folder == "ingress" ]]
+    if [[ $folder == "edge" ]]
     then
         kubectl apply -f ci/resources/edge.service.yaml
-        kubectl apply -f ingress/edge.serviceaccount.yaml
-        kubectl apply -f ingress/edge.sidecar.configmap.yaml
-        kubectl apply -f ingress/edge.deployment.yaml
+        kubectl apply -f edge/edge.serviceaccount.yaml
+        kubectl apply -f edge/edge.sidecar.configmap.yaml
+        kubectl apply -f edge/edge.deployment.yaml
     else
         find $folder/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
     fi
