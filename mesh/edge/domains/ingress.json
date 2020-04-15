@@ -5,6 +5,17 @@
   "port": 8443,
   "redirects": [],
   "gzip_enabled": false,
+  "ssl_config": {
+    "cert_key_pairs": [
+      {
+        "certificate_path": "/etc/tls/edge.ingress.svc.crt",
+        "key_path": "/etc/tls/edge.ingress.svc.key"
+      }
+    ],
+    "trust_file": "/etc/tls/ca.crt",
+    "require_client_certs": false
+  },
   "cors_config": null,
-  "aliases": null
+  "aliases": null,
+  "force_https": true
 }
