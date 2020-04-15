@@ -4,20 +4,20 @@ kind: Deployment
 metadata:
   labels:
     app: edge
-    cluster: ingress.edge
+    cluster: edge.edge
   name: edge
-  namespace: ingress
+  namespace: edge
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: edge
-      cluster: ingress.edge
+      cluster: edge.edge
   template:
     metadata:
       labels:
         app: edge
-        cluster: ingress.edge
+        cluster: edge.edge
     spec:
       serviceAccountName: edge
       containers:
@@ -57,7 +57,7 @@ spec:
             name: edge-sidecar
         - name: sidecar-tls
           secret:
-            secretName: edge.ingress.svc
+            secretName: edge.svc
 
         - name: spire-socket
           hostPath:

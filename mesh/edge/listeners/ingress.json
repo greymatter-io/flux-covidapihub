@@ -7,7 +7,14 @@
   "port": 8443,
   "protocol": "http_auto",
   "tracing_config": null,
-  "active_http_filters": ["gm.metrics", "gm.observables", "envoy.rbac"],
+  "active_http_filters": [
+    "gm.metrics",
+    "gm.oidc-validation",
+    "gm.oidc-authentication",
+    "envoy.jwt_authn",
+    "envoy.rbac",
+    "gm.observables"
+  ],
   "http_filters": {
     "gm_inheaders": {},
     "gm_metrics": {
@@ -27,6 +34,26 @@
           "0": {
             "permissions": [
               {
+                "any": true
+              }
+            ],
+            "principals": [
+              {
+                "metadata": {
+                  "filter": "envoy.filters.http.jwt_authn",
+                  "path": [{ "key": "claims" }, { "key": "email" }],
+                  "value": {
+                    "string_match": {
+                      "suffix": "greymatter.io"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "1": {
+            "permissions": [
+              {
                 "header": {
                   "name": ":method",
                   "exact_match": "GET"
@@ -41,6 +68,50 @@
           }
         }
       }
+    },
+    "gm_oidc-validation": {
+      "accessToken": {
+        "location": "cookie",
+        "key": "access_token"
+      },
+      "provider": "https://accounts.google.com",
+      "enforce": false
+    },
+    "gm_oidc-authentication": {
+      "accessToken": {
+        "location": "cookie",
+        "key": "access_token",
+        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+      },
+      "idToken": {
+        "location": "header",
+        "key": "id_token",
+        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+      },
+      "serviceUrl": "https://covidapihub.io",
+      "callbackPath": "/oauth",
+      "provider": "https://accounts.google.com",
+      "clientId": "REDACTED",
+      "clientSecret": "REDACTED",
+      "additionalScopes": ["profile", "email"]
+    },
+    "envoy_jwt_authn": {
+      "providers": {
+        "default_provider": {
+          "issuer": "https://accounts.google.com",
+          "from_headers": [{ "name": "id_token" }],
+          "payload_in_metadata": "claims",
+          "local_jwks": {
+            "inline_string": "{\r\nkeys: [\r\n{\r\nkid: \"79c809dd1186cc228c4baf9358599530ce92b4c8\",\r\ne: \"AQAB\",\r\nkty: \"RSA\",\r\nalg: \"RS256\",\r\nn: \"yULcoP9V6feuEjCBkZ2RDHM9WLmeLJ4VlaZopidkp4ix72SKte74r6SETRdlf0K-vtfGQMPQQj1K_Z8QvHoeb1xl_KrDZ8YRzXws93Mw92RTAr9RsXKPmUVMt8I_Ed7PzBXKiDIG9JpZ35jZIbrsFYrInEomulvXDR-QormXkNe4aGxGljumzUAm25Kqp_539llrQ4uySQ8DPc9e7Pq6S9QRO7bJe2GAupkBcPD2k7p8wpIbO_Iy5gACrReipGwZtUDLeVjo9x3kVoJT-7ktRiO8r64dyjqj85uT7Jz3SnimKx1Rb3ZBtBj2CeBwnpCx7aYjmrOMiJH9B5na7TMJ3Q\",\r\nuse: \"sig\"\r\n},\r\n{\r\nkid: \"17d55ff4e10991d6b0efd392b91a33e54c0e218b\",\r\ne: \"AQAB\",\r\nkty: \"RSA\",\r\nalg: \"RS256\",\r\nn: \"o-N21NegwWXPCXubI-QLHoEXfx_SQb6vwGt7_JSUvXqgMB5zDADwyv05luxY-owafLq5Zon0yuv_qsub-fLeVHL4KVj_rvmu0CZyYh9DP2J3QUpUT-m7i1ag_z4SC_-LEQz8Z2bkP0vbt0U8XUpF3QVc0SwJkShvTmHF-SLDAFWBgPFzRNQaXfm5dX3NTw4jAw8x0MdWdZg1yrFwlzSKQVQi2jbV2U0KwsYYkiL5arc-WG_m7lqdNGEoWvfmEHwrICHEDJq9mlF-PjYor8sgypCdmj5FryPVMzVBHME6c67wOFr3-wIEl_JI8_SsCVLreHHL-pLstdJFgq-y7bqVww\",\r\nuse: \"sig\"\r\n}\r\n]\r\n}"
+          }
+        }
+      },
+      "rules": [
+        {
+          "match": { "prefix": "/" },
+          "requires": { "provider_name": "default_provider" }
+        }
+      ]
     }
   }
 }

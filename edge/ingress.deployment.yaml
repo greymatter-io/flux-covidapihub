@@ -3,10 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ingress
-  namespace: ingress
-  labels:
-    app.kubernetes.io/name: ingress
-    app.kubernetes.io/part-of: ingress
+  namespace: edge
 spec:
   replicas: 1
   selector:
