@@ -3,23 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: public
-    cluster: ingress.public
-  name: public
+    app: edge
+    cluster: ingress.edge
+  name: edge
   namespace: ingress
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: public
-      cluster: ingress.public
+      app: edge
+      cluster: ingress.edge
   template:
     metadata:
       labels:
-        app: public
-        cluster: ingress.public
+        app: edge
+        cluster: ingress.edge
     spec:
-      serviceAccountName: public
+      serviceAccountName: edge
       containers:
         - name: edge
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
@@ -52,10 +52,10 @@ spec:
       volumes:
         - name: sidecar-config
           configMap:
-            name: public-sidecar
+            name: edge-sidecar
         - name: sidecar-tls
           secret:
-            secretName: public.ingress.svc
+            secretName: edge.ingress.svc
 
         - name: spire-socket
           hostPath:

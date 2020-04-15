@@ -1,11 +1,11 @@
 {
-    "zone_key": "default.zone",
-    "cluster_key": "catalog.public.cluster",
-    "name": "ingress.public",
-    "instances": [],
-    "circuit_breakers": null,
-    "outlier_detection": null,
-    "health_checks": [],
-    "require_tls": true,
-    "secret": null
+  "zone_key": "default.zone",
+  "cluster_key": "catalog.edge.cluster",
+  "name": "ingress.edge",
+  "instances": [],
+  "circuit_breakers": null,
+  "outlier_detection": null,
+  "health_checks": [],
+  "require_tls": true,
+  "secret": null
 }

@@ -1,0 +1,8 @@
+{
+  "zone_key": "default.zone",
+  "proxy_key": "edgeroxy",
+  "domain_keys": ["edgengress.domain"],
+  "listener_keys": ["edgengress.listener"],
+  "name": "ingress.edge
+  "listeners": null
+}
