@@ -46,6 +46,8 @@ spec:
           env:
           - name: METRICS_KEY_FUNCTION
             value: depth
+          - name: ENVOY_LOG_LEVEL
+            value: debug
         - name: dashboard
           image: docker.production.deciphernow.com/deciphernow/gm-dashboard:3.3.2
           imagePullPolicy: IfNotPresent

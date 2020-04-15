@@ -46,6 +46,8 @@ spec:
           env:
           - name: METRICS_KEY_FUNCTION
             value: depth
+          - name: ENVOY_LOG_LEVEL
+            value: debug
         - name: slo
           image: docker.production.deciphernow.com/deciphernow/gm-slo:1.1.2
           imagePullPolicy: IfNotPresent
