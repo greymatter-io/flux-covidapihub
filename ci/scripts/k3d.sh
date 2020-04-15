@@ -58,7 +58,7 @@ EdgeCaCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t authority -f pem)"
 EdgeCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t certificate -f pem)"
 EdgeKey="$(acert leaves export ${EDGE_FINGERPRINT} -t key -f pem)"
 
-kubectl create secret generic edge.ingress.svc \
+kubectl create secret generic edge.svc \
     --namespace "edge" \
     --from-literal=ca.crt="$EdgeCaCrt" \
     --from-literal=edge.svc.crt="$EdgeCrt" \
