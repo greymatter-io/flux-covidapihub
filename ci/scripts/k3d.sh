@@ -99,23 +99,29 @@ echo ""
 echo "spire applied"
 echo ""
 
-kubectl apply -f ci/resources/dev.ingress.yaml
-echo ""
-echo "ingress applied"
-echo ""
 
 for folder in "${folders[@]}"; do
     echo "==================================$folder"
     if [[ $folder == "ingress" ]]
     then
+        for f in ingress/public*.yaml; do kubectl apply -f $f; done
         for f in ingress/private*.yaml; do kubectl apply -f $f; done
     else
-        find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+        find $folder/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
     fi
 done
 
 
 kubectl apply -f ci/resources/dashboard.deployment.yaml
+
 echo ""
 echo "files applied"
+echo ""
+
+
+kubectl apply -f ci/resources/dev.ingress.yaml
+# kubectl apply -f private.ingress.yaml
+
+echo ""
+echo "ingress applied"
 echo ""
