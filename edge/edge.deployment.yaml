@@ -55,7 +55,7 @@ spec:
             name: edge-sidecar
         - name: sidecar-tls
           secret:
-            secretName: edge.edge.svc
+            secretName: edge.svc
 
         - name: spire-socket
           hostPath:
