@@ -9,7 +9,7 @@
   "require_tls": true,
   "secret": {
     "secret_key": "edge.identity",
-    "secret_name": "spiffe://covidapihub.io/ns/ingress/sa/edge",
+    "secret_name": "spiffe://covidapihub.io/ns/edge/sa/edge",
     "secret_validation_name": "spiffe://covidapihub.io",
     "subject_names": ["spiffe://covidapihub.io/ns/observables/sa/kibana"],
     "ecdh_curves": ["X25519:P-256:P-521:P-384"]
