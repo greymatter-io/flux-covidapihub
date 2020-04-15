@@ -15,4 +15,4 @@ spec:
   selector:
     app: public
     cluster: ingress.public
-  type: ClusterIP
+  type: LoadBalancer
