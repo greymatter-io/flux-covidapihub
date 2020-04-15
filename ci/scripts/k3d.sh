@@ -52,27 +52,17 @@ echo ""
 # Apply secrets
 
 export AUTHORITY_FINGERPRINT=$(acert authorities create -n "Covid API Hub" -o "Decipher Technology Studios" -c "US")
-export PUBLIC_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'public.ingress.svc')
-export PRIVATE_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'private.ingress.svc')
+export EDGE_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.ingress.svc')
 
-PublicCaCrt="$(acert leaves export ${PUBLIC_FINGERPRINT} -t authority -f pem)"
-PublicCrt="$(acert leaves export ${PUBLIC_FINGERPRINT} -t certificate -f pem)"
-PublicKey="$(acert leaves export ${PUBLIC_FINGERPRINT} -t key -f pem)"
-PrivateCaCrt="$(acert leaves export ${PRIVATE_FINGERPRINT} -t authority -f pem)"
-PrivateCrt="$(acert leaves export ${PRIVATE_FINGERPRINT} -t certificate -f pem)"
-PrivateKey="$(acert leaves export ${PRIVATE_FINGERPRINT} -t key -f pem)"
+EdgeCaCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t authority -f pem)"
+EdgeCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t certificate -f pem)"
+EdgeKey="$(acert leaves export ${EDGE_FINGERPRINT} -t key -f pem)"
 
-kubectl create secret generic public.ingress.svc \
+kubectl create secret generic edge.ingress.svc \
     --namespace "ingress" \
-    --from-literal=ca.crt="$PublicCaCrt" \
-    --from-literal=public.ingress.svc.crt="$PublicCrt" \
-    --from-literal=public.ingress.svc.key="$PublicKey"
-
-kubectl create secret generic private.ingress.svc \
-    --namespace "ingress" \
-    --from-literal=ca.crt="$PrivateCaCrt" \
-    --from-literal=private.ingress.svc.crt="$PrivateCrt" \
-    --from-literal=private.ingress.svc.key="$PrivateKey"
+    --from-literal=ca.crt="$EdgeCaCrt" \
+    --from-literal=edge.ingress.svc.crt="$EdgeCrt" \
+    --from-literal=edge.ingress.svc.key="$EdgeKey"
 
 ObjectivesPostgresDatabase="greymatter"
 ObjectivesPostgresHost=""
@@ -101,11 +91,13 @@ echo ""
 
 
 for folder in "${folders[@]}"; do
-    echo "==================================$folder"
+    echo "================================== $folder"
     if [[ $folder == "ingress" ]]
     then
-        for f in ingress/public*.yaml; do kubectl apply -f $f; done
-        for f in ingress/private*.yaml; do kubectl apply -f $f; done
+        kubectl apply -f ci/resources/edge.service.yaml
+        kubectl apply -f ingress/edge.serviceaccount.yaml
+        kubectl apply -f ingress/edge.sidecar.configmap.yaml
+        kubectl apply -f ingress/edge.deployment.yaml
     else
         find $folder/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
     fi

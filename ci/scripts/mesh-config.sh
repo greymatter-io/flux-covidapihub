@@ -40,19 +40,19 @@ do
     cd $meshfolder
     for folder in $objects
     do
-	echo "Found folder: $meshfolder/$folder"
-	for file in $folder/*
-	do
-	    object="${folder%?}"
-	    if [[ $object == "proxie" ]]; then object="proxy"; fi
-	    if [[ $object == "rule" ]]; then object="shared_rules"; fi
-	    echo "applying $file"
-	    create_or_update $object $file
-	    sleep $delay
-	done
+        echo "Found folder: $meshfolder/$folder"
+        for file in $folder/*
+        do
+            object="${folder%?}"
+            if [[ $object == "proxie" ]]; then object="proxy"; fi
+            if [[ $object == "rule" ]]; then object="shared_rules"; fi
+            echo "applying $file"
+            create_or_update $object $file
+            sleep $delay
+        done
     done
     cd -
 done
 
 # Overwrite
-create_or_update listener ci/resources/private.ingress.listener.json
+create_or_update listener ci/resources/mesh.edge.listener.ingress.json
