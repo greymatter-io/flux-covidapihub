@@ -27,7 +27,8 @@ cat  << EOF
     },
     "active_http_filters": [
         "gm.metrics",
-        "gm.observables"
+        "gm.observables",
+        "envoy.rbac"
     ],
     "http_filters": {
         "gm_metrics": {
@@ -39,7 +40,29 @@ cat  << EOF
             "prometheus_system_metrics_interval_seconds": 15,
             "metrics_key_function": "depth"
         },
-        "gm_observables": {}
+        "gm_observables": {},
+        "envoy_rbac": {
+            "rules": {
+            "action": 0,
+            "policies": {
+                "0": {
+                "permissions": [
+                    {
+                    "header": {
+                        "name": ":method",
+                        "exact_match": "GET"
+                    }
+                    }
+                ],
+                "principals": [
+                    {
+                    "any": true
+                    }
+                ]
+                }
+            }
+            }
+        }
     },
     "tracing_config": null
 }

@@ -17,3 +17,4 @@ ci/scripts/api_files/edge.cluster.sh $api_name > apis/$api_name/mesh/edge.$api_n
 ci/scripts/api_files/edge.rules.sh $api_name > apis/$api_name/mesh/edge.$api_name.rules.json
 ci/scripts/api_files/edge.route.sh $api_name > apis/$api_name/mesh/edge.$api_name.route.json
 ci/scripts/api_files/edge.route.slash.sh $api_name > apis/$api_name/mesh/edge.$api_name.route.slash.json
+ci/scripts/api_files/catalog.sh $api_name > apis/$api_name/mesh/catalog.$api_name.json
