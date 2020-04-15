@@ -11,7 +11,7 @@
     "secret_name": "spiffe://covidapihub.io/ns/data/sa/jwt",
     "secret_validation_name": "spiffe://covidapihub.io",
     "subject_names": [
-      "spiffe://covidapihub.io/ns/ingress/sa/private",
+      "spiffe://covidapihub.io/ns/ingress/sa/edge",
       "spiffe://covidapihub.io/ns/data/sa/data"
     ],
     "ecdh_curves": ["X25519:P-256:P-521:P-384"]

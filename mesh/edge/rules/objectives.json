@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "public.objectives.rules",
-  "name": "public.objectives",
+  "shared_rules_key": "edgebjectives.rules",
+  "name": "edgebjectives",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "public.objectives.cluster",
+        "cluster_key": "edgebjectives.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},

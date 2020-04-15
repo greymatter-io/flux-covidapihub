@@ -1,13 +1,13 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "catalog.egress.domain",
-    "route_key": "catalog.private.route",
-    "path": "/private/",
-    "prefix_rewrite": "/",
-    "redirects": null,
-    "shared_rules_key": "catalog.private.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "catalog.egress.domain",
+  "route_key": "catalog.edge.route",
+  "path": "/edge/",
+  "prefix_rewrite": "/",
+  "redirects": null,
+  "shared_rules_key": "catalog.edge.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null,
+  "retry_policy": null
 }

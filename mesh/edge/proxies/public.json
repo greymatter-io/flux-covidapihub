@@ -1,8 +1,8 @@
 {
   "zone_key": "default.zone",
-  "proxy_key": "public.proxy",
-  "domain_keys": ["public.ingress.domain"],
-  "listener_keys": ["public.ingress.listener"],
-  "name": "ingress.public",
+  "proxy_key": "edgeroxy",
+  "domain_keys": ["edgengress.domain"],
+  "listener_keys": ["edgengress.listener"],
+  "name": "ingress.edge
   "listeners": null
 }

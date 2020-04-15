@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "public.prometheus.rules",
-  "name": "public.prometheus",
+  "shared_rules_key": "edge.prometheus.rules",
+  "name": "edge.prometheus",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "public.prometheus.cluster",
+        "cluster_key": "edge.prometheus.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},

@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "public.kibana.rules",
-  "name": "public.kibana",
+  "shared_rules_key": "edge.kibana.rules",
+  "name": "edge.kibana",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "public.kibana.cluster",
+        "cluster_key": "edge.kibana.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},

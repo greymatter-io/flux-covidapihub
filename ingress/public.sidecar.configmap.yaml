@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: public-sidecar
+  name: edge-sidecar
   namespace: ingress
 data:
   config.yaml: |-
     node:
       id: "default"
-      cluster: "ingress.public"
+      cluster: "ingress.edge"
       locality:
         zone: default.zone
         region: default.region
@@ -41,7 +41,7 @@ data:
           tls_context:
             common_tls_context:
               tls_certificate_sds_secret_configs:
-                - name: "spiffe://covidapihub.io/ns/ingress/sa/public"
+                - name: "spiffe://covidapihub.io/ns/ingress/sa/edge"
                   sds_config:
                     api_config_source:
                       api_type: GRPC

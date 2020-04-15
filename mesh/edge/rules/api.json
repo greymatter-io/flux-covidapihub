@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "public.api.rules",
-  "name": "public.api",
+  "shared_rules_key": "edge.api.rules",
+  "name": "edge.api",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "public.api.cluster",
+        "cluster_key": "edge.api.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},

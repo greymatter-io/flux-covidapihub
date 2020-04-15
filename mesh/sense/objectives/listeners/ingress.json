@@ -10,7 +10,7 @@
     "secret_key": "objectives.identity",
     "secret_name": "spiffe://covidapihub.io/ns/sense/sa/objectives",
     "secret_validation_name": "spiffe://covidapihub.io",
-    "subject_names": ["spiffe://covidapihub.io/ns/ingress/sa/private"],
+    "subject_names": ["spiffe://covidapihub.io/ns/ingress/sa/edge"],
     "ecdh_curves": ["X25519:P-256:P-521:P-384"]
   },
   "active_http_filters": ["gm.metrics", "gm.observables", "envoy.rbac"],

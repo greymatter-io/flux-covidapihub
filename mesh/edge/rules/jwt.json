@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "public.jwt-security.rules",
-  "name": "public.jwt-security",
+  "shared_rules_key": "edge.jwt-security.rules",
+  "name": "edge.jwt-security",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "public.jwt-security.cluster",
+        "cluster_key": "edge.jwt-security.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},
