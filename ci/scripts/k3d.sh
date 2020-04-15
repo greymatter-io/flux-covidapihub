@@ -52,11 +52,11 @@ echo ""
 # Apply secrets
 
 export AUTHORITY_FINGERPRINT=$(acert authorities create -n "Covid API Hub" -o "Decipher Technology Studios" -c "US")
-export EDGE_FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.svc')
+export FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.svc')
 
-EdgeCaCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t authority -f pem)"
-EdgeCrt="$(acert leaves export ${EDGE_FINGERPRINT} -t certificate -f pem)"
-EdgeKey="$(acert leaves export ${EDGE_FINGERPRINT} -t key -f pem)"
+EdgeCaCrt="$(acert leaves export ${FINGERPRINT} -t authority -f pem)"
+EdgeCrt="$(acert leaves export ${FINGERPRINT} -t certificate -f pem)"
+EdgeKey="$(acert leaves export ${FINGERPRINT} -t key -f pem)"
 
 kubectl create secret generic edge.svc \
     --namespace "edge" \
