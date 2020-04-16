@@ -18,8 +18,18 @@ The content of `./word.sealedsecret.yaml` is suitable for commiting into the rep
 
 ## Running Locally with K3D
 
+### With Makefile
+
 Run `make k3d mesh` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.  It will apply the various yamls and create secrets for local development.  Part of the secret creation includes using [acert](https://github.com/deciphernow/acert) so that needs to be installed before running the script.
 
-Run `export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"` to use the kubeconfig for that cluster and be able to use `kubectl` commands.
+Note that this will not change which environment your `kubectl` is pointing to. Make sure to run `export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"` to use the kubeconfig for that cluster and be able to use `kubectl` commands.
 
 When using Chrome, you will get a security warning which can be bypassed by typing `thisisunsafe`.
+
+### With run script
+At the root of this repo, it has run.sh script. By running this like so:
+```
+source ./run.sh
+```
+
+It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
