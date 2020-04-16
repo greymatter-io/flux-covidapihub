@@ -1,0 +1,17 @@
+{
+ "clusterName": "opendata-eu",
+ "zoneName": "default.zone",
+ "name": "opendata-eu",
+ "version": "1.0",
+ "owner": "Decipher",
+ "capability": "API",
+ "runtime": "GO",
+ "documentation": "/apis/opendata-eu/",
+ "prometheusJob": "opendata-eu",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

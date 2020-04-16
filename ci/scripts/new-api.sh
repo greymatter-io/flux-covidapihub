@@ -8,9 +8,6 @@ echo Port:
 read port
 echo Path:
 read route_path
-echo Apply API?:
-read apply
-
 
 mkdir apis/$name
 mkdir apis/$name/mesh
@@ -34,6 +31,7 @@ ci/scripts/api_files/local.route.sh $name $route_path > apis/$name/mesh/routes/l
 ci/scripts/api_files/edge.route.slash.sh $name > apis/$name/mesh/routes/edge.$name.route.slash.json
 ci/scripts/api_files/catalog.sh $name > apis/$name/mesh/catalog.$name.json
 
-if [[ "$apply" == "True" ]]; then
+read -r -p "Apply the configs now? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     ci/scripts/apply-new-api.sh $name
 fi
