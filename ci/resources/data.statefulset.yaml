@@ -4,6 +4,8 @@ apiVersion: apps/v1
 metadata:
   name: data
   namespace: data
+  annotations:
+    fluxcd.io/ignore: "true"
 spec:
   serviceName: data
   replicas: 1
