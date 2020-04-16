@@ -7,8 +7,6 @@ metadata:
     cluster: sense.dashboard
   name: dashboard
   namespace: sense
-  annotations:
-    fluxcd.io/ignore: "true"
 spec:
   replicas: 1
   selector:
@@ -63,7 +61,7 @@ spec:
             - name: PROMETHEUS_SERVER
               value: https://localhost:30000/prometheus/latest/api/v1/
             - name: BASE_URL
-              value: /
+              value: /dashboard
             - name: PORT
               value: "10080"
           ports:

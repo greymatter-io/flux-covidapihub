@@ -5,7 +5,6 @@ SHELL := /bin/bash
 .PHONY: k3d
 k3d:
 	./ci/scripts/k3d.sh
-	kubectl config use-context greymatter
 
 .PHONY: mesh
 mesh:

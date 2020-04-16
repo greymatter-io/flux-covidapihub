@@ -11,8 +11,6 @@
     "gm.metrics",
     "gm.oidc-validation",
     "gm.oidc-authentication",
-    "envoy.jwt_authn",
-    "envoy.rbac",
     "gm.observables"
   ],
   "http_filters": {
