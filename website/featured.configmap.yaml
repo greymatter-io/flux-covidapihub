@@ -6,320 +6,162 @@ metadata:
   namespace: website
 data:
   featured-data.json: |-
-  {
-    "apis": [
-      {
-        "name": "CDC Number of US Cases And Deaths",
-        "url": "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true",
-        "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
-        "source": "CDC",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-        "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "5 Minutes"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "CDC Number of Cases by State",
-        "url": "https://api.apify.com/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1",
-        "description": "Actual number of examined and infected people by COVID-19 by state from CDC",
-        "source": "CDC",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-        "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "5 Minutes"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "NovelCOVID API",
-        "url": "https://corona.lmao.ninja",
-        "description": "API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain",
-        "source": "John Hopkins Univerty",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-        "thumbnail": "https://github.com/NovelCOVID/API/raw/master/assets/logo.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Weekly"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "EU Open Data Covid Dataset",
-        "url": "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/",
-        "description": "Destribution of cases across Europe",
-        "source": "European Union",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://data.europa.eu/euodp/en/developerscorner",
-        "thumbnail": "https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png",
-        "coverage": [
-          "Europe"
-        ],
-        "format": [
-          "JSON",
-          "CSV",
-          "HTML"
-        ],
-        "updates": [
-          "Daily"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "State Government Twitter Search",
-        "url": "https://documenter.getpostman.com/view/8854915/SzS7NkKA?version=latest",
-        "description": "Authoritative updates on what is happening in each state when it comes to COVID-19",
-        "source": "Twitter",
-        "contentType": [
-          "News"
-        ],
-        "homePage": "https://documenter.getpostman.com/favicon.icohttps://documenter.getpostman.com/favicon.ico",
-        "thumbnail": "https://assets.getpostman.com/common-share/postman-logo-horizontal-white.svg",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Realtime"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "Finnhub IO",
-        "url": "https://finnhub.io/docs/api",
-        "description": "Access real-time stock API, institutional-grade fundamental and alternative data to supercharge your investment for FREE.",
-        "source": "",
-        "contentType": [
-          "News"
-        ],
-        "homePage": "https://finnhub.io/",
-        "thumbnail": "https://res.cloudinary.com/whirlpooldata/image/upload/v1569776706/default/logo_transparent_3.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Realtime"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "Flight Stats",
-        "url": "https://developer.flightstats.com/api-docs/historical-flight-status/v3",
-        "description": "",
-        "source": "Federal Aviation Administration",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "https://developer.flightstats.com/",
-        "thumbnail": "https://assets.flightstats.com/developer-center/FSDCbyC.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "5 Minutes"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "UNHCR",
-        "url": "http://data.unhcr.org/api/",
-        "description": "Authoritative source on refugee migration, resettlement, and population statistics",
-        "source": "UN",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "http://data.unhcr.org/wiki/index.php/API_Documentation.html",
-        "thumbnail": "https://www.unhcr.org/assets/img/unhcr-logo.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Daily"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "USA Spending",
-        "url": "https://api.usaspending.gov/docs/endpoints",
-        "description": "Breakdowns of all federal spending including federal awards (contracts, grants, etc) and non-award spending (e.g. employee compensation)",
-        "source": "",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "https://www.usaspending.gov/#/",
-        "thumbnail": "https://www.usaspending.gov/img/logo.png",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Yearly"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "US Census Bureau",
-        "url": "https://www.census.gov/data/developers/data-sets/popest-popproj/popest.Vintage_2019.html",
-        "description": "Historical population growth and demographic shifts since 2000",
-        "source": "Census Beureau",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "https://www.census.gov/data.html",
-        "thumbnail": "https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/us-census-bureau.png",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Yearly"
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "UN Data",
-        "url": "https://data.un.org/Host.aspx?Content=API",
-        "description": "Historical data by country on population, education, economy, energy, crime, human resources, and communication",
-        "source": "",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "https://data.un.org/",
-        "thumbnail": "https://data.un.org/_Images/Logo.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "JSON"
-        ],
-        "updates": [
-          "Yearly"
-        ],
-        "paid": true,
-        "keyRequired": true
-      }
-    ],
-    "visualizations": [],
-    "datasets": [
-      {
-        "name": "John Hopkins CSSE",
-        "url": "https://github.com/CSSEGISandData/COVID-19",
-        "description": "Data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).",
-        "source": "John Hopkins University",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://systems.jhu.edu/",
-        "thumbnail": "https://brand.jhu.edu/assets/uploads/sites/5/2016/01/university.logo_.small_.horizontal.white_.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "CSV"
-        ],
-        "updates": [
-          ""
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "NYT Covid-19 US Data",
-        "url": "https://github.com/nytimes/covid-19-data",
-        "description": "Series of data files with cumulative counts of coronavirus cases in the United States, at the state and county level, over time",
-        "source": "",
-        "contentType": [
-          "Health Stats"
-        ],
-        "homePage": "https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html",
-        "thumbnail": "https://www.sjlib.org/wp-content/uploads/2015/01/New-York-Times-logo.jpg",
-        "coverage": [
-          "US"
-        ],
-        "format": [
-          "CSV"
-        ],
-        "updates": [
-          ""
-        ],
-        "paid": true,
-        "keyRequired": true
-      },
-      {
-        "name": "World Bank Climate Data",
-        "url": "https://climateknowledgeportal.worldbank.org/download-data",
-        "description": "Historical Temperature and Rainfall data dating back to 1901",
-        "source": "World Bank",
-        "contentType": [
-          "Governance"
-        ],
-        "homePage": "https://climateknowledgeportal.worldbank.org/",
-        "thumbnail": "https://climateknowledgeportal.worldbank.org/themes/custom/wb_cckp/resources/img/logo-wb-cckp.png",
-        "coverage": [
-          "World"
-        ],
-        "format": [
-          "CSV"
-        ],
-        "updates": [
-          "Yearly"
-        ],
-        "paid": true,
-        "keyRequired": true
-      }
-    ]
-  }
+    {
+      "apis": [
+        {
+          "name": "CDC Number of US Cases And Deaths",
+          "url": "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true",
+          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
+          "source": "CDC",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
+          "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
+          "coverage": [
+            "US"
+          ],
+          "format": [
+            "JSON"
+          ],
+          "updates": [
+            "5 Minutes"
+          ],
+          "paid": false,
+          "keyRequired": true
+        },
+        {
+          "name": "CDC Number of Cases by State",
+          "url": "https://api.apify.com/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1",
+          "description": "Actual number of examined and infected people by COVID-19 by state from CDC",
+          "source": "CDC",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
+          "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
+          "coverage": [
+            "US"
+          ],
+          "format": [
+            "JSON"
+          ],
+          "updates": [
+            "5 Minutes"
+          ],
+          "paid": false,
+          "keyRequired": true
+        },
+        {
+          "name": "NovelCOVID API",
+          "url": "https://corona.lmao.ninja",
+          "description": "API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain",
+          "source": "John Hopkins Univerty",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
+          "thumbnail": "https://github.com/NovelCOVID/API/raw/master/assets/logo.png",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "JSON"
+          ],
+          "updates": [
+            "Weekly"
+          ],
+          "paid": false,
+          "keyRequired": false
+        },
+        {
+          "name": "EU Open Data Covid Dataset",
+          "url": "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/",
+          "description": "Destribution of cases across Europe",
+          "source": "European Union",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://data.europa.eu/euodp/en/developerscorner",
+          "thumbnail": "https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png",
+          "coverage": [
+            "Europe"
+          ],
+          "format": [
+            "JSON",
+            "CSV",
+            "HTML"
+          ],
+          "updates": [
+            "Daily"
+          ],
+          "paid": false,
+          "keyRequired": false
+        },
+        {
+          "name": "State Government Twitter Search",
+          "url": "https://documenter.getpostman.com/view/8854915/SzS7NkKA?version=latest",
+          "description": "Authoritative updates on what is happening in each state when it comes to COVID-19",
+          "source": "Twitter",
+          "contentType": [
+            "News"
+          ],
+          "homePage": "https://documenter.getpostman.com/favicon.icohttps://documenter.getpostman.com/favicon.ico",
+          "thumbnail": "https://assets.getpostman.com/common-share/postman-logo-horizontal-white.svg",
+          "coverage": [
+            "US"
+          ],
+          "format": [
+            "JSON"
+          ],
+          "updates": [
+            "Realtime"
+          ],
+          "paid": false,
+          "keyRequired": true
+        }
+      ],
+      "visualizations": [],
+      "datasets": [
+        {
+          "name": "John Hopkins CSSE",
+          "url": "https://github.com/CSSEGISandData/COVID-19",
+          "description": "Data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).",
+          "source": "John Hopkins University",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://systems.jhu.edu/",
+          "thumbnail": "https://brand.jhu.edu/assets/uploads/sites/5/2016/01/university.logo_.small_.horizontal.white_.png",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "CSV"
+          ],
+          "updates": [],
+          "paid": false,
+          "keyRequired": false
+        },
+        {
+          "name": "NYT Covid-19 US Data",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "description": "Series of data files with cumulative counts of coronavirus cases in the United States, at the state and county level, over time",
+          "source": "",
+          "contentType": [
+            "Health Stats"
+          ],
+          "homePage": "https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html",
+          "thumbnail": "https://www.sjlib.org/wp-content/uploads/2015/01/New-York-Times-logo.jpg",
+          "coverage": [
+            "US"
+          ],
+          "format": [
+            "CSV"
+          ],
+          "updates": [],
+          "paid": false,
+          "keyRequired": false
+        }
+      ]
+    }
