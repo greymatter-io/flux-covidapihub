@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: edge.simple
+  namespace: edge
+  annotations:
+    fluxcd.io/ignore: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: https
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+spec:
+  rules:
+    - host: development.deciphernow.com
+      http:
+        paths:
+        - backend:
+            serviceName: edge
+            servicePort: 8443
+          path: / #end with ingress
