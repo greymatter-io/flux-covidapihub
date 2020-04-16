@@ -22,4 +22,4 @@ Run `make k3d mesh` in order to start up a four-worker [k3d](https://github.com/
 
 Run `export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"` to use the kubeconfig for that cluster and be able to use `kubectl` commands.
 
-When using Chrome, you will get a security warning which can be bipassed by typing `thisisunsafe`.
+When using Chrome, you will get a security warning which can be bypassed by typing `thisisunsafe`.
