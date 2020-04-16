@@ -55,7 +55,7 @@ spec:
             - name: CONTROL_SERVER_0_ADDRESS
               value: 127.0.0.1:9081
             - name: CONTROL_SERVER_0_REQUEST_CLUSTER_NAME
-              value: edge.edge
+              value: sense.catalog
             - name: CONTROL_SERVER_0_ZONE_NAME
               value: default.zone
             - name: INSTANCE_MAX_SILENCE
