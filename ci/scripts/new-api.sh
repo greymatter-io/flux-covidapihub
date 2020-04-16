@@ -4,6 +4,8 @@ echo API Name:
 read api_name
 echo API Address:
 read api_addr
+echo Apply API?:
+read apply
 
 
 mkdir apis/$api_name
@@ -24,3 +26,7 @@ ci/scripts/api_files/edge.rules.sh $api_name > apis/$api_name/mesh/rules/edge.$a
 ci/scripts/api_files/edge.route.sh $api_name > apis/$api_name/mesh/routes/edge.$api_name.route.json
 ci/scripts/api_files/edge.route.slash.sh $api_name > apis/$api_name/mesh/routes/edge.$api_name.route.slash.json
 ci/scripts/api_files/catalog.sh $api_name > apis/$api_name/mesh/catalog.$api_name.json
+
+if [[ "$apply" == "True" ]]; then
+    ci/scripts/apply-new-api.sh $api_name
+fi
