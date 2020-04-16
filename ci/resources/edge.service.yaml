@@ -4,8 +4,6 @@ kind: Service
 metadata:
   name: edge
   namespace: edge
-  annotations:
-    fluxcd.io/ignore: "true"
   labels:
     app: edge
     cluster: edge.edge
