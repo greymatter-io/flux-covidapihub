@@ -56,7 +56,7 @@ data:
                   verify_subject_alt_name:
                     - "spiffe://covidapihub.io/ns/fabric/sa/control"
                 validation_context_sds_secret_config:
-                  name: "spiffe://production.greymatter.io"
+                  name: "spiffe://covidapihub.io"
                   sds_config:
                     api_config_source:
                       api_type: GRPC
