@@ -29,7 +29,7 @@ When using Chrome, you will get a security warning which can be bypassed by typi
 ### With run script
 At the root of this repo, it has run.sh script. By running this like so:
 ```
-. ./run.sh
+source ./run.sh
 ```
 
 It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
