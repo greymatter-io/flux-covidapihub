@@ -77,7 +77,7 @@ spec:
             - name: SERVICE_0_ZONE_NAME
               value: default.zone
             - name: SERVICE_0_NAME
-              value: Website
+              value: Covid API Hub landing page
             - name: SERVICE_0_VERSION
               value: latest
             - name: SERVICE_0_OWNER
