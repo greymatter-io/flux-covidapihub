@@ -1,0 +1,17 @@
+{
+ "clusterName": "bingcovid",
+ "zoneName": "default.zone",
+ "name": "bingcovid",
+ "version": "1.0",
+ "owner": "Decipher",
+ "capability": "API",
+ "runtime": "GO",
+ "documentation": "/apis/bingcovid/",
+ "prometheusJob": "bingcovid",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

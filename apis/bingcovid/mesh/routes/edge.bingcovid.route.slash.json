@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.bingcovid.slash.route",
+    "path": "/apis/bingcovid",
+    "prefix_rewrite": "/apis/bingcovid/",
+    "redirects": null,
+    "shared_rules_key": "edge.bingcovid.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

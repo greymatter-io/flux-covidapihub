@@ -22,8 +22,11 @@ ci/scripts/api_files/domain.sh $api_name $api_addr > apis/$api_name/mesh/domains
 ci/scripts/api_files/listener.sh $api_name > apis/$api_name/mesh/listeners/$api_name.listener.ingress.json
 ci/scripts/api_files/proxy.sh $api_name > apis/$api_name/mesh/proxies/$api_name.proxy.json
 ci/scripts/api_files/edge.cluster.sh $api_name > apis/$api_name/mesh/clusters/edge.$api_name.cluster.json
+ci/scripts/api_files/local.cluster.sh $api_name $api_addr > apis/$api_name/mesh/clusters/local.cluster.json
 ci/scripts/api_files/edge.rules.sh $api_name > apis/$api_name/mesh/rules/edge.$api_name.rules.json
+ci/scripts/api_files/local.rules.sh $api_name > apis/$api_name/mesh/rules/local.rules.json
 ci/scripts/api_files/edge.route.sh $api_name > apis/$api_name/mesh/routes/edge.$api_name.route.json
+ci/scripts/api_files/local.route.sh $api_name > apis/$api_name/mesh/routes/local.route.json
 ci/scripts/api_files/edge.route.slash.sh $api_name > apis/$api_name/mesh/routes/edge.$api_name.route.slash.json
 ci/scripts/api_files/catalog.sh $api_name > apis/$api_name/mesh/catalog.$api_name.json
 
