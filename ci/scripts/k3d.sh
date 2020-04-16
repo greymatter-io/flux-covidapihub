@@ -107,6 +107,7 @@ done
 # Overwrite with development only configs
 kubectl apply -f ci/resources/dashboard.deployment.yaml
 kubectl apply -f ci/resources/data.statefulset.yaml
+kubectl apply -f ci/resources/local.secrets.yaml
 
 echo ""
 echo "files applied"
