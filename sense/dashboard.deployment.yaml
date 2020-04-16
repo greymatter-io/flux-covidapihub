@@ -61,7 +61,7 @@ spec:
             - name: PROMETHEUS_SERVER
               value: https://covidapihub.io/prometheus/latest/api/v1/
             - name: BASE_URL
-              value: /
+              value: /dashboard
             - name: PORT
               value: "10080"
           ports:
