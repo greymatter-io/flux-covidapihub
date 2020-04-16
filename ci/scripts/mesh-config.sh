@@ -3,6 +3,7 @@
 greymatter version
 
 source ./ci/scripts/mesh-env.sh
+kubectl cluster-info
 
 listener=$(lsof -t -i:10080)
 
