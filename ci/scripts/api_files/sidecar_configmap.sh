@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
@@ -8,13 +8,13 @@ cat  << EOF
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: $API_NAME-sidecar
+  name: $NAME-sidecar
   namespace: apis
 data:
   config.yaml: |-
     node:
       id: "default"
-      cluster: "apis.$API_NAME"
+      cluster: "apis.$NAME"
       locality:
         zone: default.zone
         region: default.region

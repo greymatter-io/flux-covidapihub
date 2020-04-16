@@ -1,7 +1,7 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "edge.cdc-test.cluster",
-    "name": "apis.cdc-test",
+    "cluster_key": "edge.cdc-us.cluster",
+    "name": "apis.cdc-us",
     "instances": [],
     "circuit_breakers": null,
     "outlier_detection": null,

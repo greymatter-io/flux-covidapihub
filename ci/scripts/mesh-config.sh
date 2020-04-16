@@ -4,7 +4,7 @@ greymatter version
 
 source ./ci/scripts/mesh-env.sh
 kubectl cluster-info
-
+kubectl config use-context greymatter
 listener=$(lsof -t -i:10080)
 
 if [ ! -z "$listener" ]; then

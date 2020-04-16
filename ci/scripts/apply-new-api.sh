@@ -2,6 +2,8 @@
 
 API_NAME=$1
 
+kubectl config use-context greymatter
+
 echo "Applying new api: $API_NAME"
 
 kubectl apply -f apis/$API_NAME/$API_NAME.sidecar.configmap.yaml

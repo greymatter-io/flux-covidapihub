@@ -1,14 +1,14 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "listener_key": "$API_NAME.apis.listener",
+    "listener_key": "$NAME.apis.listener",
     "domain_keys": [
-        "$API_NAME.apis.domain"
+        "$NAME.apis.domain"
     ],
     "name": "ingress",
     "ip": "0.0.0.0",

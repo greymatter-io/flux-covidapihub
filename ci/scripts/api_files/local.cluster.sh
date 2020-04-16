@@ -1,18 +1,19 @@
 #!/bin/bash
 
-API_NAME=$1
-API_ADDRESS=$2
+NAME=$1
+HOST=$2
+PORT=$3
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "cluster_key": "$API_NAME.local.cluster",
+    "cluster_key": "$NAME.local.cluster",
     "name": "local",
     "instances": [
         {
-            "host": "$API_ADDRESS",
-            "port": 443
+            "host": "$HOST",
+            "port": $PORT
         }
     ],
     "circuit_breakers": null,

@@ -1,8 +1,8 @@
 {
     "zone_key": "default.zone",
-    "listener_key": "cdc-test.apis.listener",
+    "listener_key": "cdc-us.apis.listener",
     "domain_keys": [
-        "cdc-test.apis.domain"
+        "cdc-us.apis.domain"
     ],
     "name": "ingress",
     "ip": "0.0.0.0",

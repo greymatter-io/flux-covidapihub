@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
@@ -9,25 +9,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: $API_NAME
-    cluster: apis.$API_NAME
-  name: $API_NAME
+    app: $NAME
+    cluster: apis.$NAME
+  name: $NAME
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $API_NAME
-      cluster: apis.$API_NAME
+      app: $NAME
+      cluster: apis.$NAME
   template:
     metadata:
       labels:
-        app: $API_NAME
-        cluster: apis.$API_NAME
+        app: $NAME
+        cluster: apis.$NAME
     spec:
       serviceAccountName: apis-sa
       containers:
-        - name: $API_NAME-proxy
+        - name: $NAME-proxy
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -59,5 +59,5 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: $API_NAME-sidecar
+            name: $NAME-sidecar
 EOF

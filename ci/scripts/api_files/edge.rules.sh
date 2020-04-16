@@ -1,18 +1,18 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "shared_rules_key": "edge.$API_NAME.rules",
-    "name": "edge.$API_NAME",
+    "shared_rules_key": "edge.$NAME.rules",
+    "name": "edge.$NAME",
     "default": {
         "light": [
             {
                 "constraint_key": "",
-                "cluster_key": "edge.$API_NAME.cluster",
+                "cluster_key": "edge.$NAME.cluster",
                 "metadata": null,
                 "properties": null,
                 "response_data": {},

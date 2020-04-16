@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "cdc-us.apis.domain",
+    "route_key": "cdc-us.local.route",
+    "path": "/",
+    "prefix_rewrite": "/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1",
+    "redirects": null,
+    "shared_rules_key": "cdc-us.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

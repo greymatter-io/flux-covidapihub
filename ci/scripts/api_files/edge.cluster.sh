@@ -1,13 +1,13 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "cluster_key": "edge.$API_NAME.cluster",
-    "name": "apis.$API_NAME",
+    "cluster_key": "edge.$NAME.cluster",
+    "name": "apis.$NAME",
     "instances": [],
     "circuit_breakers": null,
     "outlier_detection": null,

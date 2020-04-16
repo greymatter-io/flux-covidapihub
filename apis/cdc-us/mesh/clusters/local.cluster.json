@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "cdc-test.local.cluster",
+    "cluster_key": "cdc-us.local.cluster",
     "name": "local",
     "instances": [
         {

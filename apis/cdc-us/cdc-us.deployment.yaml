@@ -3,25 +3,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: cdc-test
-    cluster: apis.cdc-test
-  name: cdc-test
+    app: cdc-us
+    cluster: apis.cdc-us
+  name: cdc-us
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdc-test
-      cluster: apis.cdc-test
+      app: cdc-us
+      cluster: apis.cdc-us
   template:
     metadata:
       labels:
-        app: cdc-test
-        cluster: apis.cdc-test
+        app: cdc-us
+        cluster: apis.cdc-us
     spec:
       serviceAccountName: apis-sa
       containers:
-        - name: cdc-test-proxy
+        - name: cdc-us-proxy
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -53,4 +53,4 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: cdc-test-sidecar
+            name: cdc-us-sidecar

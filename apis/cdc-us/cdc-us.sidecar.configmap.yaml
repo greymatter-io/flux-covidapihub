@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: cdc-test-sidecar
+  name: cdc-us-sidecar
   namespace: apis
 data:
   config.yaml: |-
     node:
       id: "default"
-      cluster: "apis.cdc-test"
+      cluster: "apis.cdc-us"
       locality:
         zone: default.zone
         region: default.region

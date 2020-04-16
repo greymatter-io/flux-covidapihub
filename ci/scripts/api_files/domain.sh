@@ -1,13 +1,13 @@
 #!/bin/bash
 
-API_NAME=$1
-API_ADDRESS=$2
+NAME=$1
+HOST=$2
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "domain_key": "$API_NAME.apis.domain",
+    "domain_key": "$NAME.apis.domain",
     "name": "*",
     "port": 8443,
     "gzip_enabled": false,
@@ -17,7 +17,7 @@ cat  << EOF
     "custom_headers": [
       {
         "key": "Host",
-        "value": "$API_ADDRESS"
+        "value": "$HOST"
       }
   ]
 }

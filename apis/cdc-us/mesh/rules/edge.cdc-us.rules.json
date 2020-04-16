@@ -1,12 +1,12 @@
 {
     "zone_key": "default.zone",
-    "shared_rules_key": "cdc-test.local.rules",
-    "name": "local",
+    "shared_rules_key": "edge.cdc-us.rules",
+    "name": "edge.cdc-us",
     "default": {
         "light": [
             {
                 "constraint_key": "",
-                "cluster_key": "cdc-test.local.cluster",
+                "cluster_key": "edge.cdc-us.cluster",
                 "metadata": null,
                 "properties": null,
                 "response_data": {},

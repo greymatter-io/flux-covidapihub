@@ -1,19 +1,19 @@
 #!/bin/bash
 
-API_NAME=$1
+NAME=$1
 
 #define the template.
 cat  << EOF
 {
     "zone_key": "default.zone",
-    "proxy_key": "$API_NAME.proxy",
+    "proxy_key": "$NAME.proxy",
     "domain_keys": [
-        "$API_NAME.apis.domain"
+        "$NAME.apis.domain"
     ],
     "listener_keys": [
-        "$API_NAME.apis.listener"
+        "$NAME.apis.listener"
     ],
-    "name": "apis.$API_NAME",
+    "name": "apis.$NAME",
     "listeners": null
 }
 EOF
