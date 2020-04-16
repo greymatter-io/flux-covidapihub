@@ -37,7 +37,7 @@ spec:
           - name: DATA_SOURCE
             value: /usr/src/data/featured-data.json
           - name: API_HUB_ENDPOINT
-            value: /services/dashboard/latest
+            value: /dashboard
         - name: sidecar
           image: docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
           imagePullPolicy: IfNotPresent
