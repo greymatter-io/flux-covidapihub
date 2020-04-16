@@ -6,7 +6,7 @@ then
     read DockerProductionUsername
     echo docker production password:
     read -s DockerProductionPassword
-    
+
     echo index.docker.io username:
     read IndexDockerUsername
     echo index.docker.io password:
@@ -31,14 +31,14 @@ if [[ "$(k3d list)" == *"greymatter"* ]]; then
 fi
 
 # Create 4 workers for a greymatter cluster
-k3d create --workers 4 --name greymatter --publish 30000:10808
+k3d create --workers 4 --name greymatter --publish 30000:8443
 while [[ $(k3d get-kubeconfig --name='greymatter') != *kubeconfig.yaml ]]; do echo "echo waiting for k3d cluster to start up" && sleep 10; done
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 
 echo "Cluster is connected"
 
-folders=(fabric sense data website)
+folders=(edge fabric sense data website)
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -50,6 +50,19 @@ echo "namespaces applied"
 echo ""
 
 # Apply secrets
+
+export AUTHORITY_FINGERPRINT=$(acert authorities create -n "Covid API Hub" -o "Decipher Technology Studios" -c "US")
+export FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.svc')
+
+EdgeCaCrt="$(acert leaves export ${FINGERPRINT} -t authority -f pem)"
+EdgeCrt="$(acert leaves export ${FINGERPRINT} -t certificate -f pem)"
+EdgeKey="$(acert leaves export ${FINGERPRINT} -t key -f pem)"
+
+kubectl create secret generic edge.svc \
+    --namespace "edge" \
+    --from-literal=ca.crt="$EdgeCaCrt" \
+    --from-literal=edge.svc.crt="$EdgeCrt" \
+    --from-literal=edge.svc.key="$EdgeKey"
 
 ObjectivesPostgresDatabase="greymatter"
 ObjectivesPostgresHost=""
@@ -76,10 +89,33 @@ echo ""
 echo "spire applied"
 echo ""
 
+
 for folder in "${folders[@]}"; do
-    find $folder/*.yaml ! -name "namespace.yaml" ! -name "*sealedsecret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+    echo "================================== $folder"
+    if [[ $folder == "edge" ]]
+    then
+        kubectl apply -f ci/resources/edge.service.yaml
+        kubectl apply -f edge/edge.serviceaccount.yaml
+        kubectl apply -f edge/edge.sidecar.configmap.yaml
+        kubectl apply -f edge/edge.deployment.yaml
+    else
+        find $folder/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+    fi
 done
+
+
+# Overwrite with development only configs
+kubectl apply -f ci/resources/dashboard.deployment.yaml
+kubectl apply -f ci/resources/data.statefulset.yaml
+kubectl apply -f ci/resources/local.secrets.yaml
 
 echo ""
 echo "files applied"
+echo ""
+
+
+kubectl apply -f ci/resources/edge.ingress.yaml
+
+echo ""
+echo "ingress applied"
 echo ""
