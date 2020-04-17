@@ -2,7 +2,12 @@
 
 API_NAME=$1
 
-kubectl config use-context greymatter
+if [ "$API_NAME" == "" ]; then
+    echo API Name
+    read API_NAME
+fi
+
+source ./ci/scripts/mesh-env.sh
 
 echo "Applying new api: $API_NAME"
 
@@ -13,7 +18,6 @@ echo "Applying mesh config for api: $API_NAME"
 
 greymatter version
 
-source ./ci/scripts/mesh-env.sh
 kubectl cluster-info
 
 listener=$(lsof -t -i:10080)
@@ -30,13 +34,36 @@ sleep 10
 
 echo "Starting mesh configuration ..."
 
-echo "Creating service configuration objects..."
+echo "Creating (or updating) service configuration objects..."
+
+create_or_update() {
+    file=$2
+    # If file is null, set to objecttype.json, eg route.json
+    if [ -z "$file" ]; then
+        file=$1.json
+    fi
+
+    echo "Creating object with $file"
+    resp=$(greymatter create $1 <$file)
+    echo "$resp"
+    # If response from the api is null, try editing the object
+    if [ -z "$resp" ]; then
+        echo "Object already exists! Editing $file"
+        greymatter edit $1 _ <$file
+    fi
+
+    echo "----------"
+}
+
+
+
 
 delay=0.01
 
-for cl in apis/$API_NAME/mesh/clusters/*.json; do greymatter create cluster < $cl; done
-for cl in apis/$API_NAME/mesh/domains/*.json; do greymatter create domain < $cl; done
-for cl in apis/$API_NAME/mesh/listeners/*.json; do greymatter create listener < $cl; done
-for cl in apis/$API_NAME/mesh/proxies/*.json; do greymatter create proxy < $cl; done
-for cl in apis/$API_NAME/mesh/rules/*.json; do greymatter create shared_rules < $cl; done
-for cl in apis/$API_NAME/mesh/routes/*.json; do greymatter create route < $cl; done
+
+for cl in apis/$API_NAME/mesh/clusters/*.json; do create_or_update cluster $cl; done
+for cl in apis/$API_NAME/mesh/domains/*.json; do create_or_update domain $cl; done
+for cl in apis/$API_NAME/mesh/listeners/*.json; do create_or_update listener $cl; done
+for cl in apis/$API_NAME/mesh/proxies/*.json; do create_or_update proxy $cl; done
+for cl in apis/$API_NAME/mesh/rules/*.json; do create_or_update shared_rules $cl; done
+for cl in apis/$API_NAME/mesh/routes/*.json; do create_or_update route $cl; done

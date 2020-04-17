@@ -9,8 +9,15 @@ k3d:
 .PHONY: mesh
 mesh:
 	./ci/scripts/mesh-config.sh
-	kubectl config use-context greymatter
 
 .PHONY: new-api
 new-api:
 	./ci/scripts/new-api.sh
+
+.PHONY: apply-api
+apply-api:
+	./ci/scripts/apply-new-api.sh
+
+.PHONY: delete-api
+delete-api:
+	./ci/scripts/delete-api.sh
