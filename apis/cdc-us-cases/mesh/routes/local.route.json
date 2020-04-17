@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "cdc-us-cases.apis.domain",
+    "route_key": "cdc-us-cases.local.route",
+    "path": "/",
+    "prefix_rewrite": "/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true",
+    "redirects": null,
+    "shared_rules_key": "cdc-us-cases.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

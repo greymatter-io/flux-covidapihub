@@ -1,0 +1,56 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cdc-us-cases
+    cluster: apis.cdc-us-cases
+  name: cdc-us-cases
+  namespace: apis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cdc-us-cases
+      cluster: apis.cdc-us-cases
+  template:
+    metadata:
+      labels:
+        app: cdc-us-cases
+        cluster: apis.cdc-us-cases
+    spec:
+      serviceAccountName: apis-sa
+      containers:
+        - name: cdc-us-cases-proxy
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          env:
+            - name: ENVOY_LOG_LEVEL
+              value: "debug"
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+      volumes:
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+        - name: sidecar-config
+          configMap:
+            name: cdc-us-cases-sidecar
