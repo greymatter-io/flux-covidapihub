@@ -1,0 +1,17 @@
+{
+  "clusterName": "apis.cdc-us-cases",
+  "zoneName": "default.zone",
+  "name": "CDC Number of US Cases And Deaths",
+  "version": "1.0",
+  "owner": "CDC",
+  "capability": "health",
+  "runtime": "GO",
+  "documentation": "/apis/cdc-us-cases/",
+  "prometheusJob": "apis.cdc-us-cases",
+  "minInstances": 1,
+  "maxInstances": 2,
+  "authorized": true,
+  "enableInstanceMetrics": true,
+  "enableHistoricalMetrics": true,
+  "metricsPort": 8080
+}

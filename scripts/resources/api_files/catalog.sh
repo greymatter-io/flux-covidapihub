@@ -8,7 +8,7 @@ CAPABILITY=$4
 #define the template.
 cat  << EOF
 {
- "clusterName": "$NAME",
+ "clusterName": "apis.$NAME",
  "zoneName": "default.zone",
  "name": "$DISPLAY",
  "version": "1.0",

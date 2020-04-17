@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.opendata-eu",
+ "zoneName": "default.zone",
+ "name": "EU Open Data Covid Dataset",
+ "version": "1.0",
+ "owner": "European Centre for Disease Prevention and Control",
+ "capability": "Health",
+ "runtime": "GO",
+ "documentation": "/apis/opendata-eu/",
+ "prometheusJob": "apis.opendata-eu",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

@@ -1,33 +1,27 @@
-#!/bin/bash
-
-NAME=$1
-
-#define the template.
-cat  << EOF
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: $NAME
-    cluster: apis.$NAME
-  name: $NAME
+    app: cdc-cases-by-state
+    cluster: apis.cdc-cases-by-state
+  name: cdc-cases-by-state
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $NAME
-      cluster: apis.$NAME
+      app: cdc-cases-by-state
+      cluster: apis.cdc-cases-by-state
   template:
     metadata:
       labels:
-        app: $NAME
-        cluster: apis.$NAME
+        app: cdc-cases-by-state
+        cluster: apis.cdc-cases-by-state
     spec:
       serviceAccountName: apis-sa
       containers:
-        - name: $NAME-proxy
+        - name: cdc-cases-by-state-proxy
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -40,6 +34,9 @@ spec:
               containerPort: 8080
             - name: sidecar
               containerPort: 8443
+          env:
+            - name: ENVOY_LOG_LEVEL
+              value: "debug"
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
@@ -56,5 +53,4 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: $NAME-sidecar
-EOF
+            name: cdc-cases-by-state-sidecar
