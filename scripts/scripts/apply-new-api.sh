@@ -7,7 +7,7 @@ if [ "$API_NAME" == "" ]; then
     read API_NAME
 fi
 
-source ./ci/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh
 
 echo "Applying new api: $API_NAME"
 

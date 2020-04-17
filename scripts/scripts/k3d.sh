@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f ci/scripts/credentials.sh ]
+if [ ! -f scripts/scripts/credentials.sh ]
 then
     echo decipher email:
     read DockerProductionUsername
@@ -12,15 +12,15 @@ then
     echo index.docker.io password:
     read -s IndexDockerPassword
 
-    TEMPLATE=ci/scripts/credentials.template
-    cp $TEMPLATE ci/scripts/credentials.sh
-    sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" ci/scripts/credentials.sh
-    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g"  ci/scripts/credentials.sh
-    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g"  ci/scripts/credentials.sh
-    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  ci/scripts/credentials.sh
+    TEMPLATE=scripts/scripts/credentials.template
+    cp $TEMPLATE scripts/scripts/credentials.sh
+    sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" scripts/scripts/credentials.sh
+    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g"  scripts/scripts/credentials.sh
+    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g"  scripts/scripts/credentials.sh
+    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  scripts/scripts/credentials.sh
 fi
 
-source ./ci/scripts/credentials.sh
+source ./scripts/scripts/credentials.sh
 
 # install k3d 1.7.0
 curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | TAG=v1.7.0 bash
@@ -38,7 +38,7 @@ export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 
 echo "Cluster is connected"
 
-folders=(edge fabric sense data website)
+folders=(edge fabric sense data website apis)
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -94,7 +94,7 @@ for folder in "${folders[@]}"; do
     echo "================================== $folder"
     if [[ $folder == "edge" ]]
     then
-        kubectl apply -f ci/resources/edge.service.yaml
+        kubectl apply -f scripts/resources/edge.service.yaml
         kubectl apply -f edge/edge.serviceaccount.yaml
         kubectl apply -f edge/edge.sidecar.configmap.yaml
         kubectl apply -f edge/edge.deployment.yaml
@@ -105,16 +105,16 @@ done
 
 
 # Overwrite with development only configs
-kubectl apply -f ci/resources/dashboard.deployment.yaml
-kubectl apply -f ci/resources/data.statefulset.yaml
-kubectl apply -f ci/resources/local.secrets.yaml
+kubectl apply -f scripts/resources/dashboard.deployment.yaml
+kubectl apply -f scripts/resources/data.statefulset.yaml
+kubectl apply -f scripts/resources/local.secrets.yaml
 
 echo ""
 echo "files applied"
 echo ""
 
 
-kubectl apply -f ci/resources/edge.ingress.yaml
+kubectl apply -f scripts/resources/edge.ingress.yaml
 
 echo ""
 echo "ingress applied"

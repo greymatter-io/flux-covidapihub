@@ -3,7 +3,7 @@
 echo API Name:
 read API_NAME
 
-source ./ci/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh
 
 echo "Removing $API_NAME"
 

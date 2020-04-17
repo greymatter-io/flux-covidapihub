@@ -1,3 +1,3 @@
-ci/scripts/credentials.sh
+scripts/scripts/credentials.sh
 *.secret.yaml
 .DS_Store
