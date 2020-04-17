@@ -31,6 +31,7 @@ data:
             Tag kube.*
             Mem_Buf_Limit 5MB
             Skip_Long_Lines On
+            Ignore_Older 10m
 
         [FILTER]
             Name kubernetes
@@ -45,18 +46,23 @@ data:
             Match *
             Regex eventId /[a-z0-9]*\-[a-z0-9]*\-[a-z0-9]*\-[a-z0-9]*\-[a-z0-9]/
 
+        [FILTER]
+            Name record_modifier
+            Match *
+            Remove_key message
+
         [OUTPUT]
             Name  es
             Match *
-            Host vpc-covidapihub-v4j46vkvupaulmzmhqzsnk5c5q.us-east-1.es.amazonaws.com
+            Host ${ES_HOST}
             Port 443
+            HTTP_User ${ES_USERNAME}
+            HTTP_Passwd ${ES_PASSWORD}
             Logstash_Format On
             Logstash_Prefix observables
-            Retry_Limit False
+            Retry_Limit 5
             Type observables
             Index observables-%{+YYYY.MM.dd}
-            AWS_Auth On
-            AWS_Region us-east-1
             tls On
 
         [OUTPUT]
