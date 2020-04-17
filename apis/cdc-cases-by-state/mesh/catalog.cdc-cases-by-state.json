@@ -1,17 +1,17 @@
 {
- "clusterName": "cdc-cases-by-state",
- "zoneName": "default.zone",
- "name": "CDC Number of Cases by State",
- "version": "1.0",
- "owner": "CDC",
- "capability": "health",
- "runtime": "GO",
- "documentation": "/apis/cdc-cases-by-state/",
- "prometheusJob": "apis.cdc-cases-by-state",
- "minInstances": 1,
- "maxInstances": 2,
- "authorized": true,
- "enableInstanceMetrics": true,
- "enableHistoricalMetrics": true,
- "metricsPort": 8080
- }
+  "clusterName": "apis.cdc-cases-by-state",
+  "zoneName": "default.zone",
+  "name": "CDC Number of Cases by State",
+  "version": "1.0",
+  "owner": "CDC",
+  "capability": "health",
+  "runtime": "GO",
+  "documentation": "/apis/cdc-cases-by-state/",
+  "prometheusJob": "apis.cdc-cases-by-state",
+  "minInstances": 1,
+  "maxInstances": 2,
+  "authorized": true,
+  "enableInstanceMetrics": true,
+  "enableHistoricalMetrics": true,
+  "metricsPort": 8080
+}
