@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cdc-cases-by-state.proxy",
+    "domain_keys": [
+        "cdc-cases-by-state.apis.domain"
+    ],
+    "listener_keys": [
+        "cdc-cases-by-state.apis.listener"
+    ],
+    "name": "apis.cdc-cases-by-state",
+    "listeners": null
+}
