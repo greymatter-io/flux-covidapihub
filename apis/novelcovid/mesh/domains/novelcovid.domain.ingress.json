@@ -1,0 +1,16 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "novelcovid.apis.domain",
+    "name": "*",
+    "port": 8443,
+    "gzip_enabled": false,
+    "cors_config": null,
+    "aliases": null,
+    "force_https": true,
+    "custom_headers": [
+      {
+        "key": "Host",
+        "value": "corona.lmao.ninja"
+      }
+  ]
+}
