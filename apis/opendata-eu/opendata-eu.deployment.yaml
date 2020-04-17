@@ -1,33 +1,27 @@
-#!/bin/bash
-
-NAME=$1
-
-#define the template.
-cat  << EOF
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: $NAME
-    cluster: apis.$NAME
-  name: $NAME
+    app: opendata-eu
+    cluster: apis.opendata-eu
+  name: opendata-eu
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $NAME
-      cluster: apis.$NAME
+      app: opendata-eu
+      cluster: apis.opendata-eu
   template:
     metadata:
       labels:
-        app: $NAME
-        cluster: apis.$NAME
+        app: opendata-eu
+        cluster: apis.opendata-eu
     spec:
       serviceAccountName: apis-sa
       containers:
-        - name: $NAME-proxy
+        - name: opendata-eu-proxy
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -56,5 +50,4 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: $NAME-sidecar
-EOF
+            name: opendata-eu-sidecar

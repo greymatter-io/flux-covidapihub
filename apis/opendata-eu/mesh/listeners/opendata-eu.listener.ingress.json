@@ -1,21 +1,15 @@
-#!/bin/bash
-
-NAME=$1
-
-#define the template.
-cat  << EOF
 {
     "zone_key": "default.zone",
-    "listener_key": "$NAME.apis.listener",
+    "listener_key": "opendata-eu.apis.listener",
     "domain_keys": [
-        "$NAME.apis.domain"
+        "opendata-eu.apis.domain"
     ],
     "name": "ingress",
     "ip": "0.0.0.0",
     "port": 8443,
     "protocol": "http_auto",
     "secret": {
-        "secret_key": "apis.identity",
+        "secret_key": "dashboard.identity",
         "secret_name": "spiffe://covidapihub.io/ns/apis/sa/apis-sa",
         "secret_validation_name": "spiffe://covidapihub.io",
         "subject_names": [
@@ -66,4 +60,3 @@ cat  << EOF
     },
     "tracing_config": null
 }
-EOF

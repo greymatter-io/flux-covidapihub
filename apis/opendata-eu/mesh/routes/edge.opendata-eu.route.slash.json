@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.opendata-eu.slash.route",
+    "path": "/apis/opendata-eu",
+    "prefix_rewrite": "/apis/opendata-eu/",
+    "redirects": null,
+    "shared_rules_key": "edge.opendata-eu.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
