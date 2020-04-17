@@ -26,9 +26,11 @@ data:
             namespaces:
               names:
                 - fabric
-                - ingress
+                - edge
                 - sense
                 - website
+                - apis
+                - data
         relabel_configs:
         - source_labels: ['__meta_kubernetes_pod_container_port_name']
           regex: 'metrics'
