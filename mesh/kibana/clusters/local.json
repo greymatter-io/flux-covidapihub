@@ -4,7 +4,7 @@
     "name": "local",
     "instances": [
         {
-            "host": "vpc-covidhub-4qwfn24a5vf7nzoz2b6jddf72e.us-east-1.es.amazonaws.com",
+            "host": "vpc-covidapihub-v4j46vkvupaulmzmhqzsnk5c5q.us-east-1.es.amazonaws.com",
             "port": 443
         }
     ],

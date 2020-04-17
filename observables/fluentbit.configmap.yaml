@@ -48,7 +48,7 @@ data:
         [OUTPUT]
             Name  es
             Match *
-            Host vpc-covidhub-4qwfn24a5vf7nzoz2b6jddf72e.us-east-1.es.amazonaws.com
+            Host vpc-covidapihub-v4j46vkvupaulmzmhqzsnk5c5q.us-east-1.es.amazonaws.com
             Port 443
             Logstash_Format On
             Logstash_Prefix observables
