@@ -2,9 +2,8 @@
 
 greymatter version
 
-source ./ci/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh
 kubectl cluster-info
-
 listener=$(lsof -t -i:10080)
 
 if [ ! -z "$listener" ]; then
@@ -64,4 +63,4 @@ do
 done
 
 # Overwrite
-create_or_update listener ci/resources/mesh.edge.listener.ingress.json
+create_or_update listener scripts/resources/mesh.edge.listener.ingress.json

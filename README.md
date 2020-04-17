@@ -33,3 +33,41 @@ source ./run.sh
 ```
 
 It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
+
+### How to add an API
+
+To add an api to the mesh, run the following:
+
+```bash
+make new-api
+```
+
+It will prompt you for the following information:
+
+- API Name: an all lowercase, no spaces or special characters name for the deployment. This will dictate the route to this api - it will be `https://covidapihub.io/apis/<api_name>`
+- Host: hostname of the api
+- Port: port of the api
+- Path: path to the api, it should being with `/`.
+- Display Name: display name for catalog entry
+- Owner: owner for catalog entry
+- Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
+
+Example:
+
+For example, to create a deployment and configs for [this api](https://api.census.gov/data/2019/pep/population) from [this entry](https://github.com/greymatter-io/covidapihub-site/blob/7f1eb7fff72f77ccf9389bfac5c2bded889b9d55/public/mock.json#L203-L224) - these are the entries:
+
+1. API NAME: `us-census-population`
+2. Host: `api.census.gov`
+3. Port: `443`
+4. Path: `/data/2019/pep/population`
+5. Display Name: `US Census Bureau - Population`
+6. Owner: `Census Bureau`
+7. Capability: `Governance`
+
+Once this is done, if youre deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory.
+
+If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted.
+
+If you want to apply an api from a set of already generated configs, run `make apply-api` and type the `api_name` when prompted. 
+
+**NOTE**: This script will generate a catalog json configuration, saved in `apis/<api_name>/mesh/catalog.json` from the inputs, but it will not post it. For now, all apis must be registered with catalog manually.
