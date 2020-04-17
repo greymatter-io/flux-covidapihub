@@ -11,10 +11,6 @@
     {
       "key": "Host",
       "value": "corona.lmao.ninja"
-    },
-    {
-      "key": "x-forwarded-proto",
-      "value": "https"
     }
   ]
 }

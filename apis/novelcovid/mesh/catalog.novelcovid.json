@@ -6,7 +6,7 @@
   "owner": "Johns Hopkins University",
   "capability": "health",
   "runtime": "GO",
-  "documentation": "/apis/novelcovid/docs",
+  "documentation": "/apis/novelcovid/v2/all",
   "prometheusJob": "apis.novelcovid",
   "minInstances": 1,
   "maxInstances": 2,
