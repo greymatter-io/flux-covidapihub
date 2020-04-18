@@ -11,7 +11,9 @@
   "tracing_config": null,
   "active_http_filters": [
     "gm.observables",
-    "gm.metrics"
+    "gm.metrics",
+    "gm.oidc-validation",
+    "envoy.rbac"
   ],
   "http_filters": {
     "gm_metrics": {
@@ -24,6 +26,14 @@
       "metrics_key_function": "depth"
     },
     "gm_observables": {},
+    "gm_oidc-validation": {
+      "accessToken": {
+        "location": "header",
+        "key": "access_token"
+      },
+      "provider": "https://accounts.google.com",
+      "enforce": false
+    },
     "envoy_rbac": {
       "rules": {
         "action": 0,

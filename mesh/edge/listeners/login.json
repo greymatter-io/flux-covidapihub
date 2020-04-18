@@ -8,34 +8,12 @@
   "protocol": "http_auto",
   "tracing_config": null,
   "active_http_filters": [
+    "gm.observables",
+    "gm.metrics",
+    "gm.oidc-validation",
     "gm.oidc-authentication"
   ],
   "http_filters": {
-    "envoy_rbac": {
-      "rules": {
-      "action": 0,
-      "policies": {
-          "0": {
-          "permissions": [
-              {
-              "header": {
-                  "name": ":method",
-                  "exact_match": "GET"
-              }
-              }
-          ],
-          "principals": [
-            {
-              "header": {
-                "name": "access_token",
-                "present_match": true
-              }
-            }
-          ]
-          }
-      }
-      }
-    },
     "gm_metrics": {
       "metrics_port": 8080,
       "metrics_host": "0.0.0.0",
