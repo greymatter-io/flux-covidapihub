@@ -63,4 +63,4 @@ do
 done
 
 # Overwrite
-create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+# create_or_update listener scripts/resources/mesh.edge.listener.ingress.json

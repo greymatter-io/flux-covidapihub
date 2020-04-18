@@ -13,7 +13,7 @@
     "subject_names": ["spiffe://covidapihub.io/ns/edge/sa/edge"],
     "ecdh_curves": ["X25519:P-256:P-521:P-384"]
   },
-  "active_http_filters": ["gm.metrics", "gm.observables", "envoy.rbac"],
+  "active_http_filters": ["gm.metrics", "gm.observables"],
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,
@@ -24,29 +24,7 @@
       "prometheus_system_metrics_interval_seconds": 15,
       "metrics_key_function": "depth"
     },
-    "gm_observables": {},
-    "envoy_rbac": {
-      "rules": {
-        "action": 0,
-        "policies": {
-          "0": {
-            "permissions": [
-              {
-                "header": {
-                  "name": ":method",
-                  "exact_match": "GET"
-                }
-              }
-            ],
-            "principals": [
-              {
-                "any": true
-              }
-            ]
-          }
-        }
-      }
-    }
+    "gm_observables": {}
   },
   "tracing_config": null
 }

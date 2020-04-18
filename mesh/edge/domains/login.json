@@ -1,0 +1,29 @@
+{
+  "zone_key": "default.zone",
+  "domain_key": "edge.login.domain",
+  "name": "*",
+  "port": 9443,
+  "gzip_enabled": false,
+  "ssl_config": {
+    "cert_key_pairs": [
+      {
+        "certificate_path": "/etc/tls/edge.svc.crt",
+        "key_path": "/etc/tls/edge.svc.key"
+      }
+    ],
+    "trust_file": "/etc/tls/ca.crt",
+    "require_client_certs": false
+  },
+  "cors_config": null,
+  "aliases": null,
+  "force_https": true,
+  "redirects": [
+      {
+        "name": "redirect-to-covidhub",
+        "from": "/",
+        "to": "https://localhost:30000",
+        "redirect_type": "temporary",
+        "header_constraints": null
+      }
+  ]
+}
