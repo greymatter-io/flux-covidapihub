@@ -34,6 +34,8 @@ spec:
               containerPort: 8080
             - name: sidecar
               containerPort: 8443
+            - name: login
+              containerPort: 9443
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter

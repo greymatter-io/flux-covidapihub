@@ -63,4 +63,6 @@ do
 done
 
 # Overwrite
+create_or_update domain scripts/resources/mesh.edge.domains.login.json
+create_or_update listener scripts/resources/mesh.edge.listener.login.json
 create_or_update listener scripts/resources/mesh.edge.listener.ingress.json

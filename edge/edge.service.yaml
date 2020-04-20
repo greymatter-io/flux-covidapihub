@@ -9,9 +9,14 @@ metadata:
     cluster: edge.edge
 spec:
   ports:
-    - port: 8443
+    - name: sidecar
+      port: 8443
       protocol: TCP
       targetPort: sidecar
+    - name: login
+      port: 9443
+      protocol: TCP
+      targetPort: login
   selector:
     app: edge
     cluster: edge.edge

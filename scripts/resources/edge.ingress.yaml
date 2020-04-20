@@ -12,7 +12,12 @@ spec:
     - host: development.deciphernow.com
       http:
         paths:
-        - backend:
+        - path: /login
+          backend:
+            serviceName: edge
+            servicePort: 9443
+        - path: /
+          backend:
             serviceName: edge
             servicePort: 8443
-          path: / #end with ingress
+
