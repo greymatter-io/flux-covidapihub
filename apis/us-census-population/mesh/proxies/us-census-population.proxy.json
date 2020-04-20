@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "us-census-population.proxy",
+    "domain_keys": [
+        "us-census-population.apis.domain"
+    ],
+    "listener_keys": [
+        "us-census-population.apis.listener"
+    ],
+    "name": "apis.us-census-population",
+    "listeners": null
+}
