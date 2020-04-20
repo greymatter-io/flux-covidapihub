@@ -38,9 +38,16 @@ cat  << EOF
             "metrics_prometheus_uri_path": "/prometheus",
             "metrics_ring_buffer_size": 4096,
             "prometheus_system_metrics_interval_seconds": 15,
-            "metrics_key_function": "depth"
+            "metrics_key_function": "depth",
+            "metrics_key_depth": "3"
         },
-        "gm_observables": {},
+        "gm_observables": {
+            "topic": "apis.$API_NAME",
+            "eventTopic": "observables",
+            "useKafka": true,
+            "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
+            "useKafkaTLS": true
+        },
         "envoy_rbac": {
             "rules": {
             "action": 0,

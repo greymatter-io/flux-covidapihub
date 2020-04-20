@@ -1,0 +1,17 @@
+{
+  "clusterName": "apis.novelcovid",
+  "zoneName": "default.zone",
+  "name": "NOVELCovid",
+  "version": "1.0",
+  "owner": "Johns Hopkins University",
+  "capability": "health",
+  "runtime": "GO",
+  "documentation": "/apis/novelcovid/",
+  "prometheusJob": "apis.novelcovid",
+  "minInstances": 1,
+  "maxInstances": 2,
+  "authorized": true,
+  "enableInstanceMetrics": true,
+  "enableHistoricalMetrics": true,
+  "metricsPort": 8080
+}
