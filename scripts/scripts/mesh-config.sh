@@ -1,4 +1,5 @@
 #!/bin/bash
+DEV=$1
 
 greymatter version
 
@@ -54,13 +55,23 @@ do
             object="${folder%?}"
             if [[ $object == "proxie" ]]; then object="proxy"; fi
             if [[ $object == "rule" ]]; then object="shared_rules"; fi
-            echo "applying $file"
-            create_or_update $object $file
-            sleep $delay
+            if [[ $object == "listener" && "$DEV" =~ ^([yY])$ ]]; then
+                value=$(<$file)
+                value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
+                echo "$value" > /tmp/listener.json
+                create_or_update listener /tmp/listener.json
+                sleep $delay
+            else
+                echo "applying $file"
+                create_or_update $object $file
+                sleep $delay
+            fi
         done
     done
     cd -
 done
 
 # Overwrite
-create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+if [[ "$DEV" =~ ^([yY])$ ]]; then
+    create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+fi

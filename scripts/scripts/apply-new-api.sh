@@ -1,6 +1,7 @@
 #!/bin/bash
 
-API_NAME=$1
+DEV=$1
+API_NAME=$2
 
 if [ "$API_NAME" == "" ]; then
     echo API Name
@@ -63,7 +64,18 @@ delay=0.01
 
 for cl in apis/$API_NAME/mesh/clusters/*.json; do create_or_update cluster $cl; done
 for cl in apis/$API_NAME/mesh/domains/*.json; do create_or_update domain $cl; done
-for cl in apis/$API_NAME/mesh/listeners/*.json; do create_or_update listener $cl; done
+
+if [[ "$DEV" =~ ^([yY])$ ]]; then
+    for cl in apis/$API_NAME/mesh/listeners/*.json; do
+        value=$(<$cl)
+        value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
+        echo "$value" > /tmp/listener.json
+        create_or_update listener /tmp/listener.json
+    done
+else
+    for cl in apis/$API_NAME/mesh/listeners/*.json; do create_or_update listener $cl; done
+fi
+
 for cl in apis/$API_NAME/mesh/proxies/*.json; do create_or_update proxy $cl; done
 for cl in apis/$API_NAME/mesh/rules/*.json; do create_or_update shared_rules $cl; done
 for cl in apis/$API_NAME/mesh/routes/*.json; do create_or_update route $cl; done
