@@ -48,7 +48,7 @@ spec:
             value: depth
         - name: dashboard
           image: deciphernow/gm-dashboard:covidapihub
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: FABRIC_SERVER
               value: https://covidapihub.io/catalog/latest/
