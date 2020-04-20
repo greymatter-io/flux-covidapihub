@@ -1,6 +1,10 @@
 #!/bin/bash
 
-export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
+DEV=$1
+
+if ! [[ "$DEV" =~ ^([nN])$ ]]; then
+    export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
+fi
 export GREYMATTER_API_HOST='localhost:10080'
 export GREYMATTER_API_SSL='false'
 export GREYMATTER_API_INSECURE='true'

@@ -1,8 +1,9 @@
 #!/bin/bash
+DEV=$1
 
 greymatter version
 
-source ./scripts/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh $DEV
 kubectl cluster-info
 listener=$(lsof -t -i:10080)
 
@@ -54,15 +55,25 @@ do
             object="${folder%?}"
             if [[ $object == "proxie" ]]; then object="proxy"; fi
             if [[ $object == "rule" ]]; then object="shared_rules"; fi
-            echo "applying $file"
-            create_or_update $object $file
-            sleep $delay
+            if [[ $object == "listener" && "$DEV" =~ ^([yY])$ ]]; then
+                value=$(<$file)
+                value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
+                echo "$value" > /tmp/listener.json
+                create_or_update listener /tmp/listener.json
+                sleep $delay
+            else
+                echo "applying $file"
+                create_or_update $object $file
+                sleep $delay
+            fi
         done
     done
     cd -
 done
 
 # Overwrite
-create_or_update domain scripts/resources/mesh.edge.domains.login.json
-create_or_update listener scripts/resources/mesh.edge.listener.login.json
-create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+if [[ "$DEV" =~ ^([yY])$ ]]; then
+    create_or_update domain scripts/resources/mesh.edge.domains.login.json
+    create_or_update listener scripts/resources/mesh.edge.listener.login.json
+    create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+fi

@@ -2,8 +2,10 @@
 
 echo API Name:
 read API_NAME
+echo "Delete API in dev? [y/N]":
+read DEV
 
-source ./scripts/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh $DEV
 
 echo "Removing $API_NAME"
 
