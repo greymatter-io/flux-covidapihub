@@ -1,7 +1,21 @@
 apiVersion: v1
 kind: LimitRange
 metadata:
-  name: default-limit-range
+  namespace: edge
+  name: edge-lr
+spec:
+  limits:
+  - default:
+    max:
+      cpu: 1
+      memory: 1Gi
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: fabric
+  name: fabric-lr
 spec:
   limits:
   - default:
@@ -13,12 +27,68 @@ spec:
 apiVersion: v1
 kind: LimitRange
 metadata:
-  namespace: edge
-  name: edge-limit-range
+  namespace: sense
+  name: sense-lr
 spec:
   limits:
   - default:
     max:
-      cpu: 1
-      memory: 1Gi
+      cpu: 200m
+      memory: 512Mi
     type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: data
+  name: data-lr
+spec:
+  limits:
+  - default:
+    max:
+      cpu: 200m
+      memory: 512Mi
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: apis
+  name: apis-lr
+spec:
+  limits:
+  - default:
+    max:
+      cpu: 200m
+      memory: 512Mi
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: website
+  name: website-lr
+spec:
+  limits:
+  - default:
+    max:
+      cpu: 200m
+      memory: 512Mi
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: spire-dev
+  name: spire-dev-lr
+spec:
+  limits:
+  - default:
+    max:
+      cpu: 200m
+      memory: 512Mi
+    type: Container
+
+
+
+
