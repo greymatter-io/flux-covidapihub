@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.us-census-economic-indicators.route",
+    "path": "/apis/us-census-economic-indicators/",
+    "prefix_rewrite": "/",
+    "redirects": null,
+    "shared_rules_key": "edge.us-census-economic-indicators.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.us-census-economic-indicators",
+ "zoneName": "default.zone",
+ "name": "US Census Bureau - Economic Indicators",
+ "version": "1.0",
+ "owner": "Census Bureau",
+ "capability": "Governance",
+ "runtime": "GO",
+ "documentation": "/apis/us-census-economic-indicators/",
+ "prometheusJob": "apis.us-census-economic-indicators",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
