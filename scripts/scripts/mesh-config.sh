@@ -3,7 +3,7 @@ DEV=$1
 
 greymatter version
 
-source ./scripts/scripts/mesh-env.sh
+source ./scripts/scripts/mesh-env.sh $DEV
 kubectl cluster-info
 listener=$(lsof -t -i:10080)
 
