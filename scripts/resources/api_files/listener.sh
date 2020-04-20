@@ -42,7 +42,7 @@ cat  << EOF
             "metrics_key_depth": "3"
         },
         "gm_observables": {
-            "topic": "apis.$API_NAME",
+            "topic": "apis.$NAME",
             "eventTopic": "observables",
             "useKafka": true,
             "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
