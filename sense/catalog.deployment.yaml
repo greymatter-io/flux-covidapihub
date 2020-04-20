@@ -72,36 +72,6 @@ spec:
               value: "10080"
             - name: DEBUG
               value: "true"
-            - name: SERVICE_0_CLUSTER_NAME
-              value: website.website
-            - name: SERVICE_0_ZONE_NAME
-              value: default.zone
-            - name: SERVICE_0_NAME
-              value: Covid API Hub landing page
-            - name: SERVICE_0_VERSION
-              value: latest
-            - name: SERVICE_0_OWNER
-              value: Decipher
-            - name: SERVICE_0_CAPABILITY
-              value: Website
-            - name: SERVICE_0_RUNTIME
-              value: "Node"
-            - name: SERVICE_0_DOCUMENTATION
-              value: ""
-            - name: SERVICE_0_PROMETHEUS_JOB
-              value: website.website
-            - name: SERVICE_0_MAX_INSTANCES
-              value: "3"
-            - name: SERVICE_0_MIN_INSTANCES
-              value: "1"
-            - name: SERVICE_0_ENABLE_INSTANCE_METRICS
-              value: "true"
-            - name: SERVICE_0_ENABLE_HISTORICAL_METRICS
-              value: "true"
-            - name: SERVICE_0_METRICS_TEMPLATE
-              value: ""
-            - name: SERVICE_0_METRICS_PORT
-              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
