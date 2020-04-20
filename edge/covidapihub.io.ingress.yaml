@@ -21,6 +21,10 @@ spec:
     - host: covidapihub.io
       http:
         paths:
+          - path: /login/(.*)
+            backend:
+              serviceName: edge
+              servicePort: 9443
           - path: /(.*)
             backend:
               serviceName: edge
@@ -32,10 +36,3 @@ spec:
             backend:
               serviceName: edge
               servicePort: 8443
-    - host: login.covidapihub.io
-      http:
-        paths:
-          - path: /(.*)
-            backend:
-              serviceName: edge
-              servicePort: 9443
