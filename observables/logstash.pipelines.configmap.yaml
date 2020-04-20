@@ -1,0 +1,55 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logstash-pipelines
+  namespace: observables
+data:
+  filter_main.conf: |-
+    filter {
+      json {
+        source => "message"
+        remove_field => [
+          "message"
+        ]
+      }
+      split {
+        field => "xForwardedForIp"
+        terminator => ','
+      }
+      geoip {
+        source => "xForwardedForIp"
+      }
+      date {
+        match => [
+          "timestamp",
+          "UNIX"
+        ]
+      }
+    }
+  input_main.conf: |-
+    input {
+      kafka {
+        auto_offset_reset => earliest
+        bootstrap_servers => "${KAFKA_SERVERS}"
+        topics => [
+            "observables"
+        ]
+        security_protocol => SSL
+      }
+    }
+  output_main.conf: |-
+    output {
+      elasticsearch {
+        ilm_enabled => false
+        hosts => [
+          "${ES_HOST}"
+        ]
+        user => "${ES_USERNAME}"
+        password => "${ES_PASSWORD}"
+        index => "observables-%{+YYYY.MM.dd}"
+        manage_template => true
+        template => "/usr/share/logstash/templates/observables.json"
+        template_name => "observables"
+      }
+    }
