@@ -20,7 +20,11 @@ spec:
     - host: covidapihub.io
       http:
         paths:
-          - path: /login($|\/.*)
+          - path: /login
+            backend:
+              serviceName: edge
+              servicePort: 9443
+          - path: /login/(.*)
             backend:
               serviceName: edge
               servicePort: 9443
