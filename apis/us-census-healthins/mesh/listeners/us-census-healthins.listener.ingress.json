@@ -1,13 +1,13 @@
 {
   "zone_key": "default.zone",
-  "listener_key": "cdc-cases-by-state.apis.listener",
-  "domain_keys": ["cdc-cases-by-state.apis.domain"],
+  "listener_key": "us-census-healthins.apis.listener",
+  "domain_keys": ["us-census-healthins.apis.domain"],
   "name": "ingress",
   "ip": "0.0.0.0",
   "port": 8443,
   "protocol": "http_auto",
   "secret": {
-    "secret_key": "dashboard.identity",
+    "secret_key": "apis.identity",
     "secret_name": "spiffe://covidapihub.io/ns/apis/sa/apis-sa",
     "secret_validation_name": "spiffe://covidapihub.io",
     "subject_names": ["spiffe://covidapihub.io/ns/edge/sa/edge"],
@@ -26,7 +26,7 @@
       "metrics_key_depth": "3"
     },
     "gm_observables": {
-      "topic": "apis.cdc-cases-by-state",
+      "topic": "apis.",
       "eventTopic": "observables",
       "useKafka": true,
       "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
