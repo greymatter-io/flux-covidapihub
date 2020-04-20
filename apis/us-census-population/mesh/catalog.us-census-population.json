@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.us-census-population",
+ "zoneName": "default.zone",
+ "name": "US Census Bureau - Population",
+ "version": "1.0",
+ "owner": "Census Bureau",
+ "capability": "Governance",
+ "runtime": "GO",
+ "documentation": "/apis/us-census-population/",
+ "prometheusJob": "apis.us-census-population",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
