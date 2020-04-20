@@ -7,11 +7,11 @@ k3d:
 	./scripts/scripts/k3d.sh
 
 .PHONY: mesh-prod
-mesh:
+mesh-prod:
 	./scripts/scripts/mesh-config.sh "N"
 
 .PHONY: mesh
-mesh-dev:
+mesh:
 	./scripts/scripts/mesh-config.sh "Y"
 
 .PHONY: new-api
@@ -19,11 +19,11 @@ new-api:
 	./scripts/scripts/new-api.sh
 
 .PHONY: apply-api-prod
-apply-api:
+apply-api-prod:
 	./scripts/scripts/apply-new-api.sh "N"
 
 .PHONY: apply-api
-apply-api-dev:
+apply-api:
 	./scripts/scripts/apply-new-api.sh "Y"
 
 .PHONY: delete-api
