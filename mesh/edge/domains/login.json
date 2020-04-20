@@ -21,7 +21,7 @@
       {
         "name": "redirect-to-covidhub",
         "from": "/",
-        "to": "https://localhost:30000",
+        "to": "https://covidapihub.io",
         "redirect_type": "temporary",
         "header_constraints": null
       }

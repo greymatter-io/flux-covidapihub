@@ -1,0 +1,52 @@
+{
+    "zone_key": "default.zone",
+    "listener_key": "edge.login.listener",
+    "domain_keys": ["edge.login.domain"],
+    "name": "ingress",
+    "ip": "0.0.0.0",
+    "port": 9443,
+    "protocol": "http_auto",
+    "tracing_config": null,
+    "active_http_filters": [
+      "gm.metrics",
+      "gm.oidc-validation",
+      "gm.oidc-authentication"
+    ],
+    "http_filters": {
+      "gm_metrics": {
+        "metrics_port": 8080,
+        "metrics_host": "0.0.0.0",
+        "metrics_dashboard_uri_path": "/metrics",
+        "metrics_prometheus_uri_path": "/prometheus",
+        "metrics_ring_buffer_size": 4096,
+        "prometheus_system_metrics_interval_seconds": 15,
+        "metrics_key_function": "depth"
+      },
+      "gm_oidc-validation": {
+        "accessToken": {
+          "location": "cookie",
+          "key": "access_token"
+        },
+        "provider": "https://accounts.google.com",
+        "enforce": false
+      },
+      "gm_oidc-authentication": {
+        "accessToken": {
+          "location": "cookie",
+          "key": "access_token",
+          "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+        },
+        "idToken": {
+          "location": "cookie",
+          "key": "id_token",
+          "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+        },
+        "serviceUrl": "https://localhost:30001",
+        "callbackPath": "/oauth",
+        "provider": "https://accounts.google.com",
+        "clientId": "664877975183-co1amdfa8bhqlgh6uo9nklado3s83kem.apps.googleusercontent.com",
+        "clientSecret": "2KaOo4N5IdUtvVbFCbohBg9G",
+        "additionalScopes": ["profile", "email"]
+      }
+    }
+  }

@@ -8,6 +8,7 @@
   "protocol": "http_auto",
   "tracing_config": null,
   "active_http_filters": [
+    "gm.metrics",
     "gm.oidc-validation",
     "gm.oidc-authentication"
   ],
@@ -24,18 +25,18 @@
       "accessToken": {
         "location": "cookie",
         "key": "access_token",
-        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "domain":"*.covidapihub.io", "path": "/" }
       },
       "idToken": {
         "location": "cookie",
         "key": "id_token",
-        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "path": "/" }
+        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "domain":"*.covidapihub.io", "path": "/" }
       },
-      "serviceUrl": "https://localhost:30001",
+      "serviceUrl": "https://login.covidapihub.io",
       "callbackPath": "/oauth",
       "provider": "https://accounts.google.com",
-      "clientId": "664877975183-co1amdfa8bhqlgh6uo9nklado3s83kem.apps.googleusercontent.com",
-      "clientSecret": "2KaOo4N5IdUtvVbFCbohBg9G",
+      "clientId": "REDACTED",
+      "clientSecret": "REDACTED",
       "additionalScopes": ["profile", "email"]
     }
   }
