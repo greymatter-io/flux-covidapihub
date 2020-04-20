@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "novelcovid.proxy",
+    "domain_keys": [
+        "novelcovid.apis.domain"
+    ],
+    "listener_keys": [
+        "novelcovid.apis.listener"
+    ],
+    "name": "apis.novelcovid",
+    "listeners": null
+}

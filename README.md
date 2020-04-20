@@ -34,7 +34,7 @@ source ./run.sh
 
 It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
 
-### How to add an API
+## Adding an API
 
 To add an api to the mesh, run the following:
 
@@ -64,10 +64,25 @@ For example, to create a deployment and configs for [this api](https://api.censu
 6. Owner: `Census Bureau`
 7. Capability: `Governance`
 
-Once this is done, if youre deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory.
+Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. 
+
+Some API's sit behind load balancers and will need to add an SNI field. This will let the request know which backend server to go to. If you are having trouble proxying, try adding this field to the local cluster object:
+
+```json
+  "ssl_config": {
+    "cipher_filter": "",
+    "protocols": null,
+    "sni": "api.census.gov"
+  }
+```
+
+**NOTE**: This script will generate a catalog json configuration, saved in `apis/<api_name>/mesh/catalog.json` from the inputs, but it will not post it. For now, all apis must be registered with catalog manually. To do this, you can run:
+
+```sh
+kc port-forward deployment/catalog -n sense 10080:10080 &
+curl -XPOST http://localhost:10080/clusters -d "@apis/us-census-population/mesh/us-census-population.json"
+````
 
 If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted.
 
 If you want to apply an api from a set of already generated configs, run `make apply-api` and type the `api_name` when prompted. 
-
-**NOTE**: This script will generate a catalog json configuration, saved in `apis/<api_name>/mesh/catalog.json` from the inputs, but it will not post it. For now, all apis must be registered with catalog manually.
