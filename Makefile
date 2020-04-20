@@ -6,11 +6,11 @@ SHELL := /bin/bash
 k3d:
 	./scripts/scripts/k3d.sh
 
-.PHONY: mesh
+.PHONY: mesh-prod
 mesh:
 	./scripts/scripts/mesh-config.sh "N"
 
-.PHONY: mesh-dev
+.PHONY: mesh
 mesh-dev:
 	./scripts/scripts/mesh-config.sh "Y"
 
@@ -18,11 +18,11 @@ mesh-dev:
 new-api:
 	./scripts/scripts/new-api.sh
 
-.PHONY: apply-api
+.PHONY: apply-api-prod
 apply-api:
 	./scripts/scripts/apply-new-api.sh "N"
 
-.PHONY: apply-api-dev
+.PHONY: apply-api
 apply-api-dev:
 	./scripts/scripts/apply-new-api.sh "Y"
 
