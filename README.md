@@ -20,7 +20,7 @@ The content of `./word.sealedsecret.yaml` is suitable for commiting into the rep
 
 ### With Makefile
 
-Run `make k3d mesh` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.  It will apply the various yamls and create secrets for local development.  Part of the secret creation includes using [acert](https://github.com/deciphernow/acert) so that needs to be installed before running the script.
+Run `make k3d mesh-dev` in order to start up a four-worker [k3d](https://github.com/rancher/k3d) cluster locally on port 30000.  It will apply the various yamls and create secrets for local development.  Part of the secret creation includes using [acert](https://github.com/deciphernow/acert) so that needs to be installed before running the script.
 
 Note that this will not change which environment your `kubectl` is pointing to. Make sure to run `export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"` to use the kubeconfig for that cluster and be able to use `kubectl` commands.
 
@@ -32,7 +32,7 @@ At the root of this repo, it has run.sh script. By running this like so:
 source ./run.sh
 ```
 
-It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
+It will run `make k3d mesh-dev` as described above, but also change your `KUBECONFIG` environment variable.
 
 ## Adding an API
 
@@ -64,7 +64,7 @@ For example, to create a deployment and configs for [this api](https://api.censu
 6. Owner: `Census Bureau`
 7. Capability: `Governance`
 
-Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. 
+Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
 Some API's sit behind load balancers and will need to add an SNI field. This will let the request know which backend server to go to. If you are having trouble proxying, try adding this field to the local cluster object:
 
@@ -83,6 +83,6 @@ kc port-forward deployment/catalog -n sense 10080:10080 &
 curl -XPOST http://localhost:10080/clusters -d "@apis/us-census-population/mesh/us-census-population.json"
 ````
 
-If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted.
+If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted. If you want to delete the api from your local dev environment, type `Y` when it prompts `Delete API in dev? [y/N]`.
 
-If you want to apply an api from a set of already generated configs, run `make apply-api` and type the `api_name` when prompted. 
+If you want to apply an api from a set of already generated configs in your local dev environment, run `make apply-api-dev` and type the `api_name` when prompted.  To apply an api from a set of already generated configs in prod, run `make apply-api`.

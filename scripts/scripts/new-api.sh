@@ -40,10 +40,10 @@ scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capabili
 
 read -r -p "Apply the configs now? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    read -r -p "Apply to dev? [y/N] " dev
-    if [[ "$dev" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-        scripts/scripts/apply-new-api.sh "Y" $name
-    else
+    read -r -p "Apply to prod? [y/N] " prod
+    if [[ "$prod" =~ ^([yY][eE][sS]|[yY])$ ]]; then
         scripts/scripts/apply-new-api.sh "N" $name
+    else
+        scripts/scripts/apply-new-api.sh "Y" $name
     fi
 fi
