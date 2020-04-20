@@ -3,25 +3,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: edge
-    cluster: edge.edge
-  name: edge
-  namespace: edge
+    app: us-census-healthins
+    cluster: apis.us-census-healthins
+  name: us-census-healthins
+  namespace: apis
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: edge
-      cluster: edge.edge
+      app: us-census-healthins
+      cluster: apis.us-census-healthins
   template:
     metadata:
       labels:
-        app: edge
-        cluster: edge.edge
+        app: us-census-healthins
+        cluster: apis.us-census-healthins
     spec:
-      serviceAccountName: edge
+      serviceAccountName: apis-sa
       containers:
-        - name: edge
+        - name: us-census-healthins-proxy
           image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -34,32 +34,20 @@ spec:
               containerPort: 8080
             - name: sidecar
               containerPort: 8443
-            - name: login
-              containerPort: 9443
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
               readOnly: true
-            - name: sidecar-tls
-              mountPath: /etc/tls
-              readOnly: true
             - name: spire-socket
               mountPath: /run/spire/sockets
               readOnly: false
-          env:
-          - name: METRICS_KEY_FUNCTION
-            value: depth
       imagePullSecrets:
         - name: docker.production.deciphernow.com
       volumes:
-        - name: sidecar-config
-          configMap:
-            name: edge-sidecar
-        - name: sidecar-tls
-          secret:
-            secretName: edge.svc
-
         - name: spire-socket
           hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
+        - name: sidecar-config
+          configMap:
+            name: us-census-healthins-sidecar
