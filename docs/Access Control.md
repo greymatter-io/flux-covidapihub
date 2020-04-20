@@ -24,7 +24,7 @@ make k3d mesh
 https://localhost:30001
 
 If you do not have a cookie "access_token", it will redirect you to a login page.
-Otherwise, it is actually redirecting you to https://localhost:30000 - but redirect process chops off the port for some reasons, so you will end up in https://localhost and it will give you 443 error page. I think this will look okay when we are redirecting to https://covidapihub.io in prod. If you open up https://localhost:30000, you will see the access_token it acquired.
+Otherwise, it is actually redirecting you to https://localhost:30000 - but redirect process chops off the port at the time of writing (https://github.com/DecipherNow/greymatter/issues/326), so you will end up in https://localhost and it will give you 443 error page. I think this will look okay when we are redirecting to https://covidapihub.io in prod. If you open up https://localhost:30000, you will see the access_token it acquired.
 
 This route has validation filter that removes stale access_token cookie if found.
 
