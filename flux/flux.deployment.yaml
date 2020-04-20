@@ -61,6 +61,7 @@ spec:
             - --git-readonly
             - --k8s-secret-name=flux
             - --listen-metrics=:3031
+            - --sync-garbage-collection
       volumes:
         - name: git-key
           secret:
