@@ -3,7 +3,7 @@
  "zoneName": "default.zone",
  "name": "US Census Bureau - Economic Indicators",
  "version": "1.0",
- "owner": "Census Bureau",
+ "owner": "US Census Bureau",
  "capability": "Governance",
  "runtime": "GO",
  "documentation": "/apis/us-census-economic-indicators/",
