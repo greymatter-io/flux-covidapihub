@@ -1,14 +1,8 @@
-#!/bin/bash
-
-NAME=$1
-
-#define the template.
-cat  << EOF
 {
     "zone_key": "default.zone",
-    "listener_key": "$NAME.apis.listener",
+    "listener_key": "us-census-economic-indicators.apis.listener",
     "domain_keys": [
-        "$NAME.apis.domain"
+        "us-census-economic-indicators.apis.domain"
     ],
     "name": "ingress",
     "ip": "0.0.0.0",
@@ -42,7 +36,7 @@ cat  << EOF
             "metrics_key_depth": "3"
         },
         "gm_observables": {
-            "topic": "apis.$NAME",
+            "topic": "apis.us-census-economic-indicators",
             "eventTopic": "observables",
             "useKafka": true,
             "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
@@ -73,4 +67,3 @@ cat  << EOF
     },
     "tracing_config": null
 }
-EOF

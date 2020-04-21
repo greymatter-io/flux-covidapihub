@@ -3,7 +3,7 @@
  "zoneName": "default.zone",
  "name": "US Census Bureau - Health Insurance Statistics",
  "version": "1.0",
- "owner": "Us Census Bureau",
+ "owner": "US Census Bureau",
  "capability": "Governance",
  "runtime": "GO",
  "documentation": "/apis/us-census-healthins/",

@@ -13,7 +13,7 @@
     "gm.observables",
     "gm.metrics",
     "gm.oidc-validation",
-    "gm.oidc-authentication"
+    "envoy.rbac"
   ],
   "http_filters": {
     "gm_metrics": {
@@ -35,29 +35,11 @@
     },
     "gm_oidc-validation": {
       "accessToken": {
-        "location": "cookie",
+        "location": "header",
         "key": "access_token"
       },
       "provider": "https://accounts.google.com",
       "enforce": false
-    },
-    "gm_oidc-authentication": {
-      "accessToken": {
-        "location": "cookie",
-        "key": "access_token",
-        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "domain":"*.covidapihub.io", "path": "/" }
-      },
-      "idToken": {
-        "location": "cookie",
-        "key": "id_token",
-        "cookieOptions": { "httpOnly": true, "maxAge": "1h", "domain":"*.covidapihub.io", "path": "/" }
-      },
-      "serviceUrl": "https://login.covidapihub.io/login",
-      "callbackPath": "/oauth",
-      "provider": "https://accounts.google.com",
-      "clientId": "REDACTED",
-      "clientSecret": "REDACTED",
-      "additionalScopes": ["profile", "email"]
     },
     "envoy_rbac": {
       "rules": {

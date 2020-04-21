@@ -10,7 +10,7 @@ data:
       "apis": [
         {
           "name": "CDC Number of US Cases And Deaths",
-          "url": "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true",
+          "url": "https://covidapihub.io/dashboard/#/cdc-number-of-us-cases-and-deaths-v1-0",
           "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
           "source": "CDC",
           "contentType": [
@@ -32,7 +32,7 @@ data:
         },
         {
           "name": "CDC Number of Cases by State",
-          "url": "https://api.apify.com/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1",
+          "url": "https://covidapihub.io/dashboard/#/cdc-number-of-cases-by-state-v1-0",
           "description": "Actual number of examined and infected people by COVID-19 by state from CDC",
           "source": "CDC",
           "contentType": [
@@ -53,10 +53,10 @@ data:
           "keyRequired": true
         },
         {
-          "name": "NovelCOVID API",
-          "url": "https://corona.lmao.ninja",
-          "description": "API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain",
-          "source": "John Hopkins Univerty",
+          "name": "US Census Bureau - Economic Indicators",
+          "url": "https://covidapihub.io/dashboard/#/us-census-bureau-economic-indicators-v1-0",
+          "description": "Provides monthly and quarterly data that offer comprehensive measures of the U.S. economy. These surveys produce a variety of statistics covering construction, housing, international trade, retail trade, wholesale trade, services and manufacturing.",
+          "source": "US Census Bureau",
           "contentType": [
             "Health Stats"
           ],
@@ -76,7 +76,7 @@ data:
         },
         {
           "name": "EU Open Data Covid Dataset",
-          "url": "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/",
+          "url": "https://covidapihub.io/dashboard/#/eu-open-data-covid-dataset-v1-0",
           "description": "Destribution of cases across Europe",
           "source": "European Union",
           "contentType": [
@@ -97,71 +97,8 @@ data:
           ],
           "paid": false,
           "keyRequired": false
-        },
-        {
-          "name": "State Government Twitter Search",
-          "url": "https://documenter.getpostman.com/view/8854915/SzS7NkKA?version=latest",
-          "description": "Authoritative updates on what is happening in each state when it comes to COVID-19",
-          "source": "Twitter",
-          "contentType": [
-            "News"
-          ],
-          "homePage": "https://documenter.getpostman.com/favicon.icohttps://documenter.getpostman.com/favicon.ico",
-          "thumbnail": "https://assets.getpostman.com/common-share/postman-logo-horizontal-white.svg",
-          "coverage": [
-            "US"
-          ],
-          "format": [
-            "JSON"
-          ],
-          "updates": [
-            "Realtime"
-          ],
-          "paid": false,
-          "keyRequired": true
         }
       ],
       "visualizations": [],
-      "datasets": [
-        {
-          "name": "John Hopkins CSSE",
-          "url": "https://github.com/CSSEGISandData/COVID-19",
-          "description": "Data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).",
-          "source": "John Hopkins University",
-          "contentType": [
-            "Health Stats"
-          ],
-          "homePage": "https://systems.jhu.edu/",
-          "thumbnail": "https://brand.jhu.edu/assets/uploads/sites/5/2016/01/university.logo_.small_.horizontal.white_.png",
-          "coverage": [
-            "World"
-          ],
-          "format": [
-            "CSV"
-          ],
-          "updates": [],
-          "paid": false,
-          "keyRequired": false
-        },
-        {
-          "name": "NYT Covid-19 US Data",
-          "url": "https://github.com/nytimes/covid-19-data",
-          "description": "Series of data files with cumulative counts of coronavirus cases in the United States, at the state and county level, over time",
-          "source": "",
-          "contentType": [
-            "Health Stats"
-          ],
-          "homePage": "https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html",
-          "thumbnail": "https://www.sjlib.org/wp-content/uploads/2015/01/New-York-Times-logo.jpg",
-          "coverage": [
-            "US"
-          ],
-          "format": [
-            "CSV"
-          ],
-          "updates": [],
-          "paid": false,
-          "keyRequired": false
-        }
-      ]
+      "datasets": []
     }

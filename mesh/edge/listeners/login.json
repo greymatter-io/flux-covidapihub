@@ -32,7 +32,7 @@
         "key": "id_token",
         "cookieOptions": { "httpOnly": true, "maxAge": "1h", "domain":"*.covidapihub.io", "path": "/" }
       },
-      "serviceUrl": "https://login.covidapihub.io/login",
+      "serviceUrl": "https://covidapihub.io/login",
       "callbackPath": "/oauth",
       "provider": "https://accounts.google.com",
       "clientId": "REDACTED",
