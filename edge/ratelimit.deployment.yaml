@@ -1,0 +1,52 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ratelimit
+    cluster: edge.ratelimit
+  name: ratelimit
+  namespace: edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ratelimit
+      cluster: edge.ratelimit
+  template:
+    metadata:
+      labels:
+        app: ratelimit
+        cluster: edge.ratelimit
+    spec:
+      serviceAccountName: edge
+      containers:
+        - name: ratelimit
+          image: "envoyproxy/ratelimit:v1.4.0"
+          imagePullPolicy: IfNotPresent
+          env:
+          - name: USE_STATSD
+            value: false
+          - name: LOG_LEVEL
+            value: debug
+          - name: REDIS_SOCKET_TYPE
+            value: tcp
+          - name: REDIS_URL
+            value: redis:6379
+          - name: RUNTIME_ROOT
+            value: /data
+          - name: RUNTIME_SUBDIRECTORY
+            value: ratelimit                      
+          command:
+            - /bin/ratelimit
+          ports:
+            - name: ratelimit-port
+              containerPort: 9999
+          volumeMounts:
+            - name: ratelimit-config
+              mountPath: /data/ratelimit/config
+              readOnly: true
+      volumes:
+        - name: ratelimit-config
+          configMap:
+            name: ratelimit

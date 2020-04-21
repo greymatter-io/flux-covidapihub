@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ratelimit
+  namespace: edge
+data:
+  config.yaml: |-
+    ---
+    domain: ratelimit
+    descriptors:
+      - key: path
+        value: "/"
+        rate_limit:
+          unit: minute
+          requests_per_unit: 5
