@@ -1,0 +1,15 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "usa-spending.local.cluster",
+    "name": "local",
+    "instances": [
+        {
+            "host": "api.usaspending.gov",
+            "port": 443
+        }
+    ],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true
+}
