@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.coronatab",
+ "zoneName": "default.zone",
+ "name": "CoronaTab API",
+ "version": "1.0",
+ "owner": "CoronaTab",
+ "capability": "Health",
+ "runtime": "GO",
+ "documentation": "/apis/coronatab/",
+ "prometheusJob": "apis.coronatab",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

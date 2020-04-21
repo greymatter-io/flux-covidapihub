@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "coronatab.apis.domain",
+    "route_key": "coronatab.local.route",
+    "path": "/",
+    "prefix_rewrite": "/places",
+    "redirects": null,
+    "shared_rules_key": "coronatab.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
