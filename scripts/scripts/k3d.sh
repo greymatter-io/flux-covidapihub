@@ -120,3 +120,17 @@ kubectl apply -f scripts/resources/edge.ingress.yaml
 echo ""
 echo "ingress applied"
 echo ""
+
+for folder in apis/*
+do
+    if [ -d "$folder" ]
+    then
+	echo "================================== $folder"
+	find $folder/*.yaml -exec kubectl apply -f {} \;
+    fi
+done
+
+echo ""
+echo "apis applied"
+echo ""
+

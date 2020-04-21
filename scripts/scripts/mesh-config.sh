@@ -77,3 +77,35 @@ if [[ "$DEV" =~ ^([yY])$ ]]; then
     create_or_update listener scripts/resources/mesh.edge.listener.login.json
     create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
 fi
+
+
+kubectl port-forward deployment/catalog -n sense 10081:10080 &
+
+for meshfolder in apis/*
+do
+    if [ -d "$meshfolder" ]
+    then
+	for folder in $objects
+	do
+	    echo "Found folder: $meshfolder/mesh/$folder"
+	    for file in $meshfolder/mesh/$folder/*
+	    do
+		object="${folder%?}"
+		if [[ $object == "proxie" ]]; then object="proxy"; fi
+		if [[ $object == "rule" ]]; then object="shared_rules"; fi
+		if [[ $object == "listener" && "$DEV" =~ ^([yY])$ ]]; then
+                    value=$(<$file)
+                    value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
+                    echo "$value" > /tmp/listener.json
+                    create_or_update listener /tmp/listener.json
+                    sleep $delay
+		else
+                    echo "applying $file"
+                    create_or_update $object $file
+                    sleep $delay
+		fi
+	    done
+	done
+	curl -XPOST http://localhost:10081/clusters -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json"
+    fi
+done
