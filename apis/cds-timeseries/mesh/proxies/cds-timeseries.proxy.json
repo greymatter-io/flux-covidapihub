@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cds-timeseries.proxy",
+    "domain_keys": [
+        "cds-timeseries.apis.domain"
+    ],
+    "listener_keys": [
+        "cds-timeseries.apis.listener"
+    ],
+    "name": "apis.cds-timeseries",
+    "listeners": null
+}

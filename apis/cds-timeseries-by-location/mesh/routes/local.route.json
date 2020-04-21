@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "cds-timeseries-by-location.apis.domain",
+    "route_key": "cds-timeseries-by-location.local.route",
+    "path": "/",
+    "prefix_rewrite": "/timeseries-byLocation.json",
+    "redirects": null,
+    "shared_rules_key": "cds-timeseries-by-location.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
