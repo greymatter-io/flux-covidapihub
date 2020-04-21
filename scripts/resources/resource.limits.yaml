@@ -6,7 +6,6 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 1
       memory: 1Gi
     type: Container
@@ -19,9 +18,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 ---
 apiVersion: v1
@@ -32,9 +33,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 ---
 apiVersion: v1
@@ -45,9 +48,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 ---
 apiVersion: v1
@@ -58,9 +63,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 ---
 apiVersion: v1
@@ -71,9 +78,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 ---
 apiVersion: v1
@@ -84,9 +93,11 @@ metadata:
 spec:
   limits:
   - default:
-    max:
       cpu: 200m
       memory: 512Mi
+  - defaultRequests:
+      cpu: 100m
+      memory: 128Mi      
     type: Container
 
 
