@@ -1,0 +1,105 @@
+# Resource limit ranges for development
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: spire-dev-lr
+  namespace: spire-dev
+spec:
+  limits:
+  - default:
+      memory: 1Gi
+      cpu: 1
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: fabric-lr
+  namespace: fabric
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: sense-lr
+  namespace: sense
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: data-lr
+  namespace: data
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: apis-lr
+  namespace: apis
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: website-lr
+  namespace: website
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: spire-dev-lr
+  namespace: spire-dev
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 128Mi
+      cpu: 100m
+    type: Container

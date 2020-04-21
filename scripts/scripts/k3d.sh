@@ -108,6 +108,7 @@ done
 kubectl apply -f scripts/resources/dashboard.deployment.yaml
 kubectl apply -f scripts/resources/data.statefulset.yaml
 kubectl apply -f scripts/resources/local.secrets.yaml
+kubectl apply -f scripts/resources/limit.ranges.yaml
 
 echo ""
 echo "files applied"
