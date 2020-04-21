@@ -1,7 +1,7 @@
 {
  "clusterName": "apis.bls-unemployment-states",
  "zoneName": "default.zone",
- "name": "BLS Unemployment Statistics per State",
+ "name": "BLS Unemployment Statistics by State",
  "version": "1.0",
  "owner": "Bureau of Labor Statistics",
  "capability": "Governance",
