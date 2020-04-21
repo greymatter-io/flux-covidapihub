@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.cdc-death-counts-by-state",
+ "zoneName": "default.zone",
+ "name": "CDC Death Counts by State",
+ "version": "1.0",
+ "owner": "CDC",
+ "capability": "Health",
+ "runtime": "GO",
+ "documentation": "https://dev.socrata.com/foundry/data.cdc.gov/hc4f-j6nb",
+ "prometheusJob": "apis.cdc-death-counts-by-state",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
