@@ -6,7 +6,7 @@
  "owner": "CDC",
  "capability": "Health",
  "runtime": "GO",
- "documentation": "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html",
+ "documentation": "https://dev.socrata.com/foundry/data.cdc.gov/pj7m-y5uh",
  "prometheusJob": "apis.cdc-provisional-death-counts",
  "minInstances": 1,
  "maxInstances": 2,
