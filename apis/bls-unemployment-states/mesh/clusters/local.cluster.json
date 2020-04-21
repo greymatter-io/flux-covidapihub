@@ -1,0 +1,20 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "bls-unemployment-states.local.cluster",
+    "name": "local",
+    "instances": [
+        {
+            "host": "services.arcgis.com",
+            "port": 443
+        }
+    ],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true,
+    "ssl_config": {
+        "cipher_filter": "",
+        "protocols": null,
+        "sni": "services.arcgis.com"
+      }
+}

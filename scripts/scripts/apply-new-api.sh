@@ -62,7 +62,7 @@ create_or_update() {
 
 
 delay=0.01
-
+kubectl port-forward deployment/catalog -n sense 10081:10080 &
 
 for cl in apis/$API_NAME/mesh/clusters/*.json; do create_or_update cluster $cl; done
 for cl in apis/$API_NAME/mesh/domains/*.json; do create_or_update domain $cl; done
@@ -81,3 +81,5 @@ fi
 for cl in apis/$API_NAME/mesh/proxies/*.json; do create_or_update proxy $cl; done
 for cl in apis/$API_NAME/mesh/rules/*.json; do create_or_update shared_rules $cl; done
 for cl in apis/$API_NAME/mesh/routes/*.json; do create_or_update route $cl; done
+
+curl -XPOST http://localhost:10081/clusters -d "@apis/$API_NAME/mesh/catalog.$API_NAME.json"
