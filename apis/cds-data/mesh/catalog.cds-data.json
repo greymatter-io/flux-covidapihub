@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.cds-data",
+ "zoneName": "default.zone",
+ "name": "CDC Today's Data",
+ "version": "1.0",
+ "owner": "COVID Atlas",
+ "capability": "Health",
+ "runtime": "GO",
+ "documentation": "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md",
+ "prometheusJob": "apis.cds-data",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
