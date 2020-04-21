@@ -1,7 +1,7 @@
 {
  "clusterName": "apis.cds-data",
  "zoneName": "default.zone",
- "name": "CDC Today's Data",
+ "name": "CDS Today's Data",
  "version": "1.0",
  "owner": "COVID Atlas",
  "capability": "Health",
