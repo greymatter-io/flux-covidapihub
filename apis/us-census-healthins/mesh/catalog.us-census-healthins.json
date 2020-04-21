@@ -6,7 +6,7 @@
  "owner": "US Census Bureau",
  "capability": "Governance",
  "runtime": "GO",
- "documentation": "/apis/us-census-healthins/",
+ "documentation": "https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html",
  "prometheusJob": "apis.us-census-healthins",
  "minInstances": 1,
  "maxInstances": 2,

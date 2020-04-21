@@ -6,7 +6,7 @@
  "owner": "European Centre for Disease Prevention and Control",
  "capability": "Health",
  "runtime": "GO",
- "documentation": "/apis/opendata-eu/",
+ "documentation": "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide",
  "prometheusJob": "apis.opendata-eu",
  "minInstances": 1,
  "maxInstances": 2,
