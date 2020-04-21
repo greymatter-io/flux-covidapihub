@@ -6,7 +6,7 @@
   "owner": "CDC",
   "capability": "health",
   "runtime": "GO",
-  "documentation": "/apis/cdc-us-cases/",
+  "documentation": "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html",
   "prometheusJob": "apis.cdc-us-cases",
   "minInstances": 1,
   "maxInstances": 2,

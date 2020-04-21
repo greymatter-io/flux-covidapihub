@@ -6,7 +6,7 @@
  "owner": "US Census Bureau",
  "capability": "Governance",
  "runtime": "GO",
- "documentation": "/apis/us-census-economic-indicators/",
+ "documentation": "https://www.census.gov/data/developers/data-sets/economic-indicators.html",
  "prometheusJob": "apis.us-census-economic-indicators",
  "minInstances": 1,
  "maxInstances": 2,

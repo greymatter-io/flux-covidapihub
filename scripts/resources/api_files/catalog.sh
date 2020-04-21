@@ -4,6 +4,7 @@ NAME=$1
 DISPLAY=$2
 OWNER=$3
 CAPABILITY=$4
+DOCS=$5
 
 #define the template.
 cat  << EOF
@@ -15,7 +16,7 @@ cat  << EOF
  "owner": "$OWNER",
  "capability": "$CAPABILITY",
  "runtime": "GO",
- "documentation": "/apis/$NAME/",
+ "documentation": "$DOCS",
  "prometheusJob": "apis.$NAME",
  "minInstances": 1,
  "maxInstances": 2,

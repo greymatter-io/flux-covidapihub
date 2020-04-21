@@ -6,7 +6,7 @@
  "owner": "CoronaTab",
  "capability": "Health",
  "runtime": "GO",
- "documentation": "/apis/coronatab/",
+ "documentation": "https://github.com/PotentialWeb/CoronaTab/wiki/RESTful-API-documentation",
  "prometheusJob": "apis.coronatab",
  "minInstances": 1,
  "maxInstances": 2,

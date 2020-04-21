@@ -14,6 +14,8 @@ echo Owner:
 read owner
 echo Capability:
 read capability
+echo Docs link:
+read docs
 
 
 mkdir apis/$name
@@ -36,7 +38,7 @@ scripts/resources/api_files/local.rules.sh $name > apis/$name/mesh/rules/local.r
 scripts/resources/api_files/edge.route.sh $name > apis/$name/mesh/routes/edge.$name.route.json
 scripts/resources/api_files/local.route.sh $name $route_path > apis/$name/mesh/routes/local.route.json
 scripts/resources/api_files/edge.route.slash.sh $name > apis/$name/mesh/routes/edge.$name.route.slash.json
-scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capability" > apis/$name/mesh/catalog.$name.json
+scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capability" "$docs" > apis/$name/mesh/catalog.$name.json
 
 read -r -p "Apply the configs now? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
