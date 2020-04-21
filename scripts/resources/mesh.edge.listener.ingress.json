@@ -12,6 +12,7 @@
   "active_http_filters": [
     "gm.observables",
     "gm.metrics",
+    "gm.ensure-variables",
     "gm.oidc-validation",
     "envoy.rbac"
   ],
@@ -26,6 +27,21 @@
       "metrics_key_function": "depth"
     },
     "gm_observables": {},
+    "gm_ensure-variables": {
+      "rules": [
+        {
+          "location": "cookie",
+          "key": "access_token",
+          "removeOriginal": false,
+          "copyTo": [
+            {
+              "location": "header",
+              "key": "access_token"
+            }
+          ]
+        }
+      ]
+    },
     "gm_oidc-validation": {
       "accessToken": {
         "location": "header",
