@@ -23,28 +23,6 @@
       "metrics_ring_buffer_size": 4096,
       "prometheus_system_metrics_interval_seconds": 15,
       "metrics_key_function": "depth"
-    },
-    "envoy_rbac": {
-      "rules": {
-        "action": 0,
-        "policies": {
-          "0": {
-            "permissions": [
-              {
-                "header": {
-                  "name": ":method",
-                  "exact_match": "GET"
-                }
-              }
-            ],
-            "principals": [
-              {
-                "any": true
-              }
-            ]
-          }
-        }
-      }
     }
   },
   "tracing_config": null
