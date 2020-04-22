@@ -26,17 +26,17 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
           - name: USE_STATSD
-            value: false
+            value: "false"
           - name: LOG_LEVEL
-            value: debug
+            value: "debug"
           - name: REDIS_SOCKET_TYPE
-            value: tcp
+            value: "tcp"
           - name: REDIS_URL
-            value: redis:6379
+            value: "redis:6379"
           - name: RUNTIME_ROOT
-            value: /data
+            value: "/data"
           - name: RUNTIME_SUBDIRECTORY
-            value: ratelimit                      
+            value: "ratelimit"                      
           command:
             - /bin/ratelimit
           ports:
