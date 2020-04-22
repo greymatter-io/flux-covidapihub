@@ -9,13 +9,34 @@
   "port": 8443,
   "protocol": "http_auto",
   "tracing_config": null,
-  "active_http_filters": [
-    "gm.observables",
-    "gm.metrics",
-    "gm.ensure-variables",
-    "gm.oidc-validation",
-    "envoy.rbac"
+  "active_network_filters": [
+    "envoy.rate_limit"
   ],
+  "network_filters": {
+    "envoy_rate_limit": {
+      "stat_prefix": "ratelimit",
+      "domain": "ratelimit",
+      "failure_mode_deny": true,
+      "descriptors": [
+        {
+          "entries": [
+            {
+              "key": "path",
+              "value": "/"
+            }
+          ]
+        }
+      ],
+      "rate_limit_service": {
+        "grpc_service": {
+          "envoy_grpc": {
+            "cluster_name": "ratelimit"
+          }
+        }
+      }
+    }
+  },
+  "active_http_filters": [],
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,
