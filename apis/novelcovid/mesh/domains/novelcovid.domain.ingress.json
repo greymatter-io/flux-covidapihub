@@ -6,11 +6,5 @@
   "gzip_enabled": false,
   "cors_config": null,
   "aliases": null,
-  "force_https": true,
-  "custom_headers": [
-    {
-      "key": "Host",
-      "value": "corona.lmao.ninja"
-    }
-  ]
+  "force_https": true
 }

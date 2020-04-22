@@ -4,17 +4,12 @@
   "name": "local",
   "instances": [
     {
-      "host": "corona.lmao.ninja",
-      "port": 443
+      "host": "localhost",
+      "port": 3000
     }
   ],
   "circuit_breakers": null,
   "outlier_detection": null,
   "health_checks": [],
-  "require_tls": true,
-  "ssl_config": {
-    "cipher_filter": "",
-    "protocols": null,
-    "sni": "corona.lmao.ninja"
-  }
+  "require_tls": false
 }

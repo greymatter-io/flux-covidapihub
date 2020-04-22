@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cds-data.proxy",
+    "domain_keys": [
+        "cds-data.apis.domain"
+    ],
+    "listener_keys": [
+        "cds-data.apis.listener"
+    ],
+    "name": "apis.cds-data",
+    "listeners": null
+}

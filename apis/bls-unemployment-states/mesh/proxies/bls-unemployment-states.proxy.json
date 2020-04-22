@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "bls-unemployment-states.proxy",
+    "domain_keys": [
+        "bls-unemployment-states.apis.domain"
+    ],
+    "listener_keys": [
+        "bls-unemployment-states.apis.listener"
+    ],
+    "name": "apis.bls-unemployment-states",
+    "listeners": null
+}

@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "bls-unemployment-usa.apis.domain",
+    "route_key": "bls-unemployment-usa.local.route",
+    "path": "/",
+    "prefix_rewrite": "/P3ePLMYs2RVChkJx/arcgis/rest/services/BLS_Monthly_Unemployment_Current_14_Months/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json",
+    "redirects": null,
+    "shared_rules_key": "bls-unemployment-usa.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
