@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.cms-hospitals-with-medicare",
+ "zoneName": "default.zone",
+ "name": "CMS Hospitals Registered with Medicare",
+ "version": "1.0",
+ "owner": "cms",
+ "capability": "governance",
+ "runtime": "GO",
+ "documentation": "https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u",
+ "prometheusJob": "apis.cms-hospitals-with-medicare",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

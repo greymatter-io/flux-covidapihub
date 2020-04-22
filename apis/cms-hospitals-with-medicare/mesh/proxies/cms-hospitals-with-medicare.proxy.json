@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cms-hospitals-with-medicare.proxy",
+    "domain_keys": [
+        "cms-hospitals-with-medicare.apis.domain"
+    ],
+    "listener_keys": [
+        "cms-hospitals-with-medicare.apis.listener"
+    ],
+    "name": "apis.cms-hospitals-with-medicare",
+    "listeners": null
+}
