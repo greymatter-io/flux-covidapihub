@@ -32,7 +32,7 @@ spec:
           - name: REDIS_SOCKET_TYPE
             value: "tcp"
           - name: REDIS_URL
-            value: "redis:6379"
+            value: "redis.data.svc.cluster.local:6379"
           - name: RUNTIME_ROOT
             value: "/data"
           - name: RUNTIME_SUBDIRECTORY
