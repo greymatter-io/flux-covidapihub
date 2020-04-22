@@ -61,7 +61,7 @@ data:
             "Health Stats"
           ],
           "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-          "thumbnail": "https://github.com/NovelCOVID/API/raw/master/assets/logo.png",
+          "thumbnail": "https://www.census.gov/etc/designs/census/images/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg",
           "coverage": [
             "World"
           ],
@@ -83,7 +83,7 @@ data:
             "Health Stats"
           ],
           "homePage": "https://data.europa.eu/euodp/en/developerscorner",
-          "thumbnail": "https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png",
+          "thumbnail": "https://www.openaire.eu/images/openscienceEU/euopendata.jpg",
           "coverage": [
             "Europe"
           ],
