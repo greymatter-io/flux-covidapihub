@@ -6,7 +6,7 @@
  "owner": "CMS",
  "capability": "governance",
  "runtime": "GO",
- "documentation": "https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u",
+ "documentation": "https://dev.socrata.com/foundry/data.medicare.gov/xubh-q36u",
  "prometheusJob": "apis.cms-hospitals-with-medicare",
  "minInstances": 1,
  "maxInstances": 2,
