@@ -1,10 +1,10 @@
 {
   "clusterName": "apis.cds-data",
   "zoneName": "default.zone",
-  "name": "CDC Today's Data",
+  "name": "CDS Today's Data",
   "version": "1.0",
   "owner": "COVID Atlas",
-  "capability": "health",
+  "capability": "Health",
   "runtime": "GO",
   "documentation": "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md",
   "prometheusJob": "apis.cds-data",
