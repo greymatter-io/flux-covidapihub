@@ -49,12 +49,6 @@ spec:
           env:
           - name: METRICS_KEY_FUNCTION
             value: depth
-          - name: TCP_CLUSTER
-            value: ratelimit
-          - name: TCP_HOST
-            value: ratelimit
-          - name: TCP_PORT
-            value: "8081"
       imagePullSecrets:
         - name: docker.production.deciphernow.com
       volumes:
