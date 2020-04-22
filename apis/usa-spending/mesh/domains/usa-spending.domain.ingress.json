@@ -11,6 +11,10 @@
     {
       "key": "Host",
       "value": "api.usaspending.gov"
+    },
+    {
+      "key": "Accept",
+      "value": "application/json"
     }
   ]
 }
