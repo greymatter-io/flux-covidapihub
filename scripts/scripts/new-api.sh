@@ -17,6 +17,10 @@ read capability
 echo Docs link:
 read docs
 
+# convert sort and group-by fields to lowercase
+route_path=`perl -e "print lc('$route_path');"`
+capability=`perl -e "print lc('$capability');"`
+owner=`perl -e "print lc('$owner');"`
 
 mkdir apis/$name
 mkdir apis/$name/mesh
