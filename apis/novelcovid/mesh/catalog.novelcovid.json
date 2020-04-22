@@ -4,7 +4,7 @@
   "name": "NOVELCovid",
   "version": "1.0",
   "owner": "Johns Hopkins University",
-  "capability": "Health",
+  "capability": "health",
   "runtime": "GO",
   "documentation": "https://corona.lmao.ninja/docs/",
   "prometheusJob": "apis.novelcovid",
