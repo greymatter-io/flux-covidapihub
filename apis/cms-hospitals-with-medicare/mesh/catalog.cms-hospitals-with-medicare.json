@@ -3,7 +3,7 @@
  "zoneName": "default.zone",
  "name": "CMS Hospitals Registered with Medicare",
  "version": "1.0",
- "owner": "cms",
+ "owner": "CMS",
  "capability": "governance",
  "runtime": "GO",
  "documentation": "https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u",
