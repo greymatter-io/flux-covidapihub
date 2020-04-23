@@ -7,10 +7,10 @@ metadata:
 data:
   config.yaml: |-
     ---
-    domain: ratelimit
+    domain: edge
     descriptors:
       - key: path
         value: "/"
         rate_limit:
-          unit: minute
-          requests_per_unit: 5          
+          unit: second
+          requests_per_unit: 100
