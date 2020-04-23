@@ -10,6 +10,10 @@ spec:
       port: 8081
       protocol: TCP
       targetPort: 8001
+    - name: debug
+      port: 6070
+      protocol: TCP
+      targetPort: 6070
   selector:
     cluster: edge.ratelimit
   sessionAffinity: None

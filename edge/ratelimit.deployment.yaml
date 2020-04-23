@@ -40,8 +40,10 @@ spec:
           command: ["/bin/sh","-c"]
           args: ["mkdir -p /ratelimit/config && cp /data/ratelimit/config/config.yaml /ratelimit/config/config.yaml && cat /ratelimit/config/config.yaml &&  /bin/ratelimit"]
           ports:
-            - name: tcp
+            - name: server
               containerPort: 8001
+            - name: debug
+              containerPort: 6070
           volumeMounts:
             - name: ratelimit-config
               mountPath: /data/ratelimit/config
