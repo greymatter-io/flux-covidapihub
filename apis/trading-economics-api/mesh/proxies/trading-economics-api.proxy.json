@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "trading-economics-api.proxy",
+    "domain_keys": [
+        "trading-economics-api.apis.domain"
+    ],
+    "listener_keys": [
+        "trading-economics-api.apis.listener"
+    ],
+    "name": "apis.trading-economics-api",
+    "listeners": null
+}

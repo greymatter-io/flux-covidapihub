@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: trading-economics-api
+    cluster: apis.trading-economics-api
+  name: trading-economics-api
+  namespace: apis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trading-economics-api
+      cluster: apis.trading-economics-api
+  template:
+    metadata:
+      labels:
+        app: trading-economics-api
+        cluster: apis.trading-economics-api
+    spec:
+      serviceAccountName: apis-sa
+      containers:
+        - name: trading-economics-api-proxy
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+      volumes:
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+        - name: sidecar-config
+          configMap:
+            name: trading-economics-api-sidecar
