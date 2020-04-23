@@ -34,14 +34,14 @@ spec:
           - name: REDIS_URL
             value: "redis.data.svc.cluster.local:6379"
           - name: RUNTIME_ROOT
-            value: "/data"
+            value: "/"
           - name: RUNTIME_SUBDIRECTORY
-            value: "ratelimit"                      
-          command:
-            - /bin/ratelimit
+            value: "ratelimit"
+          command: ["/bin/sh","-c"]
+          args: ["mkdir -p /ratelimit/config && cp /data/ratelimit/config/config.yaml /ratelimit/config/config.yaml && cat /ratelimit/config/config.yaml &&  /bin/ratelimit"]
           ports:
-            - name: ratelimit-port
-              containerPort: 9999
+            - name: tcp
+              containerPort: 8001
           volumeMounts:
             - name: ratelimit-config
               mountPath: /data/ratelimit/config

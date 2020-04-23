@@ -9,7 +9,7 @@ spec:
     - name: server
       port: 8081
       protocol: TCP
-      targetPort: 6379
+      targetPort: 8001
   selector:
     cluster: edge.ratelimit
   sessionAffinity: None
