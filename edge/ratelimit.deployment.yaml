@@ -33,11 +33,11 @@ spec:
             value: "tcp"
           - name: REDIS_URL
             value: "redis.edge.svc:6379"
-          # - name: REDIS_AUTH
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: redis-password
-          #       key: password
+          - name: REDIS_AUTH
+            valueFrom:
+              secretKeyRef:
+                name: redis
+                key: password
 
           - name: RUNTIME_ROOT
             value: "/"
