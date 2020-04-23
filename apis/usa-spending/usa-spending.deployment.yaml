@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: usa-spending
+    cluster: apis.usa-spending
+  name: usa-spending
+  namespace: apis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usa-spending
+      cluster: apis.usa-spending
+  template:
+    metadata:
+      labels:
+        app: usa-spending
+        cluster: apis.usa-spending
+    spec:
+      serviceAccountName: apis-sa
+      containers:
+        - name: usa-spending-proxy
+          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+      imagePullSecrets:
+        - name: docker.production.deciphernow.com
+      volumes:
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+        - name: sidecar-config
+          configMap:
+            name: usa-spending-sidecar

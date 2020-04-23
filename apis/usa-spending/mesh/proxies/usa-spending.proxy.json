@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "usa-spending.proxy",
+    "domain_keys": [
+        "usa-spending.apis.domain"
+    ],
+    "listener_keys": [
+        "usa-spending.apis.listener"
+    ],
+    "name": "apis.usa-spending",
+    "listeners": null
+}

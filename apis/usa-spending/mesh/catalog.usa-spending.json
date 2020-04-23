@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.usa-spending",
+ "zoneName": "default.zone",
+ "name": "USA Spending",
+ "version": "1.0",
+ "owner": "US Treasury",
+ "capability": "Governance",
+ "runtime": "GO",
+ "documentation": "https://api.usaspending.gov/docs/",
+ "prometheusJob": "apis.usa-spending",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

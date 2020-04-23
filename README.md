@@ -62,7 +62,7 @@ For example, to create a deployment and configs for [this api](https://api.censu
 4. Path: `/data/2019/pep/population`
 5. Display Name: `US Census Bureau - Population`
 6. Owner: `Census Bureau`
-7. Capability: `Governance`
+7. Capability: `governance`
 8. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
 
 Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
@@ -77,12 +77,14 @@ Some API's sit behind load balancers and will need to add an SNI field. This wil
   }
 ```
 
-**NOTE**: This script will generate a catalog json configuration, saved in `apis/<api_name>/mesh/catalog.json` from the inputs, but it will not post it. For now, all apis must be registered with catalog manually. To do this, you can run:
+**NOTE**: If an API is returning an html response in a browser for an endpoing when it should be returning json, try adding a custom `Accept` header to it's domain object to tell it to accept content-type application/json:
 
-```sh
-kc port-forward deployment/catalog -n sense 10080:10080 &
-curl -XPOST http://localhost:10080/clusters -d "@apis/us-census-population/mesh/us-census-population.json"
-````
+```json
+    {
+      "key": "Accept",
+      "value": "application/json"
+    }
+```
 
 If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted. If you want to delete the api from your local dev environment, type `Y` when it prompts `Delete API in dev? [y/N]`.
 
