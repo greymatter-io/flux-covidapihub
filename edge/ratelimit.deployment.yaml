@@ -32,7 +32,13 @@ spec:
           - name: REDIS_SOCKET_TYPE
             value: "tcp"
           - name: REDIS_URL
-            value: "redis.data.svc.cluster.local:6379"
+            value: "redis.edge.svc:6379"
+          # - name: REDIS_AUTH
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: redis-password
+          #       key: password
+
           - name: RUNTIME_ROOT
             value: "/"
           - name: RUNTIME_SUBDIRECTORY
