@@ -90,7 +90,7 @@ data:
                     address:
                       socket_address:
                           address: ratelimit.edge.svc.cluster.local
-                          port_value: 8001                        
+                          port_value: 8081                        
     admin:
       access_log_path: /dev/stdout
       address:
