@@ -36,7 +36,13 @@
       }
     }
   },
-  "active_http_filters": [],
+  "active_http_filters": [
+    "gm.observables",
+    "gm.metrics",
+    "gm.ensure-variables",
+    "gm.oidc-validation",
+    "envoy.rbac"
+  ],
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,
