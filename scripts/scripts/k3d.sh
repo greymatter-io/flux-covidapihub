@@ -30,14 +30,14 @@ if [[ "$(k3d list)" == *"greymatter"* ]]; then
 fi
 
 # Create 4 workers for a greymatter cluster
-k3d create --workers 8 --name greymatter --publish 30000:8443 --publish 30001:9443
+k3d create --workers 4 --name greymatter --publish 30000:8443 --publish 30001:9443
 while [[ $(k3d get-kubeconfig --name='greymatter') != *kubeconfig.yaml ]]; do echo "echo waiting for k3d cluster to start up" && sleep 10; done
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
 
 echo "Cluster is connected"
 
-folders=(edge fabric sense apis)
+folders=(edge fabric sense data website apis)
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -104,7 +104,6 @@ done
 kubectl apply -f scripts/resources/dashboard.deployment.yaml
 kubectl apply -f scripts/resources/data.statefulset.yaml
 kubectl apply -f scripts/resources/local.secrets.yaml
-# kubectl apply -f scripts/resources/limit.ranges.yaml
 
 echo ""
 echo "files applied"
