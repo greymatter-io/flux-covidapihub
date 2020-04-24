@@ -50,7 +50,7 @@ spec:
         - name: SOURCE_URL
           value: $CSV_URL
         image: covidapihub/apier:latest
-        imagePullPolicy: "IfNotPresent"
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
       - name: sidecar

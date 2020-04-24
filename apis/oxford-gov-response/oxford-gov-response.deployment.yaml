@@ -43,7 +43,7 @@ spec:
         - name: SOURCE_URL
           value: https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/OxCGRT_latest.csv
         image: covidapihub/apier:latest
-        imagePullPolicy: "IfNotPresent"
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
       - name: sidecar
