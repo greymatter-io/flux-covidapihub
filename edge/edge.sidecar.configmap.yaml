@@ -76,6 +76,21 @@ data:
                     address:
                       pipe:
                         path: /run/spire/sockets/agent.sock
+
+        - name: ratelimit
+          connect_timeout: 1s
+          http2_protocol_options: {}
+          type: LOGICAL_DNS
+          lb_policy: ROUND_ROBIN
+          load_assignment:
+            cluster_name: ratelimit
+            endpoints:
+            - lb_endpoints:
+                - endpoint:
+                    address:
+                      socket_address:
+                          address: ratelimit.edge.svc.cluster.local
+                          port_value: 8081                        
     admin:
       access_log_path: /dev/stdout
       address:
