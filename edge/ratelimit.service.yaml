@@ -1,0 +1,20 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ratelimit
+  namespace: edge
+spec:
+  ports:
+    - name: server
+      port: 8081
+      protocol: TCP
+      targetPort: 8081
+    - name: debug
+      port: 6070
+      protocol: TCP
+      targetPort: 6070
+  selector:
+    cluster: edge.ratelimit
+  sessionAffinity: None
+  type: ClusterIP

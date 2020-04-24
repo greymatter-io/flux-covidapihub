@@ -1,0 +1,51 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    cluster: edge.redis
+  name: redis
+  namespace: edge
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      cluster: edge.redis
+      deployment: redis
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        cluster: edge.redis
+        deployment: redis
+    spec:
+      containers:
+        - name: redis
+          image: docker.io/centos/redis-32-centos7
+          env:
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: redis
+                  key: password
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 200m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+      imagePullSecrets:
+        - name: index.docker.io
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
