@@ -29,3 +29,7 @@ apply-api:
 .PHONY: delete-api
 delete-api:
 	./scripts/scripts/delete-api.sh
+
+.PHONY: new-csv
+new-csv:
+	./scripts/scripts/new-csv.sh
