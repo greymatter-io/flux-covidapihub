@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "oxford-gov-response.proxy",
+    "domain_keys": [
+        "oxford-gov-response.apis.domain"
+    ],
+    "listener_keys": [
+        "oxford-gov-response.apis.listener"
+    ],
+    "name": "apis.oxford-gov-response",
+    "listeners": null
+}
