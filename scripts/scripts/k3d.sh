@@ -20,6 +20,9 @@ then
     sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  scripts/scripts/credentials.sh
 fi
 
+read -r -p "Would you like to deploy all apis? [y/N] " response
+APPLY_APIS=$response
+
 source ./scripts/scripts/credentials.sh
 
 # install k3d 1.7.0
@@ -120,6 +123,11 @@ kubectl apply -f scripts/resources/edge.ingress.yaml
 echo ""
 echo "ingress applied"
 echo ""
+
+if [[ ! "$APPLY_APIS" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    exit 0
+fi
 
 for folder in apis/*
 do
