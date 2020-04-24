@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: dashboard
-          image: deciphernow/gm-dashboard:covidapihub-test2
+          image: docker.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
           imagePullPolicy: IfNotPresent
           env:
             - name: FABRIC_SERVER
