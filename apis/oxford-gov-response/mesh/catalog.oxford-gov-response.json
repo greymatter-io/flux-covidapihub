@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.oxford-gov-response",
+ "zoneName": "default.zone",
+ "name": "Oxford COVID-19 Government Response Tracker",
+ "version": "1.0",
+ "owner": "Oxford University",
+ "capability": "governance",
+ "runtime": "GO",
+ "documentation": "https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker",
+ "prometheusJob": "apis.oxford-gov-response",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
