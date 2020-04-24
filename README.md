@@ -34,7 +34,7 @@ source ./run.sh
 
 It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
 
-## Adding an API
+## Adding an API or a CSV
 
 To add an api to the mesh, run the following:
 
@@ -51,12 +51,14 @@ It will prompt you for the following information:
 - Display Name: display name for catalog entry
 - Owner: owner for catalog entry
 - Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
-- Documentation: API doc/spec if available
+- Documentation: Docs link
+
+
 Example:
 
 For example, to create a deployment and configs for [this api](https://api.census.gov/data/2019/pep/population) from [this entry](https://github.com/greymatter-io/covidapihub-site/blob/7f1eb7fff72f77ccf9389bfac5c2bded889b9d55/public/mock.json#L203-L224) - these are the entries:
 
-1. API NAME: `us-census-population`
+1. API Name: `us-census-population`
 2. Host: `api.census.gov`
 3. Port: `443`
 4. Path: `/data/2019/pep/population`
@@ -64,6 +66,30 @@ For example, to create a deployment and configs for [this api](https://api.censu
 6. Owner: `Census Bureau`
 7. Capability: `governance`
 8. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
+
+To add a csv, run the following:
+
+```bash
+make new-csv
+```
+
+It will prompt you for the following information:
+
+- API Name: an all lowercase, no spaces or special characters name for the deployment. This will dictate the route to this api - it will be `https://covidapihub.io/apis/<api_name>`
+- URL: this is the url to the csv file online
+- Display Name: display name for catalog entry
+- Owner: owner for catalog entry
+- Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
+- Documentation: Docs link
+
+Example:
+
+1. API Name: `nyt-us-csv`
+2. URL: `https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv`
+3. Display Name: `NYT US Data`
+4. Owner: `New York Times`
+5. Capability: `health`
+6. Documentation URL: `https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html`
 
 Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
