@@ -48,7 +48,7 @@ spec:
             value: depth
         - name: dashboard
           image: docker.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           env:
             - name: FABRIC_SERVER
               value: https://localhost:30000/catalog/latest/

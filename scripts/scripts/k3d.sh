@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ ! -f scripts/scripts/credentials.sh ]
-then
+if [ ! -f scripts/scripts/credentials.sh ]; then
     echo decipher email:
     read DockerProductionUsername
     echo docker production password:
@@ -15,9 +14,9 @@ then
     TEMPLATE=scripts/scripts/credentials.template
     cp $TEMPLATE scripts/scripts/credentials.sh
     sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" scripts/scripts/credentials.sh
-    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g"  scripts/scripts/credentials.sh
-    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g"  scripts/scripts/credentials.sh
-    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  scripts/scripts/credentials.sh
+    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g" scripts/scripts/credentials.sh
+    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g" scripts/scripts/credentials.sh
+    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g" scripts/scripts/credentials.sh
 fi
 
 read -r -p "Would you like to deploy all apis? [y/N] " response
@@ -92,11 +91,9 @@ echo ""
 echo "spire applied"
 echo ""
 
-
 for folder in "${folders[@]}"; do
     echo "================================== $folder"
-    if [[ $folder == "edge" ]]
-    then
+    if [[ $folder == "edge" ]]; then
         kubectl apply -f scripts/resources/edge.service.yaml
         kubectl apply -f edge/edge.serviceaccount.yaml
         kubectl apply -f edge/edge.sidecar.configmap.yaml
@@ -106,17 +103,14 @@ for folder in "${folders[@]}"; do
     fi
 done
 
-
 # Overwrite with development only configs
 kubectl apply -f scripts/resources/dashboard.deployment.yaml
 kubectl apply -f scripts/resources/data.statefulset.yaml
 kubectl apply -f scripts/resources/local.secrets.yaml
-kubectl apply -f scripts/resources/limit.ranges.yaml
 
 echo ""
 echo "files applied"
 echo ""
-
 
 kubectl apply -f scripts/resources/edge.ingress.yaml
 
@@ -124,21 +118,17 @@ echo ""
 echo "ingress applied"
 echo ""
 
-if [[ ! "$APPLY_APIS" =~ ^([yY][eE][sS]|[yY])$ ]]
-then
+if [[ ! "$APPLY_APIS" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     exit 0
 fi
 
-for folder in apis/*
-do
-    if [ -d "$folder" ]
-    then
-	echo "================================== $folder"
-	find $folder/*.yaml -exec kubectl apply -f {} \;
+for folder in apis/*; do
+    if [ -d "$folder" ]; then
+        echo "================================== $folder"
+        find $folder/*.yaml -exec kubectl apply -f {} \;
     fi
 done
 
 echo ""
 echo "apis applied"
 echo ""
-

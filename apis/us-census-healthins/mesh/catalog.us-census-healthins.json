@@ -4,7 +4,7 @@
   "name": "US Census Bureau - Health Insurance Statistics",
   "version": "1.0",
   "owner": "US Census Bureau",
-  "capability": "governance",
+  "capability": "\"{\\\"name\\\":\\\"US Health Insurance Statistics\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"description\\\":\\\"The Current Population Survey Annual Social and Economic Supplement (CPS ASEC) is a supplemental survey of the CPS, which is the longest running survey conducted by the Census Bureau. The key purpose of the CPS ASEC is to provide nationally representative estimates of economic well-being in the United States, of which health insurance coverage is an important part.\\\",\\\"source\\\":\\\"Census Beureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\"",
   "runtime": "GO",
   "documentation": "https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html",
   "prometheusJob": "apis.us-census-healthins",

@@ -4,7 +4,7 @@
   "name": "EU Open Data Covid Dataset",
   "version": "1.0",
   "owner": "European Centre for Disease Prevention and Control",
-  "capability": "health",
+  "capability": "\"{\\\"name\\\":\\\"EU Open Data Covid Dataset\\\",\\\"url\\\":\\\"https://opendata.ecdc.europa.eu/covid19/casedistribution/json/\\\",\\\"description\\\":\\\"The dataset contains the latest available public data on COVID-19 including a daily situation update, the epidemiological curve and the global geographical distribution (EU/EEA and the UK, worldwide).\\\",\\\"source\\\":\\\"European Union\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.europa.eu/euodp/en/developerscorner\\\",\\\"thumbnail\\\":\\\"https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png\\\",\\\"coverage\\\":[\\\"Europe\\\"],\\\"format\\\":[\\\"JSON\\\",\\\"CSV\\\",\\\"HTML\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\"",
   "runtime": "GO",
   "documentation": "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide",
   "prometheusJob": "apis.opendata-eu",

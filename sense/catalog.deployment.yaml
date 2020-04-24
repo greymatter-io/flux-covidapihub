@@ -82,8 +82,6 @@ spec:
               value: latest
             - name: SERVICE_0_OWNER
               value: Decipher
-            - name: SERVICE_0_CAPABILITY
-              value: Website
             - name: SERVICE_0_RUNTIME
               value: "Node"
             - name: SERVICE_0_DOCUMENTATION
