@@ -4,7 +4,7 @@
   "name": "BLS Unemployment Statistics by State",
   "version": "1.0",
   "owner": "Bureau of Labor Statistics",
-  "capability": "governance",
+  "capability": "{\"name\":\"Bureau of Labor Statistics Monthly Unemployment - Statewide\",\"url\":\"https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/BLS_Monthly_Unemployment_Current_14_Months/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json\",\"description\":\"the most current 14 months of unemployment statistics from the U.S. Bureau of Labor Statistics (BLS).\",\"source\":\"BLS\",\"contentType\":[\"Governance\"],\"homePage\":\"https://coronavirus-disasterresponse.hub.arcgis.com/datasets/993b8c64a67a4c6faa44a91846547786_1?geometry=-144.265%2C28.795%2C144.896%2C67.148\",\"thumbnail\":\"\",\"coverage\":\"US\",\"format\":\"JSON\",\"updates\":\"\",\"paid\":\"\",\"keyRequired\":\"\"}",
   "runtime": "GO",
   "documentation": "https://coronavirus-disasterresponse.hub.arcgis.com/datasets/993b8c64a67a4c6faa44a91846547786_1?geometry=-144.265%2C28.795%2C144.896%2C67.148",
   "prometheusJob": "apis.bls-unemployment-states",

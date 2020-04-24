@@ -4,7 +4,7 @@
   "name": "US Census Bureau - Population",
   "version": "1.0",
   "owner": "US Census Bureau",
-  "capability": "governance",
+  "capability": "{\"name\":\"US Census Bureau\",\"url\":\"https://www.census.gov/data/developers/data-sets/popest-popproj/popest.Vintage_2019.html\",\"description\":\"Historical population growth and demographic shifts since 2000\",\"source\":\"Census Beureau\",\"contentType\":[\"Governance\"],\"homePage\":\"https://www.census.gov/data.html\",\"thumbnail\":\"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/us-census-bureau.png\",\"coverage\":[\"US\"],\"format\":[\"JSON\"],\"updates\":[\"Yearly\"],\"paid\":true,\"keyRequired\":true}",
   "runtime": "GO",
   "documentation": "https://www.census.gov/data/developers/data-sets/popest-popproj.html",
   "prometheusJob": "apis.us-census-population",

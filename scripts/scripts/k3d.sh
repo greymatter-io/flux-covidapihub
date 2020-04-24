@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ ! -f scripts/scripts/credentials.sh ]
-then
+if [ ! -f scripts/scripts/credentials.sh ]; then
     echo decipher email:
     read DockerProductionUsername
     echo docker production password:
@@ -15,9 +14,9 @@ then
     TEMPLATE=scripts/scripts/credentials.template
     cp $TEMPLATE scripts/scripts/credentials.sh
     sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" scripts/scripts/credentials.sh
-    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g"  scripts/scripts/credentials.sh
-    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g"  scripts/scripts/credentials.sh
-    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g"  scripts/scripts/credentials.sh
+    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g" scripts/scripts/credentials.sh
+    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g" scripts/scripts/credentials.sh
+    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g" scripts/scripts/credentials.sh
 fi
 
 source ./scripts/scripts/credentials.sh
@@ -31,7 +30,7 @@ if [[ "$(k3d list)" == *"greymatter"* ]]; then
 fi
 
 # Create 4 workers for a greymatter cluster
-k3d create --workers 4 --name greymatter --publish 30000:8443 --publish 30001:9443
+k3d create --workers 10 --name greymatter --publish 30000:8443 --publish 30001:9443
 while [[ $(k3d get-kubeconfig --name='greymatter') != *kubeconfig.yaml ]]; do echo "echo waiting for k3d cluster to start up" && sleep 10; done
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
@@ -89,11 +88,9 @@ echo ""
 echo "spire applied"
 echo ""
 
-
 for folder in "${folders[@]}"; do
     echo "================================== $folder"
-    if [[ $folder == "edge" ]]
-    then
+    if [[ $folder == "edge" ]]; then
         kubectl apply -f scripts/resources/edge.service.yaml
         kubectl apply -f edge/edge.serviceaccount.yaml
         kubectl apply -f edge/edge.sidecar.configmap.yaml
@@ -102,7 +99,6 @@ for folder in "${folders[@]}"; do
         find $folder/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
     fi
 done
-
 
 # Overwrite with development only configs
 kubectl apply -f scripts/resources/dashboard.deployment.yaml
@@ -114,23 +110,19 @@ echo ""
 echo "files applied"
 echo ""
 
-
 kubectl apply -f scripts/resources/edge.ingress.yaml
 
 echo ""
 echo "ingress applied"
 echo ""
 
-for folder in apis/*
-do
-    if [ -d "$folder" ]
-    then
-	echo "================================== $folder"
-	find $folder/*.yaml -exec kubectl apply -f {} \;
+for folder in apis/*; do
+    if [ -d "$folder" ]; then
+        echo "================================== $folder"
+        find $folder/*.yaml -exec kubectl apply -f {} \;
     fi
 done
 
 echo ""
 echo "apis applied"
 echo ""
-

@@ -1,10 +1,10 @@
 {
   "clusterName": "apis.cds-timeseries",
   "zoneName": "default.zone",
-  "name": "CDS Timeseries",
+  "name": "Corona Data Scraper: Timeseries",
   "version": "1.0",
   "owner": "COVID Atlas",
-  "capability": "health",
+  "capability": "{\"name\":\"Corona Data Scraper: Timeseries\",\"url\":\"\",\"description\":\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\",\"source\":\"CDC\",\"contentType\":[\"Health\"],\"homePage\":\"https://coronadatascraper.com/\",\"thumbnail\":\"\",\"coverage\":[\"US\"],\"format\":[\"JSON\"],\"updates\":[\"Daily\"],\"paid\":true,\"keyRequired\":true}",
   "runtime": "GO",
   "documentation": "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md",
   "prometheusJob": "apis.cds-timeseries",

@@ -4,7 +4,7 @@
   "name": "CDC Death Counts by State",
   "version": "1.0",
   "owner": "CDC",
-  "capability": "health",
+  "capability": "{\"name\":\"CDC - Death counts by state\",\"url\":\"https://data.cdc.gov/resource/hc4f-j6nb.json\",\"description\":\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\",\"source\":\"CDC\",\"contentType\":\"Health\",\"homePage\":\"https://data.cdc.gov/\",\"thumbnail\":\"\",\"coverage\":\"\",\"format\":\"\",\"updates\":\"\",\"paid\":\"\",\"keyRequired\":\"\"}",
   "runtime": "GO",
   "documentation": "https://dev.socrata.com/foundry/data.cdc.gov/hc4f-j6nb",
   "prometheusJob": "apis.cdc-death-counts-by-state",
