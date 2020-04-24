@@ -14,7 +14,7 @@
   ],
   "network_filters": {
     "envoy_rate_limit": {
-      "stat_prefix": "ratelimit",
+      "stat_prefix": "edge",
       "domain": "edge",
       "failure_mode_deny": true,
       "descriptors": [
