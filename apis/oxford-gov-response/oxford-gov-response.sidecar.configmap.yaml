@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: edge-sidecar
-  namespace: edge
+  name: oxford-gov-response-sidecar
+  namespace: apis
 data:
   config.yaml: |-
     node:
       id: "default"
-      cluster: "edge.edge"
+      cluster: "apis.oxford-gov-response"
       locality:
         zone: default.zone
         region: default.region
@@ -25,7 +25,7 @@ data:
     static_resources:
       clusters:
         - name: xds_cluster
-          connect_timeout: 5s
+          connect_timeout: 0.25s
           http2_protocol_options: {}
           type: STRICT_DNS
           lb_policy: ROUND_ROBIN
@@ -41,7 +41,7 @@ data:
           tls_context:
             common_tls_context:
               tls_certificate_sds_secret_configs:
-                - name: "spiffe://covidapihub.io/ns/edge/sa/edge"
+                - name: "spiffe://covidapihub.io/ns/apis/sa/apis-sa"
                   sds_config:
                     api_config_source:
                       api_type: GRPC
@@ -64,7 +64,7 @@ data:
                         envoy_grpc:
                           cluster_name: spire_agent
         - name: spire_agent
-          connect_timeout: 5s
+          connect_timeout: 0.25s
           http2_protocol_options: {}
           type: STATIC
           lb_policy: ROUND_ROBIN
@@ -76,21 +76,6 @@ data:
                     address:
                       pipe:
                         path: /run/spire/sockets/agent.sock
-
-        - name: ratelimit
-          connect_timeout: 1s
-          http2_protocol_options: {}
-          type: LOGICAL_DNS
-          lb_policy: ROUND_ROBIN
-          load_assignment:
-            cluster_name: ratelimit
-            endpoints:
-            - lb_endpoints:
-                - endpoint:
-                    address:
-                      socket_address:
-                          address: ratelimit.edge.svc.cluster.local
-                          port_value: 8081                        
     admin:
       access_log_path: /dev/stdout
       address:

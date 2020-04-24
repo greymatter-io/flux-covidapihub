@@ -78,6 +78,10 @@ if [[ "$DEV" =~ ^([yY])$ ]]; then
     create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
 fi
 
+if [[ ! "$(kubectl get pods -n apis)" ]]
+then
+    exit 0
+fi
 
 kubectl port-forward deployment/catalog -n sense 10081:10080 &
 
