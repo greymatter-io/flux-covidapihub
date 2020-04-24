@@ -4,7 +4,7 @@
   "name": "Corona Data Scraper: Timeseries by Location",
   "version": "1.0",
   "owner": "COVID Atlas",
-  "capability": "{\"name\":\"Corona Data Scraper: Timeseries by Location\",\"url\":\"\",\"description\":\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\",\"source\":\"CDC\",\"contentType\":[\"Health\"],\"homePage\":\"https://coronadatascraper.com/\",\"thumbnail\":\"\",\"coverage\":[\"US\"],\"format\":[\"JSON\"],\"updates\":[\"Daily\"],\"paid\":true,\"keyRequired\":true}",
+  "capability": "\"{\\\"name\\\":\\\"Corona Data Scraper: Timeseries by Location\\\",\\\"url\\\":\\\"\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://coronadatascraper.com/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\"",
   "runtime": "GO",
   "documentation": "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md",
   "prometheusJob": "apis.cds-timeseries-by-location",

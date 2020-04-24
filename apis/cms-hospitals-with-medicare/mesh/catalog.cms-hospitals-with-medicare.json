@@ -4,7 +4,7 @@
   "name": "CMS Hospitals Registered with Medicare",
   "version": "1.0",
   "owner": "CMS",
-  "capability": "{\"name\":\"CMS - Hospitals Registered with Medicare\",\"url\":\"https://data.medicare.gov/resource/xubh-q36u.json\",\"description\":\"Information on all Hospitals registered with Medicare in the US\",\"source\":\"CMS\",\"contentType\":[\"Governance\"],\"homePage\":\"https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u\",\"thumbnail\":\"\",\"coverage\":\"US\",\"format\":\"JSON\",\"updates\":\"\",\"paid\":\"\",\"keyRequired\":\"\" }",
+  "capability": "\"{\\\"name\\\":\\\"CMS - Hospitals Registered with Medicare\\\",\\\"url\\\":\\\"https://data.medicare.gov/resource/xubh-q36u.json\\\",\\\"description\\\":\\\"A list of all hospitals that have been registered with Medicare. The list includes addresses, phone numbers, hospital type, and overall hospital rating.\\\",\\\"source\\\":\\\"CMS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, XML, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\" }\"",
   "runtime": "GO",
   "documentation": "https://dev.socrata.com/foundry/data.medicare.gov/xubh-q36u",
   "prometheusJob": "apis.cms-hospitals-with-medicare",

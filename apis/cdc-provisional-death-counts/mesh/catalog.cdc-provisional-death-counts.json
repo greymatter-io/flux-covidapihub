@@ -4,7 +4,7 @@
   "name": "CDC Provisional Death Counts for Coronavirus",
   "version": "1.0",
   "owner": "CDC",
-  "capability": "{\"name\":\"CDC - Provisional Death Counts for Coronavirus Disease\",\"url\":\"https://data.cdc.gov/resource/pj7m-y5uh.json\",\"description\":\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\",\"source\":\"CDC\",\"contentType\":[\"Health\"],\"homePage\":\"https://data.cdc.gov/NCHS/Provisional-Death-Counts-for-Coronavirus-Disease-C/pj7m-y5uh\",\"thumbnail\":\"\",\"coverage\":\"\",\"format\":\"\",\"updates\":\"\",\"paid\":\"\",\"keyRequired\":\"\"}",
+  "capability": "\"{\\\"name\\\":\\\"CDC - Provisional Death Counts for Coronavirus Disease\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/pj7m-y5uh.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Provisional-Death-Counts-for-Coronavirus-Disease-C/pj7m-y5uh\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\"",
   "runtime": "GO",
   "documentation": "https://dev.socrata.com/foundry/data.cdc.gov/pj7m-y5uh",
   "prometheusJob": "apis.cdc-provisional-death-counts",

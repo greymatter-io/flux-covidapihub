@@ -83,7 +83,7 @@ spec:
             - name: SERVICE_0_OWNER
               value: Decipher
             - name: SERVICE_0_CAPABILITY
-              value: Website
+              value: '"{\"name\":\"UN Data\",\"url\":\"https:\/\/data.un.org\/Host.aspx?Content=API\",\"description\":\"Historical data by country on population, education, economy, energy, crime, human resources, and communication\",\"source\":\"\",\"contentType\":[\"Governance\"],\"homePage\":\"https:\/\/data.un.org\/\",\"thumbnail\":\"https:\/\/data.un.org\/_Images\/Logo.png\",\"coverage\":[\"World\"],\"format\":[\"JSON\"],\"updates\":[\"Yearly\"],\"paid\":true,\"keyRequired\":true}"'
             - name: SERVICE_0_RUNTIME
               value: "Node"
             - name: SERVICE_0_DOCUMENTATION
