@@ -26,13 +26,11 @@ Note that this will not change which environment your `kubectl` is pointing to. 
 
 When using Chrome, you will get a security warning which can be bypassed by typing `thisisunsafe`.
 
-### With run script
-At the root of this repo, it has run.sh script. By running this like so:
-```
-source ./run.sh
-```
+If you would like to deploy all the APIs to your local k3d, you can run:
 
-It will run `make k3d mesh` as described above, but also change your `KUBECONFIG` environment variable.
+```
+make k3d-api
+```
 
 ## Adding an API or a CSV
 

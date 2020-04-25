@@ -31,18 +31,19 @@ k3d-api:
     ./scripts/scripts/k3d-setup-k8-api.sh; \
 	./scripts/scripts/mesh-api.sh "k3d"
 
+# Clean ports, delete k3d cluster, and empty acert folder.
 .PHONY: clean
 clean:
 	./scripts/scripts/clean-ports.sh; \
 	./scripts/scripts/clean-k3d.sh; \
 	./scripts/scripts/clean-acert.sh
 
+# Deploy meshconfig to prod. You must have OIDC client ID and secret in your credential.sh file.
 .PHONY: mesh-prod
 mesh-prod:
 	source ./scripts/scripts/kubeconfig-aws.sh; \
 	./scripts/scripts/mesh-config.sh "prod"
 	./scripts/scripts/mesh-api.sh "prod"
-
 
 .PHONY: new-api
 new-api:
