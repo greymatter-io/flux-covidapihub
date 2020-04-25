@@ -69,7 +69,7 @@ for meshfolder in "${meshfolders[@]}"; do
             if [[ $object == "listener" && $ENV == "k3d" ]]; then
                 value=$(<$file)
                 value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
-                echo "$value" >/tmp/listener.json
+                echo "$value" > /tmp/listener.json
                 create_or_update listener /tmp/listener.json
                 sleep $delay
             else
