@@ -8,7 +8,14 @@ if [ "$API_NAME" == "" ]; then
     read API_NAME
 fi
 
-source ./scripts/scripts/mesh-env.sh $DEV
+source ./scripts/scripts/mesh-env.sh
+
+if [[ "$DEV" =~ ^([yY])$ ]]; then
+    source ./scripts/scripts/kubeconfig-k3d.sh
+else
+    source ./scripts/scripts/kubeconfig-aws.sh
+fi
+
 
 echo "Applying new api: $API_NAME"
 
