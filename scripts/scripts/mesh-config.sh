@@ -88,9 +88,6 @@ if [[ $ENV == "k3d" ]]; then
     create_or_update listener scripts/resources/mesh.edge.listener.login.json
     create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
 
-    # A little forceful but killing dashboard pod
-    dashboard_pod=$(kubectl get pod -l app=dashboard -o jsonpath="{.items[0].metadata.name}" -n sense)
-    kubectl delete pod $dashboard_pod -n sense
 fi
 
 if [[ $ENV == "prod" ]]; then

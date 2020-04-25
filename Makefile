@@ -31,6 +31,11 @@ k3d-api:
     ./scripts/scripts/k3d-setup-k8-api.sh; \
 	./scripts/scripts/mesh-api.sh "k3d"
 
+.PHONY: dashboard
+dashboard:
+	source ./scripts/scripts/kubeconfig-k3d.sh; \
+	./scripts/scripts/delete-dashboard-pod.sh
+
 # Clean ports, delete k3d cluster, and empty acert folder.
 .PHONY: clean
 clean:
