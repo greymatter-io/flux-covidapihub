@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "acaps-gov-response.proxy",
+    "domain_keys": [
+        "acaps-gov-response.apis.domain"
+    ],
+    "listener_keys": [
+        "acaps-gov-response.apis.listener"
+    ],
+    "name": "apis.acaps-gov-response",
+    "listeners": null
+}

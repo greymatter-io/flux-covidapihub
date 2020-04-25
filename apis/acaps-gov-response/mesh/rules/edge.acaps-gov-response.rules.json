@@ -1,0 +1,24 @@
+{
+    "zone_key": "default.zone",
+    "shared_rules_key": "edge.acaps-gov-response.rules",
+    "name": "edge.acaps-gov-response",
+    "default": {
+        "light": [
+            {
+                "constraint_key": "",
+                "cluster_key": "edge.acaps-gov-response.cluster",
+                "metadata": null,
+                "properties": null,
+                "response_data": {},
+                "weight": 1
+            }
+        ],
+        "dark": null,
+        "tap": null
+    },
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "properties": null,
+    "retry_policy": null
+}
