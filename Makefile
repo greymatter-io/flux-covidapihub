@@ -33,6 +33,7 @@ k3d-api:
 
 .PHONY: clean
 clean:
+	./scripts/scripts/clean-ports.sh; \
 	./scripts/scripts/clean-k3d.sh; \
 	./scripts/scripts/clean-acert.sh
 

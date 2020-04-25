@@ -25,6 +25,7 @@ if [ ! -z "$listener" ]; then
     kill $listener
 fi
 
+echo "Waiting for Control API to start... ⏱"
 kubectl -n fabric wait --for=condition=Ready pod/api-0 --timeout=300s
 
 kubectl port-forward api-0 -n fabric 10080:10080 &
@@ -86,6 +87,10 @@ if [[ $ENV == "k3d" ]]; then
     create_or_update domain scripts/resources/mesh.edge.domains.login.json
     create_or_update listener scripts/resources/mesh.edge.listener.login.json
     create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
+
+    # A little forceful but killing dashboard pod
+    dashboard_pod=$(kubectl get pod -l app=dashboard -o jsonpath="{.items[0].metadata.name}" -n sense)
+    kubectl delete pod $dashboard_pod -n sense
 fi
 
 if [[ $ENV == "prod" ]]; then

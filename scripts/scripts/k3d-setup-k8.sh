@@ -7,7 +7,9 @@ if [[ "$(kubectl config current-context)" != "greymatter" ]]; then
     exit 1
 fi
 
-folders=(edge fabric sense data website apis)
+
+deployments=(edge fabric sense data website)
+folders=( "${deployments[@]}" "apis" )  # we just want to create namespace and secrets for apis.
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -50,6 +52,7 @@ echo "secrets applied"
 echo ""
 
 kubectl apply -f spire/server.dev.yaml
+echo "Waiting for Spire server to start... ⏱"
 sleep 60
 kubectl apply -f spire/agent.dev.yaml
 
@@ -57,7 +60,7 @@ echo ""
 echo "spire applied"
 echo ""
 
-for folder in "${folders[@]}"; do
+for folder in "${deployments[@]}"; do
     echo "================================== $folder"
     if [[ $folder == "edge" ]]; then
         kubectl apply -f scripts/resources/edge.service.yaml

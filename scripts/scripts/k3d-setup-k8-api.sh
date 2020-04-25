@@ -5,6 +5,9 @@ if [[ "$(kubectl config current-context)" != "greymatter" ]]; then
     exit 1
 fi
 
+ find apis/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+
+
 for folder in apis/*; do
     if [ -d "$folder" ]; then
         echo "================================== $folder"
