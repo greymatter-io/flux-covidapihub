@@ -4,6 +4,14 @@ echo API Name:
 read name
 echo URL:
 read csv_url
+
+
+fmt="${csv_url##*.}"
+if [[ "$fmt" =~ ^(xls|xlsx|xlsm|xlsb|odf)$ ]]; then
+    echo "Sheet Name: "
+    read sheet_name
+fi
+
 echo Display Name:
 read display_name
 echo Owner:
@@ -24,7 +32,7 @@ mkdir apis/$name/mesh/listeners
 mkdir apis/$name/mesh/routes
 mkdir apis/$name/mesh/proxies
 mkdir apis/$name/mesh/rules
-scripts/resources/api_files/csv.deployment.sh $name $csv_url >apis/$name/$name.deployment.yaml
+scripts/resources/api_files/csv.deployment.sh $name $csv_url $sheet_name >apis/$name/$name.deployment.yaml
 scripts/resources/api_files/sidecar_configmap.sh $name >apis/$name/$name.sidecar.configmap.yaml
 scripts/resources/api_files/domain.csv.sh $name "0.0.0.0" >apis/$name/mesh/domains/$name.domain.ingress.json
 scripts/resources/api_files/listener.sh $name >apis/$name/mesh/listeners/$name.listener.ingress.json

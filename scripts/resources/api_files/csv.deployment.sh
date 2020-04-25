@@ -2,6 +2,7 @@
 
 NAME=$1
 CSV_URL=$2
+SHEET_NAME=$3
 
 #define the template.
 cat  << EOF
@@ -41,6 +42,8 @@ spec:
       containers:
       - name: apier
         env:
+        - name: SHEET_NAME
+          value: $SHEET_NAME
         - name: FLASK_APP
           value: app/main.py
         - name: FLASK_DEBUG
