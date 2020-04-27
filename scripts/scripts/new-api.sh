@@ -29,12 +29,12 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     read thumbnail
     echo "Format (JSON, CSV, etc.)":
     read format
-    echo "Paid? TRUE/FALSE":
+    echo "Paid? true/false":
     read paid
-    paid=$(perl -e "print uc('$paid');")
-    echo "Key Required? TRUE/FALSE":
+    paid=$(perl -e "print lc('$paid');")
+    echo "Key Required? true/false":
     read keyreq
-    keyreq=$(perl -e "print uc('$keyreq');")
+    keyreq=$(perl -e "print lc('$keyreq');")
 else
     format="JSON"
 fi
@@ -44,7 +44,9 @@ fi
 route_path=$(perl -e "print lc('$route_path');")
 content_type=$(perl -e "print lc('$content_type');")
 
-capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://${host}${route_path\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"],\\\\\\\"paid\\\\\\\":\\\\\\\"$paid\\\\\\\",\\\\\\\"keyRequired\\\\\\\":\\\\\\\"$keyreq\\\\\\\"}\\\"\"
+capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$https://${host}${route_path}\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"],\\\\\\\"paid\\\\\\\":\\\\\\\"$paid\\\\\\\",\\\\\\\"keyRequired\\\\\\\":\\\\\\\"$keyreq\\\\\\\"}\\\"\"
+
+
 
 mkdir apis/$name
 mkdir apis/$name/mesh
