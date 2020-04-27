@@ -1,0 +1,10 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "usafacts-county-population.apis.domain",
+    "name": "*",
+    "port": 8443,
+    "gzip_enabled": false,
+    "cors_config": null,
+    "aliases": null,
+    "force_https": true
+}
