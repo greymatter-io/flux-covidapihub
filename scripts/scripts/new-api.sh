@@ -12,14 +12,39 @@ echo Display Name:
 read display_name
 echo Owner:
 read owner
-echo Capability:
-read capability
+echo "Capability (health, governance, etc.)":
+read content_type
 echo Docs link:
 read docs
 
+read -r -p "Add details for catalog metadata? [y/N] (description, coverage, updates, etc.) " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    echo Description:
+    read description
+    echo "Updates (ex. Daily, Monthly, 5 Minutes)":
+    read updates
+    echo "Coverage (ex. US)":
+    read coverage
+    echo Thumbnail:
+    read thumbnail
+    echo "Format (JSON, CSV, etc.)":
+    read format
+    echo "Paid? TRUE/FALSE":
+    read paid
+    paid=$(perl -e "print uc('$paid');")
+    echo "Key Required? TRUE/FALSE":
+    read keyreq
+    keyreq=$(perl -e "print uc('$keyreq');")
+else
+    format="JSON"
+fi
+
+
 # convert sort and group-by fields to lowercase
 route_path=$(perl -e "print lc('$route_path');")
-capability=$(perl -e "print lc('$capability');")
+content_type=$(perl -e "print lc('$content_type');")
+
+capability="\"{\\\"name\\\":\\\"$display_name\\\",\\\"url\\\":\\\"https://${host}${route_path}\\\",\\\"description\\\":\\\"${description}\\\",\\\"source\\\":\\\"$owner\\\",\\\"contentType\\\":[\\\"$content_type\\\"],\\\"homePage\\\":\\\"$docs\\\",\\\"thumbnail\\\":\\\"$thumbnail\\\",\\\"coverage\\\":[\\\"$coverage\\\"],\\\"format\\\":[\\\"$format\\\"],\\\"updates\\\":[\\\"$updates\\\"],\\\"paid\\\":\\\"$paid\\\",\\\"keyRequired\\\":\\\"$keyreq\\\"}\""
 
 mkdir apis/$name
 mkdir apis/$name/mesh
