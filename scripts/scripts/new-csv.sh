@@ -38,6 +38,20 @@ scripts/resources/api_files/local.route.sh $name "" >apis/$name/mesh/routes/loca
 scripts/resources/api_files/edge.route.slash.sh $name >apis/$name/mesh/routes/edge.$name.route.slash.json
 scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capability" "$docs" >apis/$name/mesh/catalog.$name.json
 
+echo ""
+echo "Generating Catalog envvars, checking covidapihub for number of services"
+count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .clusterCount)
+echo $count
+echo "The current service count is: $count, incrementing by 1"
+count=$((count+1))
+scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$number" >apis/$name/mesh/catalog.envvars.yaml
+echo ""
+echo "Copy the following envvars (theyre also stored in apis/$name/mesh/catalog.envvars.yaml) and paste them into the catalog container env"
+echo ""
+cat apis/$name/mesh/catalog.envvars.yaml
+echo ""
+
+
 read -r -p "Apply the configs now? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     read -r -p "Apply to prod? [y/N] " prod
