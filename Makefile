@@ -36,6 +36,11 @@ dashboard:
 	source ./scripts/scripts/kubeconfig-k3d.sh; \
 	./scripts/scripts/delete-dashboard-pod.sh
 
+.PHONY: fix-control
+fix-control:
+	source ./scripts/scripts/kubeconfig-k3d.sh;\
+	./scripts/scripts/fix-control-issue.sh
+
 # Clean ports, delete k3d cluster, and empty acert folder.
 .PHONY: clean
 clean:
