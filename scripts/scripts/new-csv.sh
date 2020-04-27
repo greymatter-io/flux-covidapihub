@@ -32,12 +32,12 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     read thumbnail
     echo "Format (JSON, CSV, etc.)":
     read format
-    echo "Paid? TRUE/FALSE":
+    echo "Paid? true/false":
     read paid
-    paid=$(perl -e "print uc('$paid');")
-    echo "Key Required? TRUE/FALSE":
+    paid=$(perl -e "print lc('$paid');")
+    echo "Key Required? true/false":
     read keyreq
-    keyreq=$(perl -e "print uc('$keyreq');")
+    keyreq=$(perl -e "print lc('$keyreq');")
 else
     format="JSON"
 fi
@@ -45,7 +45,7 @@ fi
 # convert sort and group-by fields to lowercase
 content_type=$(perl -e "print lc('$content_type');")
 
-capability="\"{\\\"name\\\":\\\"$display_name\\\",\\\"url\\\":\\\"$csv_url\\\",\\\"description\\\":\\\"${description}\\\",\\\"source\\\":\\\"$owner\\\",\\\"contentType\\\":[\\\"$content_type\\\"],\\\"homePage\\\":\\\"$docs\\\",\\\"thumbnail\\\":\\\"$thumbnail\\\",\\\"coverage\\\":[\\\"$coverage\\\"],\\\"format\\\":[\\\"$format\\\"],\\\"updates\\\":[\\\"$updates\\\"],\\\"paid\\\":\\\"$paid\\\",\\\"keyRequired\\\":\\\"$keyreq\\\"}\""
+capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$csv_url\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"],\\\\\\\"paid\\\\\\\":\\\\\\\"$paid\\\\\\\",\\\\\\\"keyRequired\\\\\\\":\\\\\\\"$keyreq\\\\\\\"}\\\"\"
 
 mkdir apis/$name
 mkdir apis/$name/mesh
@@ -75,7 +75,7 @@ count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .c
 echo $count
 echo "The current service count is: $count, incrementing by 1"
 count=$((count+1))
-scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$number" >apis/$name/mesh/catalog.envvars.yaml
+scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$count" >apis/$name/mesh/catalog.envvars.yaml
 echo ""
 echo "Copy the following envvars (theyre also stored in apis/$name/mesh/catalog.envvars.yaml) and paste them into the catalog container env"
 echo ""
