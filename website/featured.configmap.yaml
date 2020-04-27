@@ -14,7 +14,7 @@ data:
           "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
           "source": "CDC",
           "contentType": [
-            "Health Stats"
+            "Health"
           ],
           "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
           "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
@@ -36,7 +36,7 @@ data:
           "description": "Actual number of examined and infected people by COVID-19 by state from CDC",
           "source": "CDC",
           "contentType": [
-            "Health Stats"
+            "Health"
           ],
           "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
           "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
@@ -58,7 +58,7 @@ data:
           "description": "Provides monthly and quarterly data that offer comprehensive measures of the U.S. economy. These surveys produce a variety of statistics covering construction, housing, international trade, retail trade, wholesale trade, services and manufacturing.",
           "source": "US Census Bureau",
           "contentType": [
-            "Health Stats"
+            "Health"
           ],
           "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
           "thumbnail": "https://www.census.gov/etc/designs/census/images/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg",
@@ -80,7 +80,7 @@ data:
           "description": "Destribution of cases across Europe",
           "source": "European Union",
           "contentType": [
-            "Health Stats"
+            "Health"
           ],
           "homePage": "https://data.europa.eu/euodp/en/developerscorner",
           "thumbnail": "https://www.openaire.eu/images/openscienceEU/euopendata.jpg",
