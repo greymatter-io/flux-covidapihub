@@ -436,34 +436,34 @@ spec:
               value: ""
             - name: SERVICE_12_METRICS_PORT
               value: "8080"
-            - name: SERVICE_13_CLUSTER_NAME
-              value: apis.novelcovid
-            - name: SERVICE_13_ZONE_NAME
-              value: default.zone
-            - name: SERVICE_13_NAME
-              value: "NOVELCovid"
-            - name: SERVICE_13_OWNER
-              value: "Johns Hopkins University"
-            - name: SERVICE_13_RUNTIME
-              value: "Node"
-            - name: SERVICE_13_DOCUMENTATION
-              value: "/apis/novelcovid"
-            - name: SERVICE_13_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"NovelCOVID API\\\",\\\"url\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"description\\\":\\\"API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain\\\",\\\"source\\\":\\\"John Hopkins Univerty\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"thumbnail\\\":\\\"https://github.com/NovelCOVID/API/raw/master/assets/logo.png\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
-            - name: SERVICE_13_PROMETHEUS_JOB
-              value: apis.novelcovid
-            - name: SERVICE_13_MAX_INSTANCES
-              value: "2"
-            - name: SERVICE_13_MIN_INSTANCES
-              value: "1"
-            - name: SERVICE_13_ENABLE_INSTANCE_METRICS
-              value: "true"
-            - name: SERVICE_13_ENABLE_HISTORICAL_METRICS
-              value: "true"
-            - name: SERVICE_13_METRICS_TEMPLATE
-              value: ""
-            - name: SERVICE_13_METRICS_PORT
-              value: "8080"
+            # - name: SERVICE_13_CLUSTER_NAME
+            #   value: apis.novelcovid
+            # - name: SERVICE_13_ZONE_NAME
+            #   value: default.zone
+            # - name: SERVICE_13_NAME
+            #   value: "NOVELCovid"
+            # - name: SERVICE_13_OWNER
+            #   value: "Johns Hopkins University"
+            # - name: SERVICE_13_RUNTIME
+            #   value: "Node"
+            # - name: SERVICE_13_DOCUMENTATION
+            #   value: "/apis/novelcovid"
+            # - name: SERVICE_13_CAPABILITY
+            #   value: "\"{\\\"name\\\":\\\"NovelCOVID API\\\",\\\"url\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"description\\\":\\\"API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain\\\",\\\"source\\\":\\\"John Hopkins Univerty\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"thumbnail\\\":\\\"https://github.com/NovelCOVID/API/raw/master/assets/logo.png\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            # - name: SERVICE_13_PROMETHEUS_JOB
+            #   value: apis.novelcovid
+            # - name: SERVICE_13_MAX_INSTANCES
+            #   value: "2"
+            # - name: SERVICE_13_MIN_INSTANCES
+            #   value: "1"
+            # - name: SERVICE_13_ENABLE_INSTANCE_METRICS
+            #   value: "true"
+            # - name: SERVICE_13_ENABLE_HISTORICAL_METRICS
+            #   value: "true"
+            # - name: SERVICE_13_METRICS_TEMPLATE
+            #   value: ""
+            # - name: SERVICE_13_METRICS_PORT
+            #   value: "8080"
             - name: SERVICE_14_CLUSTER_NAME
               value: apis.opendata-eu
             - name: SERVICE_14_ZONE_NAME
