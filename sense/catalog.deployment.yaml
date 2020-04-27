@@ -100,6 +100,539 @@ spec:
               value: ""
             - name: SERVICE_0_METRICS_PORT
               value: "8080"
+            - name: SERVICE_1_CLUSTER_NAME
+              value: apis.bls-unemployment-states
+            - name: SERVICE_1_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_1_NAME
+              value: "BLS Unemployment Statistics by State"
+            - name: SERVICE_1_OWNER
+              value: "Bureau of Labor Statistics"
+            - name: SERVICE_1_RUNTIME
+              value: "Node"
+            - name: SERVICE_1_DOCUMENTATION
+              value: "https://coronavirus-disasterresponse.hub.arcgis.com/datasets/993b8c64a67a4c6faa44a91846547786_1?geometry=-144.265%2C28.795%2C144.896%2C67.148"
+            - name: SERVICE_1_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Bureau of Labor Statistics Monthly Unemployment - Statewide\\\",\\\"url\\\":\\\"https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/BLS_Monthly_Unemployment_Current_14_Months/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json\\\",\\\"description\\\":\\\"The most current 14 months of unemployment statistics from the U.S. Bureau of Labor Statistics (BLS). The data is offered at the nationwide, state, and county geography levels. Puerto Rico is included. These are not seasonally adjusted values. The layer is updated monthly with the newest unemployment statistics available from BLS. There are attributes in the layer that specify which month is associated to each statistic.\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://coronavirus-disasterresponse.hub.arcgis.com/datasets/993b8c64a67a4c6faa44a91846547786_1?geometry=-144.265%2C28.795%2C144.896%2C67.148\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_1_PROMETHEUS_JOB
+              value: apis.bls-unemployment-states
+            - name: SERVICE_1_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_1_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_1_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_1_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_1_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_1_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_2_CLUSTER_NAME
+              value: apis.bls-unemployment-usa
+            - name: SERVICE_2_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_2_NAME
+              value: "BLS Unemployment Statistics US Totals"
+            - name: SERVICE_2_OWNER
+              value: "Bureau of Labor Statistics"
+            - name: SERVICE_2_RUNTIME
+              value: "Node"
+            - name: SERVICE_2_DOCUMENTATION
+              value: "https://coronavirus-disasterresponse.hub.arcgis.com/datasets/esri::country-11/geoservice?geometry=-144.265%2C28.795%2C144.896%2C67.148"
+            - name: SERVICE_2_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"BLS Unemployment Statistics US Totals\\\",\\\"url\\\":\\\"https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/BLS_Monthly_Unemployment_Current_14_Months/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json\\\",\\\"description\\\":\\\"The most current 14 months of unemployment statistics from the U.S. Bureau of Labor Statistics (BLS).\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://coronavirus-disasterresponse.hub.arcgis.com/datasets/993b8c64a67a4c6faa44a91846547786_1?geometry=-144.265%2C28.795%2C144.896%2C67.148\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_2_PROMETHEUS_JOB
+              value: apis.bls-unemployment-usa
+            - name: SERVICE_2_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_2_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_2_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_2_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_2_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_2_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_3_CLUSTER_NAME
+              value: apis.cdc-cases-by-state
+            - name: SERVICE_3_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_3_NAME
+              value: "CDC Number of Cases by State"
+            - name: SERVICE_3_OWNER
+              value: "CDC"
+            - name: SERVICE_3_RUNTIME
+              value: "Node"
+            - name: SERVICE_3_DOCUMENTATION
+              value: "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html#anchor_1586784349"
+            - name: SERVICE_3_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC Number of Cases by State\\\",\\\"url\\\":\\\"https://api.apify.com/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1\\\",\\\"description\\\":\\\"Actual number of examined and infected people by COVID-19 by state from CDC\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://apify.com/petrpatek/covid-usa-cdc\\\",\\\"thumbnail\\\":\\\"https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"5 Minutes\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_3_PROMETHEUS_JOB
+              value: apis.cdc-cases-by-state
+            - name: SERVICE_3_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_3_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_3_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_3_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_3_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_3_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_4_CLUSTER_NAME
+              value: apis.cdc-death-counts-by-state
+            - name: SERVICE_4_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_4_NAME
+              value: "CDC Death Counts by State"
+            - name: SERVICE_4_OWNER
+              value: "CDC"
+            - name: SERVICE_4_RUNTIME
+              value: "Node"
+            - name: SERVICE_4_DOCUMENTATION
+              value: "https://dev.socrata.com/foundry/data.cdc.gov/hc4f-j6nb"
+            - name: SERVICE_4_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC - Death counts by state\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/hc4f-j6nb.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_4_PROMETHEUS_JOB
+              value: apis.cdc-death-counts-by-state
+            - name: SERVICE_4_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_4_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_4_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_4_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_4_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_4_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_5_CLUSTER_NAME
+              value: apis.cdc-provisional-death-counts
+            - name: SERVICE_5_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_5_NAME
+              value: "CDC Provisional Death Counts for Coronavirus"
+            - name: SERVICE_5_OWNER
+              value: "CDC"
+            - name: SERVICE_5_RUNTIME
+              value: "Node"
+            - name: SERVICE_5_DOCUMENTATION
+              value: "https://dev.socrata.com/foundry/data.cdc.gov/pj7m-y5uh"
+            - name: SERVICE_5_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC - Provisional Death Counts for Coronavirus Disease\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/pj7m-y5uh.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Provisional-Death-Counts-for-Coronavirus-Disease-C/pj7m-y5uh\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_5_PROMETHEUS_JOB
+              value: apis.cdc-provisional-death-counts
+            - name: SERVICE_5_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_5_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_5_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_5_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_5_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_5_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_6_CLUSTER_NAME
+              value: apis.cdc-social-vulnerability-index
+            - name: SERVICE_6_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_6_NAME
+              value: "CDC Social Vulnerability Index"
+            - name: SERVICE_6_OWNER
+              value: "CDC"
+            - name: SERVICE_6_RUNTIME
+              value: "Node"
+            - name: SERVICE_6_DOCUMENTATION
+              value: "https://dev.socrata.com/foundry/data.cdc.gov/48va-t53r"
+            - name: SERVICE_6_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC - Social Vulnerability Index\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/48va-t53r.json\\\",\\\"description\\\":\\\"SVI indicates the relative vulnerability of every U.S. Census tract, created to help public health officials and emergency response planners identify and map the communities that will most likely need support before, during, and after a hazardous event.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/Health-Statistics/Social-Vulnerability-Index-2018-United-States-coun/48va-t53r\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_6_PROMETHEUS_JOB
+              value: apis.cdc-social-vulnerability-index
+            - name: SERVICE_6_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_6_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_6_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_6_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_6_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_6_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_7_CLUSTER_NAME
+              value: apis.cdc-us-cases
+            - name: SERVICE_7_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_7_NAME
+              value: "CDC Number of US Cases And Deaths"
+            - name: SERVICE_7_OWNER
+              value: "CDC"
+            - name: SERVICE_7_RUNTIME
+              value: "Node"
+            - name: SERVICE_7_DOCUMENTATION
+              value: "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html"
+            - name: SERVICE_7_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC Number of US Cases And Deaths\\\",\\\"url\\\":\\\"https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true\\\",\\\"description\\\":\\\"Actual number of examined and infected people by COVID-19 in the USA from CDC\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://apify.com/petrpatek/covid-usa-cdc\\\",\\\"thumbnail\\\":\\\"https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"5 Minutes\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_7_PROMETHEUS_JOB
+              value: apis.cdc-us-cases
+            - name: SERVICE_7_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_7_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_7_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_7_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_7_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_7_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_8_CLUSTER_NAME
+              value: apis.cds-data
+            - name: SERVICE_8_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_8_NAME
+              value: "Corona Data Scraper: Today's Data"
+            - name: SERVICE_8_OWNER
+              value: "COVID Atlas"
+            - name: SERVICE_8_RUNTIME
+              value: "Node"
+            - name: SERVICE_8_DOCUMENTATION
+              value: "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md"
+            - name: SERVICE_8_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Corona Data Scraper: Today's Data\\\",\\\"url\\\":\\\"\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://coronadatascraper.com/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_8_PROMETHEUS_JOB
+              value: apis.cds-data
+            - name: SERVICE_8_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_8_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_8_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_8_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_8_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_8_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_9_CLUSTER_NAME
+              value: apis.cds-timeseries
+            - name: SERVICE_9_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_9_NAME
+              value: "Corona Data Scraper: Timeseries"
+            - name: SERVICE_9_OWNER
+              value: "COVID Atlas"
+            - name: SERVICE_9_RUNTIME
+              value: "Node"
+            - name: SERVICE_9_DOCUMENTATION
+              value: "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md"
+            - name: SERVICE_9_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Corona Data Scraper: Timeseries\\\",\\\"url\\\":\\\"\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://coronadatascraper.com/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_9_PROMETHEUS_JOB
+              value: apis.cds-timeseries
+            - name: SERVICE_9_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_9_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_9_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_9_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_9_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_9_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_10_CLUSTER_NAME
+              value: apis.cds-timeseries-by-location
+            - name: SERVICE_10_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_10_NAME
+              value: "Corona Data Scraper: Timeseries by Location"
+            - name: SERVICE_10_OWNER
+              value: "COVID Atlas"
+            - name: SERVICE_10_RUNTIME
+              value: "Node"
+            - name: SERVICE_10_DOCUMENTATION
+              value: "https://github.com/covidatlas/coronadatascraper/blob/master/docs/data_fields.md"
+            - name: SERVICE_10_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Corona Data Scraper: Timeseries by Location\\\",\\\"url\\\":\\\"\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://coronadatascraper.com/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_10_PROMETHEUS_JOB
+              value: apis.cds-timeseries-by-location
+            - name: SERVICE_10_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_10_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_10_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_10_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_10_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_10_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_11_CLUSTER_NAME
+              value: apis.cms-hospitals-with-medicare
+            - name: SERVICE_11_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_11_NAME
+              value: "CMS Hospitals Registered with Medicare"
+            - name: SERVICE_11_OWNER
+              value: "CMS"
+            - name: SERVICE_11_RUNTIME
+              value: "Node"
+            - name: SERVICE_11_DOCUMENTATION
+              value: "https://dev.socrata.com/foundry/data.medicare.gov/xubh-q36u"
+            - name: SERVICE_11_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CMS - Hospitals Registered with Medicare\\\",\\\"url\\\":\\\"https://data.medicare.gov/resource/xubh-q36u.json\\\",\\\"description\\\":\\\"A list of all hospitals that have been registered with Medicare. The list includes addresses, phone numbers, hospital type, and overall hospital rating.\\\",\\\"source\\\":\\\"CMS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, XML, CSV\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\" }\""
+            - name: SERVICE_11_PROMETHEUS_JOB
+              value: apis.cms-hospitals-with-medicare
+            - name: SERVICE_11_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_11_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_11_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_11_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_11_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_11_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_12_CLUSTER_NAME
+              value: apis.coronatab
+            - name: SERVICE_12_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_12_NAME
+              value: "CoronaTab API"
+            - name: SERVICE_12_OWNER
+              value: "CoronaTab"
+            - name: SERVICE_12_RUNTIME
+              value: "Node"
+            - name: SERVICE_12_DOCUMENTATION
+              value: "https://github.com/PotentialWeb/CoronaTab/wiki/RESTful-API-documentation"
+            - name: SERVICE_12_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CoronaTab API\\\",\\\"url\\\":\\\"https://api.coronatab.app/places\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"Corona Data Scraper\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/PotentialWeb/CoronaTab/wiki/RESTful-API-documentation\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_12_PROMETHEUS_JOB
+              value: apis.coronatab
+            - name: SERVICE_12_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_12_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_12_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_12_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_12_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_12_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_13_CLUSTER_NAME
+              value: apis.novelcovid
+            - name: SERVICE_13_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_13_NAME
+              value: "NOVELCovid"
+            - name: SERVICE_13_OWNER
+              value: "Johns Hopkins University"
+            - name: SERVICE_13_RUNTIME
+              value: "Node"
+            - name: SERVICE_13_DOCUMENTATION
+              value: "/apis/novelcovid"
+            - name: SERVICE_13_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"NovelCOVID API\\\",\\\"url\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"description\\\":\\\"API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain\\\",\\\"source\\\":\\\"John Hopkins Univerty\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/NovelCOVID/API\\\",\\\"thumbnail\\\":\\\"https://github.com/NovelCOVID/API/raw/master/assets/logo.png\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_13_PROMETHEUS_JOB
+              value: apis.novelcovid
+            - name: SERVICE_13_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_13_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_13_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_13_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_13_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_13_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_14_CLUSTER_NAME
+              value: apis.opendata-eu
+            - name: SERVICE_14_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_14_NAME
+              value: "EU Open Data Covid Dataset"
+            - name: SERVICE_14_OWNER
+              value: "European Centre for Disease Prevention and Control"
+            - name: SERVICE_14_RUNTIME
+              value: "Node"
+            - name: SERVICE_14_DOCUMENTATION
+              value: "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"
+            - name: SERVICE_14_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"EU Open Data Covid Dataset\\\",\\\"url\\\":\\\"https://opendata.ecdc.europa.eu/covid19/casedistribution/json/\\\",\\\"description\\\":\\\"The dataset contains the latest available public data on COVID-19 including a daily situation update, the epidemiological curve and the global geographical distribution (EU/EEA and the UK, worldwide).\\\",\\\"source\\\":\\\"European Union\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.europa.eu/euodp/en/developerscorner\\\",\\\"thumbnail\\\":\\\"https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png\\\",\\\"coverage\\\":[\\\"Europe\\\"],\\\"format\\\":[\\\"JSON\\\",\\\"CSV\\\",\\\"HTML\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_14_PROMETHEUS_JOB
+              value: apis.opendata-eu
+            - name: SERVICE_14_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_14_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_14_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_14_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_14_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_14_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_15_CLUSTER_NAME
+              value: apis.oxford-gov-response
+            - name: SERVICE_15_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_15_NAME
+              value: "Oxford COVID-19 Government Response Tracker"
+            - name: SERVICE_15_OWNER
+              value: "Oxford University"
+            - name: SERVICE_15_RUNTIME
+              value: "Node"
+            - name: SERVICE_15_DOCUMENTATION
+              value: "https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker"
+            - name: SERVICE_15_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Oxford COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"description\\\":\\\"Systematic information on which governments have taken which measures, and when, can help decision-makers and citizens understand the robustness of governmental responses in a consistent way, aiding efforts to fight the pandemic. The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically collects information on several different common policy responses governments have taken, scores the stringency of such measures, and aggregates these scores into a common Stringency Index. Data is collected from public sources by a team of over one hundred Oxford University students and staff from every part of the world.\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_15_PROMETHEUS_JOB
+              value: apis.oxford-gov-response
+            - name: SERVICE_15_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_15_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_15_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_15_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_15_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_15_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_16_CLUSTER_NAME
+              value: apis.us-census-economic-indicators
+            - name: SERVICE_16_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_16_NAME
+              value: "US Census Bureau - Economic Indicators"
+            - name: SERVICE_16_OWNER
+              value: "US Census Bureau"
+            - name: SERVICE_16_RUNTIME
+              value: "Node"
+            - name: SERVICE_16_DOCUMENTATION
+              value: "https://www.census.gov/data/developers/data-sets/economic-indicators.html"
+            - name: SERVICE_16_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"US Economic Indicator Time Series Database\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/economic-indicators.html\\\",\\\"description\\\":\\\"The U.S. Census Bureau's economic indicator surveys provide monthly and quarterly data that are timely, reliable, and offer comprehensive measures of the U.S. economy. These surveys produce a variety of statistics covering construction, housing, international trade, retail trade, wholesale trade, services and manufacturing. \\\",\\\"source\\\":\\\"Census Bureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data/developers/data-sets/economic-indicators.html\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_16_PROMETHEUS_JOB
+              value: apis.us-census-economic-indicators
+            - name: SERVICE_16_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_16_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_16_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_16_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_16_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_16_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_17_CLUSTER_NAME
+              value: apis.us-census-healthins
+            - name: SERVICE_17_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_17_NAME
+              value: "US Census Bureau - Health Insurance Statistics"
+            - name: SERVICE_17_OWNER
+              value: "US Census Bureau"
+            - name: SERVICE_17_RUNTIME
+              value: "Node"
+            - name: SERVICE_17_DOCUMENTATION
+              value: "https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html"
+            - name: SERVICE_17_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"US Health Insurance Statistics\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"description\\\":\\\"The Current Population Survey Annual Social and Economic Supplement (CPS ASEC) is a supplemental survey of the CPS, which is the longest running survey conducted by the Census Bureau. The key purpose of the CPS ASEC is to provide nationally representative estimates of economic well-being in the United States, of which health insurance coverage is an important part.\\\",\\\"source\\\":\\\"Census Beureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+            - name: SERVICE_17_PROMETHEUS_JOB
+              value: apis.us-census-healthins
+            - name: SERVICE_17_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_17_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_17_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_17_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_17_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_17_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_18_CLUSTER_NAME
+              value: apis.us-census-population
+            - name: SERVICE_18_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_18_NAME
+              value: "US Census Bureau - Population"
+            - name: SERVICE_18_OWNER
+              value: "US Census Bureau"
+            - name: SERVICE_18_RUNTIME
+              value: "Node"
+            - name: SERVICE_18_DOCUMENTATION
+              value: "https://www.census.gov/data/developers/data-sets/popest-popproj.html"
+            - name: SERVICE_18_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"US Census Bureau\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/popest-popproj/popest.Vintage_2019.html\\\",\\\"description\\\":\\\"Historical population growth and demographic shifts since 2000\\\",\\\"source\\\":\\\"Census Beureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data.html\\\",\\\"thumbnail\\\":\\\"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/us-census-bureau.png\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_18_PROMETHEUS_JOB
+              value: apis.us-census-population
+            - name: SERVICE_18_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_18_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_18_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_18_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_18_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_18_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_19_CLUSTER_NAME
+              value: apis.usa-spending
+            - name: SERVICE_19_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_19_NAME
+              value: "USA Spending"
+            - name: SERVICE_19_OWNER
+              value: "US Treasury"
+            - name: SERVICE_19_RUNTIME
+              value: "Node"
+            - name: SERVICE_19_DOCUMENTATION
+              value: "https://api.usaspending.gov/docs/"
+            - name: SERVICE_19_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"USA Spending\\\",\\\"url\\\":\\\"https://api.usaspending.gov/docs/endpoints\\\",\\\"description\\\":\\\"Breakdowns of all federal spending including federal awards (contracts, grants, etc) and non-award spending (e.g. employee compensation)\\\",\\\"source\\\":\\\"\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.usaspending.gov/#/\\\",\\\"thumbnail\\\":\\\"https://www.usaspending.gov/img/logo.png\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+            - name: SERVICE_19_PROMETHEUS_JOB
+              value: apis.usa-spending
+            - name: SERVICE_19_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_19_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_19_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_19_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_19_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_19_METRICS_PORT
+              value: "8080"
+
           ports:
             - name: catalog
               containerPort: 10080
