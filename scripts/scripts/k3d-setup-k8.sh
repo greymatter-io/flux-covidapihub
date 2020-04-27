@@ -1,46 +1,15 @@
 #!/bin/bash
 
-if [ ! -f scripts/scripts/credentials.sh ]; then
-    echo decipher email:
-    read DockerProductionUsername
-    echo docker production password:
-    read -s DockerProductionPassword
-
-    echo index.docker.io username:
-    read IndexDockerUsername
-    echo index.docker.io password:
-    read -s IndexDockerPassword
-
-    TEMPLATE=scripts/scripts/credentials.template
-    cp $TEMPLATE scripts/scripts/credentials.sh
-    sed -i '' "s/DPUsername/\"${DockerProductionUsername}\"/g" scripts/scripts/credentials.sh
-    sed -i '' "s/DPPassword/\"${DockerProductionPassword}\"/g" scripts/scripts/credentials.sh
-    sed -i '' "s/IDUsername/\"${IndexDockerUsername}\"/g" scripts/scripts/credentials.sh
-    sed -i '' "s/IDPassword/\"${IndexDockerPassword}\"/g" scripts/scripts/credentials.sh
-fi
-
-read -r -p "Would you like to deploy all apis? [y/N] " response
-APPLY_APIS=$response
-
 source ./scripts/scripts/credentials.sh
 
-# install k3d 1.7.0
-curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | TAG=v1.7.0 bash
-
-# Check if there's already a greymatter cluster, if so delete it
-if [[ "$(k3d list)" == *"greymatter"* ]]; then
-    k3d delete --name greymatter
+if [[ "$(kubectl config current-context)" != "greymatter" ]]; then
+    echo "⛔️⛔️⛔️⛔️⛔ You are about to apply yaml file to non-k3d environment ⛔️⛔️⛔️⛔️⛔️"
+    exit 1
 fi
 
-# Create 4 workers for a greymatter cluster
-k3d create --workers 4 --name greymatter --publish 30000:8443 --publish 30001:9443
-while [[ $(k3d get-kubeconfig --name='greymatter') != *kubeconfig.yaml ]]; do echo "echo waiting for k3d cluster to start up" && sleep 10; done
 
-export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
-
-echo "Cluster is connected"
-
-folders=(edge fabric sense data website apis)
+deployments=(edge fabric sense data website)
+folders=( "${deployments[@]}" "apis" )  # we just want to create namespace and secrets for apis.
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -52,7 +21,6 @@ echo "namespaces applied"
 echo ""
 
 # Apply secrets
-
 export AUTHORITY_FINGERPRINT=$(acert authorities create -n "Covid API Hub" -o "Decipher Technology Studios" -c "US")
 export FINGERPRINT=$(acert authorities issue ${AUTHORITY_FINGERPRINT} -n 'edge.svc')
 
@@ -84,6 +52,7 @@ echo "secrets applied"
 echo ""
 
 kubectl apply -f spire/server.dev.yaml
+echo "Waiting for Spire server to start... ⏱"
 sleep 60
 kubectl apply -f spire/agent.dev.yaml
 
@@ -91,7 +60,7 @@ echo ""
 echo "spire applied"
 echo ""
 
-for folder in "${folders[@]}"; do
+for folder in "${deployments[@]}"; do
     echo "================================== $folder"
     if [[ $folder == "edge" ]]; then
         kubectl apply -f scripts/resources/edge.service.yaml
@@ -116,19 +85,4 @@ kubectl apply -f scripts/resources/edge.ingress.yaml
 
 echo ""
 echo "ingress applied"
-echo ""
-
-if [[ ! "$APPLY_APIS" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    exit 0
-fi
-
-for folder in apis/*; do
-    if [ -d "$folder" ]; then
-        echo "================================== $folder"
-        find $folder/*.yaml -exec kubectl apply -f {} \;
-    fi
-done
-
-echo ""
-echo "apis applied"
 echo ""

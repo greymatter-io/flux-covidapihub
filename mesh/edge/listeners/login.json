@@ -35,8 +35,8 @@
       "serviceUrl": "https://covidapihub.io/login",
       "callbackPath": "/oauth",
       "provider": "https://accounts.google.com",
-      "clientId": "REDACTED",
-      "clientSecret": "REDACTED",
+      "clientId": "CLIENT_ID_REDACTED",
+      "clientSecret": "CLIENT_SECRET_REDACTED",
       "additionalScopes": ["profile", "email"]
     }
   }

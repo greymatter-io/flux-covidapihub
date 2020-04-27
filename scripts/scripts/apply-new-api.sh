@@ -8,7 +8,15 @@ if [ "$API_NAME" == "" ]; then
     read API_NAME
 fi
 
-source ./scripts/scripts/mesh-env.sh $DEV
+source ./scripts/scripts/mesh-env.sh
+
+if [[ "$DEV" =~ ^([yY])$ ]]; then
+    source ./scripts/scripts/kubeconfig-k3d.sh
+    find apis/*.yaml ! -name "namespace.yaml" ! -name "*secret.yaml" ! -name "registrar.validatingwebhookconfiguration.yaml" -exec kubectl apply -f {} \;
+else
+    source ./scripts/scripts/kubeconfig-aws.sh
+fi
+
 
 echo "Applying new api: $API_NAME"
 
@@ -58,11 +66,15 @@ create_or_update() {
     echo "----------"
 }
 
-
-
-
 delay=0.01
+
+listener=$(lsof -t -i:10081)
+if [ ! -z "$listener" ]; then
+    echo "Killing a process (pid $listener) using port 10081"
+    kill $listener
+fi
 kubectl port-forward deployment/catalog -n sense 10081:10080 &
+
 
 for cl in apis/$API_NAME/mesh/clusters/*.json; do create_or_update cluster $cl; done
 for cl in apis/$API_NAME/mesh/domains/*.json; do create_or_update domain $cl; done
