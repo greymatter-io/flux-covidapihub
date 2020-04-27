@@ -102,6 +102,8 @@ spec:
               value: "8080"
             - name: SERVICE_1_CLUSTER_NAME
               value: apis.bls-unemployment-states
+            - name: SERVICE_1_VERSION
+              value: "1.0"
             - name: SERVICE_1_ZONE_NAME
               value: default.zone
             - name: SERVICE_1_NAME
@@ -130,6 +132,8 @@ spec:
               value: "8080"
             - name: SERVICE_2_CLUSTER_NAME
               value: apis.bls-unemployment-usa
+            - name: SERVICE_2_VERSION
+              value: "1.0"
             - name: SERVICE_2_ZONE_NAME
               value: default.zone
             - name: SERVICE_2_NAME
@@ -162,6 +166,8 @@ spec:
               value: default.zone
             - name: SERVICE_3_NAME
               value: "CDC Number of Cases by State"
+            - name: SERVICE_3_VERSION
+              value: "1.0"
             - name: SERVICE_3_OWNER
               value: "CDC"
             - name: SERVICE_3_RUNTIME
@@ -186,6 +192,8 @@ spec:
               value: "8080"
             - name: SERVICE_4_CLUSTER_NAME
               value: apis.cdc-death-counts-by-state
+            - name: SERVICE_4_VERSION
+              value: "1.0"
             - name: SERVICE_4_ZONE_NAME
               value: default.zone
             - name: SERVICE_4_NAME
@@ -214,6 +222,8 @@ spec:
               value: "8080"
             - name: SERVICE_5_CLUSTER_NAME
               value: apis.cdc-provisional-death-counts
+            - name: SERVICE_5_VERSION
+              value: "1.0"
             - name: SERVICE_5_ZONE_NAME
               value: default.zone
             - name: SERVICE_5_NAME
@@ -242,6 +252,8 @@ spec:
               value: "8080"
             - name: SERVICE_6_CLUSTER_NAME
               value: apis.cdc-social-vulnerability-index
+            - name: SERVICE_6_VERSION
+              value: "1.0"
             - name: SERVICE_6_ZONE_NAME
               value: default.zone
             - name: SERVICE_6_NAME
@@ -270,6 +282,8 @@ spec:
               value: "8080"
             - name: SERVICE_7_CLUSTER_NAME
               value: apis.cdc-us-cases
+            - name: SERVICE_7_VERSION
+              value: "1.0"
             - name: SERVICE_7_ZONE_NAME
               value: default.zone
             - name: SERVICE_7_NAME
@@ -298,6 +312,8 @@ spec:
               value: "8080"
             - name: SERVICE_8_CLUSTER_NAME
               value: apis.cds-data
+            - name: SERVICE_8_VERSION
+              value: "1.0"
             - name: SERVICE_8_ZONE_NAME
               value: default.zone
             - name: SERVICE_8_NAME
@@ -326,6 +342,8 @@ spec:
               value: "8080"
             - name: SERVICE_9_CLUSTER_NAME
               value: apis.cds-timeseries
+            - name: SERVICE_9_VERSION
+              value: "1.0"
             - name: SERVICE_9_ZONE_NAME
               value: default.zone
             - name: SERVICE_9_NAME
@@ -358,6 +376,8 @@ spec:
               value: default.zone
             - name: SERVICE_10_NAME
               value: "Corona Data Scraper: Timeseries by Location"
+            - name: SERVICE_10_VERSION
+              value: "1.0"
             - name: SERVICE_10_OWNER
               value: "COVID Atlas"
             - name: SERVICE_10_RUNTIME
@@ -386,6 +406,8 @@ spec:
               value: default.zone
             - name: SERVICE_11_NAME
               value: "CMS Hospitals Registered with Medicare"
+            - name: SERVICE_11_VERSION
+              value: "1.0"
             - name: SERVICE_11_OWNER
               value: "CMS"
             - name: SERVICE_11_RUNTIME
@@ -410,6 +432,8 @@ spec:
               value: "8080"
             - name: SERVICE_12_CLUSTER_NAME
               value: apis.coronatab
+            - name: SERVICE_12_VERSION
+              value: "1.0"
             - name: SERVICE_12_ZONE_NAME
               value: default.zone
             - name: SERVICE_12_NAME
@@ -470,6 +494,8 @@ spec:
               value: default.zone
             - name: SERVICE_14_NAME
               value: "EU Open Data Covid Dataset"
+            - name: SERVICE_14_VERSION
+              value: "1.0"
             - name: SERVICE_14_OWNER
               value: "European Centre for Disease Prevention and Control"
             - name: SERVICE_14_RUNTIME
@@ -508,6 +534,8 @@ spec:
               value: "\"{\\\"name\\\":\\\"Oxford COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"description\\\":\\\"Systematic information on which governments have taken which measures, and when, can help decision-makers and citizens understand the robustness of governmental responses in a consistent way, aiding efforts to fight the pandemic. The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically collects information on several different common policy responses governments have taken, scores the stringency of such measures, and aggregates these scores into a common Stringency Index. Data is collected from public sources by a team of over one hundred Oxford University students and staff from every part of the world.\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
             - name: SERVICE_15_PROMETHEUS_JOB
               value: apis.oxford-gov-response
+            - name: SERVICE_15_VERSION
+              value: "1.0"
             - name: SERVICE_15_MAX_INSTANCES
               value: "2"
             - name: SERVICE_15_MIN_INSTANCES
@@ -522,6 +550,8 @@ spec:
               value: "8080"
             - name: SERVICE_16_CLUSTER_NAME
               value: apis.us-census-economic-indicators
+            - name: SERVICE_16_VERSION
+              value: "1.0"
             - name: SERVICE_16_ZONE_NAME
               value: default.zone
             - name: SERVICE_16_NAME
@@ -554,6 +584,8 @@ spec:
               value: default.zone
             - name: SERVICE_17_NAME
               value: "US Census Bureau - Health Insurance Statistics"
+            - name: SERVICE_17_VERSION
+              value: "1.0"
             - name: SERVICE_17_OWNER
               value: "US Census Bureau"
             - name: SERVICE_17_RUNTIME
@@ -584,6 +616,8 @@ spec:
               value: "US Census Bureau - Population"
             - name: SERVICE_18_OWNER
               value: "US Census Bureau"
+            - name: SERVICE_18_VERSION
+              value: "1.0"
             - name: SERVICE_18_RUNTIME
               value: "Node"
             - name: SERVICE_18_DOCUMENTATION
@@ -606,6 +640,8 @@ spec:
               value: "8080"
             - name: SERVICE_19_CLUSTER_NAME
               value: apis.usa-spending
+            - name: SERVICE_19_VERSION
+              value: "1.0"
             - name: SERVICE_19_ZONE_NAME
               value: default.zone
             - name: SERVICE_19_NAME
