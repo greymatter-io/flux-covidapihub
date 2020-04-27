@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.acaps-gov-response.slash.route",
+    "path": "/apis/acaps-gov-response",
+    "prefix_rewrite": "/apis/acaps-gov-response/",
+    "redirects": null,
+    "shared_rules_key": "edge.acaps-gov-response.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
