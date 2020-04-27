@@ -32,12 +32,6 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     read thumbnail
     echo "Format (JSON, CSV, etc.)":
     read format
-    echo "Paid? true/false":
-    read paid
-    paid=$(perl -e "print lc('$paid');")
-    echo "Key Required? true/false":
-    read keyreq
-    keyreq=$(perl -e "print lc('$keyreq');")
 else
     format="JSON"
 fi
@@ -45,7 +39,7 @@ fi
 # convert sort and group-by fields to lowercase
 content_type=$(perl -e "print lc('$content_type');")
 
-capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$csv_url\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"],\\\\\\\"paid\\\\\\\":\\\\\\\"$paid\\\\\\\",\\\\\\\"keyRequired\\\\\\\":\\\\\\\"$keyreq\\\\\\\"}\\\"\"
+capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$csv_url\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"]}\\\"\"
 
 mkdir apis/$name
 mkdir apis/$name/mesh
