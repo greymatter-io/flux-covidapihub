@@ -78,6 +78,12 @@ if [[ "$DEV" =~ ^([yY])$ ]]; then
     create_or_update listener scripts/resources/mesh.edge.listener.ingress.json
 fi
 
+listener=$(lsof -t -i:10081)
+
+if [ ! -z "$listener" ]; then
+    echo "Killing a process (pid $listener) using port 10081"
+    kill $listener
+
 if [[ ! "$(kubectl get pods -n apis)" ]]
 then
     exit 0
@@ -110,6 +116,11 @@ do
 		fi
 	    done
 	done
-	curl -XPOST http://localhost:10081/clusters -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json"
+	if [[ $(curl -XPOST http://localhost:10081/clusters -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json") != *"400"* ]]
+	then
+	    echo "curl command succeeded"
+	else
+	    curl -XPUT http://localhost:10081/clusters/$meshfolder?zoneName=default.zone -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json"
+	fi
     fi
 done
