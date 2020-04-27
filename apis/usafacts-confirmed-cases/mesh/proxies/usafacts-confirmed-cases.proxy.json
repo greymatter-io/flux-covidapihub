@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "usafacts-confirmed-cases.proxy",
+    "domain_keys": [
+        "usafacts-confirmed-cases.apis.domain"
+    ],
+    "listener_keys": [
+        "usafacts-confirmed-cases.apis.listener"
+    ],
+    "name": "apis.usafacts-confirmed-cases",
+    "listeners": null
+}
