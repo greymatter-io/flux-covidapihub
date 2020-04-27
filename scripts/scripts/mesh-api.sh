@@ -72,6 +72,11 @@ for meshfolder in apis/*; do
                 fi
             done
         done
-        curl -XPOST http://localhost:10081/clusters -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json"
+        if [[ $(curl -XPOST http://localhost:10081/clusters -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json") != *"400"* ]]
+        then
+            echo "curl command succeeded"
+        else
+            curl -XPUT http://localhost:10081/clusters/$meshfolder?zoneName=default.zone -d "@$meshfolder/mesh/catalog.${meshfolder##*/}.json"
+        fi
     fi
 done
