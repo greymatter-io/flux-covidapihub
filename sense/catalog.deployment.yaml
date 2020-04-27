@@ -668,7 +668,34 @@ spec:
               value: ""
             - name: SERVICE_19_METRICS_PORT
               value: "8080"
-
+            - name: SERVICE_20_CLUSTER_NAME
+              value: apis.usafacts-coronavirus-deaths
+            - name: SERVICE_20_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_20_NAME
+              value: USAFacts Coronavirus Deaths
+            - name: SERVICE_20_OWNER
+              value: USAFacts
+            - name: SERVICE_20_RUNTIME
+              value: "Node"
+            - name: SERVICE_20_DOCUMENTATION
+              value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
+            - name: SERVICE_20_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"USAFacts Coronavirus Deaths\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+            - name: SERVICE_20_PROMETHEUS_JOB
+              value: apis.usafacts-coronavirus-deaths
+            - name: SERVICE_20_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_20_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_20_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_20_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_20_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
