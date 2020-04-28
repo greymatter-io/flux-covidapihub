@@ -668,33 +668,33 @@ spec:
               value: ""
             - name: SERVICE_19_METRICS_PORT
               value: "8080"
-            - name: SERVICE_20_CLUSTER_NAME
+            - name: SERVICE_23_CLUSTER_NAME
               value: apis.our-world-in-data-coronavirus-dataset
-            - name: SERVICE_20_ZONE_NAME
+            - name: SERVICE_23_ZONE_NAME
               value: default.zone
-            - name: SERVICE_20_NAME
+            - name: SERVICE_23_NAME
               value: Our World in Data Coronavirus Source Data
-            - name: SERVICE_20_OWNER
+            - name: SERVICE_23_OWNER
               value: Our World in Data
-            - name: SERVICE_20_RUNTIME
+            - name: SERVICE_23_RUNTIME
               value: "Node"
-            - name: SERVICE_20_DOCUMENTATION
+            - name: SERVICE_23_DOCUMENTATION
               value: https://ourworldindata.org/coronavirus-source-data
-            - name: SERVICE_20_CAPABILITY
+            - name: SERVICE_23_CAPABILITY
               value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
-            - name: SERVICE_20_PROMETHEUS_JOB
+            - name: SERVICE_23_PROMETHEUS_JOB
               value: apis.our-world-in-data-coronavirus-dataset
-            - name: SERVICE_20_MAX_INSTANCES
+            - name: SERVICE_23_MAX_INSTANCES
               value: "2"
-            - name: SERVICE_20_MIN_INSTANCES
+            - name: SERVICE_23_MIN_INSTANCES
               value: "1"
-            - name: SERVICE_20_ENABLE_INSTANCE_METRICS
+            - name: SERVICE_23_ENABLE_INSTANCE_METRICS
               value: "true"
-            - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
+            - name: SERVICE_23_ENABLE_HISTORICAL_METRICS
               value: "true"
-            - name: SERVICE_20_METRICS_TEMPLATE
+            - name: SERVICE_23_METRICS_TEMPLATE
               value: ""
-            - name: SERVICE_20_METRICS_PORT
+            - name: SERVICE_23_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog
