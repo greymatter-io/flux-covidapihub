@@ -21,6 +21,8 @@ cat  << EOF
               value: "Node"
             - name: SERVICE_${NUMBER}_DOCUMENTATION
               value: "$DOCS"
+            - name: SERVICE_${NUMBER}_VERSION
+              value: "latest"
             - name: SERVICE_${NUMBER}_CAPABILITY
               value: $CAPABILITY
             - name: SERVICE_${NUMBER}_PROMETHEUS_JOB
