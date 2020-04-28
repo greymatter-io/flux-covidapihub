@@ -67,7 +67,7 @@ scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capabili
 echo ""
 echo "Generating Catalog envvars, checking covidapihub for number of services"
 count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .clusterCount)
-echo $count
+count=$((count+1))
 echo "The current service count is: $count, incrementing by 1"
 count=$((count+1))
 scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$count" >apis/$name/mesh/catalog.envvars.yaml

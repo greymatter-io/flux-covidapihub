@@ -1,24 +1,16 @@
-#!/bin/bash
-
-NAME=$1
-DISPLAY=$2
-DOCS=$3
-
-#define the template.
-cat  << EOF
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: $NAME-swagger
+  name: usafacts-confirmed-cases-swagger
   namespace: apis
 data:
   swagger.yml: |-
     openapi: 3.0.0
     info:
       description: |-
-          ## $DISPLAY
-          Details about this dataset: [$DOCS]($DOCS)
+          ## USAFacts Confirmed Coronavirus Cases
+          Details about this dataset: [https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/](https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
             - Limiting fields
@@ -34,9 +26,8 @@ data:
           ### Slicing (`max` and `start`)
           You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
       version: "0.1"
-      title: $DISPLAY - powered by apier
-
-    servers: https://covidapihub.io/apis/$NAME
+      title: USAFacts Confirmed Coronavirus Cases - powered by apier
+    servers: https://covidapihub.io/apis/usafacts-confirmed-cases
     paths:
       /:
         get:
@@ -119,5 +110,4 @@ data:
                     items: {}
           summary: Get JSON data
           description: This allows the data to be fetched in JSON format with basic query,
-            sort, pagination.
-EOF
+            sort, pagination. 
