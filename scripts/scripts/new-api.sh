@@ -17,19 +17,18 @@ read content_type
 echo Docs link:
 read docs
 
-read -r -p "Add details for catalog metadata? [y/N] (description, coverage, updates, etc.) " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    echo Description:
-    read description
-    echo "Updates (ex. Daily, Monthly, 5 Minutes)":
-    read updates
-    echo "Coverage (ex. US)":
-    read coverage
-    echo Thumbnail:
-    read thumbnail
-    echo "Format (JSON, CSV, etc.)":
-    read format
-else
+echo Description:
+read description
+echo "Updates (ex. Daily, Monthly, 5 Minutes)":
+read updates
+echo "Coverage (ex. US)":
+read coverage
+echo Thumbnail:
+read thumbnail
+echo "Format (JSON, CSV, etc.)":
+read format
+
+if [[ $format == "" ]]; then
     format="JSON"
 fi
 
@@ -37,6 +36,7 @@ fi
 # convert sort and group-by fields to lowercase
 route_path=$(perl -e "print lc('$route_path');")
 content_type=$(perl -e "print lc('$content_type');")
+content_type="$(tr '[:lower:]' '[:upper:]' <<< ${content_type:0:1})${content_type:1}"
 
 capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$https://${host}${route_path}\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"]}\\\"\"
 
