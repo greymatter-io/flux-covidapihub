@@ -7,17 +7,17 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: apier
-    app: oxford-gov-response
-    cluster: apis.oxford-gov-response
-  name: oxford-gov-response
+    app: google-mobility-reports
+    cluster: apis.google-mobility-reports
+  name: google-mobility-reports
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
       io.kompose.service: apier
-      app: oxford-gov-response
-      cluster: apis.oxford-gov-response
+      app: google-mobility-reports
+      cluster: apis.google-mobility-reports
   strategy: {}
   template:
     metadata:
@@ -27,8 +27,8 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: apier
-        app: oxford-gov-response
-        cluster: apis.oxford-gov-response
+        app: google-mobility-reports
+        cluster: apis.google-mobility-reports
     spec:
       serviceAccountName: apis-sa
       containers:
@@ -41,7 +41,7 @@ spec:
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/OxCGRT_latest.csv
+          value: https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:
@@ -79,7 +79,7 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: oxford-gov-response-sidecar
+            name: google-mobility-reports-sidecar
         - name: swagger-static
           configMap:
-            name: oxford-gov-response-swagger
+            name: google-mobility-reports-swagger

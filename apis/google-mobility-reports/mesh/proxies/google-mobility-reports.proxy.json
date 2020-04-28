@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "google-mobility-reports.proxy",
+    "domain_keys": [
+        "google-mobility-reports.apis.domain"
+    ],
+    "listener_keys": [
+        "google-mobility-reports.apis.listener"
+    ],
+    "name": "apis.google-mobility-reports",
+    "listeners": null
+}

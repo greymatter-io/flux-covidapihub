@@ -1,0 +1,14 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "usafacts-confirmed-cases.local.cluster",
+    "name": "local",
+    "instances": [
+        {
+            "host": "0.0.0.0",
+            "port": 80
+        }
+    ],
+    "circuit_breakers": null,
+    "outlier_detection": null,
+    "health_checks": []
+}
