@@ -1,24 +1,16 @@
-#!/bin/bash
-
-NAME=$1
-DISPLAY=$2
-DOCS=$3
-
-#define the template.
-cat  << EOF
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: $NAME-swagger
+  name: acaps-gov-response-swagger
   namespace: apis
 data:
   swagger.yml: |-
     openapi: 3.0.0
     info:
       description: |-
-          ## $DISPLAY
-          Details about this dataset: [$DOCS]($DOCS)
+          ## ACAPS COVID-19 Government Response Tracker
+          Details about this dataset: [https://www.acaps.org/covid19-government-measures-dataset](https://www.acaps.org/covid19-government-measures-dataset)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
             - Limiting fields
@@ -34,9 +26,9 @@ data:
           ### Slicing (`max` and `start`)
           You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
       version: "0.1"
-      title: $DISPLAY - powered by apier
+      title: ACAPS COVID-19 Government Response Tracker - powered by apier
 
-    servers: https://covidapihub.io/apis/$NAME
+    servers: https://covidapihub.io/apis/acaps-gov-response
     paths:
       /:
         get:
@@ -120,4 +112,3 @@ data:
           summary: Get JSON data
           description: This allows the data to be fetched in JSON format with basic query,
             sort, pagination.
-EOF
