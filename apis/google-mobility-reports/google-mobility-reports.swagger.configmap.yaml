@@ -9,27 +9,26 @@ data:
     openapi: 3.0.0
     info:
       description: |-
+          ## Google COVID-19 Community Mobility Reports
+          Details about this dataset: [https://www.google.com/covid19/mobility](https://www.google.com/covid19/mobility)
+          ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
             - Limiting fields
             - Query by value
             - Multi level sorting
             - Slicing
-          
           ### Limiting fields (`fields`)
           In cases you were only interested in a handful of fields, you can specify which fields to return. By default, apier will return all fields.
-          
           ### Querying by value (`query`)
           apier uses [pandas query expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query). e.g. `a < b and b < c` to fetch all rows where these conditions evaluate to true.
-          
           ### Multi level sorting (`by` and `ascending`)
           apier allows multi level sorting - specify which fields to sort by in `by` as well as `ascending` 0 (false) or 1 (true) for each fields you specify. For example, if you want to sort by "date" descending and "name" ascending, you will tell apier `by=date,name&ascending=0,1`
-          
           ### Slicing (`max` and `start`)
           You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
-      
-      
       version: "0.1"
-      title: apier
+      title: Google COVID-19 Community Mobility Reports - powered by apier
+
+    servers: https://covidapihub.io/apis/google-mobility-reports
     paths:
       /:
         get:
