@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.our-world-in-data-coronavirus-dataset.slash.route",
+    "path": "/apis/our-world-in-data-coronavirus-dataset",
+    "prefix_rewrite": "/apis/our-world-in-data-coronavirus-dataset/",
+    "redirects": null,
+    "shared_rules_key": "edge.our-world-in-data-coronavirus-dataset.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
