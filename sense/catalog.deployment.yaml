@@ -733,7 +733,7 @@ spec:
             - name: SERVICE_23_RUNTIME
               value: "Node"
             - name: SERVICE_23_DOCUMENTATION
-              value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
+              value: "/apis/usafacts-coronavirus-deaths/docs/"
             - name: SERVICE_23_CAPABILITY
               value: "\"{\\\"name\\\":\\\"USAFacts Coronavirus Deaths\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data on coronavirus deaths.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_23_PROMETHEUS_JOB
