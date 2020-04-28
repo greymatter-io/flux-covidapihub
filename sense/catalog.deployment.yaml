@@ -291,7 +291,7 @@ spec:
             - name: SERVICE_8_NAME
               value: "Corona Data Scraper: Today's Data"
             - name: SERVICE_8_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_8_RUNTIME
               value: "Node"
             - name: SERVICE_8_DOCUMENTATION
@@ -321,7 +321,7 @@ spec:
             - name: SERVICE_9_NAME
               value: "Corona Data Scraper: Timeseries"
             - name: SERVICE_9_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_9_RUNTIME
               value: "Node"
             - name: SERVICE_9_DOCUMENTATION
@@ -351,7 +351,7 @@ spec:
             - name: SERVICE_10_VERSION
               value: "1.0"
             - name: SERVICE_10_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_10_RUNTIME
               value: "Node"
             - name: SERVICE_10_DOCUMENTATION
