@@ -68,7 +68,7 @@ count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .c
 echo $count
 echo "The current service count is: $count, incrementing by 1"
 count=$((count+1))
-scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$count" >apis/$name/mesh/catalog.envvars.yaml
+scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "/apis/$name/docs/" "$count" >apis/$name/mesh/catalog.envvars.yaml
 echo ""
 echo "Copy the following envvars (theyre also stored in apis/$name/mesh/catalog.envvars.yaml) and paste them into the catalog container env"
 echo ""

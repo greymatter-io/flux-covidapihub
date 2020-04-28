@@ -20,7 +20,7 @@ cat  << EOF
             - name: SERVICE_${NUMBER}_RUNTIME
               value: "Node"
             - name: SERVICE_${NUMBER}_DOCUMENTATION
-              value: "/apis/$NAME/docs/"
+              value: "$DOCS"
             - name: SERVICE_${NUMBER}_VERSION
               value: "latest"
             - name: SERVICE_${NUMBER}_CAPABILITY
