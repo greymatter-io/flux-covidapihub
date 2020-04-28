@@ -668,7 +668,34 @@ spec:
               value: ""
             - name: SERVICE_19_METRICS_PORT
               value: "8080"
-
+            - name: SERVICE_20_CLUSTER_NAME
+              value: apis.google-mobility-reports
+            - name: SERVICE_20_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_20_NAME
+              value: COVID-19 Community Mobility Reports
+            - name: SERVICE_20_OWNER
+              value: https://www.google.com/covid19/mobility
+            - name: SERVICE_20_RUNTIME
+              value: "Node"
+            - name: SERVICE_20_DOCUMENTATION
+              value: https://www.google.com/covid19/mobility
+            - name: SERVICE_20_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"COVID-19 Community Mobility Reports\\\",\\\"url\\\":\\\"https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv\\\",\\\"description\\\":\\\"These Community Mobility Reports aim to provide insights into what has changed in response to policies aimed at combating COVID-19. The reports chart movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential.\\\",\\\"source\\\":\\\"https://www.google.com/covid19/mobility\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.google.com/covid19/mobility\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Regularly\\\"]}\""
+            - name: SERVICE_20_PROMETHEUS_JOB
+              value: apis.google-mobility-reports
+            - name: SERVICE_20_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_20_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_20_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_20_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_20_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
