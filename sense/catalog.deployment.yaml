@@ -681,7 +681,7 @@ spec:
             - name: SERVICE_20_DOCUMENTATION
               value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
             - name: SERVICE_20_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county population data for population adjustments.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"]}\""
             - name: SERVICE_20_PROMETHEUS_JOB
               value: apis.usafacts-county-population
             - name: SERVICE_20_MAX_INSTANCES
