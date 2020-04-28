@@ -703,7 +703,7 @@ spec:
             - name: SERVICE_22_RUNTIME
               value: "Node"
             - name: SERVICE_22_DOCUMENTATION
-              value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
+              value: "/apis/usafacts-confirmed-cases/docs/"
             - name: SERVICE_22_CAPABILITY
               value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_22_PROMETHEUS_JOB
