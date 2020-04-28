@@ -692,6 +692,36 @@ spec:
               value: "8080"
             - name: SERVICE_21_VERSION
               value: "latest"
+            - name: SERVICE_22_CLUSTER_NAME
+              value: apis.usafacts-confirmed-cases
+            - name: SERVICE_22_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_22_NAME
+              value: USAFacts Confirmed Coronavirus Cases
+            - name: SERVICE_22_OWNER
+              value: USAFacts
+            - name: SERVICE_22_RUNTIME
+              value: "Node"
+            - name: SERVICE_22_DOCUMENTATION
+              value: "/apis/usafacts-confirmed-cases/docs/"
+            - name: SERVICE_22_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_22_PROMETHEUS_JOB
+              value: apis.usafacts-confirmed-cases
+            - name: SERVICE_22_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_22_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_22_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_22_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_22_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_22_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_22_VERSION
+              value: "latest"
           ports:
             - name: catalog
               containerPort: 10080
