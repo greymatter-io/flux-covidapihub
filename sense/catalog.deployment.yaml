@@ -675,7 +675,7 @@ spec:
             - name: SERVICE_20_NAME
               value: COVID-19 Community Mobility Reports
             - name: SERVICE_20_OWNER
-              value: https://www.google.com/covid19/mobility
+              value: Google
             - name: SERVICE_20_RUNTIME
               value: "Node"
             - name: SERVICE_20_DOCUMENTATION
