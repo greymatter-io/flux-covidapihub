@@ -681,7 +681,7 @@ spec:
             - name: SERVICE_20_DOCUMENTATION
               value: https://ourworldindata.org/coronavirus-source-data
             - name: SERVICE_20_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_20_PROMETHEUS_JOB
               value: apis.our-world-in-data-coronavirus-dataset
             - name: SERVICE_20_MAX_INSTANCES
