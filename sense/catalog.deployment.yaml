@@ -655,7 +655,7 @@ spec:
             - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
               value: "true"
             - name: SERVICE_20_DOCUMENTATION
-              value: /apis/google-mobility-reports
+              value: /apis/google-mobility-reports/docs
             - name: SERVICE_20_VERSION
               value: "latest"
             - name: SERVICE_20_CAPABILITY
