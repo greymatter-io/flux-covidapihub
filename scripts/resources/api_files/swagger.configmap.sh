@@ -25,13 +25,13 @@ data:
             - Query by value
             - Multi level sorting
             - Slicing
-          ### Limiting fields (`fields`)
+          ### Limiting fields (\`fields\`)
           In cases you were only interested in a handful of fields, you can specify which fields to return. By default, apier will return all fields.
-          ### Querying by value (`query`)
-          apier uses [pandas query expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query). e.g. `a < b and b < c` to fetch all rows where these conditions evaluate to true.
-          ### Multi level sorting (`by` and `ascending`)
-          apier allows multi level sorting - specify which fields to sort by in `by` as well as `ascending` 0 (false) or 1 (true) for each fields you specify. For example, if you want to sort by "date" descending and "name" ascending, you will tell apier `by=date,name&ascending=0,1`
-          ### Slicing (`max` and `start`)
+          ### Querying by value (\`query\`)
+          apier uses [pandas query expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query). e.g. \`a < b and b < c\` to fetch all rows where these conditions evaluate to true.
+          ### Multi level sorting (\`by\` and \`ascending\`)
+          apier allows multi level sorting - specify which fields to sort by in \`by\` as well as \`ascending\` 0 (false) or 1 (true) for each fields you specify. For example, if you want to sort by "date" descending and "name" ascending, you will tell apier \`by=date,name&ascending=0,1\`
+          ### Slicing (\`max\` and \`start\`)
           You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
       version: "0.1"
       title: $DISPLAY - powered by apier
@@ -59,7 +59,7 @@ data:
             - name: by
               in: query
               required: false
-              description: The name(s) of the field(s) to be sorted by. If `ascending` query is
+              description: The name(s) of the field(s) to be sorted by. If \`ascending\` query is
                 not given, it will be in ascending order by default
               example: date,state
               schema:
@@ -68,7 +68,7 @@ data:
               in: query
               required: false
               description: A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
-                given in `by` parameter should be sorted in ascending order
+                given in \`by\` parameter should be sorted in ascending order
               example: 1,0
               schema:
                 type: string
@@ -83,8 +83,8 @@ data:
               in: query
               required: false
               description: The index of the starting record. Combining the sorting
-                functionality (`by` and `ascending`) and slicing functionality
-                (`max` and `start`) is useful for pagination
+                functionality (\`by\` and \`ascending\`) and slicing functionality
+                (\`max\` and \`start\`) is useful for pagination
               example: "10"
               schema:
                 type: string
