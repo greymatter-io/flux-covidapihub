@@ -668,33 +668,33 @@ spec:
               value: ""
             - name: SERVICE_19_METRICS_PORT
               value: "8080"
-            - name: SERVICE_20_CLUSTER_NAME
+            - name: SERVICE_22_CLUSTER_NAME
               value: apis.usafacts-confirmed-cases
-            - name: SERVICE_20_ZONE_NAME
+            - name: SERVICE_22_ZONE_NAME
               value: default.zone
-            - name: SERVICE_20_NAME
+            - name: SERVICE_22_NAME
               value: USAFacts Confirmed Coronavirus Cases
-            - name: SERVICE_20_OWNER
+            - name: SERVICE_22_OWNER
               value: USAFacts
-            - name: SERVICE_20_RUNTIME
+            - name: SERVICE_22_RUNTIME
               value: "Node"
-            - name: SERVICE_20_DOCUMENTATION
+            - name: SERVICE_22_DOCUMENTATION
               value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
-            - name: SERVICE_20_CAPABILITY
+            - name: SERVICE_22_CAPABILITY
               value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
-            - name: SERVICE_20_PROMETHEUS_JOB
+            - name: SERVICE_22_PROMETHEUS_JOB
               value: apis.usafacts-confirmed-cases
-            - name: SERVICE_20_MAX_INSTANCES
+            - name: SERVICE_22_MAX_INSTANCES
               value: "2"
-            - name: SERVICE_20_MIN_INSTANCES
+            - name: SERVICE_22_MIN_INSTANCES
               value: "1"
-            - name: SERVICE_20_ENABLE_INSTANCE_METRICS
+            - name: SERVICE_22_ENABLE_INSTANCE_METRICS
               value: "true"
-            - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
+            - name: SERVICE_22_ENABLE_HISTORICAL_METRICS
               value: "true"
-            - name: SERVICE_20_METRICS_TEMPLATE
+            - name: SERVICE_22_METRICS_TEMPLATE
               value: ""
-            - name: SERVICE_20_METRICS_PORT
+            - name: SERVICE_22_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog
