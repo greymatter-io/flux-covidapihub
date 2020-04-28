@@ -642,6 +642,8 @@ spec:
               value: "8080"
             - name: SERVICE_20_CLUSTER_NAME
               value: apis.acaps-gov-response
+            - name: SERVICE_20_VERSION
+              value: "1.0"
             - name: SERVICE_20_ZONE_NAME
               value: default.zone
             - name: SERVICE_20_NAME
