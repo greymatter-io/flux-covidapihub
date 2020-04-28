@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.finance-policy-responses",
+ "zoneName": "default.zone",
+ "name": "COVID-19 Finance Sector Related Policy Responses",
+ "version": "1.0",
+ "owner": "The World Bank Group",
+ "capability": ""\"{\\\"name\\\":\\\"COVID-19 Finance Sector Related Policy Responses\\\",\\\"url\\\":\\\"https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/936261/covid-fci-data.xlsx\\\",\\\"description\\\":\\\"A summary of policy measures taken by country and type of measure in support of the financial sector amid the COVID-19 pandemic. This dataset will be updated regularly and is a work in progress. It may contain errors and/or omissions.\\\",\\\"source\\\":\\\"The World Bank Group\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://datacatalog.worldbank.org/dataset/covid-19-finance-sector-related-policy-responses\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/finance-policy-responses/docs/",
+ "prometheusJob": "apis.finance-policy-responses",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

@@ -812,6 +812,36 @@ spec:
               value: "8080"
             - name: SERVICE_25_VERSION
               value: "latest"
+            - name: SERVICE_26_CLUSTER_NAME
+              value: apis.finance-policy-responses
+            - name: SERVICE_26_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_26_NAME
+              value: COVID-19 Finance Sector Related Policy Responses
+            - name: SERVICE_26_OWNER
+              value: The World Bank Group
+            - name: SERVICE_26_RUNTIME
+              value: "Node"
+            - name: SERVICE_26_DOCUMENTATION
+              value: "/apis/finance-policy-responses/docs/"
+            - name: SERVICE_26_VERSION
+              value: "latest"
+            - name: SERVICE_26_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"COVID-19 Finance Sector Related Policy Responses\\\",\\\"url\\\":\\\"https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/936261/covid-fci-data.xlsx\\\",\\\"description\\\":\\\"A summary of policy measures taken by country and type of measure in support of the financial sector amid the COVID-19 pandemic. This dataset will be updated regularly and is a work in progress. It may contain errors and/or omissions.\\\",\\\"source\\\":\\\"The World Bank Group\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://datacatalog.worldbank.org/dataset/covid-19-finance-sector-related-policy-responses\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+            - name: SERVICE_26_PROMETHEUS_JOB
+              value: apis.finance-policy-responses
+            - name: SERVICE_26_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_26_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_26_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_26_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_26_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_26_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
