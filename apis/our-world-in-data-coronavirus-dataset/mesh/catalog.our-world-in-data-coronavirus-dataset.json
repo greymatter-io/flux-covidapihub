@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.our-world-in-data-coronavirus-dataset",
+ "zoneName": "default.zone",
+ "name": "Our World in Data Coronavirus Source Data",
+ "version": "1.0",
+ "owner": "Our World in Data",
+ "capability": ""\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "https://ourworldindata.org/coronavirus-source-data",
+ "prometheusJob": "apis.our-world-in-data-coronavirus-dataset",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

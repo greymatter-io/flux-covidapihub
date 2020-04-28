@@ -722,6 +722,36 @@ spec:
               value: "8080"
             - name: SERVICE_22_VERSION
               value: "latest"
+            - name: SERVICE_23_CLUSTER_NAME
+              value: apis.our-world-in-data-coronavirus-dataset
+            - name: SERVICE_23_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_23_NAME
+              value: Our World in Data Coronavirus Source Data
+            - name: SERVICE_23_OWNER
+              value: Our World in Data
+            - name: SERVICE_23_RUNTIME
+              value: "Node"
+            - name: SERVICE_23_DOCUMENTATION
+              value: "/apis/our-world-in-data-coronavirus-dataset/docs/"
+            - name: SERVICE_23_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_23_PROMETHEUS_JOB
+              value: apis.our-world-in-data-coronavirus-dataset
+            - name: SERVICE_23_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_23_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_23_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_23_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_23_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_23_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_23_VERSION
+              value: "latest"
           ports:
             - name: catalog
               containerPort: 10080
