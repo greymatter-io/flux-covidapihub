@@ -722,35 +722,35 @@ spec:
               value: "8080"
             - name: SERVICE_22_VERSION
               value: "latest"
-            - name: SERVICE_23_CLUSTER_NAME
+            - name: SERVICE_25_CLUSTER_NAME
               value: apis.usafacts-county-population
-            - name: SERVICE_23_ZONE_NAME
+            - name: SERVICE_25_ZONE_NAME
               value: default.zone
-            - name: SERVICE_23_NAME
+            - name: SERVICE_25_NAME
               value: USAFacts County Population for Population Adjustments (2019 Census Estimates)
-            - name: SERVICE_23_OWNER
+            - name: SERVICE_25_OWNER
               value: USAFacts
-            - name: SERVICE_23_RUNTIME
+            - name: SERVICE_25_RUNTIME
               value: "Node"
-            - name: SERVICE_23_DOCUMENTATION
+            - name: SERVICE_25_DOCUMENTATION
               value: "/apis/usafacts-county-population/docs/"
-            - name: SERVICE_23_CAPABILITY
+            - name: SERVICE_25_CAPABILITY
               value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county population data for population adjustments.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"]}\""
-            - name: SERVICE_23_PROMETHEUS_JOB
+            - name: SERVICE_25_PROMETHEUS_JOB
               value: apis.usafacts-county-population
-            - name: SERVICE_23_MAX_INSTANCES
+            - name: SERVICE_25_MAX_INSTANCES
               value: "2"
-            - name: SERVICE_23_MIN_INSTANCES
+            - name: SERVICE_25_MIN_INSTANCES
               value: "1"
-            - name: SERVICE_23_ENABLE_INSTANCE_METRICS
+            - name: SERVICE_25_ENABLE_INSTANCE_METRICS
               value: "true"
-            - name: SERVICE_23_ENABLE_HISTORICAL_METRICS
+            - name: SERVICE_25_ENABLE_HISTORICAL_METRICS
               value: "true"
-            - name: SERVICE_23_METRICS_TEMPLATE
+            - name: SERVICE_25_METRICS_TEMPLATE
               value: ""
-            - name: SERVICE_23_METRICS_PORT
+            - name: SERVICE_25_METRICS_PORT
               value: "8080"
-            - name: SERVICE_23_VERSION
+            - name: SERVICE_25_VERSION
               value: "latest"
           ports:
             - name: catalog
