@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.usafacts-county-population",
+ "zoneName": "default.zone",
+ "name": "USAFacts County Population for Population Adjustments (2019 Census Estimates)",
+ "version": "1.0",
+ "owner": "USAFacts",
+ "capability": ""\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/",
+ "prometheusJob": "apis.usafacts-county-population",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

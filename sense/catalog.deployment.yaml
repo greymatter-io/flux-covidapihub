@@ -639,7 +639,7 @@ spec:
             - name: SERVICE_19_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_19_METRICS_PORT
-              value: "8080"
+              value: "8080"          
             - name: SERVICE_20_CLUSTER_NAME
               value: apis.google-mobility-reports
             - name: SERVICE_20_ZONE_NAME
@@ -781,6 +781,36 @@ spec:
             - name: SERVICE_24_METRICS_PORT
               value: "8080"
             - name: SERVICE_24_VERSION
+              value: "latest"
+            - name: SERVICE_25_CLUSTER_NAME
+              value: apis.usafacts-county-population
+            - name: SERVICE_25_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_25_NAME
+              value: USAFacts County Population for Population Adjustments (2019 Census Estimates)
+            - name: SERVICE_25_OWNER
+              value: USAFacts
+            - name: SERVICE_25_RUNTIME
+              value: "Node"
+            - name: SERVICE_25_DOCUMENTATION
+              value: "/apis/usafacts-county-population/docs/"
+            - name: SERVICE_25_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county population data for population adjustments.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"]}\""
+            - name: SERVICE_25_PROMETHEUS_JOB
+              value: apis.usafacts-county-population
+            - name: SERVICE_25_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_25_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_25_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_25_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_25_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_25_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_25_VERSION
               value: "latest"
           ports:
             - name: catalog

@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "usafacts-county-population.proxy",
+    "domain_keys": [
+        "usafacts-county-population.apis.domain"
+    ],
+    "listener_keys": [
+        "usafacts-county-population.apis.listener"
+    ],
+    "name": "apis.usafacts-county-population",
+    "listeners": null
+}
