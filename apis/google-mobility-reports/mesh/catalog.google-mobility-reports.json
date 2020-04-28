@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.google-mobility-reports",
+ "zoneName": "default.zone",
+ "name": "COVID-19 Community Mobility Reports",
+ "version": "1.0",
+ "owner": "Google",
+ "capability": "governance",
+ "runtime": "GO",
+ "documentation": "https://www.google.com/covid19/mobility/",
+ "prometheusJob": "apis.google-mobility-reports",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
