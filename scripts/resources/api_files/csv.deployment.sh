@@ -56,6 +56,10 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name: swagger-static
+            mountPath: /app/static
+            readOnly: true
       - name: sidecar
         image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
         imagePullPolicy: IfNotPresent
@@ -86,4 +90,7 @@ spec:
         - name: sidecar-config
           configMap:
             name: $NAME-sidecar
+        - name: swagger-static
+          configMap:
+            name: $NAME-swagger
 EOF

@@ -21,8 +21,7 @@ fi
 echo "Applying new api: $API_NAME"
 
 if [[ "$DEV" =~ ^([yY])$ ]]; then
-    kubectl apply -f apis/$API_NAME/$API_NAME.sidecar.configmap.yaml
-    kubectl apply -f apis/$API_NAME/$API_NAME.deployment.yaml
+    kubectl apply -f apis/$API_NAME
 fi
 
 echo "Applying mesh config for api: $API_NAME"
