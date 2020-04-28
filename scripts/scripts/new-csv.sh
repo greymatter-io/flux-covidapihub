@@ -60,7 +60,7 @@ scripts/resources/api_files/local.rules.sh $name >apis/$name/mesh/rules/local.ru
 scripts/resources/api_files/edge.route.sh $name >apis/$name/mesh/routes/edge.$name.route.json
 scripts/resources/api_files/local.route.sh $name "" >apis/$name/mesh/routes/local.route.json
 scripts/resources/api_files/edge.route.slash.sh $name >apis/$name/mesh/routes/edge.$name.route.slash.json
-scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capability" "$docs" >apis/$name/mesh/catalog.$name.json
+scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capability" "/apis/$name/docs/" >apis/$name/mesh/catalog.$name.json
 
 echo ""
 echo "Generating Catalog envvars, checking covidapihub for number of services"
