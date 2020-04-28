@@ -19,25 +19,23 @@ echo "Capability (health, governance, etc.)":
 read content_type
 echo Docs link:
 read docs
+echo Description:
+read description
+echo "Updates (ex. Daily, Monthly, 5 Minutes)":
+read updates
+echo "Coverage (ex. US)":
+read coverage
+echo Thumbnail:
+read thumbnail
+echo "Format (JSON, CSV, etc.)":
+read format
 
-read -r -p "Add details for catalog metadata? [y/N] (description, coverage, updates, etc.) " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    echo Description:
-    read description
-    echo "Updates (ex. Daily, Monthly, 5 Minutes)":
-    read updates
-    echo "Coverage (ex. US)":
-    read coverage
-    echo Thumbnail:
-    read thumbnail
-    echo "Format (JSON, CSV, etc.)":
-    read format
-else
+if [[ $format == "" ]]; then
     format="JSON"
 fi
 
-# convert sort and group-by fields to lowercase
 content_type=$(perl -e "print lc('$content_type');")
+content_type="$(tr '[:lower:]' '[:upper:]' <<< ${content_type:0:1})${content_type:1}"
 
 capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$csv_url\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"]}\\\"\"
 
