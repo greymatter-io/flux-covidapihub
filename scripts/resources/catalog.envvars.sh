@@ -20,7 +20,7 @@ cat  << EOF
             - name: SERVICE_${NUMBER}_RUNTIME
               value: "Node"
             - name: SERVICE_${NUMBER}_DOCUMENTATION
-              value: $DOCS
+              value: "$DOCS"
             - name: SERVICE_${NUMBER}_CAPABILITY
               value: $CAPABILITY
             - name: SERVICE_${NUMBER}_PROMETHEUS_JOB
