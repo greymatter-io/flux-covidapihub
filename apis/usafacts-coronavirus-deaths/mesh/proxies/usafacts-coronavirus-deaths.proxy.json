@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "usafacts-coronavirus-deaths.proxy",
+    "domain_keys": [
+        "usafacts-coronavirus-deaths.apis.domain"
+    ],
+    "listener_keys": [
+        "usafacts-coronavirus-deaths.apis.listener"
+    ],
+    "name": "apis.usafacts-coronavirus-deaths",
+    "listeners": null
+}
