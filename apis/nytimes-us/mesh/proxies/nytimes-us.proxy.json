@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "nytimes-us.proxy",
+    "domain_keys": [
+        "nytimes-us.apis.domain"
+    ],
+    "listener_keys": [
+        "nytimes-us.apis.listener"
+    ],
+    "name": "apis.nytimes-us",
+    "listeners": null
+}
