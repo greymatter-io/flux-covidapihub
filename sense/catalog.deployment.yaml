@@ -72,34 +72,6 @@ spec:
               value: "10080"
             - name: DEBUG
               value: "true"
-            - name: SERVICE_0_CLUSTER_NAME
-              value: website.website
-            - name: SERVICE_0_ZONE_NAME
-              value: default.zone
-            - name: SERVICE_0_NAME
-              value: Covid API Hub landing page
-            - name: SERVICE_0_VERSION
-              value: latest
-            - name: SERVICE_0_OWNER
-              value: Decipher
-            - name: SERVICE_0_RUNTIME
-              value: "Node"
-            - name: SERVICE_0_DOCUMENTATION
-              value: ""
-            - name: SERVICE_0_PROMETHEUS_JOB
-              value: website.website
-            - name: SERVICE_0_MAX_INSTANCES
-              value: "3"
-            - name: SERVICE_0_MIN_INSTANCES
-              value: "1"
-            - name: SERVICE_0_ENABLE_INSTANCE_METRICS
-              value: "true"
-            - name: SERVICE_0_ENABLE_HISTORICAL_METRICS
-              value: "true"
-            - name: SERVICE_0_METRICS_TEMPLATE
-              value: ""
-            - name: SERVICE_0_METRICS_PORT
-              value: "8080"
             - name: SERVICE_1_CLUSTER_NAME
               value: apis.bls-unemployment-states
             - name: SERVICE_1_VERSION
@@ -319,7 +291,7 @@ spec:
             - name: SERVICE_8_NAME
               value: "Corona Data Scraper: Today's Data"
             - name: SERVICE_8_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_8_RUNTIME
               value: "Node"
             - name: SERVICE_8_DOCUMENTATION
@@ -349,7 +321,7 @@ spec:
             - name: SERVICE_9_NAME
               value: "Corona Data Scraper: Timeseries"
             - name: SERVICE_9_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_9_RUNTIME
               value: "Node"
             - name: SERVICE_9_DOCUMENTATION
@@ -379,7 +351,7 @@ spec:
             - name: SERVICE_10_VERSION
               value: "1.0"
             - name: SERVICE_10_OWNER
-              value: "COVID Atlas"
+              value: "Corona Data Scraper"
             - name: SERVICE_10_RUNTIME
               value: "Node"
             - name: SERVICE_10_DOCUMENTATION
@@ -670,6 +642,8 @@ spec:
               value: "8080"
             - name: SERVICE_20_CLUSTER_NAME
               value: apis.usafacts-confirmed-cases
+            - name: SERVICE_20_VERSION
+              value: "latest"
             - name: SERVICE_20_ZONE_NAME
               value: default.zone
             - name: SERVICE_20_NAME
@@ -695,6 +669,36 @@ spec:
             - name: SERVICE_20_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_20_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_21_CLUSTER_NAME
+              value: apis.acaps-gov-response
+            - name: SERVICE_21_VERSION
+              value: "latest"
+            - name: SERVICE_21_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_21_NAME
+              value: ACAPS COVID-19 Government Response Tracker
+            - name: SERVICE_21_OWNER
+              value: Assessment Capacities Project
+            - name: SERVICE_21_RUNTIME
+              value: "Node"
+            - name: SERVICE_21_DOCUMENTATION
+              value: https://www.acaps.org/covid19-government-measures-dataset
+            - name: SERVICE_21_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"ACAPS COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.acaps.org/sites/acaps/files/resources/files/20200423_acaps_-_covid-19_goverment_measures_dataset_v10.xlsx\\\",\\\"description\\\":\\\"The #COVID19 Government Measures Dataset puts together all the measures implemented by governments worldwide in response to the Coronavirus pandemic.\\\",\\\"source\\\":\\\"Assessment Capacities Project\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.acaps.org/covid19-government-measures-dataset\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_21_PROMETHEUS_JOB
+              value: apis.acaps-gov-response
+            - name: SERVICE_21_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_21_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_21_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_21_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_21_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_21_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

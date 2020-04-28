@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.acaps-gov-response",
+ "zoneName": "default.zone",
+ "name": "ACAPS COVID-19 Government Response Tracker",
+ "version": "1.0",
+ "owner": "Assessment Capacities Project",
+ "capability": ""\"{\\\"name\\\":\\\"ACAPS COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.acaps.org/sites/acaps/files/resources/files/20200423_acaps_-_covid-19_goverment_measures_dataset_v10.xlsx\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"Assessment Capacities Project\\\",\\\"contentType\\\":[\\\"governance\\\"],\\\"homePage\\\":\\\"https://www.acaps.org/covid19-government-measures-dataset\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "https://www.acaps.org/covid19-government-measures-dataset",
+ "prometheusJob": "apis.acaps-gov-response",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
