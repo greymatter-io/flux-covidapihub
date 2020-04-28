@@ -673,7 +673,7 @@ spec:
             - name: SERVICE_21_RUNTIME
               value: "Node"
             - name: SERVICE_21_DOCUMENTATION
-              value: https://www.acaps.org/covid19-government-measures-dataset
+              value: /apis/acaps-gov-response/docs/
             - name: SERVICE_21_CAPABILITY
               value: "\"{\\\"name\\\":\\\"ACAPS COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.acaps.org/sites/acaps/files/resources/files/20200423_acaps_-_covid-19_goverment_measures_dataset_v10.xlsx\\\",\\\"description\\\":\\\"The #COVID19 Government Measures Dataset puts together all the measures implemented by governments worldwide in response to the Coronavirus pandemic.\\\",\\\"source\\\":\\\"Assessment Capacities Project\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.acaps.org/covid19-government-measures-dataset\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_21_PROMETHEUS_JOB
