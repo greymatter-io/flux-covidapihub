@@ -48,7 +48,7 @@ mkdir apis/$name/mesh/routes
 mkdir apis/$name/mesh/proxies
 mkdir apis/$name/mesh/rules
 scripts/resources/api_files/csv.deployment.sh $name $csv_url $sheet_name >apis/$name/$name.deployment.yaml
-scripts/resources/api_files/swagger.configmap.sh $name >apis/$name/$name.swagger.configmap.yaml
+scripts/resources/api_files/swagger.configmap.sh $name "$display_name" $docs >apis/$name/$name.swagger.configmap.yaml
 scripts/resources/api_files/sidecar_configmap.sh $name >apis/$name/$name.sidecar.configmap.yaml
 scripts/resources/api_files/domain.csv.sh $name "0.0.0.0" >apis/$name/mesh/domains/$name.domain.ingress.json
 scripts/resources/api_files/listener.sh $name >apis/$name/mesh/listeners/$name.listener.ingress.json
@@ -65,7 +65,7 @@ scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capabili
 echo ""
 echo "Generating Catalog envvars, checking covidapihub for number of services"
 count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .clusterCount)
-echo $count
+count=$((count+1))
 echo "The current service count is: $count, incrementing by 1"
 count=$((count+1))
 scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "/apis/$name/docs/" "$count" >apis/$name/mesh/catalog.envvars.yaml
