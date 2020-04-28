@@ -43,6 +43,8 @@ create_or_update() {
 kubectl port-forward api-0 -n fabric 10080:10080 &
 sleep 15
 
+delay=0.01
+
 objects="domains clusters listeners proxies rules routes"
 for meshfolder in apis/*; do
     if [ -d "$meshfolder" ]; then
