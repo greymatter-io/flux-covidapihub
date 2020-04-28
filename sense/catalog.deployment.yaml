@@ -681,7 +681,7 @@ spec:
             - name: SERVICE_20_DOCUMENTATION
               value: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
             - name: SERVICE_20_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_20_PROMETHEUS_JOB
               value: apis.usafacts-confirmed-cases
             - name: SERVICE_20_MAX_INSTANCES
