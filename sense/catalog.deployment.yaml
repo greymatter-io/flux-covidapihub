@@ -668,6 +668,35 @@ spec:
               value: ""
             - name: SERVICE_19_METRICS_PORT
               value: "8080"
+              
+            - name: SERVICE_20_CLUSTER_NAME
+              value: apis.mathdroid-jhu
+            - name: SERVICE_20_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_20_NAME
+              value: Mathdroid COVID-19 API
+            - name: SERVICE_20_OWNER
+              value: Johns Hopkins University CSSE
+            - name: SERVICE_20_RUNTIME
+              value: "Node"
+            - name: SERVICE_20_DOCUMENTATION
+              value: https://github.com/mathdroid/covid-19-api
+            - name: SERVICE_20_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Mathdroid COVID-19 API\\\",\\\"url\\\":\\\"://covid19.mathdro.id/api\\\",\\\"description\\\":\\\"The Mathdroid COVID-19 API is serving data from the Center for Systems Science and Engineering at John Hopkins University to visualize and track reported cases in real-time.\\\",\\\"source\\\":\\\"Johns Hopkins University CSSE\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/mathdroid/covid-19-api\\\",\\\"thumbnail\\\":\\\"https://systems.jhu.edu/wp-content/uploads/2020/01/csse-horizontal-white-1024x279.png\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_20_PROMETHEUS_JOB
+              value: apis.mathdroid-jhu
+            - name: SERVICE_20_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_20_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_20_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_20_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_20_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_20_METRICS_PORT
+              value: "8080"
 
           ports:
             - name: catalog

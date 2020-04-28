@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "mathdroid-jhu.proxy",
+    "domain_keys": [
+        "mathdroid-jhu.apis.domain"
+    ],
+    "listener_keys": [
+        "mathdroid-jhu.apis.listener"
+    ],
+    "name": "apis.mathdroid-jhu",
+    "listeners": null
+}

@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.mathdroid-jhu",
+ "zoneName": "default.zone",
+ "name": "Mathdroid COVID-19 API",
+ "version": "1.0",
+ "owner": "Johns Hopkins University CSSE",
+ "capability": ""\"{\\\"name\\\":\\\"Mathdroid COVID-19 API\\\",\\\"url\\\":\\\"://covid19.mathdro.id/api\\\",\\\"description\\\":\\\"The Mathdroid COVID-19 API is serving data from the Center for Systems Science and Engineering at John Hopkins University to visualize and track reported cases in real-time.\\\",\\\"source\\\":\\\"Johns Hopkins University CSSE\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/mathdroid/covid-19-api\\\",\\\"thumbnail\\\":\\\"https://systems.jhu.edu/wp-content/uploads/2020/01/csse-horizontal-white-1024x279.png\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "https://github.com/mathdroid/covid-19-api",
+ "prometheusJob": "apis.mathdroid-jhu",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
