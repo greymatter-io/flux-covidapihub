@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "yahoo-nasdaq.proxy",
+    "domain_keys": [
+        "yahoo-nasdaq.apis.domain"
+    ],
+    "listener_keys": [
+        "yahoo-nasdaq.apis.listener"
+    ],
+    "name": "apis.yahoo-nasdaq",
+    "listeners": null
+}

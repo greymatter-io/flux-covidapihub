@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.yahoo-nasdaq",
+ "zoneName": "default.zone",
+ "name": "Yahoo Finance NASDAQ Composite",
+ "version": "1.0",
+ "owner": "Yahoo",
+ "capability": ""\"{\\\"name\\\":\\\"Yahoo Finance NASDAQ Composite\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EIXIC?period1=1556553266&period2=1588175666&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance NASDAQ composite data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Finance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-nasdaq/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/yahoo-nasdaq/docs/",
+ "prometheusJob": "apis.yahoo-nasdaq",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

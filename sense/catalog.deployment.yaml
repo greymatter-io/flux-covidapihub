@@ -932,6 +932,36 @@ spec:
               value: ""
             - name: SERVICE_32_METRICS_PORT
               value: "8080"
+            - name: SERVICE_35_CLUSTER_NAME
+              value: apis.yahoo-nasdaq
+            - name: SERVICE_35_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_35_NAME
+              value: Yahoo Finance NASDAQ Composite
+            - name: SERVICE_35_OWNER
+              value: Yahoo
+            - name: SERVICE_35_RUNTIME
+              value: "Node"
+            - name: SERVICE_35_DOCUMENTATION
+              value: "/apis/yahoo-nasdaq/docs/"
+            - name: SERVICE_35_VERSION
+              value: "latest"
+            - name: SERVICE_35_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Yahoo Finance NASDAQ Composite\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EIXIC?period1=1556553266&period2=1588175666&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance NASDAQ composite data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Finance\\\"],\\\"homePage\\\":\\\"https://finance.yahoo.com/quote/%5EIXIC/history?p=%5EIXIC\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_35_PROMETHEUS_JOB
+              value: apis.yahoo-nasdaq
+            - name: SERVICE_35_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_35_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_35_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_35_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_35_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_35_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
