@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "finance-policy-responses.proxy",
+    "domain_keys": [
+        "finance-policy-responses.apis.domain"
+    ],
+    "listener_keys": [
+        "finance-policy-responses.apis.listener"
+    ],
+    "name": "apis.finance-policy-responses",
+    "listeners": null
+}
