@@ -962,6 +962,36 @@ spec:
               value: ""
             - name: SERVICE_33_METRICS_PORT
               value: "8080"
+            - name: SERVICE_34_CLUSTER_NAME
+              value: apis.owid-testing
+            - name: SERVICE_34_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_34_NAME
+              value: Our World In Data Coronavirus Testing Dataset
+            - name: SERVICE_34_OWNER
+              value: Our World In Data
+            - name: SERVICE_34_RUNTIME
+              value: "Node"
+            - name: SERVICE_34_DOCUMENTATION
+              value: "/apis/owid-testing/docs/"
+            - name: SERVICE_34_VERSION
+              value: "latest"
+            - name: SERVICE_34_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Our World In Data Coronavirus Testing Dataset\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv\\\",\\\"description\\\":\\\"A testing specific collection by country of the COVID-19 data maintained by Our World in Data including total COVID-19 tests, tests per day, total tests per 1,000 people, and more.\\\",\\\"source\\\":\\\"Our World In Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/covid-testing\\\",\\\"thumbnail\\\":\\\"https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_34_PROMETHEUS_JOB
+              value: apis.owid-testing
+            - name: SERVICE_34_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_34_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_34_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_34_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_34_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_34_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
