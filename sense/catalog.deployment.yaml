@@ -932,6 +932,36 @@ spec:
               value: ""
             - name: SERVICE_32_METRICS_PORT
               value: "8080"
+            - name: SERVICE_33_CLUSTER_NAME
+              value: apis.yahoo-snp
+            - name: SERVICE_33_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_33_NAME
+              value: "Yahoo Finance S&P 500"
+            - name: SERVICE_33_OWNER
+              value: Yahoo
+            - name: SERVICE_33_RUNTIME
+              value: "Node"
+            - name: SERVICE_33_DOCUMENTATION
+              value: "/apis/yahoo-snp/docs/"
+            - name: SERVICE_33_VERSION
+              value: "latest"
+            - name: SERVICE_33_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Yahoo Finance S&P 500\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EGSPC?period1=1556546403&period2=1588168803&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance S&P 500 data.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-snp/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_33_PROMETHEUS_JOB
+              value: apis.yahoo-snp
+            - name: SERVICE_33_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_33_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_33_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_33_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_33_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_33_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
