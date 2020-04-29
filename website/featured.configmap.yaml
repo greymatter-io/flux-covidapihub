@@ -101,7 +101,7 @@ data:
         {
           "name": "CDC Number of US Cases And Deaths",
           "url": "https://covidapihub.io/dashboard/#/cdc-number-of-us-cases-and-deaths-v1-0",
-          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
+          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC.",
           "source": "CDC",
           "contentType": [
             "Health"
