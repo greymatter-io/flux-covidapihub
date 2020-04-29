@@ -947,7 +947,7 @@ spec:
             - name: SERVICE_33_VERSION
               value: "latest"
             - name: SERVICE_33_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Yahoo Finance S&P 500\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EGSPC?period1=1556546403&period2=1588168803&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance S&P 500 data.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-snp/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Yahoo Finance S&P 500\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EGSPC?period1=1556546403&period2=1588168803&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance S&P 500 data.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Finance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-snp/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_33_PROMETHEUS_JOB
               value: apis.yahoo-snp
             - name: SERVICE_33_MAX_INSTANCES
