@@ -27,8 +27,7 @@ cat  << EOF
     },
     "active_http_filters": [
         "gm.metrics",
-        "gm.observables",
-        "envoy.rbac"
+        "gm.observables"
     ],
     "http_filters": {
         "gm_metrics": {
@@ -47,40 +46,6 @@ cat  << EOF
             "useKafka": true,
             "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
             "useKafkaTLS": true
-        },
-        "envoy_rbac": {
-            "rules": {
-            "action": 0,
-            "policies": {
-                "0": {
-                "permissions": [
-                {
-                    "or_rules": {
-                        "rules": [
-                            {
-                                "header": {
-                                    "name": ":method",
-                                    "exact_match": "GET"
-                                }
-                            },
-                            {
-                                "header": {
-                                    "name": ":method",
-                                    "exact_match": "HEAD"
-                                }
-                            }
-                        ]
-                    }
-                }
-                ],
-                "principals": [
-                    {
-                    "any": true
-                    }
-                ]
-                }
-            }
-            }
         }
     },
     "tracing_config": null
