@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.inform-risk-index.slash.route",
+    "path": "/apis/inform-risk-index",
+    "prefix_rewrite": "/apis/inform-risk-index/",
+    "redirects": null,
+    "shared_rules_key": "edge.inform-risk-index.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
