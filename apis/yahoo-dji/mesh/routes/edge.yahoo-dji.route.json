@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.yahoo-dji.route",
+    "path": "/apis/yahoo-dji/",
+    "prefix_rewrite": "/",
+    "redirects": null,
+    "shared_rules_key": "edge.yahoo-dji.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

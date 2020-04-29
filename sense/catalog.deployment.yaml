@@ -932,6 +932,36 @@ spec:
               value: ""
             - name: SERVICE_32_METRICS_PORT
               value: "8080"
+            - name: SERVICE_34_CLUSTER_NAME
+              value: apis.yahoo-dji
+            - name: SERVICE_34_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_34_NAME
+              value: Yahoo Finance Dow Jones Industrial Average
+            - name: SERVICE_34_OWNER
+              value: Yahoo
+            - name: SERVICE_34_RUNTIME
+              value: "Node"
+            - name: SERVICE_34_DOCUMENTATION
+              value: "/apis/yahoo-dji/docs/"
+            - name: SERVICE_34_VERSION
+              value: "latest"
+            - name: SERVICE_34_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Yahoo Finance Dow Jones Industrial Average\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EDJI?period1=1556550697&period2=1588173097&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance Dow Jones Industrial Average data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-dji/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_34_PROMETHEUS_JOB
+              value: apis.yahoo-dji
+            - name: SERVICE_34_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_34_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_34_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_34_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_34_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_34_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080

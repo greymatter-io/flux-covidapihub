@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.yahoo-dji",
+ "zoneName": "default.zone",
+ "name": "Yahoo Finance Dow Jones Industrial Average",
+ "version": "1.0",
+ "owner": "Yahoo",
+ "capability": ""\"{\\\"name\\\":\\\"Yahoo Finance Dow Jones Industrial Average\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EDJI?period1=1556550697&period2=1588173097&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance Dow Jones Industrial Average data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-dji/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/yahoo-dji/docs/",
+ "prometheusJob": "apis.yahoo-dji",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
