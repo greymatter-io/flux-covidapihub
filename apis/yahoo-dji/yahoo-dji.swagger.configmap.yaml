@@ -10,7 +10,7 @@ data:
     info:
       description: |-
           ## Yahoo Finance Dow Jones Industrial Average
-          Details about this dataset: [/apis/yahoo-dji/docs](/apis/yahoo-dji/docs)
+          Details about this dataset: [https://finance.yahoo.com/quote/%5EDJI/history?p=%5EDJI](https://finance.yahoo.com/quote/%5EDJI/history?p=%5EDJI)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
             - Limiting fields

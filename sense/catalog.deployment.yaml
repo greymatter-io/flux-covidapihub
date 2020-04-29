@@ -947,7 +947,7 @@ spec:
             - name: SERVICE_34_VERSION
               value: "latest"
             - name: SERVICE_34_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Yahoo Finance Dow Jones Industrial Average\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EDJI?period1=1556550697&period2=1588173097&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance Dow Jones Industrial Average data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Finance\\\"],\\\"homePage\\\":\\\"/apis/yahoo-dji/docs\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Yahoo Finance Dow Jones Industrial Average\\\",\\\"url\\\":\\\"https://query1.finance.yahoo.com/v7/finance/download/%5EDJI?period1=1556550697&period2=1588173097&interval=1d&events=history\\\",\\\"description\\\":\\\"Yahoo Finance Dow Jones Industrial Average data for the last year.\\\",\\\"source\\\":\\\"Yahoo\\\",\\\"contentType\\\":[\\\"Finance\\\"],\\\"homePage\\\":\\\"https://finance.yahoo.com/quote/%5EDJI/history?p=%5EDJI\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_34_PROMETHEUS_JOB
               value: apis.yahoo-dji
             - name: SERVICE_34_MAX_INSTANCES
