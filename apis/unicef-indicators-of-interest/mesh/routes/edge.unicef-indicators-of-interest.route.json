@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.unicef-indicators-of-interest.route",
+    "path": "/apis/unicef-indicators-of-interest/",
+    "prefix_rewrite": "/",
+    "redirects": null,
+    "shared_rules_key": "edge.unicef-indicators-of-interest.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

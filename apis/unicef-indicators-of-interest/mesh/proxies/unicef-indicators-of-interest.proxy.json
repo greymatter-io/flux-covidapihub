@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "unicef-indicators-of-interest.proxy",
+    "domain_keys": [
+        "unicef-indicators-of-interest.apis.domain"
+    ],
+    "listener_keys": [
+        "unicef-indicators-of-interest.apis.listener"
+    ],
+    "name": "apis.unicef-indicators-of-interest",
+    "listeners": null
+}

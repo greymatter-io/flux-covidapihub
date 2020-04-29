@@ -79,7 +79,9 @@ It will prompt you for the following information:
 - Owner: owner for catalog entry
 - Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
 - Documentation: Docs link
-
+- Coverage: geographic coverage of the data e.g. World, US, Italy
+- Format: format of the data. This should be "JSON" plus the original format (CSV, XSLX, etc.)
+  
 Example:
 
 1. API Name: `nyt-us-csv`
@@ -88,8 +90,13 @@ Example:
 4. Owner: `New York Times`
 5. Capability: `health`
 6. Documentation URL: `https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html`
+7. Coverage: `US`
+8. Format: `JSON, CSV`
+  
+Once this is done, You
 
-Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
+
+If you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
 Some API's sit behind load balancers and will need to add an SNI field. This will let the request know which backend server to go to. If you are having trouble proxying, try adding this field to the local cluster object:
 
