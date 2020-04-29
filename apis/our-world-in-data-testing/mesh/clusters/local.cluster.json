@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "owid-testing.local.cluster",
+    "cluster_key": "our-world-in-data-testing.local.cluster",
     "name": "local",
     "instances": [
         {

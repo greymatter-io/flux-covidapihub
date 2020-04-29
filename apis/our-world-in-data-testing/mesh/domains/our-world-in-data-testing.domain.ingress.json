@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "domain_key": "owid-testing.apis.domain",
+    "domain_key": "our-world-in-data-testing.apis.domain",
     "name": "*",
     "port": 8443,
     "gzip_enabled": false,

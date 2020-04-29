@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: owid-testing-swagger
+  name: our-world-in-data-testing-swagger
   namespace: apis
 data:
   swagger.yml: |-
@@ -28,7 +28,7 @@ data:
       version: "0.1"
       title: Our World In Data Coronavirus Testing Dataset - powered by apier
 
-    servers: https://covidapihub.io/apis/owid-testing
+    servers: https://covidapihub.io/apis/our-world-in-data-testing
     paths:
       /:
         get:

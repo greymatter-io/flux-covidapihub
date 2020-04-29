@@ -1,7 +1,7 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "edge.owid-testing.cluster",
-    "name": "apis.owid-testing",
+    "cluster_key": "edge.our-world-in-data-testing.cluster",
+    "name": "apis.our-world-in-data-testing",
     "instances": [],
     "circuit_breakers": null,
     "outlier_detection": null,

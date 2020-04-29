@@ -1,8 +1,8 @@
 {
     "zone_key": "default.zone",
-    "listener_key": "owid-testing.apis.listener",
+    "listener_key": "our-world-in-data-testing.apis.listener",
     "domain_keys": [
-        "owid-testing.apis.domain"
+        "our-world-in-data-testing.apis.domain"
     ],
     "name": "ingress",
     "ip": "0.0.0.0",
@@ -21,8 +21,7 @@
     },
     "active_http_filters": [
         "gm.metrics",
-        "gm.observables",
-        "envoy.rbac"
+        "gm.observables"
     ],
     "http_filters": {
         "gm_metrics": {
@@ -36,33 +35,11 @@
             "metrics_key_depth": "3"
         },
         "gm_observables": {
-            "topic": "apis.owid-testing",
+            "topic": "apis.our-world-in-data-testing",
             "eventTopic": "observables",
             "useKafka": true,
             "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
             "useKafkaTLS": true
-        },
-        "envoy_rbac": {
-            "rules": {
-            "action": 0,
-            "policies": {
-                "0": {
-                "permissions": [
-                    {
-                    "header": {
-                        "name": ":method",
-                        "exact_match": "GET"
-                    }
-                    }
-                ],
-                "principals": [
-                    {
-                    "any": true
-                    }
-                ]
-                }
-            }
-            }
         }
     },
     "tracing_config": null

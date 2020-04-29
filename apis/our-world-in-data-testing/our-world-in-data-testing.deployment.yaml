@@ -7,17 +7,17 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: apier
-    app: owid-testing
-    cluster: apis.owid-testing
-  name: owid-testing
+    app: our-world-in-data-testing
+    cluster: apis.our-world-in-data-testing
+  name: our-world-in-data-testing
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
       io.kompose.service: apier
-      app: owid-testing
-      cluster: apis.owid-testing
+      app: our-world-in-data-testing
+      cluster: apis.our-world-in-data-testing
   strategy: {}
   template:
     metadata:
@@ -27,8 +27,8 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: apier
-        app: owid-testing
-        cluster: apis.owid-testing
+        app: our-world-in-data-testing
+        cluster: apis.our-world-in-data-testing
     spec:
       serviceAccountName: apis-sa
       containers:
@@ -81,7 +81,7 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: owid-testing-sidecar
+            name: our-world-in-data-testing-sidecar
         - name: swagger-static
           configMap:
-            name: owid-testing-swagger
+            name: our-world-in-data-testing-swagger

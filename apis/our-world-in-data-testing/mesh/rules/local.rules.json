@@ -1,12 +1,12 @@
 {
     "zone_key": "default.zone",
-    "shared_rules_key": "edge.owid-testing.rules",
-    "name": "edge.owid-testing",
+    "shared_rules_key": "our-world-in-data-testing.local.rules",
+    "name": "local",
     "default": {
         "light": [
             {
                 "constraint_key": "",
-                "cluster_key": "edge.owid-testing.cluster",
+                "cluster_key": "our-world-in-data-testing.local.cluster",
                 "metadata": null,
                 "properties": null,
                 "response_data": {},
