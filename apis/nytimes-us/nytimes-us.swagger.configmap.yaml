@@ -9,7 +9,7 @@ data:
     openapi: 3.0.0
     info:
       description: |-
-          ## NY Times US
+          ## NY Times COVID-19 Data - US
           Details about this dataset: [https://github.com/nytimes/covid-19-data](https://github.com/nytimes/covid-19-data)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
@@ -26,7 +26,7 @@ data:
           ### Slicing (`max` and `start`)
           You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
       version: "0.1"
-      title: NY Times US - powered by apier
+      title: NY Times COVID-19 Data - US - powered by apier
 
     servers: https://covidapihub.io/apis/nytimes-us
     paths:
