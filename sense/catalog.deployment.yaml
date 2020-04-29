@@ -969,7 +969,7 @@ spec:
             - name: SERVICE_34_NAME
               value: Our World In Data Coronavirus Testing Dataset
             - name: SERVICE_34_OWNER
-              value: Our World In Data
+              value: Our World in Data
             - name: SERVICE_34_RUNTIME
               value: "Node"
             - name: SERVICE_34_DOCUMENTATION
