@@ -10,7 +10,7 @@ data:
     info:
       description: |-
           ## Yahoo Finance S&P 500
-          Details about this dataset: [/apis/yahoo-snp/docs](/apis/yahoo-snp/docs)
+          Details about this dataset: [https://finance.yahoo.com/quote/%5EGSPC/history?p=%5EGSPC](https://finance.yahoo.com/quote/%5EGSPC/history?p=%5EGSPC)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
             - Limiting fields
