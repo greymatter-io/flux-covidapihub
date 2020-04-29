@@ -932,6 +932,36 @@ spec:
               value: ""
             - name: SERVICE_32_METRICS_PORT
               value: "8080"
+            - name: SERVICE_33_CLUSTER_NAME
+              value: apis.bing-covid
+            - name: SERVICE_33_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_33_NAME
+              value: Bing COVID-19 Data
+            - name: SERVICE_33_OWNER
+              value: Microsoft
+            - name: SERVICE_33_RUNTIME
+              value: "Node"
+            - name: SERVICE_33_DOCUMENTATION
+              value: "/apis/bing-covid/docs/"
+            - name: SERVICE_33_VERSION
+              value: "latest"
+            - name: SERVICE_33_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Bing COVID-19 Data\\\",\\\"url\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data/raw/master/data/Bing-COVID19-Data.csv\\\",\\\"description\\\":\\\"Bing COVID-19 data includes confirmed, fatal, and recovered cases from all regions, updated daily in a .csv file. If there is an update or correction to already-published data, the data file will be updated accordingly. To ensure the stability of the data we share, it will be released with a 24-hour delay.\\\",\\\"source\\\":\\\"Microsoft\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data\\\",\\\"thumbnail\\\":\\\"https://www.bing.com/favicon.ico\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_33_PROMETHEUS_JOB
+              value: apis.bing-covid
+            - name: SERVICE_33_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_33_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_33_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_33_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_33_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_33_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
