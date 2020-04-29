@@ -54,12 +54,24 @@ cat  << EOF
             "policies": {
                 "0": {
                 "permissions": [
-                    {
-                    "header": {
-                        "name": ":method",
-                        "exact_match": "GET"
+                {
+                    "or_rules": {
+                        "rules": [
+                            {
+                                "header": {
+                                    "name": ":method",
+                                    "exact_match": "GET"
+                                }
+                            },
+                            {
+                                "header": {
+                                    "name": ":method",
+                                    "exact_match": "HEAD"
+                                }
+                            }
+                        ]
                     }
-                    }
+                }
                 ],
                 "principals": [
                     {
