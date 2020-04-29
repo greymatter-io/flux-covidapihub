@@ -77,8 +77,8 @@ It will prompt you for the following information:
 - URL: this is the url to the csv file online
 - Display Name: display name for catalog entry
 - Owner: owner for catalog entry
-- Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
-- Documentation: Docs link
+- Capability: capability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
+- Docs link: link to docs, for csv's we want to point to apier's docs, so just use the default which is `/apis/{api_name}/docs/`
 - Coverage: geographic coverage of the data e.g. World, US, Italy
 - Format: format of the data. This should be "JSON" plus the original format (CSV, XSLX, etc.)
   
@@ -89,12 +89,11 @@ Example:
 3. Display Name: `NYT US Data`
 4. Owner: `New York Times`
 5. Capability: `health`
-6. Documentation URL: `https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html`
+6. Documentation URL: `/apis/nyt-us-csv/docs/`
 7. Coverage: `US`
 8. Format: `JSON, CSV`
   
 Once this is done, You
-
 
 If you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
