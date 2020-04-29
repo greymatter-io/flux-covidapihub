@@ -639,7 +639,7 @@ spec:
             - name: SERVICE_19_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_19_METRICS_PORT
-              value: "8080"          
+              value: "8080"
             - name: SERVICE_20_CLUSTER_NAME
               value: apis.google-mobility-reports
             - name: SERVICE_20_ZONE_NAME
@@ -662,7 +662,7 @@ spec:
               value: "\"{\\\"name\\\":\\\"COVID-19 Community Mobility Reports\\\",\\\"url\\\":\\\"https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv\\\",\\\"description\\\":\\\"These Community Mobility Reports aim to provide insights into what has changed in response to policies aimed at combating COVID-19. The reports chart movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential.\\\",\\\"source\\\":\\\"https://www.google.com/covid19/mobility\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.google.com/covid19/mobility\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Regularly\\\"]}\""
             - name: SERVICE_20_PROMETHEUS_JOB
               value: apis.google-mobility-reports
-            - name: SERVICE_21_CLUSTER_NAME              
+            - name: SERVICE_21_CLUSTER_NAME
               value: apis.acaps-gov-response
             - name: SERVICE_21_ZONE_NAME
               value: default.zone
@@ -841,6 +841,96 @@ spec:
             - name: SERVICE_26_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_26_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_30_CLUSTER_NAME
+              value: apis.nytimes-us
+            - name: SERVICE_30_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_30_NAME
+              value: NY Times COVID-19 Data - US
+            - name: SERVICE_30_OWNER
+              value: The New York Times
+            - name: SERVICE_30_RUNTIME
+              value: "Node"
+            - name: SERVICE_30_DOCUMENTATION
+              value: "/apis/nytimes-us/docs/"
+            - name: SERVICE_30_VERSION
+              value: "latest"
+            - name: SERVICE_30_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S.\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_30_PROMETHEUS_JOB
+              value: apis.nytimes-us
+            - name: SERVICE_30_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_30_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_30_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_30_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_30_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_30_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_31_CLUSTER_NAME
+              value: apis.nytimes-us-states
+            - name: SERVICE_31_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_31_NAME
+              value: NY Times COVID-19 Data - US States
+            - name: SERVICE_31_OWNER
+              value: The New York Times
+            - name: SERVICE_31_RUNTIME
+              value: "Node"
+            - name: SERVICE_31_DOCUMENTATION
+              value: "/apis/nytimes-us-states/docs/"
+            - name: SERVICE_31_VERSION
+              value: "latest"
+            - name: SERVICE_31_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US States\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. states\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_31_PROMETHEUS_JOB
+              value: apis.nytimes-us-states
+            - name: SERVICE_31_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_31_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_31_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_31_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_31_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_31_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_32_CLUSTER_NAME
+              value: apis.nytimes-us-counties
+            - name: SERVICE_32_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_32_NAME
+              value: NY Times COVID-19 Data - US Counties
+            - name: SERVICE_32_OWNER
+              value: The New York Times
+            - name: SERVICE_32_RUNTIME
+              value: "Node"
+            - name: SERVICE_32_DOCUMENTATION
+              value: "/apis/nytimes-us-counties/docs/"
+            - name: SERVICE_32_VERSION
+              value: "latest"
+            - name: SERVICE_32_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US Counties\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. counties\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_32_PROMETHEUS_JOB
+              value: apis.nytimes-us-counties
+            - name: SERVICE_32_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_32_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_32_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_32_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_32_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_32_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

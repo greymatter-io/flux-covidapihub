@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.nytimes-us-states",
+ "zoneName": "default.zone",
+ "name": "NY Times COVID-19 Data - US States",
+ "version": "1.0",
+ "owner": "The New York Times",
+ "capability": ""\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US States\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. states\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/nytimes-us-states/docs/",
+ "prometheusJob": "apis.nytimes-us-states",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

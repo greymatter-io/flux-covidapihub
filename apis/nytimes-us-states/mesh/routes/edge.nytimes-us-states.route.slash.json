@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.nytimes-us-states.slash.route",
+    "path": "/apis/nytimes-us-states",
+    "prefix_rewrite": "/apis/nytimes-us-states/",
+    "redirects": null,
+    "shared_rules_key": "edge.nytimes-us-states.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

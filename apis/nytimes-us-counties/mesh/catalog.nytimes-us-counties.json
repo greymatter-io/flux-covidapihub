@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.nytimes-us-counties",
+ "zoneName": "default.zone",
+ "name": "NY Times COVID-19 Data - US Counties",
+ "version": "1.0",
+ "owner": "The New York Times",
+ "capability": ""\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US Counties\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. counties\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/nytimes-us-counties/docs/",
+ "prometheusJob": "apis.nytimes-us-counties",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
