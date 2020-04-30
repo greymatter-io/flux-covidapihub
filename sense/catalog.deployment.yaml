@@ -993,23 +993,23 @@ spec:
             - name: SERVICE_34_METRICS_PORT
               value: "8080"
             - name: SERVICE_35_CLUSTER_NAME
-              value: apis.tweetbinder-by-day
+              value: apis.inform-p2p-index
             - name: SERVICE_35_ZONE_NAME
               value: default.zone
             - name: SERVICE_35_NAME
-              value: Tweet Binder Coronavirus Tweets By Day
+              value: INFORM Epidemic Person to Person Risk Index
             - name: SERVICE_35_OWNER
-              value: Tweet Binder
+              value: European Commission, Inter-Agency Standing Committee
             - name: SERVICE_35_RUNTIME
               value: "Node"
             - name: SERVICE_35_DOCUMENTATION
-              value: "/apis/tweetbinder-by-day/docs/"
+              value: "/apis/inform-p2p-index/docs/"
             - name: SERVICE_35_VERSION
               value: "latest"
             - name: SERVICE_35_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"We at Tweet Binder have run several Twitter analysis about it and we intend to liberate all the Twitter datasets about Coronavirus and Covid19 that we possible can create. We have analyzed day by day the evolution of several words: #covid19 OR #coronavirus OR coronavirus OR #covidー19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"INFORM Epidemic Person to Person Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/EPIDEMIC-INFORM_P2P_2020_v041.xlsx\\\",\\\"description\\\":\\\"Through extensive consultation, the WHO identified the underlying risk drivers of epidemic, which enabled the development of a conceptual framework for epidemic risk assessment in countries. The risk score ranges from 0-10, where 10 is the highest risk. The INFORM Epidemic Risk Index was adapted to better reflect the situation of the Covid-19 pandemic. As transmission is now dominated by human-to-human transmission, the “Hazard & Exposure dimension” of the model was narrowed down to the P2P (meaning people to people) component only. The adapted version of the index is called INFORM Epidemic P2P Risk Index.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
             - name: SERVICE_35_PROMETHEUS_JOB
-              value: apis.tweetbinder-by-day
+              value: apis.inform-p2p-index
             - name: SERVICE_35_MAX_INSTANCES
               value: "2"
             - name: SERVICE_35_MIN_INSTANCES
@@ -1023,23 +1023,23 @@ spec:
             - name: SERVICE_35_METRICS_PORT
               value: "8080"
             - name: SERVICE_36_CLUSTER_NAME
-              value: apis.tweetbinder-1000-rts
+              value: apis.inform-risk-index
             - name: SERVICE_36_ZONE_NAME
               value: default.zone
             - name: SERVICE_36_NAME
-              value: Tweet Binder Users with 1000 Retweets
+              value: INFORM COVID-19 Risk Index
             - name: SERVICE_36_OWNER
-              value: Tweet Binder
+              value: European Commission, Inter-Agency Standing Committee
             - name: SERVICE_36_RUNTIME
               value: "Node"
             - name: SERVICE_36_DOCUMENTATION
-              value: "/apis/tweetbinder-1000-rts/docs/"
+              value: "/apis/inform-risk-index/docs/"
             - name: SERVICE_36_VERSION
               value: "latest"
             - name: SERVICE_36_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Users with 1000 Retweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"Since a lot of people are tweeting about Coronavirus, we have run a search with all the tweets that got 1000 RTs at least. We consider those “important”, that doesn’t mean obviously that they are the most important tweets of the Coronavirus issue. There are more than 40,000 tweets about Covid19 who got at least 1,000 RTs in a tweet.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"INFORM COVID-19 Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/INFORM%20COVID-19%20RISK%20INDEX%20v012.xlsx\\\",\\\"description\\\":\\\"The INFORM COVID-19 Risk Index is an experimental adaptation of the INFORM Epidemic P2P Risk Index and aims to identify: “countries at risk from health and humanitarian impacts of COVID-19 that could overwhelm current national response capacity, and therefore lead to a need for additional international assistance”. It can be used to support prioritization of preparedness and early response actions for the primary impacts of the pandemic, and identify countries where secondary impacts are likely to have the most critical humanitarian consequences. The main scope of the INFORM COVID-19 Risk Index is global and regional risk-informed resource allocation, i.e. where comparable understanding of countries’ risk is important. It cannot predict the impacts of the pandemic in individual countries.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
             - name: SERVICE_36_PROMETHEUS_JOB
-              value: apis.tweetbinder-1000-rts
+              value: apis.inform-risk-index
             - name: SERVICE_36_MAX_INSTANCES
               value: "2"
             - name: SERVICE_36_MIN_INSTANCES
@@ -1053,23 +1053,23 @@ spec:
             - name: SERVICE_36_METRICS_PORT
               value: "8080"
             - name: SERVICE_37_CLUSTER_NAME
-              value: apis.tweetbinder-by-who
+              value: apis.tweetbinder-by-day
             - name: SERVICE_37_ZONE_NAME
               value: default.zone
             - name: SERVICE_37_NAME
-              value: Tweet Binder Tweets by @WHO
+              value: Tweet Binder Coronavirus Tweets By Day
             - name: SERVICE_37_OWNER
               value: Tweet Binder
             - name: SERVICE_37_RUNTIME
               value: "Node"
             - name: SERVICE_37_DOCUMENTATION
-              value: "/apis/tweetbinder-by-who/docs/"
+              value: "/apis/tweetbinder-by-day/docs/"
             - name: SERVICE_37_VERSION
               value: "latest"
             - name: SERVICE_37_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The World Health Organization has been actively tweeting information these past months. Here you will find a dataset with all their tweets since the 1st of January 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"We at Tweet Binder have run several Twitter analysis about it and we intend to liberate all the Twitter datasets about Coronavirus and Covid19 that we possible can create. We have analyzed day by day the evolution of several words: #covid19 OR #coronavirus OR coronavirus OR #covidー19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_37_PROMETHEUS_JOB
-              value: apis.tweetbinder-by-who
+              value: apis.tweetbinder-by-day
             - name: SERVICE_37_MAX_INSTANCES
               value: "2"
             - name: SERVICE_37_MIN_INSTANCES
@@ -1081,6 +1081,66 @@ spec:
             - name: SERVICE_37_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_37_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_38_CLUSTER_NAME
+              value: apis.tweetbinder-1000-rts
+            - name: SERVICE_38_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_38_NAME
+              value: Tweet Binder Users with 1000 Retweets
+            - name: SERVICE_38_OWNER
+              value: Tweet Binder
+            - name: SERVICE_38_RUNTIME
+              value: "Node"
+            - name: SERVICE_38_DOCUMENTATION
+              value: "/apis/tweetbinder-1000-rts/docs/"
+            - name: SERVICE_38_VERSION
+              value: "latest"
+            - name: SERVICE_38_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Tweet Binder Users with 1000 Retweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"Since a lot of people are tweeting about Coronavirus, we have run a search with all the tweets that got 1000 RTs at least. We consider those “important”, that doesn’t mean obviously that they are the most important tweets of the Coronavirus issue. There are more than 40,000 tweets about Covid19 who got at least 1,000 RTs in a tweet.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_38_PROMETHEUS_JOB
+              value: apis.tweetbinder-1000-rts
+            - name: SERVICE_38_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_38_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_38_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_38_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_38_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_38_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_39_CLUSTER_NAME
+              value: apis.tweetbinder-by-who
+            - name: SERVICE_39_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_39_NAME
+              value: Tweet Binder Tweets by @WHO
+            - name: SERVICE_39_OWNER
+              value: Tweet Binder
+            - name: SERVICE_39_RUNTIME
+              value: "Node"
+            - name: SERVICE_39_DOCUMENTATION
+              value: "/apis/tweetbinder-by-who/docs/"
+            - name: SERVICE_39_VERSION
+              value: "latest"
+            - name: SERVICE_39_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Tweet Binder Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The World Health Organization has been actively tweeting information these past months. Here you will find a dataset with all their tweets since the 1st of January 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+            - name: SERVICE_39_PROMETHEUS_JOB
+              value: apis.tweetbinder-by-who
+            - name: SERVICE_39_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_39_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_39_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_39_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_39_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_39_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

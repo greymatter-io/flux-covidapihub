@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.inform-p2p-index",
+ "zoneName": "default.zone",
+ "name": "INFORM Epidemic Person to Person Risk Index",
+ "version": "1.0",
+ "owner": "European Commission, Inter-Agency Standing Committee",
+ "capability": ""\"{\\\"name\\\":\\\"INFORM Epidemic Person to Person Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/EPIDEMIC-INFORM_P2P_2020_v041.xlsx\\\",\\\"description\\\":\\\"Through extensive consultation, the WHO identified the underlying risk drivers of epidemic, which enabled the development of a conceptual framework for epidemic risk assessment in countries. The risk score ranges from 0-10, where 10 is the highest risk. The INFORM Epidemic Risk Index was adapted to better reflect the situation of the Covid-19 pandemic. As transmission is now dominated by human-to-human transmission, the “Hazard & Exposure dimension” of the model was narrowed down to the P2P (meaning people to people) component only. The adapted version of the index is called INFORM Epidemic P2P Risk Index.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/inform-p2p-index/docs/",
+ "prometheusJob": "apis.inform-p2p-index",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

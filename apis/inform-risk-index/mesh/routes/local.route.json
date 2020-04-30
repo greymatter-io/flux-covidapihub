@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "inform-risk-index.apis.domain",
+    "route_key": "inform-risk-index.local.route",
+    "path": "/",
+    "prefix_rewrite": "",
+    "redirects": null,
+    "shared_rules_key": "inform-risk-index.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
