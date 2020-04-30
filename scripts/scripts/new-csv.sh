@@ -9,15 +9,14 @@ fmt="${csv_url##*.}"
 if [[ "$fmt" =~ ^(xls|xlsx|xlsm|xlsb|odf)$ ]]; then
     echo "Sheet Name: "
     read sheet_name
-else if ![[ "$fmt" == "csv" ]]; then
+elif [[ "$fmt" != "csv" ]]; then
     echo "Source format: "
     read source_format
     echo "Sheet Name: (leave empty if not applicable)"
     read sheet_name
 fi
 
-echo "Skip rows? (Y/n):"
-read skiprows
+read -r -p "Skip rows? (Y/n):" skiprows
 if [[ "$skiprows" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     echo "list of rows to skip: (ex. 0,5,10)"
     read skip_rows

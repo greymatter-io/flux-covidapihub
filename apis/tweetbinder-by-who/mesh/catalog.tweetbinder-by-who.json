@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.tweetbinder-by-who",
+ "zoneName": "default.zone",
+ "name": "Tweet Binder Tweets by @WHO",
+ "version": "1.0",
+ "owner": "Tweet Binder",
+ "capability": ""\"{\\\"name\\\":\\\"Tweet Binder Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The World Health Organization has been actively tweeting information these past months. Here you will find a dataset with all their tweets since the 1st of January 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV,\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/tweetbinder-by-who/docs/",
+ "prometheusJob": "apis.tweetbinder-by-who",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

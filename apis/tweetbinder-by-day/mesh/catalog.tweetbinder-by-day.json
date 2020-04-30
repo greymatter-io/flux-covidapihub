@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.tweetbinder-by-day",
+ "zoneName": "default.zone",
+ "name": "Tweet Binder Coronavirus Tweets By Day",
+ "version": "1.0",
+ "owner": "Tweet Binder",
+ "capability": ""\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"We at Tweet Binder have run several Twitter analysis about it and we intend to liberate all the Twitter datasets about Coronavirus and Covid19 that we possible can create. We have analyzed day by day the evolution of several words: #covid19 OR #coronavirus OR coronavirus OR #covidー19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/tweetbinder-by-day/docs/",
+ "prometheusJob": "apis.tweetbinder-by-day",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "tweetbinder-1000-rts.proxy",
+    "domain_keys": [
+        "tweetbinder-1000-rts.apis.domain"
+    ],
+    "listener_keys": [
+        "tweetbinder-1000-rts.apis.listener"
+    ],
+    "name": "apis.tweetbinder-1000-rts",
+    "listeners": null
+}

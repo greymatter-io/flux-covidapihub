@@ -1,13 +1,3 @@
-#!/bin/bash
-
-NAME=$1
-CSV_URL=$2
-SHEET_NAME=$3
-SKIP_ROWS=$4
-SOURCE_FORMAT=$5
-
-#define the template.
-cat  << EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,17 +7,17 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: apier
-    app: $NAME
-    cluster: apis.$NAME
-  name: $NAME
+    app: tweetbinder-by-who
+    cluster: apis.tweetbinder-by-who
+  name: tweetbinder-by-who
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
       io.kompose.service: apier
-      app: $NAME
-      cluster: apis.$NAME
+      app: tweetbinder-by-who
+      cluster: apis.tweetbinder-by-who
   strategy: {}
   template:
     metadata:
@@ -37,27 +27,27 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: apier
-        app: $NAME
-        cluster: apis.$NAME
+        app: tweetbinder-by-who
+        cluster: apis.tweetbinder-by-who
     spec:
       serviceAccountName: apis-sa
       containers:
       - name: apier
         env:
         - name: SHEET_NAME
-          value: $SHEET_NAME
+          value: 
         - name: FLASK_APP
           value: app/main.py
         - name: SHEET_SKIP_ROWS
-          value: $SKIP_ROWS
+          value: 
         - name: SOURCE_FORMAT
-          value: $SOURCE_FORMAT
+          value: csv
         - name: FLASK_DEBUG
           value: "0"
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: $CSV_URL
+          value: https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:
@@ -95,8 +85,7 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: $NAME-sidecar
+            name: tweetbinder-by-who-sidecar
         - name: swagger-static
           configMap:
-            name: $NAME-swagger
-EOF
+            name: tweetbinder-by-who-swagger
