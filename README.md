@@ -48,6 +48,7 @@ It will prompt you for the following information:
 - Path: path to the api, it should being with `/`.
 - Display Name: display name for catalog entry
 - Owner: owner for catalog entry
+- Owner URL: relevant link back to the source. This could be the owner's homepage or a landing page for the specific api if available
 - Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
 - Documentation: Docs link
 
@@ -61,8 +62,9 @@ For example, to create a deployment and configs for [this api](https://api.censu
 4. Path: `/data/2019/pep/population`
 5. Display Name: `US Census Bureau - Population`
 6. Owner: `Census Bureau`
-7. Capability: `governance`
-8. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
+7. Owner URL: `https://www.census.gov`
+8. Capability: `governance`
+9. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
 
 ### Troubleshooting
 
