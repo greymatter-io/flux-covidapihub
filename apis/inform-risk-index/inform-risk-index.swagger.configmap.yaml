@@ -10,7 +10,7 @@ data:
       description: |-
           ## INFORM COVID-19 Risk Index
           Details about this dataset: [https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

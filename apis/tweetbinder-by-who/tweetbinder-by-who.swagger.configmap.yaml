@@ -10,7 +10,7 @@ data:
       description: |-
           ## Tweet Binder Tweets by @WHO
           Details about this dataset: [https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/](https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

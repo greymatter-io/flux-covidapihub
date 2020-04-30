@@ -10,7 +10,7 @@ data:
       description: |-
           ## Bing COVID-19 Data
           Details about this dataset: [https://github.com/microsoft/Bing-COVID-19-Data](https://github.com/microsoft/Bing-COVID-19-Data)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

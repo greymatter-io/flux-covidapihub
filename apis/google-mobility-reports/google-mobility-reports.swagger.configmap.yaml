@@ -10,7 +10,7 @@ data:
       description: |-
           ## Google COVID-19 Community Mobility Reports
           Details about this dataset: [https://www.google.com/covid19/mobility](https://www.google.com/covid19/mobility)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

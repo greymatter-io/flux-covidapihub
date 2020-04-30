@@ -10,7 +10,7 @@ data:
       description: |-
           ## ACAPS COVID-19 Government Response Tracker
           Details about this dataset: [https://www.acaps.org/covid19-government-measures-dataset](https://www.acaps.org/covid19-government-measures-dataset)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

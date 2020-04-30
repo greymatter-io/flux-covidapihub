@@ -10,7 +10,7 @@ data:
       description: |-
           ## NY Times COVID-19 Data - US
           Details about this dataset: [https://github.com/nytimes/covid-19-data](https://github.com/nytimes/covid-19-data)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields

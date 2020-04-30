@@ -18,7 +18,7 @@ data:
       description: |-
           ## $DISPLAY
           Details about this dataset: [$DOCS]($DOCS)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields
