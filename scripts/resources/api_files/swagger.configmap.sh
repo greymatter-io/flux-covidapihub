@@ -26,29 +26,29 @@ data:
             - Multi level sorting
             - Slicing
 
-          ### Limiting fields (`fields`)
+          ### Limiting fields (\`fields\`)
 
           In cases you were only interested in a handful of fields, you can specify
           which fields to return. By default, apier will return all fields.
 
 
-          ### Querying by value (`query`)
+          ### Querying by value (\`query\`)
 
           apier uses [pandas query
           expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query).
-          e.g. `a < b and b < c` to fetch all rows where these conditions evaluate to
+          e.g. \`a < b and b < c\` to fetch all rows where these conditions evaluate to
           true.
 
 
-          ### Multi level sorting (`by` and `ascending`)
+          ### Multi level sorting (\`by\` and \`ascending\`)
 
-          apier allows multi level sorting - specify which fields to sort by in `by`
-          as well as `ascending` 0 (false) or 1 (true) for each fields you specify.
+          apier allows multi level sorting - specify which fields to sort by in \`by\`
+          as well as \`ascending\` 0 (false) or 1 (true) for each fields you specify.
           For example, if you want to sort by "date" descending and "name" ascending,
-          you will tell apier `by=date,name&ascending=0,1`
+          you will tell apier \`by=date,name&ascending=0,1\`
 
 
-          ### Slicing (`max` and `start`)
+          ### Slicing (\`max\` and \`start\`)
 
           You can specify which row to start from and a maximum number of records to
           return. By using sorting and slicing together, you can paginate the records.
@@ -79,7 +79,7 @@ data:
               type: string
               x-example: (state=="Washington") and (date=="2020-01-31")
             - description: >
-                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                The name(s) of the field(s) to be sorted by. If \`ascending\` query is
                 not given, it will be in ascending order by default
               in: query
               name: by
@@ -88,7 +88,7 @@ data:
               x-example: 'date,state'
             - description: >
                 A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
-                given in `by` parameter should be sorted in ascending order
+                given in \`by\` parameter should be sorted in ascending order
               in: query
               name: ascending
               required: false
@@ -103,8 +103,8 @@ data:
               x-example: 5
             - description: >
                 The index of the starting record. Combining the sorting
-                functionality (`by` and `ascending`) and slicing functionality
-                (`max` and `start`) is useful for pagination
+                functionality (\`by\` and \`ascending\`) and slicing functionality
+                (\`max\` and \`start\`) is useful for pagination
               format: int64
               in: query
               name: start
@@ -139,7 +139,7 @@ data:
         get:
           description: >
             This path will return all the possible values for a given field. This
-            may come in handy when creating a dropdown etc. E.g. `/f/country` will
+            may come in handy when creating a dropdown etc. E.g. \`/f/country\` will
             return all the countries that are in the dataset.
           parameters:
             - description: A name of the field
@@ -170,8 +170,8 @@ data:
         get:
           description: >
             This is similar to the main path, however, all the returned items will
-            have a `{field_name}` field with `{value}` specified. This may be useful
-            when creating a subreport sucn as `/f/state/Alaska` will give you all
+            have a \`{field_name}\` field with \`{value}\` specified. This may be useful
+            when creating a subreport sucn as \`/f/state/Alaska\` will give you all
             the data specific to Alaska, for example.
           parameters:
             - description: A name of the field
@@ -199,7 +199,7 @@ data:
               type: string
               x-example: (state=="Washington") and (date=="2020-01-31")
             - description: >-
-                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                The name(s) of the field(s) to be sorted by. If \`ascending\` query is
                 not given, it will be in ascending order by default
               in: query
               name: by
@@ -208,7 +208,7 @@ data:
               x-example: 'date,state'
             - description: >
                 A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
-                given in `by` parameter should be sorted in ascending order
+                given in \`by\` parameter should be sorted in ascending order
               in: query
               name: ascending
               required: false
@@ -223,8 +223,8 @@ data:
               x-example: 5
             - description: >
                 The index of the starting record. Combining the sorting
-                functionality (`by` and `ascending`) and slicing functionality
-                (`max` and `start`) is useful for pagination
+                functionality (\`by\` and \`ascending\`) and slicing functionality
+                (\`max\` and \`start\`) is useful for pagination
               format: int64
               in: query
               name: start
@@ -262,7 +262,7 @@ data:
             fetched as JSON format with basic query, sort, pagination. This is
             designed for excel files with multiple sheets. If the application is
             pointing at CSV file and this method is called, then apier will ignore
-            sheet name, and return the same result as the main path `/`
+            sheet name, and return the same result as the main path \`/\`
           parameters:
             - description: Excel sheet name
               in: path
@@ -284,7 +284,7 @@ data:
               type: string
               x-example: (state=="Washington") and (date=="2020-01-31")
             - description: >-
-                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                The name(s) of the field(s) to be sorted by. If \`ascending\` query is
                 not given, it will be in ascending order by default
               in: query
               name: by
@@ -293,7 +293,7 @@ data:
               x-example: 'date,state'
             - description: >
                 A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
-                given in `by` parameter should be sorted in ascending order
+                given in \`by\` parameter should be sorted in ascending order
               in: query
               name: ascending
               required: false
@@ -308,8 +308,8 @@ data:
               x-example: 5
             - description: >
                 The index of the starting record. Combining the sorting
-                functionality (`by` and `ascending`) and slicing functionality
-                (`max` and `start`) is useful for pagination
+                functionality (\`by\` and \`ascending\`) and slicing functionality
+                (\`max\` and \`start\`) is useful for pagination
               format: int64
               in: query
               name: start
@@ -344,12 +344,12 @@ data:
         get:
           description: >
             This path will return all the possible values for a given field. This
-            may come in handy when creating a dropdown etc. E.g. `/s/2020/f/country`
-            will return all the countries that are in the sheet called `2020`. This
+            may come in handy when creating a dropdown etc. E.g. \`/s/2020/f/country\`
+            will return all the countries that are in the sheet called \`2020\`. This
             API is designed for excel files with multiple sheets. If the application
             is pointing at CSV file and this method is called, then apier will
             ignore sheet name, and return the same result as the path
-            `/f/{field_name}`
+            \`/f/{field_name}\`
           parameters:
             - description: Excel sheet name
               in: path
@@ -384,13 +384,13 @@ data:
         get:
           description: >
             This is similar to the main path, however, all the returned items will
-            have a `{field_name}` field with `{value}` specified in a specified
+            have a \`{field_name}\` field with \`{value}\` specified in a specified
             sheet. This may be useful when creating a subreport sucn as
-            `/s/2020/f/state/Alaska` will give you all the data specific to Alaska
+            \`/s/2020/f/state/Alaska\` will give you all the data specific to Alaska
             in year 2020, for example. This API is designed for excel files with
             multiple sheets. If the application is pointing at CSV file and this
             method is called, then apier will ignore sheet name, and return the same
-            result as the path `/f/{field_name}/{value}`
+            result as the path \`/f/{field_name}/{value}\`
           parameters:
             - description: Excel sheet name
               in: path
@@ -422,7 +422,7 @@ data:
               type: string
               x-example: (state=="Washington") and (date=="2020-01-31")
             - description: >-
-                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                The name(s) of the field(s) to be sorted by. If \`ascending\` query is
                 not given, it will be in ascending order by default
               in: query
               name: by
@@ -431,7 +431,7 @@ data:
               x-example: 'date,state'
             - description: >
                 A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
-                given in `by` parameter should be sorted in ascending order
+                given in \`by\` parameter should be sorted in ascending order
               in: query
               name: ascending
               required: false
@@ -446,8 +446,8 @@ data:
               x-example: 5
             - description: >
                 The index of the starting record. Combining the sorting
-                functionality (`by` and `ascending`) and slicing functionality
-                (`max` and `start`) is useful for pagination
+                functionality (\`by\` and \`ascending\`) and slicing functionality
+                (\`max\` and \`start\`) is useful for pagination
               format: int64
               in: query
               name: start
