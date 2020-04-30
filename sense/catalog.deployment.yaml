@@ -1057,7 +1057,7 @@ spec:
             - name: SERVICE_37_ZONE_NAME
               value: default.zone
             - name: SERVICE_37_NAME
-              value: Tweet Binder Coronavirus Tweets By Day
+              value: Tweet Binder - COVID-19 Tweets By Day
             - name: SERVICE_37_OWNER
               value: Tweet Binder
             - name: SERVICE_37_RUNTIME
@@ -1067,7 +1067,7 @@ spec:
             - name: SERVICE_37_VERSION
               value: "latest"
             - name: SERVICE_37_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, coronavirus or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - COVID-19 Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_37_PROMETHEUS_JOB
               value: apis.tweetbinder-by-day
             - name: SERVICE_37_MAX_INSTANCES
@@ -1087,7 +1087,7 @@ spec:
             - name: SERVICE_38_ZONE_NAME
               value: default.zone
             - name: SERVICE_38_NAME
-              value: Tweet Binder Users with 1000 Retweets
+              value: Tweet Binder - Most Popular Tweets
             - name: SERVICE_38_OWNER
               value: Tweet Binder
             - name: SERVICE_38_RUNTIME
@@ -1097,7 +1097,7 @@ spec:
             - name: SERVICE_38_VERSION
               value: "latest"
             - name: SERVICE_38_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Users with 1000 Retweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"The Tweet Binder Users with 1000 Retweets dataset is a collection of information on tweets with key words or hashtags #covid19, #coronavirus, coronavirus or #covid-19 with at least 1,000 retweets.  Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_38_PROMETHEUS_JOB
               value: apis.tweetbinder-1000-rts
             - name: SERVICE_38_MAX_INSTANCES
@@ -1117,7 +1117,7 @@ spec:
             - name: SERVICE_39_ZONE_NAME
               value: default.zone
             - name: SERVICE_39_NAME
-              value: Tweet Binder Tweets by @WHO
+              value: Tweet Binder - Tweets by @WHO
             - name: SERVICE_39_OWNER
               value: Tweet Binder
             - name: SERVICE_39_RUNTIME
@@ -1127,7 +1127,7 @@ spec:
             - name: SERVICE_39_VERSION
               value: "latest"
             - name: SERVICE_39_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The Tweet Binder Tweets by @WHO dataset is the collection of tweets by the World Health Organization since January 1st, 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The Tweet Binder Tweets by @WHO dataset is the collection of tweets by the World Health Organization since January 1st, 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_39_PROMETHEUS_JOB
               value: apis.tweetbinder-by-who
             - name: SERVICE_39_MAX_INSTANCES
