@@ -101,7 +101,7 @@ It will prompt you for the following information:
 - API Name: an all lowercase, no spaces or special characters name for the deployment. This will dictate the route to this api - it will be `https://covidapihub.io/apis/<api_name>`
 - URL: this is the url to the csv file online
 - Source format: if the url to the csv/xslx did not have a file extension, you need to specify it here
-- Skip rows: If the spreadsheet is irregular, you can specify specific rows to skip. They don't need to be sequential. This is a comma delimted list of row numbers, 1-indexed. e.g., if the data in the sheet starts at row 5, you would enter '1,2,3,4'.
+- Skip rows: If the spreadsheet is irregular, you can specify specific rows to skip. They don't need to be sequential. This is a comma delimted list of row numbers, 0-indexed. e.g., if the data in the sheet starts at row 5, you would enter '0,1,2,3,4'.
 - Sheet Name: if the dataset is xlsx, you must specify the name of the sheet that the API will serve up.
 - Display Name: display name for catalog entry
 - Owner: owner for catalog entry
