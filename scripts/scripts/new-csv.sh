@@ -9,7 +9,19 @@ fmt="${csv_url##*.}"
 if [[ "$fmt" =~ ^(xls|xlsx|xlsm|xlsb|odf)$ ]]; then
     echo "Sheet Name: "
     read sheet_name
+elif [[ "$fmt" != "csv" ]]; then
+    echo "Source format: "
+    read source_format
+    echo "Sheet Name: (leave empty if not applicable)"
+    read sheet_name
 fi
+
+read -r -p "Skip rows? (Y/n):" skiprows
+if [[ "$skiprows" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    echo "list of rows to skip: (ex. 0,5,10)"
+    read skip_rows
+fi
+
 
 echo Display Name:
 read display_name
@@ -47,7 +59,7 @@ mkdir apis/$name/mesh/listeners
 mkdir apis/$name/mesh/routes
 mkdir apis/$name/mesh/proxies
 mkdir apis/$name/mesh/rules
-scripts/resources/api_files/csv.deployment.sh $name $csv_url "$sheet_name" >apis/$name/$name.deployment.yaml
+scripts/resources/api_files/csv.deployment.sh $name $csv_url "$sheet_name" "$skip_rows" "$source_format" >apis/$name/$name.deployment.yaml
 scripts/resources/api_files/swagger.configmap.sh $name "$display_name" $docs >apis/$name/$name.swagger.configmap.yaml
 scripts/resources/api_files/sidecar_configmap.sh $name >apis/$name/$name.sidecar.configmap.yaml
 scripts/resources/api_files/domain.csv.sh $name "0.0.0.0" >apis/$name/mesh/domains/$name.domain.ingress.json
