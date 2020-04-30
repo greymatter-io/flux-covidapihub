@@ -35,7 +35,11 @@ spec:
       - name: apier
         env:
         - name: SHEET_NAME
-          value: 
+          value: Dataset
+        - name: SHEET_SKIP_ROWS
+          value: 0,1,2,3,4,5,6
+        - name: SOURCE_FORMAT
+          value: xlsx
         - name: FLASK_APP
           value: app/main.py
         - name: FLASK_DEBUG
