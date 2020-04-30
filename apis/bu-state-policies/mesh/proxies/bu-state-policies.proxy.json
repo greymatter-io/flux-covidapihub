@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "bu-state-policies.proxy",
+    "domain_keys": [
+        "bu-state-policies.apis.domain"
+    ],
+    "listener_keys": [
+        "bu-state-policies.apis.listener"
+    ],
+    "name": "apis.bu-state-policies",
+    "listeners": null
+}

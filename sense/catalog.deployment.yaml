@@ -1117,7 +1117,7 @@ spec:
             - name: SERVICE_39_ZONE_NAME
               value: default.zone
             - name: SERVICE_39_NAME
-              value: Tweet Binder - Most Popular Tweets
+              value: Tweet Binder - Most Popular COVID-19 Tweets
             - name: SERVICE_39_OWNER
               value: Tweet Binder
             - name: SERVICE_39_RUNTIME
@@ -1127,7 +1127,7 @@ spec:
             - name: SERVICE_39_VERSION
               value: "latest"
             - name: SERVICE_39_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular COVID-19 Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_39_PROMETHEUS_JOB
               value: apis.tweetbinder-1000-rts
             - name: SERVICE_39_MAX_INSTANCES
@@ -1172,35 +1172,89 @@ spec:
               value: ""
             - name: SERVICE_40_METRICS_PORT
               value: "8080"
-            - name: SERVICE_41_CLUSTER_NAME
-              value: apis.ny-testing
+            - name: SERVICE_41_CLUSTER_NAME              
+              value: apis.unicef-indicators-handwashing
             - name: SERVICE_41_ZONE_NAME
               value: default.zone
             - name: SERVICE_41_NAME
-              value: New York State Statewide COVID-19 Testing
+              value: UNICEF COVID-19 Indicators - Handwashing
             - name: SERVICE_41_OWNER
-              value: New York State Department of Health
+              value: UNICEF
             - name: SERVICE_41_RUNTIME
               value: "Node"
             - name: SERVICE_41_DOCUMENTATION
-              value: "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e"
+              value: "/apis/unicef-indicators-handwashing/docs/"
             - name: SERVICE_41_VERSION
               value: "latest"
             - name: SERVICE_41_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"New York State Statewide COVID-19 Testing\\\",\\\"url\\\":\\\"://health.data.ny.gov/resource/xdss-u53e.json\\\",\\\"description\\\":\\\"This dataset includes information on the number of tests of individuals for COVID-19 infection performed in New York State beginning March 1, 2020, when the first case of COVID-19 was identified in the state. The data will be updated daily, reflecting tests completed by 12:00 am (midnight) the day of the update (i.e., all tests completed by the end of the day on the day before the update).\\\",\\\"source\\\":\\\"New York State Department of Health\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"NY State\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"UNICEF COVID-19 Indicators - Handwashing\\\",\\\"url\\\":\\\"https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel\\\",\\\"description\\\":\\\"Percentage of the population with a handwashing facility with water and soap available on premises.\\\",\\\"source\\\":\\\"UNICEF\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_41_PROMETHEUS_JOB
-              value: apis.ny-testing
-            - name: SERVICE_41_MAX_INSTANCES
-              value: "2"
-            - name: SERVICE_41_MIN_INSTANCES
-              value: "1"
+              value: apis.unicef-indicators-handwashing
             - name: SERVICE_41_ENABLE_INSTANCE_METRICS
               value: "true"
             - name: SERVICE_41_ENABLE_HISTORICAL_METRICS
               value: "true"
-            - name: SERVICE_41_METRICS_TEMPLATE
-              value: ""
             - name: SERVICE_41_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_42_CLUSTER_NAME
+              value: apis.bu-state-policies
+            - name: SERVICE_42_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_42_NAME
+              value: COVID-19 US State Policy Database
+            - name: SERVICE_42_OWNER
+              value: Boston University School of Public Health
+            - name: SERVICE_42_RUNTIME
+              value: "Node"
+            - name: SERVICE_42_DOCUMENTATION
+              value: "/apis/bu-state-policies/docs/"
+            - name: SERVICE_42_VERSION
+              value: "latest"
+            - name: SERVICE_42_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"COVID-19 US State Policy Database\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1zu9qEWI8PsOI_i8nI_S29HDGHlIp2lfVMsGxpQ5tvAQ/export?format=csv&gid=0\\\",\\\"description\\\":\\\"A collection of the coronavirus response policies and their dates of implementation, as well as size, population, unemployment and poverty levels by state created and maintained by the Boston University School of Public Health.\\\",\\\"source\\\":\\\"Boston University School of Public Health\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.bu.edu/sph/2020/04/01/tracking-covid-19-policies/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+            - name: SERVICE_42_PROMETHEUS_JOB
+              value: apis.bu-state-policies
+            - name: SERVICE_42_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_42_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_42_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_42_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_42_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_42_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_43_CLUSTER_NAME
+              value: apis.ny-testing
+            - name: SERVICE_43_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_43_NAME
+              value: New York State Statewide COVID-19 Testing
+            - name: SERVICE_43_OWNER
+              value: New York State Department of Health
+            - name: SERVICE_43_RUNTIME
+              value: "Node"
+            - name: SERVICE_43_DOCUMENTATION
+              value: "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e"
+            - name: SERVICE_43_VERSION
+              value: "latest"
+            - name: SERVICE_43_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"New York State Statewide COVID-19 Testing\\\",\\\"url\\\":\\\"://health.data.ny.gov/resource/xdss-u53e.json\\\",\\\"description\\\":\\\"This dataset includes information on the number of tests of individuals for COVID-19 infection performed in New York State beginning March 1, 2020, when the first case of COVID-19 was identified in the state. The data will be updated daily, reflecting tests completed by 12:00 am (midnight) the day of the update (i.e., all tests completed by the end of the day on the day before the update).\\\",\\\"source\\\":\\\"New York State Department of Health\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"NY State\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_43_PROMETHEUS_JOB
+              value: apis.ny-testing
+            - name: SERVICE_43_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_43_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_43_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_43_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_43_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_43_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog
