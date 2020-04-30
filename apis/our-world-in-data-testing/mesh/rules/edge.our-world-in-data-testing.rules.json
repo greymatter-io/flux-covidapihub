@@ -1,0 +1,24 @@
+{
+    "zone_key": "default.zone",
+    "shared_rules_key": "edge.our-world-in-data-testing.rules",
+    "name": "edge.our-world-in-data-testing",
+    "default": {
+        "light": [
+            {
+                "constraint_key": "",
+                "cluster_key": "edge.our-world-in-data-testing.cluster",
+                "metadata": null,
+                "properties": null,
+                "response_data": {},
+                "weight": 1
+            }
+        ],
+        "dark": null,
+        "tap": null
+    },
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "properties": null,
+    "retry_policy": null
+}

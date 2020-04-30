@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "our-world-in-data-testing.proxy",
+    "domain_keys": [
+        "our-world-in-data-testing.apis.domain"
+    ],
+    "listener_keys": [
+        "our-world-in-data-testing.apis.listener"
+    ],
+    "name": "apis.our-world-in-data-testing",
+    "listeners": null
+}

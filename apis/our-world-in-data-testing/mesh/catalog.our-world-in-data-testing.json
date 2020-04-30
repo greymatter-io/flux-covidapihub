@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.our-world-in-data-testing",
+ "zoneName": "default.zone",
+ "name": "Our World In Data Coronavirus Testing Dataset",
+ "version": "1.0",
+ "owner": "Our World In Data",
+ "capability": ""\"{\\\"name\\\":\\\"Our World In Data Coronavirus Testing Dataset\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv\\\",\\\"description\\\":\\\"Our World In Data Coronavirus Testing Dataset is a collection by country of the COVID-19 testing data maintained by Our World in Data including total COVID-19 tests, tests per day, total tests per 1,000 people.\\\",\\\"source\\\":\\\"Our World In Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/covid-testing\\\",\\\"thumbnail\\\":\\\"https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/our-world-in-data-testing/docs/",
+ "prometheusJob": "apis.our-world-in-data-testing",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

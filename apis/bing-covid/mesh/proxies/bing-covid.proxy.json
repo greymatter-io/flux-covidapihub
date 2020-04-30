@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "bing-covid.proxy",
+    "domain_keys": [
+        "bing-covid.apis.domain"
+    ],
+    "listener_keys": [
+        "bing-covid.apis.listener"
+    ],
+    "name": "apis.bing-covid",
+    "listeners": null
+}

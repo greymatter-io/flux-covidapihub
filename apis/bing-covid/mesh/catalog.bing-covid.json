@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.bing-covid",
+ "zoneName": "default.zone",
+ "name": "Bing COVID-19 Data",
+ "version": "1.0",
+ "owner": "Microsoft",
+ "capability": ""\"{\\\"name\\\":\\\"Bing COVID-19 Data\\\",\\\"url\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data/raw/master/data/Bing-COVID19-Data.csv\\\",\\\"description\\\":\\\"Bing COVID-19 data includes confirmed, fatal, and recovered cases from all regions, updated daily in a .csv file. If there is an update or correction to already-published data, the data file will be updated accordingly. To ensure the stability of the data we share, it will be released with a 24-hour delay.\\\",\\\"source\\\":\\\"Microsoft\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data\\\",\\\"thumbnail\\\":\\\"https://www.bing.com/favicon.ico\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/bing-covid/docs/",
+ "prometheusJob": "apis.bing-covid",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

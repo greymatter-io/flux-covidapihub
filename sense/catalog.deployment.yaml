@@ -933,23 +933,23 @@ spec:
             - name: SERVICE_32_METRICS_PORT
               value: "8080"
             - name: SERVICE_33_CLUSTER_NAME
-              value: apis.inform-p2p-index
+              value: apis.bing-covid
             - name: SERVICE_33_ZONE_NAME
               value: default.zone
             - name: SERVICE_33_NAME
-              value: INFORM Epidemic Person to Person Risk Index
+              value: Bing COVID-19 Data
             - name: SERVICE_33_OWNER
-              value: European Commission, Inter-Agency Standing Committee
+              value: Microsoft
             - name: SERVICE_33_RUNTIME
               value: "Node"
             - name: SERVICE_33_DOCUMENTATION
-              value: "/apis/inform-p2p-index/docs/"
+              value: "/apis/bing-covid/docs/"
             - name: SERVICE_33_VERSION
               value: "latest"
             - name: SERVICE_33_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"INFORM Epidemic Person to Person Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/EPIDEMIC-INFORM_P2P_2020_v041.xlsx\\\",\\\"description\\\":\\\"Through extensive consultation, the WHO identified the underlying risk drivers of epidemic, which enabled the development of a conceptual framework for epidemic risk assessment in countries. The risk score ranges from 0-10, where 10 is the highest risk. The INFORM Epidemic Risk Index was adapted to better reflect the situation of the Covid-19 pandemic. As transmission is now dominated by human-to-human transmission, the “Hazard & Exposure dimension” of the model was narrowed down to the P2P (meaning people to people) component only. The adapted version of the index is called INFORM Epidemic P2P Risk Index.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Bing COVID-19 Data\\\",\\\"url\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data/raw/master/data/Bing-COVID19-Data.csv\\\",\\\"description\\\":\\\"Bing COVID-19 data includes confirmed, fatal, and recovered cases from all regions, updated daily in a .csv file. If there is an update or correction to already-published data, the data file will be updated accordingly. To ensure the stability of the data we share, it will be released with a 24-hour delay.\\\",\\\"source\\\":\\\"Microsoft\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/microsoft/Bing-COVID-19-Data\\\",\\\"thumbnail\\\":\\\"https://www.bing.com/favicon.ico\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_33_PROMETHEUS_JOB
-              value: apis.inform-p2p-index
+              value: apis.bing-covid
             - name: SERVICE_33_MAX_INSTANCES
               value: "2"
             - name: SERVICE_33_MIN_INSTANCES
@@ -963,23 +963,23 @@ spec:
             - name: SERVICE_33_METRICS_PORT
               value: "8080"
             - name: SERVICE_34_CLUSTER_NAME
-              value: apis.inform-risk-index
+              value: apis.our-world-in-data-testing
             - name: SERVICE_34_ZONE_NAME
               value: default.zone
             - name: SERVICE_34_NAME
-              value: INFORM COVID-19 Risk Index
+              value: Our World in Data Coronavirus Testing Dataset
             - name: SERVICE_34_OWNER
-              value: European Commission, Inter-Agency Standing Committee
+              value: Our World in Data
             - name: SERVICE_34_RUNTIME
               value: "Node"
             - name: SERVICE_34_DOCUMENTATION
-              value: "/apis/inform-risk-index/docs/"
+              value: "/apis/our-world-in-data-testing/docs/"
             - name: SERVICE_34_VERSION
               value: "latest"
             - name: SERVICE_34_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"INFORM COVID-19 Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/INFORM%20COVID-19%20RISK%20INDEX%20v012.xlsx\\\",\\\"description\\\":\\\"The INFORM COVID-19 Risk Index is an experimental adaptation of the INFORM Epidemic P2P Risk Index and aims to identify: “countries at risk from health and humanitarian impacts of COVID-19 that could overwhelm current national response capacity, and therefore lead to a need for additional international assistance”. It can be used to support prioritization of preparedness and early response actions for the primary impacts of the pandemic, and identify countries where secondary impacts are likely to have the most critical humanitarian consequences. The main scope of the INFORM COVID-19 Risk Index is global and regional risk-informed resource allocation, i.e. where comparable understanding of countries’ risk is important. It cannot predict the impacts of the pandemic in individual countries.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Testing Dataset\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv\\\",\\\"description\\\":\\\"Our World in Data Coronavirus Testing Dataset is a collection by country of the COVID-19 testing data maintained by Our World in Data including total COVID-19 tests, tests per day, total tests per 1,000 people.\\\",\\\"source\\\":\\\"Our World In Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/covid-testing\\\",\\\"thumbnail\\\":\\\"https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_34_PROMETHEUS_JOB
-              value: apis.inform-risk-index
+              value: apis.our-world-in-data-testing
             - name: SERVICE_34_MAX_INSTANCES
               value: "2"
             - name: SERVICE_34_MIN_INSTANCES
@@ -991,6 +991,66 @@ spec:
             - name: SERVICE_34_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_34_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_35_CLUSTER_NAME
+              value: apis.inform-p2p-index
+            - name: SERVICE_35_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_35_NAME
+              value: INFORM Epidemic Person to Person Risk Index
+            - name: SERVICE_35_OWNER
+              value: European Commission, Inter-Agency Standing Committee
+            - name: SERVICE_35_RUNTIME
+              value: "Node"
+            - name: SERVICE_35_DOCUMENTATION
+              value: "/apis/inform-p2p-index/docs/"
+            - name: SERVICE_35_VERSION
+              value: "latest"
+            - name: SERVICE_35_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"INFORM Epidemic Person to Person Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/EPIDEMIC-INFORM_P2P_2020_v041.xlsx\\\",\\\"description\\\":\\\"Through extensive consultation, the WHO identified the underlying risk drivers of epidemic, which enabled the development of a conceptual framework for epidemic risk assessment in countries. The risk score ranges from 0-10, where 10 is the highest risk. The INFORM Epidemic Risk Index was adapted to better reflect the situation of the Covid-19 pandemic. As transmission is now dominated by human-to-human transmission, the “Hazard & Exposure dimension” of the model was narrowed down to the P2P (meaning people to people) component only. The adapted version of the index is called INFORM Epidemic P2P Risk Index.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
+            - name: SERVICE_35_PROMETHEUS_JOB
+              value: apis.inform-p2p-index
+            - name: SERVICE_35_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_35_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_35_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_35_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_35_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_35_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_36_CLUSTER_NAME
+              value: apis.inform-risk-index
+            - name: SERVICE_36_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_36_NAME
+              value: INFORM COVID-19 Risk Index
+            - name: SERVICE_36_OWNER
+              value: European Commission, Inter-Agency Standing Committee
+            - name: SERVICE_36_RUNTIME
+              value: "Node"
+            - name: SERVICE_36_DOCUMENTATION
+              value: "/apis/inform-risk-index/docs/"
+            - name: SERVICE_36_VERSION
+              value: "latest"
+            - name: SERVICE_36_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"INFORM COVID-19 Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/INFORM%20COVID-19%20RISK%20INDEX%20v012.xlsx\\\",\\\"description\\\":\\\"The INFORM COVID-19 Risk Index is an experimental adaptation of the INFORM Epidemic P2P Risk Index and aims to identify: “countries at risk from health and humanitarian impacts of COVID-19 that could overwhelm current national response capacity, and therefore lead to a need for additional international assistance”. It can be used to support prioritization of preparedness and early response actions for the primary impacts of the pandemic, and identify countries where secondary impacts are likely to have the most critical humanitarian consequences. The main scope of the INFORM COVID-19 Risk Index is global and regional risk-informed resource allocation, i.e. where comparable understanding of countries’ risk is important. It cannot predict the impacts of the pandemic in individual countries.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""
+            - name: SERVICE_36_PROMETHEUS_JOB
+              value: apis.inform-risk-index
+            - name: SERVICE_36_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_36_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_36_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_36_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_36_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_36_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

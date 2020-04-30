@@ -6,12 +6,102 @@ metadata:
   namespace: website
 data:
   featured-data.json: |-
-    {
+    { 
+      "datasets": [
+                {
+          "name": "COVID-19 Finance Sector Related Policy Responses",
+          "url": "https://covidapihub.io/dashboard/#/covid-19-finance-sector-related-policy-responses-vlatest",
+          "description": "A summary of policy measures taken by country and type of measure in support of the financial sector amid the COVID-19 pandemic.",
+          "source": "The World Bank",
+          "contentType": [
+            "Finance"
+          ],
+          "homePage": "https://datacatalog.worldbank.org/dataset/covid-19-finance-sector-related-policy-responses",
+          "thumbnail": "https://www.fairobserver.com/wp-content/uploads/2019/07/world-bank-logo.jpg",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "JSON", "XSLX"
+          ],
+          "updates": [
+            "Not Specified"
+          ],
+          "paid": false,
+          "keyRequired": false
+        },
+        {
+          "name": "COVID-19 Community Mobility Reports",
+          "url": "https://covidapihub.io/dashboard/#/covid-19-community-mobility-reports-vlatest",
+          "description": "Movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential.",
+          "source": "Google",
+          "contentType": [
+            "Social"
+          ],
+          "homePage": "https://www.google.com/covid19/mobility",
+          "thumbnail": "https://voluntarysupport.org.uk/wp-content/uploads/2018/07/Google_logo.jpg",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "JSON", "CSV"
+          ],
+          "updates": [
+            "Weekly"
+          ],
+          "paid": false,
+          "keyRequired": false
+        },
+        {
+          "name": "Oxford COVID-19 Government Response Tracker",
+          "url": "https://covidapihub.io/dashboard/#/oxford-covid-19-government-response-tracker-v1-0",
+          "description": "Movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential.",
+          "source": "Oxford University",
+          "contentType": [
+            "Governance"
+          ],
+          "homePage": "https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker",
+          "thumbnail": "https://www.santishealth.org/wp-content/uploads/2017/08/oxford-logo.png",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "JSON", "CSV"
+          ],
+          "updates": [
+            "Monthly"
+          ],
+          "paid": false,
+          "keyRequired": false
+        },
+                {
+          "name": "Our World In Data Coronavirus Source Data",
+          "url": "https://covidapihub.io/dashboard/#/our-world-in-data-coronavirus-source-data-vlatest",
+          "description": "A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.",
+          "source": "Our World In Data",
+          "contentType": [
+            "Health"
+          ],
+          "homePage": "https://ourworldindata.org/coronavirus-source-data",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg",
+          "coverage": [
+            "World"
+          ],
+          "format": [
+            "JSON", "CSV"
+          ],
+          "updates": [
+            "Daily"
+          ],
+          "paid": false,
+          "keyRequired": false
+        }
+      ],
       "apis": [
         {
           "name": "CDC Number of US Cases And Deaths",
           "url": "https://covidapihub.io/dashboard/#/cdc-number-of-us-cases-and-deaths-v1-0",
-          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC",
+          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC.",
           "source": "CDC",
           "contentType": [
             "Health"
@@ -28,18 +118,18 @@ data:
             "5 Minutes"
           ],
           "paid": false,
-          "keyRequired": true
+          "keyRequired": false
         },
         {
-          "name": "CDC Number of Cases by State",
-          "url": "https://covidapihub.io/dashboard/#/cdc-number-of-cases-by-state-v1-0",
-          "description": "Actual number of examined and infected people by COVID-19 by state from CDC",
-          "source": "CDC",
+          "name": "BLS Unemployment Statistics US Totals",
+          "url": "https://covidapihub.io/dashboard/#/bls-unemployment-statistics-us-totals-v1-0",
+          "description": "The most current 14 months of unemployment statistics from the U.S. Bureau of Labor Statistics (BLS).",
+          "source": "U.S. Bureau of Labor Statistics",
           "contentType": [
-            "Health"
+            "Governance"
           ],
-          "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-          "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
+          "homePage": "https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1146076978212200448/F72U6f8S_400x400.png",
           "coverage": [
             "US"
           ],
@@ -50,7 +140,7 @@ data:
             "5 Minutes"
           ],
           "paid": false,
-          "keyRequired": true
+          "keyRequired": false
         },
         {
           "name": "US Census Bureau - Economic Indicators",
@@ -75,9 +165,9 @@ data:
           "keyRequired": false
         },
         {
-          "name": "EU Open Data Covid Dataset",
+          "name": "EU Open Data Covid-19",
           "url": "https://covidapihub.io/dashboard/#/eu-open-data-covid-dataset-v1-0",
-          "description": "Destribution of cases across Europe",
+          "description": "The latest available public data on COVID-19 including a daily situation update, the epidemiological curve and the global geographical distribution (EU/EEA and the UK, worldwide).",
           "source": "European Union",
           "contentType": [
             "Health"
@@ -99,6 +189,5 @@ data:
           "keyRequired": false
         }
       ],
-      "visualizations": [],
-      "datasets": []
+      "visualizations": []
     }
