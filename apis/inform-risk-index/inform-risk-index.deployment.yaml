@@ -36,6 +36,8 @@ spec:
         env:
         - name: SHEET_NAME
           value: INFORM COVID-19 RISK 2020 (a-z)
+        - name: SHEET_SKIP_ROWS
+          value: 0,2,194,195,196,197
         - name: FLASK_APP
           value: app/main.py
         - name: FLASK_DEBUG
