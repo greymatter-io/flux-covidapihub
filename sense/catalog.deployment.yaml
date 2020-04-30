@@ -1053,23 +1053,23 @@ spec:
             - name: SERVICE_36_METRICS_PORT
               value: "8080"
             - name: SERVICE_37_CLUSTER_NAME
-              value: apis.tweetbinder-by-day
+              value: apis.cdc-excess-deaths
             - name: SERVICE_37_ZONE_NAME
               value: default.zone
             - name: SERVICE_37_NAME
-              value: Tweet Binder - COVID-19 Tweets By Day
+              value: CDC Excess Deaths Associated with COVID-19
             - name: SERVICE_37_OWNER
-              value: Tweet Binder
+              value: CDC
             - name: SERVICE_37_RUNTIME
               value: "Node"
             - name: SERVICE_37_DOCUMENTATION
-              value: "/apis/tweetbinder-by-day/docs/"
+              value: "/apis/cdc-excess-deaths/docs/"
             - name: SERVICE_37_VERSION
               value: "latest"
             - name: SERVICE_37_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - COVID-19 Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"CDC Excess Deaths Associated with COVID-19\\\",\\\"url\\\":\\\"https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD\\\",\\\"description\\\":\\\"This visualization provides weekly data on excess deaths by jurisdiction of occurrence.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Excess-Deaths-Associated-with-COVID-19/xkkf-xrst\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_37_PROMETHEUS_JOB
-              value: apis.tweetbinder-by-day
+              value: apis.cdc-excess-deaths
             - name: SERVICE_37_MAX_INSTANCES
               value: "2"
             - name: SERVICE_37_MIN_INSTANCES
@@ -1083,23 +1083,23 @@ spec:
             - name: SERVICE_37_METRICS_PORT
               value: "8080"
             - name: SERVICE_38_CLUSTER_NAME
-              value: apis.tweetbinder-1000-rts
+              value: apis.tweetbinder-by-day
             - name: SERVICE_38_ZONE_NAME
               value: default.zone
             - name: SERVICE_38_NAME
-              value: Tweet Binder - Most Popular Tweets
+              value: Tweet Binder - COVID-19 Tweets By Day
             - name: SERVICE_38_OWNER
               value: Tweet Binder
             - name: SERVICE_38_RUNTIME
               value: "Node"
             - name: SERVICE_38_DOCUMENTATION
-              value: "/apis/tweetbinder-1000-rts/docs/"
+              value: "/apis/tweetbinder-by-day/docs/"
             - name: SERVICE_38_VERSION
               value: "latest"
             - name: SERVICE_38_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - COVID-19 Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_38_PROMETHEUS_JOB
-              value: apis.tweetbinder-1000-rts
+              value: apis.tweetbinder-by-day
             - name: SERVICE_38_MAX_INSTANCES
               value: "2"
             - name: SERVICE_38_MIN_INSTANCES
@@ -1113,23 +1113,23 @@ spec:
             - name: SERVICE_38_METRICS_PORT
               value: "8080"
             - name: SERVICE_39_CLUSTER_NAME
-              value: apis.tweetbinder-by-who
+              value: apis.tweetbinder-1000-rts
             - name: SERVICE_39_ZONE_NAME
               value: default.zone
             - name: SERVICE_39_NAME
-              value: Tweet Binder - Tweets by @WHO
+              value: Tweet Binder - Most Popular Tweets
             - name: SERVICE_39_OWNER
               value: Tweet Binder
             - name: SERVICE_39_RUNTIME
               value: "Node"
             - name: SERVICE_39_DOCUMENTATION
-              value: "/apis/tweetbinder-by-who/docs/"
+              value: "/apis/tweetbinder-1000-rts/docs/"
             - name: SERVICE_39_VERSION
               value: "latest"
             - name: SERVICE_39_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The Tweet Binder Tweets by @WHO dataset is the collection of tweets by the World Health Organization since January 1st, 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_39_PROMETHEUS_JOB
-              value: apis.tweetbinder-by-who
+              value: apis.tweetbinder-1000-rts
             - name: SERVICE_39_MAX_INSTANCES
               value: "2"
             - name: SERVICE_39_MIN_INSTANCES
@@ -1141,6 +1141,36 @@ spec:
             - name: SERVICE_39_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_39_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_40_CLUSTER_NAME
+              value: apis.tweetbinder-by-who
+            - name: SERVICE_40_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_40_NAME
+              value: Tweet Binder - Tweets by @WHO
+            - name: SERVICE_40_OWNER
+              value: Tweet Binder
+            - name: SERVICE_40_RUNTIME
+              value: "Node"
+            - name: SERVICE_40_DOCUMENTATION
+              value: "/apis/tweetbinder-by-who/docs/"
+            - name: SERVICE_40_VERSION
+              value: "latest"
+            - name: SERVICE_40_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Tweets by @WHO\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308\\\",\\\"description\\\":\\\"The Tweet Binder Tweets by @WHO dataset is the collection of tweets by the World Health Organization since January 1st, 2020.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+            - name: SERVICE_40_PROMETHEUS_JOB
+              value: apis.tweetbinder-by-who
+            - name: SERVICE_40_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_40_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_40_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_40_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_40_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_40_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

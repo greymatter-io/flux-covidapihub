@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.cdc-excess-deaths.slash.route",
+    "path": "/apis/cdc-excess-deaths",
+    "prefix_rewrite": "/apis/cdc-excess-deaths/",
+    "redirects": null,
+    "shared_rules_key": "edge.cdc-excess-deaths.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

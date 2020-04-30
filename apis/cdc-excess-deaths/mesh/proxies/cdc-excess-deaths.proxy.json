@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cdc-excess-deaths.proxy",
+    "domain_keys": [
+        "cdc-excess-deaths.apis.domain"
+    ],
+    "listener_keys": [
+        "cdc-excess-deaths.apis.listener"
+    ],
+    "name": "apis.cdc-excess-deaths",
+    "listeners": null
+}
