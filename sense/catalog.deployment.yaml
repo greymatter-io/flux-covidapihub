@@ -1067,7 +1067,7 @@ spec:
             - name: SERVICE_37_VERSION
               value: "latest"
             - name: SERVICE_37_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter for reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, coronavirus or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder Coronavirus Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, coronavirus or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_37_PROMETHEUS_JOB
               value: apis.tweetbinder-by-day
             - name: SERVICE_37_MAX_INSTANCES
