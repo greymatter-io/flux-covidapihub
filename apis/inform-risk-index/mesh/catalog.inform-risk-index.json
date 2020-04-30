@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.inform-risk-index",
+ "zoneName": "default.zone",
+ "name": "INFORM COVID-19 Risk Index",
+ "version": "1.0",
+ "owner": "European Commission, Inter-Agency Standing Committee",
+ "capability": ""\"{\\\"name\\\":\\\"INFORM COVID-19 Risk Index\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/INFORM%20COVID-19%20RISK%20INDEX%20v012.xlsx\\\",\\\"description\\\":\\\"The INFORM COVID-19 Risk Index is an experimental adaptation of the INFORM Epidemic P2P Risk Index and aims to identify: “countries at risk from health and humanitarian impacts of COVID-19 that could overwhelm current national response capacity, and therefore lead to a need for additional international assistance”. It can be used to support prioritization of preparedness and early response actions for the primary impacts of the pandemic, and identify countries where secondary impacts are likely to have the most critical humanitarian consequences. The main scope of the INFORM COVID-19 Risk Index is global and regional risk-informed resource allocation, i.e. where comparable understanding of countries’ risk is important. It cannot predict the impacts of the pandemic in individual countries.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Epidemic\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Monthly\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/inform-risk-index/docs/",
+ "prometheusJob": "apis.inform-risk-index",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

@@ -3,6 +3,8 @@
 NAME=$1
 CSV_URL=$2
 SHEET_NAME=$3
+SKIP_ROWS=$4
+SOURCE_FORMAT=$5
 
 #define the template.
 cat  << EOF
@@ -46,6 +48,10 @@ spec:
           value: $SHEET_NAME
         - name: FLASK_APP
           value: app/main.py
+        - name: SHEET_SKIP_ROWS
+          value: $SKIP_ROWS
+        - name: SOURCE_FORMAT
+          value: $SOURCE_FORMAT
         - name: FLASK_DEBUG
           value: "0"
         - name: RUN

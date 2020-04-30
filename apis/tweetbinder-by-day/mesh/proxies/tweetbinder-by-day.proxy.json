@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "tweetbinder-by-day.proxy",
+    "domain_keys": [
+        "tweetbinder-by-day.apis.domain"
+    ],
+    "listener_keys": [
+        "tweetbinder-by-day.apis.listener"
+    ],
+    "name": "apis.tweetbinder-by-day",
+    "listeners": null
+}

@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.tweetbinder-1000-rts",
+ "zoneName": "default.zone",
+ "name": "Tweet Binder Users with 1000 Retweets",
+ "version": "1.0",
+ "owner": "Tweet Binder",
+ "capability": ""\"{\\\"name\\\":\\\"Tweet Binder Users with 1000 Retweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"Since a lot of people are tweeting about Coronavirus, we have run a search with all the tweets that got 1000 RTs at least. We consider those “important”, that doesn’t mean obviously that they are the most important tweets of the Coronavirus issue. There are more than 40,000 tweets about Covid19 who got at least 1,000 RTs in a tweet.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/tweetbinder-1000-rts/docs/",
+ "prometheusJob": "apis.tweetbinder-1000-rts",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

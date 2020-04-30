@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "inform-p2p-index.proxy",
+    "domain_keys": [
+        "inform-p2p-index.apis.domain"
+    ],
+    "listener_keys": [
+        "inform-p2p-index.apis.listener"
+    ],
+    "name": "apis.inform-p2p-index",
+    "listeners": null
+}
