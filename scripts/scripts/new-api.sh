@@ -12,9 +12,11 @@ echo Display Name:
 read display_name
 echo Owner:
 read owner
+echo Owner URL:
+read owner_url
 echo "Capability (health, governance, etc.)":
 read content_type
-echo Docs link:
+echo "Docs link":
 read docs
 
 echo Description:
@@ -23,8 +25,6 @@ echo "Updates (ex. Daily, Monthly, 5 Minutes)":
 read updates
 echo "Coverage (ex. US)":
 read coverage
-echo Thumbnail:
-read thumbnail
 echo "Format (JSON, CSV, etc.)":
 read format
 
@@ -32,15 +32,12 @@ if [[ $format == "" ]]; then
     format="JSON"
 fi
 
-
 # convert sort and group-by fields to lowercase
 route_path=$(perl -e "print lc('$route_path');")
 content_type=$(perl -e "print lc('$content_type');")
-content_type="$(tr '[:lower:]' '[:upper:]' <<< ${content_type:0:1})${content_type:1}"
+content_type="$(tr '[:lower:]' '[:upper:]' <<<${content_type:0:1})${content_type:1}"
 
-capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$https://${host}${route_path}\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$docs\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"]}\\\"\"
-
-
+capability=\"\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"$display_name\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"$https://${host}${route_path}\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"${description}\\\\\\\",\\\\\\\"source\\\\\\\":\\\\\\\"$owner\\\\\\\",\\\\\\\"contentType\\\\\\\":[\\\\\\\"$content_type\\\\\\\"],\\\\\\\"homePage\\\\\\\":\\\\\\\"$owner_url\\\\\\\",\\\\\\\"thumbnail\\\\\\\":\\\\\\\"$thumbnail\\\\\\\",\\\\\\\"coverage\\\\\\\":[\\\\\\\"$coverage\\\\\\\"],\\\\\\\"format\\\\\\\":[\\\\\\\"$format\\\\\\\"],\\\\\\\"updates\\\\\\\":[\\\\\\\"$updates\\\\\\\"]}\\\"\"
 
 mkdir apis/$name
 mkdir apis/$name/mesh
@@ -67,9 +64,9 @@ scripts/resources/api_files/catalog.sh $name "$display_name" "$owner" "$capabili
 echo ""
 echo "Generating Catalog envvars, checking covidapihub for number of services"
 count=$(curl -k https://covidapihub.io/catalog/latest/zones/default.zone | jq .clusterCount)
-count=$((count+1))
+count=$((count + 1))
 echo "The current service count is: $count, incrementing by 1"
-count=$((count+1))
+count=$((count + 1))
 scripts/resources/catalog.envvars.sh $name "$display_name" "$owner" "$capability" "$docs" "$count" >apis/$name/mesh/catalog.envvars.yaml
 echo ""
 echo "Copy the following envvars (theyre also stored in apis/$name/mesh/catalog.envvars.yaml) and paste them into the catalog container env"

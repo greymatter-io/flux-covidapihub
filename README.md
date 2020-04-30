@@ -32,9 +32,9 @@ If you would like to deploy all the APIs to your local k3d, you can run:
 make k3d-api
 ```
 
-## Adding an API or a CSV
+## Adding an API
 
-To add an api to the mesh, run the following:
+To add an api to the mesh by proxy, run the following:
 
 ```bash
 make new-api
@@ -48,9 +48,9 @@ It will prompt you for the following information:
 - Path: path to the api, it should being with `/`.
 - Display Name: display name for catalog entry
 - Owner: owner for catalog entry
+- Owner URL: relevant link back to the source. This could be the owner's homepage or a landing page for the specific api if available
 - Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
 - Documentation: Docs link
-
 
 Example:
 
@@ -62,34 +62,12 @@ For example, to create a deployment and configs for [this api](https://api.censu
 4. Path: `/data/2019/pep/population`
 5. Display Name: `US Census Bureau - Population`
 6. Owner: `Census Bureau`
-7. Capability: `governance`
-8. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
+7. Owner URL: `https://www.census.gov`
+8. Capability: `governance`
+9. Documentation URL: `https://www.census.gov/data/developers/data-sets/popest-popproj.html`
 
-To add a csv, run the following:
+### Troubleshooting
 
-```bash
-make new-csv
-```
-
-It will prompt you for the following information:
-
-- API Name: an all lowercase, no spaces or special characters name for the deployment. This will dictate the route to this api - it will be `https://covidapihub.io/apis/<api_name>`
-- URL: this is the url to the csv file online
-- Display Name: display name for catalog entry
-- Owner: owner for catalog entry
-- Capability: catability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
-- Documentation: Docs link
-
-Example:
-
-1. API Name: `nyt-us-csv`
-2. URL: `https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv`
-3. Display Name: `NYT US Data`
-4. Owner: `New York Times`
-5. Capability: `health`
-6. Documentation URL: `https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html`
-
-Once this is done, if you're deploying locally, you can type `Y` to apply configs, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
 Some API's sit behind load balancers and will need to add an SNI field. This will let the request know which backend server to go to. If you are having trouble proxying, try adding this field to the local cluster object:
 
@@ -109,6 +87,52 @@ Some API's sit behind load balancers and will need to add an SNI field. This wil
       "value": "application/json"
     }
 ```
+
+## Adding a CSV
+
+To add a csv, run the following:
+
+```bash
+make new-csv
+```
+
+It will prompt you for the following information:
+
+- API Name: an all lowercase, no spaces or special characters name for the deployment. This will dictate the route to this api - it will be `https://covidapihub.io/apis/<api_name>`
+- URL: this is the url to the csv file online
+- Source format: if the url to the csv/xslx did not have a file extension, you need to specify it here
+- Skip rows: If the spreadsheet is irregular, you can specify specific rows to skip. They don't need to be sequential. This is a comma delimted list of row numbers, 0-indexed. e.g., if the data in the sheet starts at row 5, you would enter '0,1,2,3,4'.
+- Sheet Name: if the dataset is xlsx, you must specify the name of the sheet that the API will serve up.
+- Display Name: display name for catalog entry
+- Owner: owner for catalog entry
+- Owner URL: Relevant link back to the source. This could be the owner's homepage or documentation for the specific dataset if available
+- Capability: capability for catalog entry - corresponds to contentType [here](https://github.com/greymatter-io/covidapihub-site/blob/master/public/mock.json)
+- Docs link: link to docs, for csv's we want to point to apier's docs, so just use the default which is `/apis/{api_name}/docs/`
+- Description: Description of the API used in dashboard service view
+- Updates: Frequency of updates to the dataset ex. Daily, Monthly, 5 Minutes, Not Specified
+- Coverage: geographic coverage of the data e.g. World, US, Italy
+- Format: format of the data. This should be "JSON" plus the original format (CSV, XSLX, etc.)
+  
+Example:
+
+1. API Name: `nyt-us-csv`
+2. URL: `https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv`
+3. Source format:
+4. Skip rows: n
+5. Sheet Name: 
+6. Display Name: `NYT US Data`
+7. Owner: `New York Times`
+8. Owner URL: `https://github.com/nytimes/covid-19-data`
+9. Capability: `health`
+10. Docs link: `/apis/nyt-us-csv/docs/`
+11. Description: `An ongoing repository of data on coronavirus cases and deaths in the U.S.`
+12. Updates: `Daily`
+13. Coverage: `US`
+14. Format: `JSON, CSV`
+  
+Once this is done, you will need to copy the resulting catalog configs and paste them into the catalog container env. These variables are also saved in a gitignore'd file located at `apis/{service}/mesh/catalog.envvars.yaml`.
+
+If you're deploying locally, you can type `Y` to apply GM configs and the service's k8s deployment files, or `N` if you want to inspect the configuration before applying - it will be stored in `apis/<api_name>` directory. If applying, it will prompt you with `Apply to prod? [y/N]`, if you want to apply the api immediately to prod type Y, otherwise type N to apply to your local dev environment.
 
 If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted. If you want to delete the api from your local dev environment, type `Y` when it prompts `Delete API in dev? [y/N]`.
 

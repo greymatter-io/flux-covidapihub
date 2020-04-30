@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "unicef-indicators-handwashing.proxy",
+    "domain_keys": [
+        "unicef-indicators-handwashing.apis.domain"
+    ],
+    "listener_keys": [
+        "unicef-indicators-handwashing.apis.listener"
+    ],
+    "name": "apis.unicef-indicators-handwashing",
+    "listeners": null
+}

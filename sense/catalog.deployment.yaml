@@ -1117,7 +1117,7 @@ spec:
             - name: SERVICE_39_ZONE_NAME
               value: default.zone
             - name: SERVICE_39_NAME
-              value: Tweet Binder - Most Popular Tweets
+              value: Tweet Binder - Most Popular COVID-19 Tweets
             - name: SERVICE_39_OWNER
               value: Tweet Binder
             - name: SERVICE_39_RUNTIME
@@ -1127,7 +1127,7 @@ spec:
             - name: SERVICE_39_VERSION
               value: "latest"
             - name: SERVICE_39_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular COVID-19 Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
             - name: SERVICE_39_PROMETHEUS_JOB
               value: apis.tweetbinder-1000-rts
             - name: SERVICE_39_MAX_INSTANCES
@@ -1171,6 +1171,30 @@ spec:
             - name: SERVICE_40_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_40_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_41_CLUSTER_NAME              
+              value: apis.unicef-indicators-handwashing
+            - name: SERVICE_41_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_41_NAME
+              value: UNICEF COVID-19 Indicators - Handwashing
+            - name: SERVICE_41_OWNER
+              value: UNICEF
+            - name: SERVICE_41_RUNTIME
+              value: "Node"
+            - name: SERVICE_41_DOCUMENTATION
+              value: "/apis/unicef-indicators-handwashing/docs/"
+            - name: SERVICE_41_VERSION
+              value: "latest"
+            - name: SERVICE_41_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"UNICEF COVID-19 Indicators - Handwashing\\\",\\\"url\\\":\\\"https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel\\\",\\\"description\\\":\\\"Percentage of the population with a handwashing facility with water and soap available on premises.\\\",\\\"source\\\":\\\"UNICEF\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+            - name: SERVICE_41_PROMETHEUS_JOB
+              value: apis.unicef-indicators-handwashing
+            - name: SERVICE_41_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_41_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_41_METRICS_PORT
               value: "8080"
           ports:
             - name: catalog

@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.unicef-indicators-handwashing",
+ "zoneName": "default.zone",
+ "name": "UNICEF COVID-19 Indicators - Handwashing",
+ "version": "1.0",
+ "owner": "UNICEF",
+ "capability": ""\"{\\\"name\\\":\\\"UNICEF COVID-19 Indicators - Handwashing\\\",\\\"url\\\":\\\"https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel\\\",\\\"description\\\":\\\"Percentage of the population with a handwashing facility with water and soap available on premises.\\\",\\\"source\\\":\\\"UNICEF\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/unicef-indicators-handwashing/docs/",
+ "prometheusJob": "apis.unicef-indicators-handwashing",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
