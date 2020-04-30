@@ -9,7 +9,7 @@ data:
     info:
       description: |-
           ## UNICEF COVID-19 Indicators - Handwashing
-          Details about this dataset: []()
+          Details about this dataset: [https://data.humdata.org/event/covid-19](https://data.humdata.org/event/covid-19)
           ## apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
