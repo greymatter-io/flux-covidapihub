@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "ny-testing.apis.domain",
+    "route_key": "ny-testing.local.route",
+    "path": "/",
+    "prefix_rewrite": "/resource/xdss-u53e.json",
+    "redirects": null,
+    "shared_rules_key": "ny-testing.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

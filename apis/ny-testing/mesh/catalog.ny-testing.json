@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.ny-testing",
+ "zoneName": "default.zone",
+ "name": "New York State Statewide COVID-19 Testing",
+ "version": "1.0",
+ "owner": "New York State Department of Health",
+ "capability": ""\"{\\\"name\\\":\\\"New York State Statewide COVID-19 Testing\\\",\\\"url\\\":\\\"://health.data.ny.gov/resource/xdss-u53e.json\\\",\\\"description\\\":\\\"This dataset includes information on the number of tests of individuals for COVID-19 infection performed in New York State beginning March 1, 2020, when the first case of COVID-19 was identified in the state. The data will be updated daily, reflecting tests completed by 12:00 am (midnight) the day of the update (i.e., all tests completed by the end of the day on the day before the update).\\\",\\\"source\\\":\\\"New York State Department of Health\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"NY State\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+ "prometheusJob": "apis.ny-testing",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
