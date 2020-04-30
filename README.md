@@ -117,15 +117,16 @@ Example:
 2. URL: `https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv`
 3. Source format:
 4. Skip rows: n
-5. Display Name: `NYT US Data`
-6. Owner: `New York Times`
-7. Owner URL: `https://github.com/nytimes/covid-19-data`
-8. Capability: `health`
-9. Docs link: `/apis/nyt-us-csv/docs/`
-10. Description: `An ongoing repository of data on coronavirus cases and deaths in the U.S.`
-11. Updates: `Daily`
-12. Coverage: `US`
-13. Format: `JSON, CSV`
+5. Sheet Name: 
+6. Display Name: `NYT US Data`
+7. Owner: `New York Times`
+8. Owner URL: `https://github.com/nytimes/covid-19-data`
+9. Capability: `health`
+10. Docs link: `/apis/nyt-us-csv/docs/`
+11. Description: `An ongoing repository of data on coronavirus cases and deaths in the U.S.`
+12. Updates: `Daily`
+13. Coverage: `US`
+14. Format: `JSON, CSV`
   
 Once this is done, you will need to copy the resulting catalog configs and paste them into the catalog container env. These variables are also saved in a gitignore'd file located at `apis/{service}/mesh/catalog.envvars.yaml`.
 
