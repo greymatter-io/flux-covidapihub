@@ -4,11 +4,12 @@
     "name": "local",
     "instances": [
         {
-            "host": "0.0.0.0",
-            "port": 80
+            "host": "health.data.ny.gov",
+            "port": 443
         }
     ],
     "circuit_breakers": null,
     "outlier_detection": null,
-    "health_checks": []
+    "health_checks": [],
+    "require_tls": true
 }
