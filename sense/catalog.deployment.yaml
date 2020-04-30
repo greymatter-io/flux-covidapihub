@@ -1052,6 +1052,36 @@ spec:
               value: ""
             - name: SERVICE_36_METRICS_PORT
               value: "8080"
+            - name: SERVICE_37_CLUSTER_NAME
+              value: apis.cdc-excess-deaths
+            - name: SERVICE_37_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_37_NAME
+              value: CDC Excess Deaths Associated with COVID-19
+            - name: SERVICE_37_OWNER
+              value: CDC
+            - name: SERVICE_37_RUNTIME
+              value: "Node"
+            - name: SERVICE_37_DOCUMENTATION
+              value: "/apis/cdc-excess-deaths/docs/"
+            - name: SERVICE_37_VERSION
+              value: "latest"
+            - name: SERVICE_37_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"CDC Excess Deaths Associated with COVID-19\\\",\\\"url\\\":\\\"https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD\\\",\\\"description\\\":\\\"This visualization provides weekly data on excess deaths by jurisdiction of occurrence.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Excess-Deaths-Associated-with-COVID-19/xkkf-xrst\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+            - name: SERVICE_37_PROMETHEUS_JOB
+              value: apis.cdc-excess-deaths
+            - name: SERVICE_37_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_37_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_37_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_37_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_37_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_37_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
