@@ -1172,6 +1172,30 @@ spec:
               value: ""
             - name: SERVICE_40_METRICS_PORT
               value: "8080"
+            - name: SERVICE_41_CLUSTER_NAME              
+              value: apis.unicef-indicators-handwashing
+            - name: SERVICE_41_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_41_NAME
+              value: UNICEF COVID-19 Indicators - Handwashing
+            - name: SERVICE_41_OWNER
+              value: UNICEF
+            - name: SERVICE_41_RUNTIME
+              value: "Node"
+            - name: SERVICE_41_DOCUMENTATION
+              value: "/apis/unicef-indicators-handwashing/docs/"
+            - name: SERVICE_41_VERSION
+              value: "latest"
+            - name: SERVICE_41_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"UNICEF COVID-19 Indicators - Handwashing\\\",\\\"url\\\":\\\"https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel\\\",\\\"description\\\":\\\"Percentage of the population with a handwashing facility with water and soap available on premises.\\\",\\\"source\\\":\\\"UNICEF\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+            - name: SERVICE_41_PROMETHEUS_JOB
+              value: apis.unicef-indicators-handwashing
+            - name: SERVICE_41_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_41_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_41_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
