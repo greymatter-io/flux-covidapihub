@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "ny-testing.proxy",
+    "domain_keys": [
+        "ny-testing.apis.domain"
+    ],
+    "listener_keys": [
+        "ny-testing.apis.listener"
+    ],
+    "name": "apis.ny-testing",
+    "listeners": null
+}
