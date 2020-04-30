@@ -44,7 +44,7 @@ data:
 
           You can specify which row to start from and a maximum number of records to
           return. By using sorting and slicing together, you can paginate the records.
-            version: "0.1"
+      version: "0.1"
       title: ACAPS COVID-19 Government Response Tracker - powered by apier
 
     servers: https://covidapihub.io/apis/acaps-gov-response
