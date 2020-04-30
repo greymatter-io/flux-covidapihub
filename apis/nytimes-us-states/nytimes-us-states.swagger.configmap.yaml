@@ -6,25 +6,44 @@ metadata:
   namespace: apis
 data:
   swagger.yml: |-
-    openapi: 3.0.0
     info:
       description: |-
           ## NY Times COVID-19 Data - US States
           Details about this dataset: [https://github.com/nytimes/covid-19-data](https://github.com/nytimes/covid-19-data)
-          ## apier
-          Making CSV and Excel data more accessible by providing the contents in JSON format. The added functionalities are:
+          ## Grey Matter apier
+          Making CSV and Excel data more accessible by providing the contents in JSON
+          format. The added functionalities are:
             - Limiting fields
             - Query by value
             - Multi level sorting
             - Slicing
+
           ### Limiting fields (`fields`)
-          In cases you were only interested in a handful of fields, you can specify which fields to return. By default, apier will return all fields.
+
+          In cases you were only interested in a handful of fields, you can specify
+          which fields to return. By default, apier will return all fields.
+
+
           ### Querying by value (`query`)
-          apier uses [pandas query expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query). e.g. `a < b and b < c` to fetch all rows where these conditions evaluate to true.
+
+          apier uses [pandas query
+          expression](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query).
+          e.g. `a < b and b < c` to fetch all rows where these conditions evaluate to
+          true.
+
+
           ### Multi level sorting (`by` and `ascending`)
-          apier allows multi level sorting - specify which fields to sort by in `by` as well as `ascending` 0 (false) or 1 (true) for each fields you specify. For example, if you want to sort by "date" descending and "name" ascending, you will tell apier `by=date,name&ascending=0,1`
+
+          apier allows multi level sorting - specify which fields to sort by in `by`
+          as well as `ascending` 0 (false) or 1 (true) for each fields you specify.
+          For example, if you want to sort by "date" descending and "name" ascending,
+          you will tell apier `by=date,name&ascending=0,1`
+
+
           ### Slicing (`max` and `start`)
-          You can specify which row to start from and a maximum number of records to return. By using sorting and slicing together, you can paginate the records.
+
+          You can specify which row to start from and a maximum number of records to
+          return. By using sorting and slicing together, you can paginate the records.
       version: "0.1"
       title: NY Times COVID-19 Data - US States - powered by apier
 
@@ -32,83 +51,422 @@ data:
     paths:
       /:
         get:
+          description: >
+            This main path allows the contents of CSV/Excel to be fetched as JSON
+            format with basic query, sort, pagination.
           parameters:
-            - name: fields
+            - description: The name of fields to be included to the response
               in: query
+              name: fields
               required: false
-              description: The name of fields to be included to the response
-              example: state,cases
-              schema:
-                type: string
-            - name: query
+              type: string
+              x-example: 'state,cases'
+            - description: >
+                Basic query. The format follows [pandas indexing](
+                https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query)
               in: query
+              name: query
               required: false
-              description: Basic query. The format follows pandas indexing
-                https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query
-              example: (state=="Washington") and (date=="2020-01-31")
-              schema:
-                type: string
-            - name: by
-              in: query
-              required: false
-              description: The name(s) of the field(s) to be sorted by. If `ascending` query is
+              type: string
+              x-example: (state=="Washington") and (date=="2020-01-31")
+            - description: >
+                The name(s) of the field(s) to be sorted by. If `ascending` query is
                 not given, it will be in ascending order by default
-              example: date,state
-              schema:
-                type: string
-            - name: ascending
               in: query
+              name: by
               required: false
-              description: A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
+              type: string
+              x-example: 'date,state'
+            - description: >
+                A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
                 given in `by` parameter should be sorted in ascending order
-              example: 1,0
-              schema:
-                type: string
-            - name: max
               in: query
+              name: ascending
               required: false
-              description: The maximum number of rows to return
-              example: "5"
-              schema:
-                type: string
-            - name: start
+              type: string
+              x-example: '1,0'
+            - description: The maximum number of rows to return
+              format: int64
               in: query
+              name: max
               required: false
-              description: The index of the starting record. Combining the sorting
+              type: integer
+              x-example: 5
+            - description: >
+                The index of the starting record. Combining the sorting
                 functionality (`by` and `ascending`) and slicing functionality
                 (`max` and `start`) is useful for pagination
-              example: "10"
-              schema:
-                type: string
+              format: int64
+              in: query
+              name: start
+              required: false
+              type: integer
+              x-example: 10
+          produces:
+            - application/json
           responses:
-            "200":
+            '200':
               description: successful operation
-              content:
-                application/json:
-                  schema:
-                    type: array
-                    example:
-                      - date: 2020-01-21
-                        state: Washington
-                        fips: 53
-                        cases: 1
-                      - date: 2020-01-22
-                        state: Washington
-                        fips: 53
-                        cases: 1
-                      - date: 2020-01-23
-                        state: Washington
-                        fips: 53
-                        cases: 1
-                      - date: 2020-01-24
-                        state: Illinois
-                        fips: 17
-                        cases: 1
-                      - date: 2020-01-24
-                        state: Washington
-                        fips: 53
-                        cases: 1
-                    items: {}
+              schema:
+                example:
+                  - cases: 1
+                    date: '2020-01-21T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-22T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-23T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                items: {}
+                type: array
           summary: Get JSON data
-          description: This allows the data to be fetched in JSON format with basic query,
-            sort, pagination.
+          tags:
+            - CSV and Excel
+      '/f/{field_name}/':
+        get:
+          description: >
+            This path will return all the possible values for a given field. This
+            may come in handy when creating a dropdown etc. E.g. `/f/country` will
+            return all the countries that are in the dataset.
+          parameters:
+            - description: A name of the field
+              in: path
+              name: field_name
+              required: true
+              type: string
+          produces:
+            - application/json
+          responses:
+            '200':
+              description: Successful operation
+              schema:
+                example:
+                  - Alabama
+                  - Alaska
+                  - Arizona
+                  - Arkansas
+                  - California
+                  - Colorado
+                  - Connecticut
+                items: {}
+                type: array
+          summary: Gets unique values contained in a field.
+          tags:
+            - CSV and Excel
+      '/f/{field_name}/{value}/':
+        get:
+          description: >
+            This is similar to the main path, however, all the returned items will
+            have a `{field_name}` field with `{value}` specified. This may be useful
+            when creating a subreport sucn as `/f/state/Alaska` will give you all
+            the data specific to Alaska, for example.
+          parameters:
+            - description: A name of the field
+              in: path
+              name: field_name
+              required: true
+              type: string
+            - description: The value the field must have.
+              in: path
+              name: value
+              required: true
+              type: string
+            - description: The name of fields to be included to the response
+              in: query
+              name: fields
+              required: false
+              type: string
+              x-example: 'state,cases'
+            - description: >
+                Basic query. The format follows [pandas indexing](
+                https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query)
+              in: query
+              name: query
+              required: false
+              type: string
+              x-example: (state=="Washington") and (date=="2020-01-31")
+            - description: >-
+                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                not given, it will be in ascending order by default
+              in: query
+              name: by
+              required: false
+              type: string
+              x-example: 'date,state'
+            - description: >
+                A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
+                given in `by` parameter should be sorted in ascending order
+              in: query
+              name: ascending
+              required: false
+              type: string
+              x-example: '1,0'
+            - description: The maximum number of rows to return
+              format: int64
+              in: query
+              name: max
+              required: false
+              type: integer
+              x-example: 5
+            - description: >
+                The index of the starting record. Combining the sorting
+                functionality (`by` and `ascending`) and slicing functionality
+                (`max` and `start`) is useful for pagination
+              format: int64
+              in: query
+              name: start
+              required: false
+              type: integer
+              x-example: 10
+          produces:
+            - application/json
+          responses:
+            '200':
+              description: Successful operation
+              schema:
+                example:
+                  - cases: 1
+                    date: '2020-01-21T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-22T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-23T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                items: {}
+                type: array
+          summary: Returns rows where a specified field contains the value given.
+          tags:
+            - CSV and Excel
+      '/s/{sheet_name}/':
+        get:
+          description: >
+            This path allows the contents of a specific sheet in an Excel file to be
+            fetched as JSON format with basic query, sort, pagination. This is
+            designed for excel files with multiple sheets. If the application is
+            pointing at CSV file and this method is called, then apier will ignore
+            sheet name, and return the same result as the main path `/`
+          parameters:
+            - description: Excel sheet name
+              in: path
+              name: sheet_name
+              required: true
+              type: string
+            - description: The name of fields to be included to the response
+              in: query
+              name: fields
+              required: false
+              type: string
+              x-example: 'state,cases'
+            - description: >
+                Basic query. The format follows [pandas indexing](
+                https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query)
+              in: query
+              name: query
+              required: false
+              type: string
+              x-example: (state=="Washington") and (date=="2020-01-31")
+            - description: >-
+                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                not given, it will be in ascending order by default
+              in: query
+              name: by
+              required: false
+              type: string
+              x-example: 'date,state'
+            - description: >
+                A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
+                given in `by` parameter should be sorted in ascending order
+              in: query
+              name: ascending
+              required: false
+              type: string
+              x-example: '1,0'
+            - description: The maximum number of rows to return
+              format: int64
+              in: query
+              name: max
+              required: false
+              type: integer
+              x-example: 5
+            - description: >
+                The index of the starting record. Combining the sorting
+                functionality (`by` and `ascending`) and slicing functionality
+                (`max` and `start`) is useful for pagination
+              format: int64
+              in: query
+              name: start
+              required: false
+              type: integer
+              x-example: 10
+          produces:
+            - application/json
+          responses:
+            '200':
+              description: successful operation
+              schema:
+                example:
+                  - cases: 1
+                    date: '2020-01-21T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-22T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-23T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                items: {}
+                type: array
+          summary: Get JSON data
+          tags:
+            - Excel only
+      '/s/{sheet_name}/f/{field_name}/':
+        get:
+          description: >
+            This path will return all the possible values for a given field. This
+            may come in handy when creating a dropdown etc. E.g. `/s/2020/f/country`
+            will return all the countries that are in the sheet called `2020`. This
+            API is designed for excel files with multiple sheets. If the application
+            is pointing at CSV file and this method is called, then apier will
+            ignore sheet name, and return the same result as the path
+            `/f/{field_name}`
+          parameters:
+            - description: Excel sheet name
+              in: path
+              name: sheet_name
+              required: true
+              type: string
+            - description: A name of the field
+              in: path
+              name: field_name
+              required: true
+              type: string
+          produces:
+            - application/json
+          responses:
+            '200':
+              description: Successful operation
+              schema:
+                example:
+                  - Alabama
+                  - Alaska
+                  - Arizona
+                  - Arkansas
+                  - California
+                  - Colorado
+                  - Connecticut
+                items: {}
+                type: array
+          summary: Gets unique values contained in a field.
+          tags:
+            - Excel only
+      '/s/{sheet_name}/f/{field_name}/{value}/':
+        get:
+          description: >
+            This is similar to the main path, however, all the returned items will
+            have a `{field_name}` field with `{value}` specified in a specified
+            sheet. This may be useful when creating a subreport sucn as
+            `/s/2020/f/state/Alaska` will give you all the data specific to Alaska
+            in year 2020, for example. This API is designed for excel files with
+            multiple sheets. If the application is pointing at CSV file and this
+            method is called, then apier will ignore sheet name, and return the same
+            result as the path `/f/{field_name}/{value}`
+          parameters:
+            - description: Excel sheet name
+              in: path
+              name: sheet_name
+              required: true
+              type: string
+            - description: A name of the field
+              in: path
+              name: field_name
+              required: true
+              type: string
+            - description: The value the field must have.
+              in: path
+              name: value
+              required: true
+              type: string
+            - description: The name of fields to be included to the response
+              in: query
+              name: fields
+              required: false
+              type: string
+              x-example: 'state,cases'
+            - description: >
+                Basic query. The format follows [pandas indexing](
+                https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query)
+              in: query
+              name: query
+              required: false
+              type: string
+              x-example: (state=="Washington") and (date=="2020-01-31")
+            - description: >-
+                The name(s) of the field(s) to be sorted by. If `ascending` query is
+                not given, it will be in ascending order by default
+              in: query
+              name: by
+              required: false
+              type: string
+              x-example: 'date,state'
+            - description: >
+                A list of 0's (i.e. False) and 1's (i.e. True) whether the fields
+                given in `by` parameter should be sorted in ascending order
+              in: query
+              name: ascending
+              required: false
+              type: string
+              x-example: '1,0'
+            - description: The maximum number of rows to return
+              format: int64
+              in: query
+              name: max
+              required: false
+              type: integer
+              x-example: 5
+            - description: >
+                The index of the starting record. Combining the sorting
+                functionality (`by` and `ascending`) and slicing functionality
+                (`max` and `start`) is useful for pagination
+              format: int64
+              in: query
+              name: start
+              required: false
+              type: integer
+              x-example: 10
+          produces:
+            - application/json
+          responses:
+            '200':
+              description: Successful operation
+              schema:
+                example:
+                  - cases: 1
+                    date: '2020-01-21T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-22T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                  - cases: 1
+                    date: '2020-01-23T00:00:00.000Z'
+                    fips: 53
+                    state: Washington
+                items: {}
+                type: array
+          summary: Returns rows where a specified field contains the value given.
+          tags:
+            - Excel only
+    swagger: '2.0'
