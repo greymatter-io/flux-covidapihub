@@ -1227,6 +1227,36 @@ spec:
               value: ""
             - name: SERVICE_43_METRICS_PORT
               value: "8080"
+            - name: SERVICE_44_CLUSTER_NAME
+              value: apis.non-pharmaceutical-csv
+            - name: SERVICE_44_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_44_NAME
+              value: Non-Pharmaceutical Interventions (NPIs)
+            - name: SERVICE_44_OWNER
+              value: Keystone Strategy
+            - name: SERVICE_44_RUNTIME
+              value: "Node"
+            - name: SERVICE_44_DOCUMENTATION
+              value: "/apis/non-pharmaceutical-csv/docs/"
+            - name: SERVICE_44_VERSION
+              value: "latest"
+            - name: SERVICE_44_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Non-Pharmaceutical Interventions (NPIs)\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/Keystone-Strategy/covid19-intervention-data/master/complete_npis_raw_policies.csv\\\",\\\"description\\\":\\\"Insufficient data has complicated the rollout of Coronavirus (COVID-19) “Non-Pharmaceutical Interventions” (NPIs) such as the closing of schools. Keystone has partnered with Susan Athey, Stanford Professor of Economics, and Marco Iansiti, Director of Harvard Business School’s Digital Initiative, to estimate the effectiveness of NPIs as a guide to policymakers, and to aid firms in developing strategic responses, respectively.\\\",\\\"source\\\":\\\"Keystone Strategy\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.keystonestrategy.com/coronavirus-covid19-intervention-dataset-model/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+            - name: SERVICE_44_PROMETHEUS_JOB
+              value: apis.non-pharmaceutical-csv
+            - name: SERVICE_44_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_44_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_44_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_44_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_44_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_44_METRICS_PORT
+              value: "8080"              
           ports:
             - name: catalog
               containerPort: 10080
