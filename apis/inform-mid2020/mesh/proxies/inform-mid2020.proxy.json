@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "inform-mid2020.proxy",
+    "domain_keys": [
+        "inform-mid2020.apis.domain"
+    ],
+    "listener_keys": [
+        "inform-mid2020.apis.listener"
+    ],
+    "name": "apis.inform-mid2020",
+    "listeners": null
+}

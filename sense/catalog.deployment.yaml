@@ -1227,6 +1227,36 @@ spec:
               value: ""
             - name: SERVICE_43_METRICS_PORT
               value: "8080"
+            - name: SERVICE_44_CLUSTER_NAME
+              value: apis.inform-mid2020
+            - name: SERVICE_44_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_44_NAME
+              value: INFORM Global Risk Index Mid-2020
+            - name: SERVICE_44_OWNER
+              value: European Commission, Inter-Agency Standing Committee
+            - name: SERVICE_44_RUNTIME
+              value: "Node"
+            - name: SERVICE_44_DOCUMENTATION
+              value: "/apis/inform-mid2020/docs/"
+            - name: SERVICE_44_VERSION
+              value: "latest"
+            - name: SERVICE_44_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"INFORM Global Risk Index Mid-2020\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/2020/INFORM_Risk_Mid2020_v041.xlsx?ver=2020-04-03-170624-200\\\",\\\"description\\\":\\\"The INFORM risk index identifies countries at risk from humanitarian crises and disasters that could overwhelm national response capacity. It is made up of three dimensions - hazards and exposure, vulnerability and lack of coping capacity.  The INFORM Global Risk Index Mid2020 is the most recent INFORM GRI results, released March 31, 2020.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Annually\\\"]}\""
+            - name: SERVICE_44_PROMETHEUS_JOB
+              value: apis.inform-mid2020
+            - name: SERVICE_44_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_44_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_44_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_44_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_44_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_44_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080

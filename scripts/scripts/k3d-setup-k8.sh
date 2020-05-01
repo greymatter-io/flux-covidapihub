@@ -53,7 +53,7 @@ echo ""
 
 kubectl apply -f spire/server.dev.yaml
 echo "Waiting for Spire server to start... ⏱"
-sleep 60
+sleep 360
 kubectl apply -f spire/agent.dev.yaml
 
 echo ""

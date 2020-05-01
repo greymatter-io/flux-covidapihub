@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "edge.ingress.domain",
+    "route_key": "edge.inform-mid2020.slash.route",
+    "path": "/apis/inform-mid2020",
+    "prefix_rewrite": "/apis/inform-mid2020/",
+    "redirects": null,
+    "shared_rules_key": "edge.inform-mid2020.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
