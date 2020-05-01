@@ -504,7 +504,7 @@ spec:
             - name: SERVICE_16_RUNTIME
               value: "Node"
             - name: SERVICE_16_DOCUMENTATION
-              value: "https://www.census.gov/data/developers/data-sets/economic-indicators.html"
+              value: "https://api.census.gov/data/timeseries/eits.html"
             - name: SERVICE_16_CAPABILITY
               value: "\"{\\\"name\\\":\\\"US Economic Indicator Time Series Database\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/economic-indicators.html\\\",\\\"description\\\":\\\"The U.S. Census Bureau's economic indicator surveys provide monthly and quarterly data that are timely, reliable, and offer comprehensive measures of the U.S. economy. These surveys produce a variety of statistics covering construction, housing, international trade, retail trade, wholesale trade, services and manufacturing. \\\",\\\"source\\\":\\\"Census Bureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data/developers/data-sets/economic-indicators.html\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
             - name: SERVICE_16_PROMETHEUS_JOB
@@ -534,7 +534,7 @@ spec:
             - name: SERVICE_17_RUNTIME
               value: "Node"
             - name: SERVICE_17_DOCUMENTATION
-              value: "https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html"
+              value: "https://api.census.gov/data/timeseries/healthins/sahie.html"
             - name: SERVICE_17_CAPABILITY
               value: "\"{\\\"name\\\":\\\"US Health Insurance Statistics\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"description\\\":\\\"The Current Population Survey Annual Social and Economic Supplement (CPS ASEC) is a supplemental survey of the CPS, which is the longest running survey conducted by the Census Bureau. The key purpose of the CPS ASEC is to provide nationally representative estimates of economic well-being in the United States, of which health insurance coverage is an important part.\\\",\\\"source\\\":\\\"Census Beureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
             - name: SERVICE_17_PROMETHEUS_JOB
@@ -556,7 +556,7 @@ spec:
             - name: SERVICE_18_ZONE_NAME
               value: default.zone
             - name: SERVICE_18_NAME
-              value: "US Census Bureau - Population"
+              value: "US Census Bureau - 2019 Population"
             - name: SERVICE_18_OWNER
               value: "US Census Bureau"
             - name: SERVICE_18_VERSION
@@ -564,7 +564,7 @@ spec:
             - name: SERVICE_18_RUNTIME
               value: "Node"
             - name: SERVICE_18_DOCUMENTATION
-              value: "https://www.census.gov/data/developers/data-sets/popest-popproj.html"
+              value: "https://api.census.gov/data/2019/pep/population.html"
             - name: SERVICE_18_CAPABILITY
               value: "\"{\\\"name\\\":\\\"US Census Bureau\\\",\\\"url\\\":\\\"https://www.census.gov/data/developers/data-sets/popest-popproj/popest.Vintage_2019.html\\\",\\\"description\\\":\\\"Historical population growth and demographic shifts since 2000\\\",\\\"source\\\":\\\"Census Beureau\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.census.gov/data.html\\\",\\\"thumbnail\\\":\\\"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/us-census-bureau.png\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
             - name: SERVICE_18_PROMETHEUS_JOB
@@ -594,9 +594,9 @@ spec:
             - name: SERVICE_19_RUNTIME
               value: "Node"
             - name: SERVICE_19_DOCUMENTATION
-              value: "https://api.usaspending.gov/docs/"
+              value: "https://api.usaspending.gov/docs/endpoints"
             - name: SERVICE_19_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USA Spending\\\",\\\"url\\\":\\\"https://api.usaspending.gov/docs/endpoints\\\",\\\"description\\\":\\\"Breakdowns of all federal spending including federal awards (contracts, grants, etc) and non-award spending (e.g. employee compensation)\\\",\\\"source\\\":\\\"\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.usaspending.gov/#/\\\",\\\"thumbnail\\\":\\\"https://www.usaspending.gov/img/logo.png\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+              value: "\"{\\\"name\\\":\\\"USA Spending\\\",\\\"url\\\":\\\"https://api.usaspending.gov/docs/\\\",\\\"description\\\":\\\"Breakdowns of all federal spending including federal awards (contracts, grants, etc) and non-award spending (e.g. employee compensation)\\\",\\\"source\\\":\\\"\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.usaspending.gov/#/\\\",\\\"thumbnail\\\":\\\"https://www.usaspending.gov/img/logo.png\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
             - name: SERVICE_19_PROMETHEUS_JOB
               value: apis.usa-spending
             - name: SERVICE_19_MAX_INSTANCES
@@ -676,7 +676,7 @@ spec:
             - name: SERVICE_22_DOCUMENTATION
               value: "/apis/usafacts-confirmed-cases/docs/"
             - name: SERVICE_22_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"USAFacts Confirmed Coronavirus Cases\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data for confirmed coronavirus cases.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_22_PROMETHEUS_JOB
               value: apis.usafacts-confirmed-cases
             - name: SERVICE_22_MAX_INSTANCES
@@ -736,7 +736,7 @@ spec:
             - name: SERVICE_24_DOCUMENTATION
               value: "/apis/usafacts-coronavirus-deaths/docs/"
             - name: SERVICE_24_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USAFacts Coronavirus Deaths\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data on coronavirus deaths.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"USAFacts Coronavirus Deaths\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county level data on coronavirus deaths.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_24_PROMETHEUS_JOB
               value: apis.usafacts-coronavirus-deaths
             - name: SERVICE_24_MAX_INSTANCES
@@ -766,7 +766,7 @@ spec:
             - name: SERVICE_25_DOCUMENTATION
               value: "/apis/usafacts-county-population/docs/"
             - name: SERVICE_25_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county population data for population adjustments.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Yearly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"USAFacts County Population for Population Adjustments (2019 Census Estimates)\\\",\\\"url\\\":\\\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv\\\",\\\"description\\\":\\\"USAFacts county population data for population adjustments.\\\",\\\"source\\\":\\\"USAFacts\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Yearly\\\"]}\""
             - name: SERVICE_25_PROMETHEUS_JOB
               value: apis.usafacts-county-population
             - name: SERVICE_25_MAX_INSTANCES
@@ -1143,7 +1143,7 @@ spec:
               value: ""
             - name: SERVICE_40_METRICS_PORT
               value: "8080"
-            - name: SERVICE_41_CLUSTER_NAME              
+            - name: SERVICE_41_CLUSTER_NAME
               value: apis.unicef-indicators-handwashing
             - name: SERVICE_41_ZONE_NAME
               value: default.zone

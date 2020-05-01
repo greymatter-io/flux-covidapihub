@@ -9,7 +9,8 @@ data:
     info:
       description: |-
           ## UNICEF COVID-19 Indicators - Handwashing
-          Details about this dataset: [https://data.humdata.org/event/covid-19](https://data.humdata.org/event/covid-19)
+          Details about this dataset: [https://data.humdata.org/dataset/unicef-indicators-of-interest-to-the-covid-19-outbreak/resource/5ff7c7e6-becc-45c3-9a19-ff8286fb4128](https://data.humdata.org/dataset/unicef-indicators-of-interest-to-the-covid-19-outbreak/resource/5ff7c7e6-becc-45c3-9a19-ff8286fb4128)
+          The original data: [https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel](https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel)
           ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
