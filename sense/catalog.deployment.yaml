@@ -402,36 +402,7 @@ spec:
               value: ""
             - name: SERVICE_11_METRICS_PORT
               value: "8080"
-            - name: SERVICE_12_CLUSTER_NAME
-              value: apis.coronatab
-            - name: SERVICE_12_VERSION
-              value: "1.0"
-            - name: SERVICE_12_ZONE_NAME
-              value: default.zone
-            - name: SERVICE_12_NAME
-              value: "CoronaTab API"
-            - name: SERVICE_12_OWNER
-              value: "CoronaTab"
-            - name: SERVICE_12_RUNTIME
-              value: "Node"
-            - name: SERVICE_12_DOCUMENTATION
-              value: "https://github.com/PotentialWeb/CoronaTab/wiki/RESTful-API-documentation"
-            - name: SERVICE_12_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CoronaTab API\\\",\\\"url\\\":\\\"https://api.coronatab.app/places\\\",\\\"description\\\":\\\"Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.\\\",\\\"source\\\":\\\"Corona Data Scraper\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/PotentialWeb/CoronaTab/wiki/RESTful-API-documentation\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
-            - name: SERVICE_12_PROMETHEUS_JOB
-              value: apis.coronatab
-            - name: SERVICE_12_MAX_INSTANCES
-              value: "2"
-            - name: SERVICE_12_MIN_INSTANCES
-              value: "1"
-            - name: SERVICE_12_ENABLE_INSTANCE_METRICS
-              value: "true"
-            - name: SERVICE_12_ENABLE_HISTORICAL_METRICS
-              value: "true"
-            - name: SERVICE_12_METRICS_TEMPLATE
-              value: ""
-            - name: SERVICE_12_METRICS_PORT
-              value: "8080"
+
             # - name: SERVICE_13_CLUSTER_NAME
             #   value: apis.novelcovid
             # - name: SERVICE_13_ZONE_NAME
