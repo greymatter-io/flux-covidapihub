@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "non-pharmaceutical-csv.apis.domain",
+    "route_key": "non-pharmaceutical-csv.local.route",
+    "path": "/",
+    "prefix_rewrite": "",
+    "redirects": null,
+    "shared_rules_key": "non-pharmaceutical-csv.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.non-pharmaceutical-csv",
+ "zoneName": "default.zone",
+ "name": "Non-Pharmaceutical Interventions (NPIs)",
+ "version": "1.0",
+ "owner": "Keyston Strategy",
+ "capability": ""\"{\\\"name\\\":\\\"Non-Pharmaceutical Interventions (NPIs)\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/Keystone-Strategy/covid19-intervention-data/master/complete_npis_raw_policies.csv\\\",\\\"description\\\":\\\"Insufficient data has complicated the rollout of Coronavirus (COVID-19) “Non-Pharmaceutical Interventions” (NPIs) such as the closing of schools. Keystone has partnered with Susan Athey, Stanford Professor of Economics, and Marco Iansiti, Director of Harvard Business School’s Digital Initiative, to estimate the effectiveness of NPIs as a guide to policymakers, and to aid firms in developing strategic responses, respectively.\\\",\\\"source\\\":\\\"Keyston Strategy\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.keystonestrategy.com/coronavirus-covid19-intervention-dataset-model/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/non-pharmaceutical-csv/docs/",
+ "prometheusJob": "apis.non-pharmaceutical-csv",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }
