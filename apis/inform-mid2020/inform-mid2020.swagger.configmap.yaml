@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: bu-state-policies-swagger
+  name: inform-mid2020-swagger
   namespace: apis
 data:
   swagger.yml: |-
     info:
       description: |-
-          ## COVID-19 US State Policy Database
-          Details about this dataset: [https://www.bu.edu/sph/2020/04/01/tracking-covid-19-policies/](https://www.bu.edu/sph/2020/04/01/tracking-covid-19-policies/)
+          ## INFORM Global Risk Index Mid-2020
+          Details about this dataset: [https://drmkc.jrc.ec.europa.eu/inform-index](https://drmkc.jrc.ec.europa.eu/inform-index)
           ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
@@ -46,9 +46,9 @@ data:
           return. By using sorting and slicing together, you can paginate the records.
 
       version: "0.1"
-      title: COVID-19 US State Policy Database - powered by apier
+      title: INFORM Global Risk Index Mid-2020 - powered by apier
 
-    servers: https://covidapihub.io/apis/bu-state-policies
+    servers: https://covidapihub.io/apis/inform-mid2020
     paths:
       /:
         get:
@@ -471,3 +471,5 @@ data:
           tags:
             - Excel only
     swagger: '2.0'
+
+
