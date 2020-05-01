@@ -7,17 +7,17 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: apier
-    app: acaps-gov-response
-    cluster: apis.acaps-gov-response
-  name: acaps-gov-response
+    app: non-pharmaceutical-csv
+    cluster: apis.non-pharmaceutical-csv
+  name: non-pharmaceutical-csv
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
       io.kompose.service: apier
-      app: acaps-gov-response
-      cluster: apis.acaps-gov-response
+      app: non-pharmaceutical-csv
+      cluster: apis.non-pharmaceutical-csv
   strategy: {}
   template:
     metadata:
@@ -27,23 +27,27 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: apier
-        app: acaps-gov-response
-        cluster: apis.acaps-gov-response
+        app: non-pharmaceutical-csv
+        cluster: apis.non-pharmaceutical-csv
     spec:
       serviceAccountName: apis-sa
       containers:
       - name: apier
         env:
         - name: SHEET_NAME
-          value: Database
+          value: 
         - name: FLASK_APP
           value: app/main.py
+        - name: SHEET_SKIP_ROWS
+          value: 
+        - name: SOURCE_FORMAT
+          value: 
         - name: FLASK_DEBUG
           value: "0"
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: https://www.acaps.org/sites/acaps/files/resources/files/acaps_covid19_goverment_measures_dataset.xlsx
+          value: https://raw.githubusercontent.com/Keystone-Strategy/covid19-intervention-data/master/complete_npis_raw_policies.csv
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:
@@ -81,7 +85,7 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: acaps-gov-response-sidecar
+            name: non-pharmaceutical-csv-sidecar
         - name: swagger-static
           configMap:
-            name: acaps-gov-response-swagger
+            name: non-pharmaceutical-csv-swagger

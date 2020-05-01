@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "non-pharmaceutical-csv.proxy",
+    "domain_keys": [
+        "non-pharmaceutical-csv.apis.domain"
+    ],
+    "listener_keys": [
+        "non-pharmaceutical-csv.apis.listener"
+    ],
+    "name": "apis.non-pharmaceutical-csv",
+    "listeners": null
+}
