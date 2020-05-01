@@ -10,7 +10,7 @@ data:
       description: |-
           ## COVID-19 US State Policy Database
           Details about this dataset: [https://www.bu.edu/sph/2020/04/01/tracking-covid-19-policies/](https://www.bu.edu/sph/2020/04/01/tracking-covid-19-policies/)
-          ## apier
+          ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
             - Limiting fields
