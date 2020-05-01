@@ -446,7 +446,7 @@ spec:
             - name: SERVICE_14_DOCUMENTATION
               value: "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"
             - name: SERVICE_14_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"EU Open Data Covid Dataset\\\",\\\"url\\\":\\\"https://opendata.ecdc.europa.eu/covid19/casedistribution/json/\\\",\\\"description\\\":\\\"The dataset contains the latest available public data on COVID-19 including a daily situation update, the epidemiological curve and the global geographical distribution (EU/EEA and the UK, worldwide).\\\",\\\"source\\\":\\\"European Union\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.europa.eu/euodp/en/developerscorner\\\",\\\"thumbnail\\\":\\\"https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png\\\",\\\"coverage\\\":[\\\"Europe\\\"],\\\"format\\\":[\\\"JSON\\\",\\\"CSV\\\",\\\"HTML\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+              value: "\"{\\\"name\\\":\\\"EU Open Data Covid Dataset\\\",\\\"url\\\":\\\"https://opendata.ecdc.europa.eu/covid19/casedistribution/json/\\\",\\\"description\\\":\\\"The dataset contains the latest available public data on COVID-19 including a daily situation update, the epidemiological curve and the global geographical distribution (EU/EEA and the UK, worldwide).\\\",\\\"source\\\":\\\"European Union\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.europa.eu/euodp/en/developerscorner\\\",\\\"thumbnail\\\":\\\"https://data.europa.eu/euodp/sites/all/themes/openDataPortalTheme/images/odp_en.png\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"JSON\\\",\\\"CSV\\\",\\\"XML\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
             - name: SERVICE_14_PROMETHEUS_JOB
               value: apis.opendata-eu
             - name: SERVICE_14_MAX_INSTANCES
@@ -474,7 +474,7 @@ spec:
             - name: SERVICE_15_DOCUMENTATION
               value: "/apis/oxford-gov-response/docs/"
             - name: SERVICE_15_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Oxford COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"description\\\":\\\"Systematic information on which governments have taken which measures, and when, can help decision-makers and citizens understand the robustness of governmental responses in a consistent way, aiding efforts to fight the pandemic. The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically collects information on several different common policy responses governments have taken, scores the stringency of such measures, and aggregates these scores into a common Stringency Index. Data is collected from public sources by a team of over one hundred Oxford University students and staff from every part of the world.\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+              value: "\"{\\\"name\\\":\\\"Oxford COVID-19 Government Response Tracker\\\",\\\"url\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"description\\\":\\\"The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically collects information on several different common policy responses governments have taken, scores the stringency of such measures, and aggregates these scores into a common Stringency Index. Data is collected from public sources by a team of over one hundred Oxford University students and staff from every part of the world.\\\",\\\"source\\\":\\\"BLS\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Monthly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
             - name: SERVICE_15_PROMETHEUS_JOB
               value: apis.oxford-gov-response
             - name: SERVICE_15_VERSION
@@ -706,7 +706,7 @@ spec:
             - name: SERVICE_23_DOCUMENTATION
               value: "/apis/our-world-in-data-coronavirus-dataset/docs/"
             - name: SERVICE_23_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"World\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Source Data\\\",\\\"url\\\":\\\"https://covid.ourworldindata.org/data/owid-covid-data.csv\\\",\\\"description\\\":\\\"A collection of the COVID-19 data maintained by Our World in Data including confirmed cases, deaths, and testing.\\\",\\\"source\\\":\\\"Our World in Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/coronavirus-source-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, XLSX, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_23_PROMETHEUS_JOB
               value: apis.our-world-in-data-coronavirus-dataset
             - name: SERVICE_23_MAX_INSTANCES
@@ -828,7 +828,7 @@ spec:
             - name: SERVICE_30_VERSION
               value: "latest"
             - name: SERVICE_30_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S.\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S.\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_30_PROMETHEUS_JOB
               value: apis.nytimes-us
             - name: SERVICE_30_MAX_INSTANCES
@@ -858,7 +858,7 @@ spec:
             - name: SERVICE_31_VERSION
               value: "latest"
             - name: SERVICE_31_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US States\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. states\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US States\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. states\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_31_PROMETHEUS_JOB
               value: apis.nytimes-us-states
             - name: SERVICE_31_MAX_INSTANCES
@@ -888,7 +888,7 @@ spec:
             - name: SERVICE_32_VERSION
               value: "latest"
             - name: SERVICE_32_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US Counties\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. counties\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"NY Times COVID-19 Data - US Counties\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv\\\",\\\"description\\\":\\\"An ongoing repository of data on coronavirus cases and deaths in the U.S. counties\\\",\\\"source\\\":\\\"The New York Times\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://github.com/nytimes/covid-19-data\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_32_PROMETHEUS_JOB
               value: apis.nytimes-us-counties
             - name: SERVICE_32_MAX_INSTANCES
@@ -948,7 +948,7 @@ spec:
             - name: SERVICE_34_VERSION
               value: "latest"
             - name: SERVICE_34_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Testing Dataset\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv\\\",\\\"description\\\":\\\"Our World in Data Coronavirus Testing Dataset is a collection by country of the COVID-19 testing data maintained by Our World in Data including total COVID-19 tests, tests per day, total tests per 1,000 people.\\\",\\\"source\\\":\\\"Our World In Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/covid-testing\\\",\\\"thumbnail\\\":\\\"https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Our World in Data Coronavirus Testing Dataset\\\",\\\"url\\\":\\\"https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv\\\",\\\"description\\\":\\\"Our World in Data Coronavirus Testing Dataset is a collection by country of the COVID-19 testing data maintained by Our World in Data including total COVID-19 tests, tests per day, total tests per 1,000 people.\\\",\\\"source\\\":\\\"Our World In Data\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://ourworldindata.org/covid-testing\\\",\\\"thumbnail\\\":\\\"https://pbs.twimg.com/profile_images/1235299549637496832/qiK2pu1-_400x400.jpg\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, XLSX, JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_34_PROMETHEUS_JOB
               value: apis.our-world-in-data-testing
             - name: SERVICE_34_MAX_INSTANCES
@@ -1068,7 +1068,7 @@ spec:
             - name: SERVICE_38_VERSION
               value: "latest"
             - name: SERVICE_38_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - COVID-19 Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags #covid19, #coronavirus, or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - COVID-19 Tweets By Day\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=0\\\",\\\"description\\\":\\\"The Tweet Binder Coronavirus Tweets By Day dataset is a day by day analysis of Twitter reflecting the number of tweets per day containing key words or hashtags \"coronavirus\", #covid19, #coronavirus, or #covid-19. \\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_38_PROMETHEUS_JOB
               value: apis.tweetbinder-by-day
             - name: SERVICE_38_MAX_INSTANCES
@@ -1098,7 +1098,7 @@ spec:
             - name: SERVICE_39_VERSION
               value: "latest"
             - name: SERVICE_39_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular COVID-19 Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Not Specified\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Tweet Binder - Most Popular COVID-19 Tweets\\\",\\\"url\\\":\\\"https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=578699533\\\",\\\"description\\\":\\\"A collection of tweets with keywords or hashtags #covid19, #coronavirus, or #covid-19 that have at least 1,000 retweets. Information includes user, location, user’s total number of tweets and followers, and several calculated impact/value scores.\\\",\\\"source\\\":\\\"Tweet Binder\\\",\\\"contentType\\\":[\\\"Social\\\"],\\\"homePage\\\":\\\"https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_39_PROMETHEUS_JOB
               value: apis.tweetbinder-1000-rts
             - name: SERVICE_39_MAX_INSTANCES
