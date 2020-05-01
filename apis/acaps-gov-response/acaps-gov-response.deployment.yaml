@@ -43,7 +43,7 @@ spec:
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: https://www.acaps.org/sites/acaps/files/resources/files/20200428_acaps_-_covid-19_goverment_measures_dataset_v11.xlsx
+          value: https://www.acaps.org/sites/acaps/files/resources/files/acaps_covid19_goverment_measures_dataset.xlsx
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:
