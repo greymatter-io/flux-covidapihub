@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        path: $GITHUB_WORKSPACE/flux-covidapihub
     - name: Check out my other private repo
       uses: actions/checkout@master
       with:
+        path: $GITHUB_WORKSPACE/test-datasource
         repository: kaitmore/test-datasource
     - run: ls
