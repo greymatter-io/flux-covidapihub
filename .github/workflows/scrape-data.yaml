@@ -1,0 +1,18 @@
+# This workflow will do a clean install of node dependencies and build the source code
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+name: Run build docker
+
+on:
+  # Runs on any commits to scrape-data-action
+  push:
+    branches: [ scrape-data-action ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check out my other private repo
+      uses: actions/checkout@master
+      with:
+        repository: kaitmore/test-datasource
+    - run: ls
