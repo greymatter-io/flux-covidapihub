@@ -20,7 +20,6 @@ data:
             - filters:
               - name: envoy.http_connection_manager
                 config:
-                  idle_timeout: 1s
                   forward_client_cert_details: sanitize_set
                   set_current_client_cert_details:
                       uri: true
@@ -52,7 +51,6 @@ data:
             - filters:
               - name: envoy.http_connection_manager
                 config:
-                  idle_timeout: 1s
                   forward_client_cert_details: sanitize_set
                   set_current_client_cert_details:
                       uri: true
