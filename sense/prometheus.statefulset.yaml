@@ -25,7 +25,7 @@ spec:
       serviceAccountName: prometheus
       containers:
         - name: sidecar
-          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -81,7 +81,7 @@ spec:
               mountPath: /data
               subPath: ""
       imagePullSecrets:
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
         - name: index.docker.io
       securityContext:
         fsGroup: 65534

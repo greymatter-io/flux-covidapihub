@@ -7,9 +7,8 @@ if [[ "$(kubectl config current-context)" != "greymatter" ]]; then
     exit 1
 fi
 
-
 deployments=(edge fabric sense data website)
-folders=( "${deployments[@]}" "apis" )  # we just want to create namespace and secrets for apis.
+folders=("${deployments[@]}" "apis") # we just want to create namespace and secrets for apis.
 
 # Apply kubernetes yaml files in order
 for folder in "${folders[@]}"; do
@@ -41,7 +40,7 @@ ObjectivesPostgresPassword="greymatter"
 ObjectivesPostgresPort="5432"
 
 for folder in "${folders[@]}"; do
-    kubectl create secret docker-registry docker.production.deciphernow.com --namespace $folder --docker-server=docker.production.deciphernow.com --docker-username=$DockerProductionUsername --docker-password=$DockerProductionPassword
+    kubectl create secret docker-registry docker-dev.production.deciphernow.com --namespace $folder --docker-server=docker-dev.production.deciphernow.com --docker-username=$DockerProductionUsername --docker-password=$DockerProductionPassword
     kubectl create secret docker-registry index.docker.io --namespace $folder --docker-server=index.docker.io --docker-username=$IndexDockerUsername --docker-password=$IndexDockerPassword --docker-email=$IndexDockerUsername
 done
 

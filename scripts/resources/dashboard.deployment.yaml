@@ -22,7 +22,7 @@ spec:
       serviceAccountName: dashboard
       containers:
         - name: sidecar
-          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: dashboard
-          image: docker.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
+          image: docker-dev.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
           imagePullPolicy: IfNotPresent
           env:
             - name: FABRIC_SERVER
@@ -69,7 +69,7 @@ spec:
               containerPort: 10080
               protocol: TCP
       imagePullSecrets:
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
         - name: index.docker.io
       volumes:
         - name: sidecar-config
