@@ -60,7 +60,7 @@ spec:
             - --web.console.templates=/etc/prometheus/consoles
             - --web.enable-lifecycle
             - --web.enable-admin-api
-            - --web.external-url=https://services.covidapihub.io/prometheus/latest
+            - --web.external-url=https://covidapihub.io/prometheus/latest
             - --web.route-prefix=/
             - --web.listen-address=127.0.0.1:10080
           ports:
@@ -69,10 +69,10 @@ spec:
               protocol: TCP
           resources:
             limits:
-              cpu: "2"
+              cpu: "1000m"
               memory: 8Gi
             requests:
-              cpu: "1"
+              cpu: "500m"
               memory: 4Gi
           volumeMounts:
             - name: prometheus-config
