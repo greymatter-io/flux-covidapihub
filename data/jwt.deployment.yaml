@@ -20,7 +20,7 @@ spec:
       serviceAccountName: jwt
       containers:
       - name: jwt-security
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.2-dev"
         imagePullPolicy: IfNotPresent
         resources:
           limits:
