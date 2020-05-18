@@ -20,7 +20,7 @@ spec:
       serviceAccountName: jwt
       containers:
       - name: jwt-security
-        image: "docker.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-jwt-security:1.0.1"
         imagePullPolicy: IfNotPresent
         resources:
           limits:
@@ -71,7 +71,7 @@ spec:
           mountPath: /gm-jwt-security/etc
 
       - name: sidecar
-        image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
         imagePullPolicy: IfNotPresent
         args:
           - -c
@@ -96,7 +96,7 @@ spec:
         - name: METRICS_KEY_FUNCTION
           value: depth
       imagePullSecrets:
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
         - name: index.docker.io
       volumes:
       - name: spire-socket

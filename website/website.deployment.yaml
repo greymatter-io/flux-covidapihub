@@ -41,7 +41,7 @@ spec:
           - name: API_HUB_ENDPOINT
             value: /dashboard
         - name: sidecar
-          image: docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
+          image: docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -65,7 +65,7 @@ spec:
             value: depth
       imagePullSecrets:
         - name: index.docker.io
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
       volumes:
         - name: sidecar-config
           configMap:

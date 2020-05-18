@@ -3,7 +3,7 @@
 NAME=$1
 
 #define the template.
-cat  << EOF
+cat <<EOF
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -28,7 +28,7 @@ spec:
       serviceAccountName: apis-sa
       containers:
         - name: $NAME-proxy
-          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -48,7 +48,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
       imagePullSecrets:
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
       volumes:
         - name: spire-socket
           hostPath:

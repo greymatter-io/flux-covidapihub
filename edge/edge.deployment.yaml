@@ -22,7 +22,7 @@ spec:
       serviceAccountName: edge
       containers:
         - name: edge
-          image: "docker.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -50,7 +50,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
       imagePullSecrets:
-        - name: docker.production.deciphernow.com
+        - name: docker-dev.production.deciphernow.com
       volumes:
         - name: sidecar-config
           configMap:
