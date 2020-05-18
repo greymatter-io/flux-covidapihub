@@ -22,7 +22,7 @@ spec:
       serviceAccountName: control
       containers:
         - name: sidecar
-          image: docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.2.2
+          image: docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: control
-          image: docker-dev.production.deciphernow.com/deciphernow/gm-control:1.2.3
+          image: docker-dev.production.deciphernow.com/deciphernow/gm-control:1.4.3-dev
           imagePullPolicy: IfNotPresent
           env:
             - name: GM_CONTROL_API_HOST
