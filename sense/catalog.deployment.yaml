@@ -1298,7 +1298,7 @@ spec:
             - name: SERVICE_46_RUNTIME
               value: "Node"
             - name: SERVICE_46_DOCUMENTATION
-              value: "/apis/novelcovid/docs/"
+              value: "https://disease.sh"
             - name: SERVICE_46_VERSION
               value: "latest"
             - name: SERVICE_46_CAPABILITY
