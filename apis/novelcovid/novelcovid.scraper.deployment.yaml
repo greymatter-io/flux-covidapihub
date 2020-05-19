@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-  name: scraper
+  name: novelcovid.scraper
   namespace: apis
 spec:
   replicas: 1
