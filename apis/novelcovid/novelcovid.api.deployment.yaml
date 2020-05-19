@@ -45,7 +45,7 @@ spec:
           value: "6379"
         - name: SERVER_PORT
           value: "3000"
-        image: novelcovid/novelcovid-api:latest
+        image: novelcovid/novelcovid-api
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
