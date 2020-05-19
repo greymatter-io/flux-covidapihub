@@ -1,28 +1,50 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.prod.yml
+    kompose.version: 1.21.0 ()
+  creationTimestamp: null
   labels:
-    app: novelcovid
-    cluster: apis.novelcovid
-  name: novelcovid
-  namespace: apis
+    io.kompose.service: app
+  name: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: novelcovid
-      cluster: apis.novelcovid
+      io.kompose.service: app
+  strategy: {}
   template:
     metadata:
-      labels:
-        app: novelcovid
-        cluster: apis.novelcovid
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.prod.yml
+        kompose.version: 1.21.0 ()
       creationTimestamp: null
+      labels:
+        io.kompose.service: app
     spec:
       containers:
-      - image: docker.io/covidapihub/novelcovidapi
+      - name: covid-api-server
+        args:
+        - npm
+        - start
+        env:
+        - name: APPLE_INTERVAL
+          value: "864e5"
+        - name: INTERVAL
+          value: "6e5"
+        - name: NYT_INTERVAL
+          value: "864e5"
+        - name: REDIS_HOST
+          value: redis
+        - name: REDIS_PASSWORD
+          value: '"7nS&01Q#w%eE"'
+        - name: REDIS_PORT
+          value: "6379"
+        - name: SERVER_PORT
+          value: "3000"
+        image: novelcovid/novelcovid-api:latest
         imagePullPolicy: "Always"
-        name: covid-api-app
         ports:
         - containerPort: 3000
         resources: {}
@@ -62,4 +84,3 @@ spec:
             name: novelcovid-sidecar
       restartPolicy: Always
       serviceAccountName: "apis-sa"
-status: {}
