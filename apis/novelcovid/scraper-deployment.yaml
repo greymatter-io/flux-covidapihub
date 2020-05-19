@@ -2,25 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f docker-compose.prod.yml
-    kompose.version: 1.21.0 ()
-  labels:
-    io.kompose.service: scraper
+    fluxcd.io/automated: "true"
   name: scraper
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: scraper
+      app: novelcovid.scraper
+      cluster: apis.novelcovid.scraper
   strategy: {}
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.prod.yml
-        kompose.version: 1.21.0 ()
       labels:
-        io.kompose.network/redis-net: "true"
-        io.kompose.service: scraper
+        app: novelcovid.scraper
+        cluster: apis.novelcovid.scraper
     spec:
       containers:
       - args:
@@ -37,7 +32,10 @@ spec:
         - name: REDIS_HOST
           value: redis
         - name: REDIS_PASSWORD
-          value: $REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis
+              key: password
         - name: REDIS_PORT
           value: "6379"
         - name: SERVER_PORT
