@@ -1298,15 +1298,15 @@ spec:
             - name: SERVICE_46_RUNTIME
               value: "Node"
             - name: SERVICE_46_DOCUMENTATION
-              value: "https://disease.sh"
+              value: "https://disease.sh/docs/"
             - name: SERVICE_46_VERSION
               value: "latest"
             - name: SERVICE_46_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"INFORM Global Risk Index Mid-2020\\\",\\\"url\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/2020/INFORM_Risk_Mid2020_v041.xlsx?ver=2020-04-03-170624-200\\\",\\\"description\\\":\\\"The INFORM risk index identifies countries at risk from humanitarian crises and disasters that could overwhelm national response capacity. It is made up of three dimensions - hazards and exposure, vulnerability and lack of coping capacity.  The INFORM Global Risk Index Mid2020 is the most recent INFORM GRI results, released March 31, 2020.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://drmkc.jrc.ec.europa.eu/inform-index\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"XLSX, JSON\\\"],\\\"updates\\\":[\\\"Annually\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"NovelCovid\\\",\\\"url\\\":\\\"https://disease.sh\\\",\\\"description\\\":\\\"This API provides a big range of detailed information about COVID19 from global data overviews to city/region specific mobility data. We also provide official government data for some countries, more to be added soon.\\\",\\\"source\\\":\\\"European Commission, Inter-Agency Standing Committee\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://disease.sh\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Global\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_46_PROMETHEUS_JOB
               value: apis.novelcovid
             - name: SERVICE_46_MAX_INSTANCES
-              value: "2"
+              value: "10"
             - name: SERVICE_46_MIN_INSTANCES
               value: "1"
             - name: SERVICE_46_ENABLE_INSTANCE_METRICS
