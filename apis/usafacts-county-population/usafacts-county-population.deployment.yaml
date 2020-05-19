@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.apier: glob:*
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
   creationTimestamp: null
@@ -44,7 +46,7 @@ spec:
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
           value: https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv
-        image: covidapihub/apier:latest
+        image: covidapihub/apier
         imagePullPolicy: Always
         ports:
         - containerPort: 80
