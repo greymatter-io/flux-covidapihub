@@ -3,12 +3,14 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
+    fluxcd.io/tag.server: regex:\b[0-9a-f]{5,40}\b # Matches github commit hash
   labels:
     app: novelcovid
     cluster: apis.novelcovid
   name: app
+  namespace: apis
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: novelcovid
@@ -21,7 +23,7 @@ spec:
         cluster: apis.novelcovid  
     spec:
       containers:
-      - name: covid-api-server
+      - name: server
         args:
         - npm
         - start
@@ -48,7 +50,7 @@ spec:
         ports:
         - containerPort: 3000
         resources: {}
-      - name: novelcovid-proxy
+      - name: sidecar
         image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
         imagePullPolicy: IfNotPresent      
         resources: {}

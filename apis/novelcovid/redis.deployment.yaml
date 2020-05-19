@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
+  namespace: apis
 spec:
   replicas: 1
   selector:
@@ -16,6 +17,7 @@ spec:
         app: novelcovid.redis
         cluster: apis.novelcovid.redis
     spec:
+      serviceAccountName: "apis-sa"
       containers:
       - args:
         - redis-server
@@ -37,7 +39,7 @@ spec:
           value: "6379"
         image: redis:5.0.8-buster
         imagePullPolicy: "IfNotPresent"
-        name: covid-api-redis
+        name: redis   
         ports:
         - containerPort: 6379
         resources: {}
@@ -45,7 +47,6 @@ spec:
         - mountPath: /data
           name: redis-data
       restartPolicy: Always
-      serviceAccountName: ""
       volumes:
       - name: redis-data
         persistentVolumeClaim:

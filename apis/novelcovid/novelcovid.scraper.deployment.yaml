@@ -4,6 +4,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
   name: scraper
+  namespace: apis
 spec:
   replicas: 1
   selector:
@@ -42,9 +43,10 @@ spec:
           value: "3000"
         image: novelcovid/novelcovid-api:latest
         imagePullPolicy: "Always"
-        name: covid-api-scraper
+        name: scraper
         ports:
         - containerPort: 3000
         resources: {}
       restartPolicy: Always
+      serviceAccountName: "apis-sa"
 status: {}
