@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.apier: glob:*
+    fluxcd.io/automated: "true" 
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
   creationTimestamp: null
