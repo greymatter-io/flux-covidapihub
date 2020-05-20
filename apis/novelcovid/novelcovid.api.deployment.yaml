@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.server: regex:\b[0-9a-f]{5,40}\b # Matches github commit hash
+    fluxcd.io/tag.server: glob:sha-* # Matches github commit hash
+    fluxcd.io/tag.sidecar: glob:1.4*
   labels:
     app: novelcovid
     cluster: apis.novelcovid

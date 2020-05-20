@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
+    fluxcd.io/tag.scraper: glob:sha-* # Matches github commit hash
   name: novelcovid.scraper
   namespace: apis
 spec:
