@@ -46,7 +46,7 @@ spec:
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
           value: https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv
-        image: covidapihub/apier:ec6380d916ec26eb9e469cf420f7099c49c5d708
+        image: covidapihub/apier:sha-67b40fe
         imagePullPolicy: Always
         ports:
         - containerPort: 80
