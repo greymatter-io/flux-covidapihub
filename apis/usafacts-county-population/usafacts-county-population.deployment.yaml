@@ -1,12 +1,13 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.apier: "regex:sha-.{7}"
+    fluxcd.io/tag.apier: "glob:sha*"
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     io.kompose.service: apier
     app: usafacts-county-population
@@ -26,7 +27,7 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.yml
         kompose.version: 1.21.0 ()
-      creationTimestamp: null
+      creationTimestamp:
       labels:
         io.kompose.service: apier
         app: usafacts-county-population
@@ -37,7 +38,7 @@ spec:
       - name: apier
         env:
         - name: SHEET_NAME
-          value: 
+          value:
         - name: FLASK_APP
           value: app/main.py
         - name: FLASK_DEBUG
@@ -51,39 +52,39 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-          - name: swagger-static
-            mountPath: /app/static
-            readOnly: true
+        - name: swagger-static
+          mountPath: /app/static
+          readOnly: true
       - name: sidecar
         image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
         imagePullPolicy: IfNotPresent
         args:
-          - -c
-          - /etc/greymatter/config.yaml
+        - -c
+        - /etc/greymatter/config.yaml
         command:
-          - /app/gm-proxy
+        - /app/gm-proxy
         ports:
-          - name: metrics
-            containerPort: 8080
-          - name: sidecar
-            containerPort: 8443
+        - name: metrics
+          containerPort: 8080
+        - name: sidecar
+          containerPort: 8443
         volumeMounts:
-          - name: sidecar-config
-            mountPath: /etc/greymatter
-            readOnly: true
-          - name: spire-socket
-            mountPath: /run/spire/sockets
-            readOnly: false
-      imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
-      volumes:
-        - name: spire-socket
-          hostPath:
-            path: /run/spire/sockets
-            type: DirectoryOrCreate
         - name: sidecar-config
-          configMap:
-            name: usafacts-county-population-sidecar
-        - name: swagger-static
-          configMap:
-            name: usafacts-county-population-swagger
+          mountPath: /etc/greymatter
+          readOnly: true
+        - name: spire-socket
+          mountPath: /run/spire/sockets
+          readOnly: false
+      imagePullSecrets:
+      - name: docker-dev.production.deciphernow.com
+      volumes:
+      - name: spire-socket
+        hostPath:
+          path: /run/spire/sockets
+          type: DirectoryOrCreate
+      - name: sidecar-config
+        configMap:
+          name: usafacts-county-population-sidecar
+      - name: swagger-static
+        configMap:
+          name: usafacts-county-population-swagger
