@@ -4,8 +4,8 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.apier: "glob:sha*"
-    fluxcd.io/tag.sidecar: semver:~1.4
+    fluxcd.io/tag.apier: glob:sha-*
+    fluxcd.io/tag.sidecar: glob:1.4*
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
   creationTimestamp:
@@ -57,7 +57,7 @@ spec:
           mountPath: /app/static
           readOnly: true
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.0"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
         imagePullPolicy: IfNotPresent
         args:
         - -c
