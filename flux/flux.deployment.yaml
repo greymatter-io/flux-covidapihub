@@ -58,7 +58,6 @@ spec:
             - --git-label=flux
             - --git-user=joshua-rutherford
             - --git-email=joshua-rutherford@users.noreply.github.com
-            - --git-readonly
             - --k8s-secret-name=flux
             - --listen-metrics=:3031
             - --sync-garbage-collection
