@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,7 +53,7 @@ spec:
             secretKeyRef:
               name: api-secret
               key: CAPTCHA_SECRET
-        image: novelcovid/novelcovid-api:sha-c96d2c7
+        image: novelcovid/novelcovid-api:sha-0bbd787
         imagePullPolicy: "Always"
         name: scraper
         ports:
