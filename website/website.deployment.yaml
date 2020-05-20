@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    fluxcd.io/automated: "true"
   labels:
     app: website
     cluster: website.website
@@ -41,7 +39,7 @@ spec:
         - name: API_HUB_ENDPOINT
           value: /dashboard
       - name: sidecar
-        image: docker-dev.production.deciphernow.com/deciphernow/gm-proxy:latest-ubuntu
+        image: docker-dev.production.deciphernow.com/deciphernow/gm-proxy::1.4.1-dev
         imagePullPolicy: IfNotPresent
         args:
         - -c

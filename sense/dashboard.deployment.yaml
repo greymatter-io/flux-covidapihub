@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    fluxcd.io/automated: "true"
   labels:
     app: dashboard
     cluster: sense.dashboard
@@ -24,7 +22,7 @@ spec:
       serviceAccountName: dashboard
       containers:
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:latest-ubuntu"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy::1.4.1-dev"
         imagePullPolicy: IfNotPresent
         args:
         - -c
