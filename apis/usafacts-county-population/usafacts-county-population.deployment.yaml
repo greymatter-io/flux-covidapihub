@@ -47,7 +47,7 @@ spec:
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
           value: https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv
-        image: covidapihub/apier:sha-67b40fe
+        image: covidapihub/apier:sha-d6af8cc
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -56,7 +56,7 @@ spec:
           mountPath: /app/static
           readOnly: true
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:latest-ubuntu"
         imagePullPolicy: IfNotPresent
         args:
         - -c

@@ -23,61 +23,61 @@ spec:
     spec:
       serviceAccountName: dashboard
       containers:
+      - name: sidecar
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:latest-ubuntu"
+        imagePullPolicy: IfNotPresent
+        args:
+        - -c
+        - /etc/greymatter/config.yaml
+        command:
+        - /app/gm-proxy
+        ports:
+        - name: metrics
+          containerPort: 8080
+          protocol: TCP
         - name: sidecar
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
-          imagePullPolicy: IfNotPresent
-          args:
-            - -c
-            - /etc/greymatter/config.yaml
-          command:
-            - /app/gm-proxy
-          ports:
-            - name: metrics
-              containerPort: 8080
-              protocol: TCP
-            - name: sidecar
-              containerPort: 8443
-              protocol: TCP
-          volumeMounts:
-            - name: sidecar-config
-              mountPath: /etc/greymatter
-              readOnly: true
-            - name: spire-socket
-              mountPath: /run/spire/sockets
-              readOnly: false
-          env:
-          - name: METRICS_KEY_FUNCTION
-            value: depth
-        - name: dashboard
-          image: docker-dev.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
-          imagePullPolicy: Always
-          env:
-            - name: FABRIC_SERVER
-              value: https://covidapihub.io/catalog/latest/
-            - name: CONFIG_SERVER
-              value: https://covidapihub.io/api/latest/v1.0/
-            - name: USE_PROMETHEUS
-              value: "true"
-            - name: OBJECTIVES_SERVER
-              value: https://covidapihub.io/objectives/latest/
-            - name: PROMETHEUS_SERVER
-              value: https://covidapihub.io/prometheus/latest/api/v1/
-            - name: BASE_URL
-              value: /dashboard
-            - name: PORT
-              value: "10080"
-          ports:
-            - name: dashboard
-              containerPort: 10080
-              protocol: TCP
-      imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
-        - name: index.docker.io
-      volumes:
+          containerPort: 8443
+          protocol: TCP
+        volumeMounts:
         - name: sidecar-config
-          configMap:
-            name: dashboard-sidecar
+          mountPath: /etc/greymatter
+          readOnly: true
         - name: spire-socket
-          hostPath:
-            path: /run/spire/sockets
-            type: DirectoryOrCreate
+          mountPath: /run/spire/sockets
+          readOnly: false
+        env:
+        - name: METRICS_KEY_FUNCTION
+          value: depth
+      - name: dashboard
+        image: docker-dev.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
+        imagePullPolicy: Always
+        env:
+        - name: FABRIC_SERVER
+          value: https://covidapihub.io/catalog/latest/
+        - name: CONFIG_SERVER
+          value: https://covidapihub.io/api/latest/v1.0/
+        - name: USE_PROMETHEUS
+          value: "true"
+        - name: OBJECTIVES_SERVER
+          value: https://covidapihub.io/objectives/latest/
+        - name: PROMETHEUS_SERVER
+          value: https://covidapihub.io/prometheus/latest/api/v1/
+        - name: BASE_URL
+          value: /dashboard
+        - name: PORT
+          value: "10080"
+        ports:
+        - name: dashboard
+          containerPort: 10080
+          protocol: TCP
+      imagePullSecrets:
+      - name: docker-dev.production.deciphernow.com
+      - name: index.docker.io
+      volumes:
+      - name: sidecar-config
+        configMap:
+          name: dashboard-sidecar
+      - name: spire-socket
+        hostPath:
+          path: /run/spire/sockets
+          type: DirectoryOrCreate
