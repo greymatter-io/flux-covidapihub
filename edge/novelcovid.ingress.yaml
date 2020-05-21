@@ -11,19 +11,18 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   tls:
-    - host: api.caw.sh
+    - hosts: 
+      - api.caw.sh
+      - www.api.caw.sh
       secretName: wildcard.caw.sh
-    - host: www.api.caw.sh
-      secretName: wildcard.caw.sh
-    - host: disease.sh
+    - hosts: 
+      - disease.sh
       secretName: disease.sh
-    - host: www.disease.sh
-      secretName: wildcard.disease.sh
-    - host: 9kzzzfwgnwgef8dc.disease.sh
-      secretName: wildcard.disease.sh
-    - host: ev3klr6bchdcdowp.disease.sh
-      secretName: wildcard.disease.sh
-    - host: tvf5ksnujo01bafz.disease.sh
+    - hosts: 
+      - www.disease.sh
+      - 9kzzzfwgnwgef8dc.disease.sh
+      - ev3klr6bchdcdowp.disease.sh
+      - tvf5ksnujo01bafz.disease.sh
       secretName: wildcard.disease.sh
   rules:
     - host: api.caw.sh
