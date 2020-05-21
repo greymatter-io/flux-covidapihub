@@ -17,6 +17,10 @@ spec:
       port: 9443
       protocol: TCP
       targetPort: login
+    - name: novelcovid
+      port: 7443
+      protocol: TCP
+      targetPort: novelcovid
   selector:
     app: edge
     cluster: edge.edge
