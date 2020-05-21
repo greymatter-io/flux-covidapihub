@@ -1,8 +1,16 @@
 {
   "zone_key": "default.zone",
   "proxy_key": "edge.proxy",
-  "domain_keys": ["edge.ingress.domain", "edge.login.domain"],
-  "listener_keys": ["edge.ingress.listener", "edge.login.listener"],
+  "domain_keys": [
+    "edge.ingress.domain",
+    "edge.login.domain",
+    "edge.novelcovid.domain"
+  ],
+  "listener_keys": [
+    "edge.ingress.listener",
+    "edge.login.listener",
+    "edge.novelcovid.listener"
+  ],
   "name": "edge.edge",
   "listeners": null
 }
