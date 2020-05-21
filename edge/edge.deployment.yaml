@@ -36,6 +36,8 @@ spec:
               containerPort: 8443
             - name: login
               containerPort: 9443
+            - name: novelcovid
+              containerPort: 7443
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
