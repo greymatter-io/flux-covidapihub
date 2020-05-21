@@ -61,11 +61,23 @@ spec:
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
-        resources: {}
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 200m
+            memory: 200Mi
       - name: sidecar
         image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
         imagePullPolicy: IfNotPresent
-        resources: {}
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
         args:
         - -c
         - /etc/greymatter/config.yaml
