@@ -12,7 +12,9 @@ metadata:
 spec:
   tls:
     - secretName: wildcard.caw.sh
+    - secretName: wildcard.caw.sh
     - secretName: disease.sh
+    - secretName: wildcard.disease.sh
   rules:
     - host: api.caw.sh
       http:
@@ -21,7 +23,21 @@ spec:
             backend:
               serviceName: edge
               servicePort: 7443
+    - host: www.api.caw.sh
+      http:
+        paths:
+          - path: /(.*)
+            backend:
+              serviceName: edge
+              servicePort: 7443
     - host: disease.sh
+      http:
+        paths:
+          - path: /(.*)
+            backend:
+              serviceName: edge
+              servicePort: 7443
+    - host: www.disease.sh
       http:
         paths:
           - path: /(.*)
