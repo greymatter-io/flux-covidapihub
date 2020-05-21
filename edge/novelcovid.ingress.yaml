@@ -12,7 +12,7 @@ metadata:
 spec:
   tls:
     - secretName: wildcard.caw.sh
-    - secretName: wildcard.disease.sh
+    - secretName: disease.sh
   rules:
     - host: api.caw.sh
       http:
