@@ -51,6 +51,8 @@ spec:
           env:
           - name: METRICS_KEY_FUNCTION
             value: depth
+          - name: ENVOY_LOG_LEVEL
+            value: trace
       imagePullSecrets:
         - name: docker-dev.production.deciphernow.com
       volumes:
