@@ -1,17 +1,13 @@
 {
   "zone_key": "default.zone",
   "listener_key": "edge.ingress.listener",
-  "domain_keys": [
-    "edge.ingress.domain"
-  ],
+  "domain_keys": ["edge.ingress.domain"],
   "name": "ingress",
   "ip": "0.0.0.0",
   "port": 8443,
   "protocol": "http_auto",
   "tracing_config": null,
-  "active_network_filters": [
-    "envoy.rate_limit"
-  ],
+  "active_network_filters": ["envoy.rate_limit"],
   "network_filters": {
     "envoy_rate_limit": {
       "stat_prefix": "edge",
@@ -40,8 +36,7 @@
     "gm.observables",
     "gm.metrics",
     "gm.ensure-variables",
-    "gm.oidc-validation",
-    "envoy.rbac"
+    "gm.oidc-validation"
   ],
   "http_filters": {
     "gm_metrics": {
@@ -82,55 +77,6 @@
       },
       "provider": "https://accounts.google.com",
       "enforce": false
-    },
-    "envoy_rbac": {
-      "rules": {
-        "action": 0,
-        "policies": {
-          "0": {
-            "permissions": [
-              {
-                "any": true
-              }
-            ],
-            "principals": [
-              {
-                "header": {
-                  "name": "access_token",
-                  "present_match": true
-                }
-              }
-            ]
-          },
-          "1": {
-            "permissions": [
-              {
-                  "or_rules": {
-                      "rules": [
-                          {
-                              "header": {
-                                  "name": ":method",
-                                  "exact_match": "GET"
-                              }
-                          },
-                          {
-                              "header": {
-                                  "name": ":method",
-                                  "exact_match": "HEAD"
-                              }
-                          }
-                      ]
-                  }
-              }
-          ],
-            "principals": [
-              {
-                "any": true
-              }
-            ]
-          }
-        }
-      }
     }
   }
 }
