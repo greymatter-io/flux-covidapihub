@@ -1,13 +1,13 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.novelcovid.slash.route",
-    "path": "/apis/novelcovid",
-    "prefix_rewrite": "/apis/novelcovid/",
-    "redirects": null,
-    "shared_rules_key": "edge.novelcovid.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.ingress.novelcovid.slash.route",
+  "path": "/apis/novelcovid",
+  "prefix_rewrite": "/apis/novelcovid/",
+  "redirects": null,
+  "shared_rules_key": "edge.novelcovid.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null,
+  "retry_policy": null
 }
