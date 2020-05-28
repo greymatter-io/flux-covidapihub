@@ -14,17 +14,9 @@ spec:
   tls:
     - hosts: 
       - api.caw.sh
-      - www.api.caw.sh
       secretName: api.caw.sh
   rules:
     - host: api.caw.sh
-      http:
-        paths:
-          - path: /(.*)
-            backend:
-              serviceName: edge
-              servicePort: 7443
-    - host: www.api.caw.sh
       http:
         paths:
           - path: /(.*)
