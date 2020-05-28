@@ -15,7 +15,7 @@ spec:
     - hosts: 
       - api.caw.sh
       - www.api.caw.sh
-      secretName: wildcard.caw.sh
+      secretName: api.caw.sh
   rules:
     - host: api.caw.sh
       http:
