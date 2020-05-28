@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: novelcovid-edge
+  name: wildcard.disease.sh.ingress
   namespace: edge
   annotations:
     kubernetes.io/ingress.class: nginx
@@ -12,40 +12,12 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - api.caw.sh
-      - www.api.caw.sh
-      secretName: wildcard.caw.sh
-    - hosts: 
-      - disease.sh
-      secretName: disease.sh
-    - hosts: 
       - www.disease.sh
       - 9kzzzfwgnwgef8dc.disease.sh
       - ev3klr6bchdcdowp.disease.sh
       - tvf5ksnujo01bafz.disease.sh
       secretName: wildcard.disease.sh
   rules:
-    - host: api.caw.sh
-      http:
-        paths:
-          - path: /(.*)
-            backend:
-              serviceName: edge
-              servicePort: 7443
-    - host: www.api.caw.sh
-      http:
-        paths:
-          - path: /(.*)
-            backend:
-              serviceName: edge
-              servicePort: 7443
-    - host: disease.sh
-      http:
-        paths:
-          - path: /(.*)
-            backend:
-              serviceName: edge
-              servicePort: 7443
     - host: www.disease.sh
       http:
         paths:
