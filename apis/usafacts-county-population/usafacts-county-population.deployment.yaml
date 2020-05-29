@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.apier: glob:sha-*
+    fluxcd.io/tag.apier: glob:sha*
     fluxcd.io/tag.sidecar: glob:1.4*
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
