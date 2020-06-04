@@ -27,6 +27,11 @@ spec:
         - name: logstash
           image: docker.elastic.co/logstash/logstash-oss:7.4.2
           imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 2Gi
+            requests:
+              memory: 1Gi
           env:
             - name: ES_USERNAME
               valueFrom:
