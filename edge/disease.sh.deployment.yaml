@@ -1,0 +1,63 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: disease.sh
+    cluster: disease
+  name: disease.sh
+  namespace: edge
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: disease.sh
+      cluster: disease
+  template:
+    metadata:
+      labels:
+        app: disease.sh
+        cluster: disease
+    spec:
+      serviceAccountName: disease.sh
+      containers:
+        - name: proxy
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: sidecar-tls
+              mountPath: /etc/tls
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
+          env:
+          - name: METRICS_KEY_FUNCTION
+            value: depth
+      imagePullSecrets:
+        - name: docker-dev.production.deciphernow.com
+      volumes:
+        - name: sidecar-config
+          configMap:
+            name: disease.sh
+        - name: sidecar-tls
+          secret:
+            secretName: edge.svc
+
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
