@@ -3,25 +3,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: disease.sh
+    app: disease
     cluster: disease
-  name: disease.sh
+  name: disease
   namespace: edge
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
-      app: disease.sh
+      app: disease
       cluster: disease
   template:
     metadata:
       labels:
-        app: disease.sh
+        app: disease
         cluster: disease
     spec:
-      serviceAccountName: disease.sh
+      serviceAccountName: edge
       containers:
-        - name: proxy
+        - name: disease
           image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
           imagePullPolicy: IfNotPresent
           args:
@@ -47,12 +47,14 @@ spec:
           env:
           - name: METRICS_KEY_FUNCTION
             value: depth
+          - name: ENVOY_LOG_LEVEL
+            value: debug
       imagePullSecrets:
         - name: docker-dev.production.deciphernow.com
       volumes:
         - name: sidecar-config
           configMap:
-            name: disease.sh
+            name: disease
         - name: sidecar-tls
           secret:
             secretName: edge.svc

@@ -1,0 +1,18 @@
+{
+  "zone_key": "default.zone",
+  "cluster_key": "disease.external.cluster",
+  "name": "disease.external",
+  "instances": [
+    {
+      "host": "disease.sh",
+      "port": 443
+    }
+  ],
+  "circuit_breakers": null,
+  "outlier_detection": null,
+  "health_checks": [],
+  "require_tls": true,
+  "ssl_config": {
+    "sni": "disease.sh"
+  }
+}
