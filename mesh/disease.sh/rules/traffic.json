@@ -1,0 +1,32 @@
+{
+  "zone_key": "default.zone",
+  "shared_rules_key": "disease.traffic.rules",
+  "name": "disease.traffic",
+  "default": {
+    "light": [
+      {
+        "constraint_key": "",
+        "cluster_key": "disease.internal.cluster",
+        "metadata": null,
+        "properties": null,
+        "response_data": {},
+        "weight": 1
+      },
+      {
+        "constraint_key": "",
+        "cluster_key": "disease.external.cluster",
+        "metadata": null,
+        "properties": null,
+        "response_data": {},
+        "weight": 9
+      }
+    ],
+    "dark": null,
+    "tap": null
+  },
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null,
+  "properties": null,
+  "retry_policy": null
+}

@@ -1,0 +1,13 @@
+{
+  "zone_key": "default.zone",
+  "domain_key": "disease.ingress.domain",
+  "route_key": "disease.ingress.route",
+  "path": "/",
+  "prefix_rewrite": "/",
+  "redirects": null,
+  "shared_rules_key": "disease.traffic.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null,
+  "retry_policy": null
+}

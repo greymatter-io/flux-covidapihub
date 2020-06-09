@@ -20,5 +20,5 @@ spec:
         paths:
           - path: /(.*)
             backend:
-              serviceName: edge
-              servicePort: 7443
+              serviceName: disease
+              servicePort: 8443

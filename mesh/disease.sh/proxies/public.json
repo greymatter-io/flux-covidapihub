@@ -1,0 +1,8 @@
+{
+  "zone_key": "default.zone",
+  "proxy_key": "disease.proxy",
+  "domain_keys": ["disease.ingress.domain"],
+  "listener_keys": ["disease.ingress.listener"],
+  "name": "disease",
+  "listeners": null
+}

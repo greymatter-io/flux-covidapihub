@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: disease
+  namespace: edge
+  labels:
+    app: disease
+    cluster: disease
+spec:
+  ports:
+    - name: sidecar
+      port: 8443
+      protocol: TCP
+      targetPort: sidecar
+  selector:
+    app: disease
+    cluster: disease
+  type: ClusterIP
+  
