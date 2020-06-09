@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress
+  namespace: edge
+  labels:
+    app.kubernetes.io/name: disease.ingress
+    app.kubernetes.io/part-of: disease.ingress
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-eip-allocation: eipalloc-008a55dfed9502792
+spec:
+  externalTrafficPolicy: Cluster
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: disease.ingress
+    app.kubernetes.io/part-of: disease.ingress
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
+    - name: https
+      port: 443
+      targetPort: https
+      protocol: TCP
