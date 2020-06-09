@@ -9,7 +9,6 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "https"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-    fluxcd.io/ignore: "true"
 spec:
   tls:
     - hosts: 
