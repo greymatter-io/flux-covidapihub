@@ -2,36 +2,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: disease.ingress
+  name: disease-ingress
   namespace: edge
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app.kubernetes.io/name: disease.ingress
-      app.kubernetes.io/part-of: disease.ingress
+      app.kubernetes.io/name: disease-ingress
+      app.kubernetes.io/part-of: disease-ingress
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: disease.ingress
-        app.kubernetes.io/part-of: disease.ingress
+        app.kubernetes.io/name: disease-ingress
+        app.kubernetes.io/part-of: disease-ingress
       annotations:
         prometheus.io/port: "10254"
         prometheus.io/scrape: "true"
     spec:
       terminationGracePeriodSeconds: 300
-      serviceAccountName: disease.ingress
+      serviceAccountName: disease-ingress
       nodeSelector:
         kubernetes.io/os: linux
       containers:
-        - name: disease.ingress
+        - name: disease-ingress
           image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.28.0
           args:
             - /nginx-ingress-controller
             - --configmap=$(POD_NAMESPACE)/disease.nginx
             - --tcp-services-configmap=$(POD_NAMESPACE)/disease.tcp
             - --udp-services-configmap=$(POD_NAMESPACE)/disease.udp
-            - --publish-service=$(POD_NAMESPACE)/disease.ingress
+            - --publish-service=$(POD_NAMESPACE)/disease-ingress
             - --annotations-prefix=nginx.ingress.kubernetes.io
           securityContext:
             allowPrivilegeEscalation: true

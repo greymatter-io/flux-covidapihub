@@ -5,7 +5,7 @@ metadata:
   name: disease.nginx
   namespace: edge
   labels:
-    app.kubernetes.io/name: disease.ingress
-    app.kubernetes.io/part-of: disease.ingress
+    app.kubernetes.io/name: disease-ingress
+    app.kubernetes.io/part-of: disease-ingress
 data:
   use-proxy-protocol: "true"

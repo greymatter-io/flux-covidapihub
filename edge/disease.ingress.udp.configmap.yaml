@@ -5,5 +5,5 @@ metadata:
   name: disease.udp
   namespace: edge
   labels:
-    app.kubernetes.io/name: disease.ingress
-    app.kubernetes.io/part-of: disease.ingress
+    app.kubernetes.io/name: disease-ingress
+    app.kubernetes.io/part-of: disease-ingress
