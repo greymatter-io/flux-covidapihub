@@ -7,3 +7,4 @@ metadata:
   labels:
     app.kubernetes.io/name: disease.ingress
     app.kubernetes.io/part-of: disease.ingress
+    

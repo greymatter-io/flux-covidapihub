@@ -17,3 +17,4 @@ spec:
     app: disease
     cluster: disease
   type: ClusterIP
+  
