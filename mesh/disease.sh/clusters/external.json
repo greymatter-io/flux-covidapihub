@@ -4,7 +4,15 @@
   "name": "disease.external",
   "instances": [
     {
-      "host": "disease.sh",
+      "host": "172.67.10.173",
+      "port": 443
+    },
+    {
+      "host": "104.22.14.76",
+      "port": 443
+    },
+    {
+      "host": "104.22.15.76",
       "port": 443
     }
   ],
