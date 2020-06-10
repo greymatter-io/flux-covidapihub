@@ -40,6 +40,8 @@ spec:
           resources:
             limits:
               memory: 4Gi
+            requests:
+              memory: 1Gi
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
