@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/part-of: disease-ingress
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
-    service.beta.kubernetes.io/aws-load-balancer-eip-allocation: eipalloc-008a55dfed9502792
+    service.beta.kubernetes.io/aws-load-balancer-eip-allocation: eipalloc-0519bb158d65945a2
 spec:
   externalTrafficPolicy: Cluster
   type: LoadBalancer
