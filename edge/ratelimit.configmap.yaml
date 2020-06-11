@@ -13,4 +13,4 @@ data:
         value: "/"
         rate_limit:
           unit: second
-          requests_per_unit: 100
+          requests_per_unit: 1000
