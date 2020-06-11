@@ -9,7 +9,17 @@ data:
     ---
     domain: edge
     descriptors:
-      - key: path
+      - key: covidapihub.io
+        value: "/"
+        rate_limit:
+          unit: second
+          requests_per_unit: 100
+      - key: disease.sh
+        value: "/"
+        rate_limit:
+          unit: second
+          requests_per_unit: 1000
+      - key: api.caw.sh
         value: "/"
         rate_limit:
           unit: second

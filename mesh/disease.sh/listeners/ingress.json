@@ -7,7 +7,32 @@
   "port": 8443,
   "protocol": "http_auto",
   "tracing_config": null,
-  "active_http_filters": ["gm.metrics"],
+  "active_network_filters": ["envoy.rate_limit"],
+  "network_filters": {
+    "envoy_rate_limit": {
+      "stat_prefix": "disease.sh",
+      "domain": "edge",
+      "failure_mode_deny": true,
+      "descriptors": [
+        {
+          "entries": [
+            {
+              "key": "disease.sh",
+              "value": "/"
+            }
+          ]
+        }
+      ],
+      "rate_limit_service": {
+        "grpc_service": {
+          "envoy_grpc": {
+            "cluster_name": "ratelimit"
+          }
+        }
+      }
+    }
+  },
+  "active_http_filters": ["gm.metrics", "gm.observables"],
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,
@@ -24,29 +49,6 @@
       "useKafka": true,
       "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
       "useKafkaTLS": true
-    },
-    "gm_ensure-variables": {
-      "rules": [
-        {
-          "location": "cookie",
-          "key": "access_token",
-          "removeOriginal": false,
-          "copyTo": [
-            {
-              "location": "header",
-              "key": "access_token"
-            }
-          ]
-        }
-      ]
-    },
-    "gm_oidc-validation": {
-      "accessToken": {
-        "location": "header",
-        "key": "access_token"
-      },
-      "provider": "https://accounts.google.com",
-      "enforce": false
     }
   }
 }
