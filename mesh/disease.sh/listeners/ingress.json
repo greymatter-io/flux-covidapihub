@@ -10,7 +10,7 @@
   "active_network_filters": ["envoy.rate_limit"],
   "network_filters": {
     "envoy_rate_limit": {
-      "stat_prefix": "edge",
+      "stat_prefix": "disease.sh",
       "domain": "edge",
       "failure_mode_deny": true,
       "descriptors": [
