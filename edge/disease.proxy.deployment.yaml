@@ -22,7 +22,7 @@ spec:
       serviceAccountName: edge
       containers:
         - name: disease
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.1-dev"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
