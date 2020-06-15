@@ -13,8 +13,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: 10m
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_cache api;
-      proxy_cache_valid 10m;
-      proxy_cache_valid any 1m;
+      proxy_cache_valid 404 1m;
       proxy_cache_use_stale error timeout updating http_404 http_500 http_502 http_503 http_504;
       proxy_set_header Host $host;
       proxy_cache_bypass $http_x_purge;
@@ -29,6 +28,10 @@ spec:
       http:
         paths:
           - path: /(.*)
+            backend:
+              serviceName: disease
+              servicePort: 8443
+          - path: /assets(.*)
             backend:
               serviceName: disease
               servicePort: 8443
