@@ -11,7 +11,7 @@
         "max_connection_pools": 10240,
         "track_remaining": false,
         "high": null
-    ,
+    },
     "outlier_detection": null,
     "health_checks": [],
     "require_tls": true,
