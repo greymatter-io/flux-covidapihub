@@ -16,7 +16,15 @@
       "port": 443
     }
   ],
-  "circuit_breakers": null,
+  "circuit_breakers": {
+    "max_connections": 10240,
+    "max_pending_requests": 10240,
+    "max_retries": 3,
+    "max_requests": 10240,
+    "max_connection_pools": 10240,
+    "track_remaining": false,
+    "high": null
+  },
   "outlier_detection": null,
   "health_checks": [],
   "require_tls": true,
