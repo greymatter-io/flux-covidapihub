@@ -31,7 +31,3 @@ spec:
             backend:
               serviceName: disease
               servicePort: 8443
-          - path: /assets(.*)
-            backend:
-              serviceName: disease
-              servicePort: 8443
