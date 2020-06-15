@@ -34,9 +34,6 @@ spec:
               containerPort: 8080
             - name: sidecar
               containerPort: 8443
-          env:
-            - name: ENVOY_LOG_LEVEL
-              value: "debug"
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
