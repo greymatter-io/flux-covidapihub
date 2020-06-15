@@ -15,7 +15,6 @@ metadata:
       proxy_cache_valid any 10m;
       proxy_cache_use_stale error timeout updating http_404 http_500 http_502 http_503 http_504;
       proxy_set_header Host $host;
-      add_header NG-Cache-Status $upstream_cache_status;
 spec:
   tls:
     - hosts: 
