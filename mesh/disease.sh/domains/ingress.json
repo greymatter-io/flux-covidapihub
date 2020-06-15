@@ -17,5 +17,6 @@
   },
   "cors_config": null,
   "aliases": null,
-  "force_https": true
+  "force_https": true,
+  "custom_headers": [{ "key": "Host", "value": "disease.sh" }]
 }
