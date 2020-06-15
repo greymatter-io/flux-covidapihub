@@ -7,7 +7,7 @@
   "port": 8443,
   "protocol": "http_auto",
   "tracing_config": null,
-  "active_network_filters": ["envoy.rate_limit"],
+  "active_network_filters": [],
   "network_filters": {
     "envoy_rate_limit": {
       "stat_prefix": "disease.sh",
