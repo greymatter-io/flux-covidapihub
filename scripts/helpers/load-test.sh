@@ -17,7 +17,7 @@ value_prompt() {
 }
 
 IP=$(value_prompt "cluster IP" $IP)
-ENDPOINT=$(value_prompt "endpoint" $ENDPOINT)
+ENDPOINT=$(value_prompt "url endpoint" $ENDPOINT)
 THREADS=$(value_prompt "num threads" $THREADS)
 CONNS=$(value_prompt "connections" $CONNS)
 DURATION=$(value_prompt "duration" $DURATION)
@@ -25,5 +25,5 @@ HOST_HEADER=$(value_prompt "Host header" $HOST_HEADER)
 
 echo ""
 echo "Copy the following work script and EXECUTE it (if it looks good)"
-echo "wrk -t${THREADS} -c${CONNS} -d${DURATION} -H \"Host: $HOST_HEADER\" https://${IP}${ENDPOINT}"
+echo "wrk -t${THREADS} -c${CONNS} -d${DURATION} -H \"Host: $HOST_HEADER\" \"https://${IP}${ENDPOINT}\""
 
