@@ -12,7 +12,7 @@ metadata:
   name: novelcovid.api
   namespace: apis
 spec:
-  replicas: 6
+  replicas: 12
   selector:
     matchLabels:
       app: novelcovid
