@@ -13,7 +13,7 @@ IP="54.196.249.239"
 value_prompt() {
     local prompt=$1
     local dfault=$2
-    echo -n $(rlwrap -pYellow -S "$prompt: " -P $dfault -H "$HISTORY" -D 1 -o cat)
+    echo -n $(rlwrap -pYellow -S "$prompt: " -P $dfault -H "$HISTORY" -D 1 -o cat 2> /dev/null)
 }
 
 IP=$(value_prompt "cluster IP" $IP)
