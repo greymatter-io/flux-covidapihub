@@ -1,7 +1,7 @@
 {
   "zone_key": "default.zone",
   "cluster_key": "disease.internal.cluster",
-  "name": "apis.passthrough",
+  "name": "apis.novelcovid",
   "instances": [],
   "circuit_breakers": {
     "max_connections": 1000000000,
