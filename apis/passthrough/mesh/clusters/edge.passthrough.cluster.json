@@ -1,0 +1,29 @@
+{
+    "zone_key": "default.zone",
+    "cluster_key": "edge.passthrough.cluster",
+    "name": "apis.passthrough",
+    "instances": [],
+    "circuit_breakers": {
+        "max_connections": 10240,
+        "max_pending_requests": 10240,
+        "max_retries": 3,
+        "max_requests": 10240,
+        "max_connection_pools": 10240,
+        "track_remaining": false,
+        "high": null
+    },
+    "outlier_detection": null,
+    "health_checks": [],
+    "require_tls": true,
+    "secret": {
+        "secret_key": "edge.identity",
+        "secret_name": "spiffe://covidapihub.io/ns/edge/sa/edge",
+        "secret_validation_name": "spiffe://covidapihub.io",
+        "subject_names": [
+            "spiffe://covidapihub.io/ns/apis/sa/apis-sa"
+        ],
+        "ecdh_curves": [
+            "X25519:P-256:P-521:P-384"
+        ]
+    }
+}
