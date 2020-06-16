@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "passthrough.proxy",
+    "domain_keys": [
+        "passthrough.apis.domain"
+    ],
+    "listener_keys": [
+        "passthrough.apis.listener"
+    ],
+    "name": "apis.passthrough",
+    "listeners": null
+}
