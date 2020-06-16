@@ -9,7 +9,7 @@
     "port": 8443,
     "protocol": "http_auto",
     "secret": {
-        "secret_key": "dashboard.identity",
+        "secret_key": "apis.identity",
         "secret_name": "spiffe://covidapihub.io/ns/apis/sa/apis-sa",
         "secret_validation_name": "spiffe://covidapihub.io",
         "subject_names": [
