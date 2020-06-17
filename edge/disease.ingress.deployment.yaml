@@ -5,7 +5,7 @@ metadata:
   name: disease-ingress
   namespace: edge
 spec:
-  replicas: 6
+  replicas: 12
   selector:
     matchLabels:
       app.kubernetes.io/name: disease-ingress
