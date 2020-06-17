@@ -37,7 +37,7 @@ spec:
         - name: NYT_INTERVAL
           value: "864e5"
         - name: REDIS_HOST
-          value: redis
+          value: novelcovid-redis.dvd05s.0001.use1.cache.amazonaws.com
         - name: REDIS_PASSWORD
           valueFrom:
             secretKeyRef:
