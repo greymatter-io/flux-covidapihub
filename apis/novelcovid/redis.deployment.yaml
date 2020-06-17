@@ -42,7 +42,13 @@ spec:
         name: redis   
         ports:
         - containerPort: 6379
-        resources: {}
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2Gi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         volumeMounts:
         - mountPath: /data
           name: redis-data
