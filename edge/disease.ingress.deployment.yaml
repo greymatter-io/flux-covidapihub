@@ -25,7 +25,7 @@ spec:
         kubernetes.io/os: linux
       containers:
         - name: disease-ingress
-          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.33.0
+          image: nginx/nginx-ingress:1.7.1
           args:
             - /nginx-ingress-controller
             - --configmap=$(POD_NAMESPACE)/disease.nginx
