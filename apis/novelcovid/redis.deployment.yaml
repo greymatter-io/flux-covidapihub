@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: novelcovid.redis
+  namespace: apis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: novelcovid.redis
+      cluster: apis.novelcovid.redis
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: novelcovid.redis
+        cluster: apis.novelcovid.redis
+    spec:
+      serviceAccountName: "apis-sa"
+      containers:
+      - args:
+        - redis-server
+        - --appendonly
+        - "yes"
+        - --requirepass
+        - "$(REDIS_PASSWORD)"
+        - --port
+        - "$(REDIS_PORT)"
+        env:
+        - name: REDIS_HOST
+          value: redis
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis
+              key: password
+        - name: REDIS_PORT
+          value: "6379"
+        image: redis:5.0.8-buster
+        imagePullPolicy: "IfNotPresent"
+        name: redis   
+        ports:
+        - containerPort: 6379
+        resources:
+          limits:
+            cpu: 500m
+            memory: 8Gi
+          requests:
+            cpu: 100m
+            memory: 1Gi
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data
+      restartPolicy: Always
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: redis-data
+status: {}
