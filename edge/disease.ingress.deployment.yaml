@@ -4,17 +4,21 @@ kind: Deployment
 metadata:
   name: disease-ingress
   namespace: edge
+  labels:
+    cluster: disease-ingress
 spec:
   replicas: 12
   selector:
     matchLabels:
       app.kubernetes.io/name: disease-ingress
       app.kubernetes.io/part-of: disease-ingress
+      cluster: disease-ingress
   template:
     metadata:
       labels:
         app.kubernetes.io/name: disease-ingress
         app.kubernetes.io/part-of: disease-ingress
+        cluster: disease-ingress
       annotations:
         prometheus.io/port: "10254"
         prometheus.io/scrape: "true"
@@ -54,8 +58,9 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-            - name: stats
-              containerPort: 8080
+            - name: metrics
+              containerPort: 10254
+              protocol: TCP
             - name: https
               containerPort: 443
               protocol: TCP
