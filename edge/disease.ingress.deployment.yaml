@@ -33,6 +33,8 @@ spec:
             - --udp-services-configmap=$(POD_NAMESPACE)/disease.udp
             - --publish-service=$(POD_NAMESPACE)/disease-ingress
             - --annotations-prefix=nginx.ingress.kubernetes.io
+            - --nginx-status
+            - --nginx-status-port=8080
           securityContext:
             allowPrivilegeEscalation: true
             capabilities:
@@ -54,6 +56,8 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+            - name: stats
+              containerPort: 8080
             - name: https
               containerPort: 443
               protocol: TCP
