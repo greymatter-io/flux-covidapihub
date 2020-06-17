@@ -48,7 +48,7 @@ spec:
             memory: 2Gi
           requests:
             cpu: 100m
-            memory: 200Mi
+            memory: 1Gi
         volumeMounts:
         - mountPath: /data
           name: redis-data
