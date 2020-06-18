@@ -17,3 +17,4 @@ spec:
     app: novelcovid
     cluster: apis.novelcovid
   type: ClusterIP
+  
