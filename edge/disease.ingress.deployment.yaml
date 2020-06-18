@@ -7,7 +7,6 @@ metadata:
   labels:
     cluster: disease-ingress
 spec:
-  replicas: 12
   selector:
     matchLabels:
       app.kubernetes.io/name: disease-ingress
