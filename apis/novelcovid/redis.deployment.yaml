@@ -29,12 +29,7 @@ spec:
         - "$(REDIS_PORT)"
         env:
         - name: REDIS_HOST
-          value: redis
-        - name: REDIS_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: redis
-              key: password
+          value: novelcovid-redis.dvd05s.0001.use1.cache.amazonaws.com
         - name: REDIS_PORT
           value: "6379"
         image: redis:5.0.8-buster
