@@ -5,8 +5,8 @@ metadata:
   name: api-caw-sh-svc
   namespace: edge
   labels:
-    app: novelcovid.apis
-    cluster: novelcovid.apis
+    app: novelcovid
+    cluster: apis.novelcovid
 spec:
   ports:
     - name: http
@@ -14,6 +14,6 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app: novelcovid.apis
-    cluster: novelcovid.apis
+    app: novelcovid
+    cluster: apis.novelcovid
   type: ClusterIP
