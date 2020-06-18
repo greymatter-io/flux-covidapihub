@@ -10,9 +10,9 @@ metadata:
 spec:
   ports:
     - name: http
-      port: 3000
+      port: 8443
       protocol: TCP
-      targetPort: 3000
+      targetPort: 8443
   selector:
     app: novelcovid
     cluster: apis.novelcovid

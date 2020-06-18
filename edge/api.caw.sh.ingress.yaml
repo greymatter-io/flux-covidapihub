@@ -22,4 +22,4 @@ spec:
           - path: /(.*)
             backend:
               serviceName: api-caw-sh-svc
-              servicePort: 3000
+              servicePort: 8443
