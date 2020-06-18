@@ -36,7 +36,8 @@
     "gm.observables",
     "gm.metrics",
     "gm.ensure-variables",
-    "gm.oidc-validation"
+    "gm.oidc-validation",
+    "envoy.rbac"
   ],
   "http_filters": {
     "gm_metrics": {
@@ -77,6 +78,31 @@
       },
       "provider": "https://accounts.google.com",
       "enforce": false
+    },
+    "envoy_rbac": {
+      "rules": {
+        "action": 1,
+        "policies": {
+          "1": {
+            "permissions": [
+              {
+                "any": true
+              }
+            ],
+            "principals": [
+              {
+                "header": {
+                  "name": "User-Agent",
+                  "safe_regex_match": {
+                    "google_re2": {},
+                    "regex": "WordPress.*"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   }
 }
