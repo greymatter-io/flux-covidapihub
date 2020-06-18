@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: api-caw-sh-svc
-  namespace: edge
+  namespace: apis
   labels:
     app: novelcovid
     cluster: apis.novelcovid
@@ -17,4 +17,3 @@ spec:
     app: novelcovid
     cluster: apis.novelcovid
   type: ClusterIP
-  
