@@ -78,6 +78,8 @@ data:
                         path: /run/spire/sockets/agent.sock
         - name: local
           connect_timeout: 0.25s
+          common_http_protocol_options:
+            idle_timeout: 10s
           http2_protocol_options: {}
           type: STATIC
           lb_policy: round_robin
