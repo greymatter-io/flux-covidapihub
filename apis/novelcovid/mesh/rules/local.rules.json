@@ -6,7 +6,7 @@
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "novelcovid.local.cluster",
+        "cluster_key": "local",
         "metadata": null,
         "properties": null,
         "response_data": {},
