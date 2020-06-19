@@ -33,6 +33,35 @@ data:
             port_value: 8443
         filter_chains:
         - filter_chain_match: {}
+          transport_socket:
+            name: envoy.transport_sockets.tls
+            typed_config:
+              "@type": type.googleapis.com/envoy.api.v2.auth.DownstreamTlsContext
+              common_tls_context:
+                tls_certificate_sds_secret_configs:
+                  - name: "spiffe://covidapihub.io/ns/apis/sa/apis-sa"
+                    sds_config:
+                      api_config_source:
+                        api_type: GRPC
+                        grpc_services:
+                          envoy_grpc:
+                            cluster_name: spire_agent
+                tls_params:
+                  ecdh_curves:
+                    - X25519:P-256:P-521:P-384
+                combined_validation_context:
+                  default_validation_context:
+                    verify_subject_alt_name:
+                      - "spiffe://covidapihub.io/ns/edge/sa/edge"
+                  validation_context_sds_secret_config:
+                    name: "spiffe://covidapihub.io"
+                    sds_config:
+                      api_config_source:
+                        api_type: GRPC
+                        grpc_services:
+                          envoy_grpc:
+                            cluster_name: spire_agent
+
           filters:
           - name: envoy.http_connection_manager
             typed_config:
@@ -43,6 +72,7 @@ data:
                 name: sidecar
                 virtual_hosts:
                 - name: '*-8443'
+                  require_tls: EXTERNAL_ONLY
                   domains:
                   - '*'
                   routes:
@@ -119,7 +149,6 @@ data:
           connect_timeout: 0.25s
           common_http_protocol_options:
             idle_timeout: 10s
-          http2_protocol_options: {}
           type: STATIC
           lb_policy: round_robin
           circuit_breakers:
