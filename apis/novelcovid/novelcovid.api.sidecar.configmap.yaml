@@ -24,45 +24,45 @@ data:
         ads: {}
     static_resources:
       
-    listeners:
-      # Address and port where the sidecar proxy listens
-      name: sidecar:8443
-      address:
-        socket_address:
-          address: 0.0.0.0
-          port_value: 8443
-      filter_chains:
-      - filter_chain_match: {}
-        filters:
-        - name: envoy.http_connection_manager
-          typed_config:
-            "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
-            stat_prefix: sidecar
-            codec_type: auto
-            route_config:
-              name: sidecar
-              virtual_hosts:
-              - name: '*-8443'
-                domains:
-                - '*'
-                routes:
-                - match:
-                    prefix: "/"
-                  route:
-                    prefix_rewrite: "/"
-                    cluster: local
-                    timeout: 3s
-            http_filters:
-            - name: envoy.cors
-              typed_config: {}
-            - name: envoy.router
-              typed_config: {}
-            access_log:
-            - name: envoy.file_access_log
-              typed_config:
-                '@type': type.googleapis.com/envoy.config.accesslog.v2.FileAccessLog
-                path: /dev/stdout
-  
+      listeners:
+        # Address and port where the sidecar proxy listens
+        name: sidecar:8443
+        address:
+          socket_address:
+            address: 0.0.0.0
+            port_value: 8443
+        filter_chains:
+        - filter_chain_match: {}
+          filters:
+          - name: envoy.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
+              stat_prefix: sidecar
+              codec_type: auto
+              route_config:
+                name: sidecar
+                virtual_hosts:
+                - name: '*-8443'
+                  domains:
+                  - '*'
+                  routes:
+                  - match:
+                      prefix: "/"
+                    route:
+                      prefix_rewrite: "/"
+                      cluster: local
+                      timeout: 3s
+              http_filters:
+              - name: envoy.cors
+                typed_config: {}
+              - name: envoy.router
+                typed_config: {}
+              access_log:
+              - name: envoy.file_access_log
+                typed_config:
+                  '@type': type.googleapis.com/envoy.config.accesslog.v2.FileAccessLog
+                  path: /dev/stdout
+    
       clusters:
         - name: xds_cluster
           connect_timeout: 0.25s
