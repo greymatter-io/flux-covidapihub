@@ -23,7 +23,7 @@ data:
       lds_config:
         ads: {}
     static_resources:
-      
+    
       listeners:
         # Address and port where the sidecar proxy listens
         name: sidecar:8443
@@ -62,7 +62,6 @@ data:
                 typed_config:
                   '@type': type.googleapis.com/envoy.config.accesslog.v2.FileAccessLog
                   path: /dev/stdout
-    
       clusters:
         - name: xds_cluster
           connect_timeout: 0.25s
