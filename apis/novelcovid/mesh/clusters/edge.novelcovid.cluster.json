@@ -17,7 +17,7 @@
       },
     "outlier_detection": null,
     "health_checks": [],
-    "require_tls": true,
+    "require_tls": false,
     "secret": {
         "secret_key": "edge.identity",
         "secret_name": "spiffe://covidapihub.io/ns/edge/sa/edge",
