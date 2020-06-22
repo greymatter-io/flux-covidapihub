@@ -74,3 +74,7 @@ delete-api:
 .PHONY: new-csv
 new-csv:
 	./scripts/scripts/new-csv.sh
+
+.PHONY: novelcovid
+novelcovid:
+	./scripts/makefile/update-novelcovid.sh

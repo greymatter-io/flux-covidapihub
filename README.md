@@ -137,3 +137,10 @@ If you're deploying locally, you can type `Y` to apply GM configs and the servic
 If you want to delete an api deployment and mesh configs, run `make delete-api` and type the `api_name` when prompted. If you want to delete the api from your local dev environment, type `Y` when it prompts `Delete API in dev? [y/N]`.
 
 If you want to apply an api from a set of already generated configs in your local dev environment, run `make apply-api` and type the `api_name` when prompted.  To apply an api from a set of already generated configs in prod, run `make apply-api-prod`.
+
+## NovelCovidAPI quick updates
+To apply mesh configs under `mesh/disease.sh` and `apis/novelcovid`, run:
+
+```
+make novelcovid
+``` 
