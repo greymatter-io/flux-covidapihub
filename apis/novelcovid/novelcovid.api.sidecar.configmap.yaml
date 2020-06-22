@@ -4,8 +4,6 @@ kind: ConfigMap
 metadata:
   name: novelcovid-sidecar
   namespace: apis
-  annotations:
-    fluxcd.io/ignore: "true"
 data:
   config.yaml: |-
     node:
