@@ -5,10 +5,16 @@ metadata:
   name: disease.sh.ingress
   namespace: edge
   annotations:
-    fluxcd.io/ignore: "true"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/proxy-buffering: "on"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_cache api;
+      proxy_cache_valid any 10m;
+      proxy_cache_use_stale error timeout updating http_404 http_500 http_502 http_503 http_504;
+      proxy_set_header Host $host;
+      add_header GM-Cache-Status $upstream_cache_status;
 spec:
   tls:
     - hosts: 
