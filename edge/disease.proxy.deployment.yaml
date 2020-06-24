@@ -8,6 +8,7 @@ metadata:
   name: disease
   namespace: edge
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: disease

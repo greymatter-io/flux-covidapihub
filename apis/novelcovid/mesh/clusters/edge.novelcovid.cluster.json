@@ -14,10 +14,10 @@
           "max_retries": 1000000000,
           "max_requests": 1000000000
         }
-      },
+    },
     "outlier_detection": null,
     "health_checks": [],
-    "require_tls": false,
+    "require_tls": true,
     "secret": {
         "secret_key": "edge.identity",
         "secret_name": "spiffe://covidapihub.io/ns/edge/sa/edge",
