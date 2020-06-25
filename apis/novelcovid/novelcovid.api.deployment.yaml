@@ -61,7 +61,7 @@ spec:
             cpu: 500m
             memory: 1Gi
           requests:
-            cpu: 500m
+            cpu: 100m
             memory: 200Mi
       - name: sidecar
         image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.3-dev"
@@ -71,7 +71,7 @@ spec:
             cpu: 500m
             memory: 512Mi
           requests:
-            cpu: 500m
+            cpu: 100m
             memory: 128Mi
         args:
         - -c

@@ -36,11 +36,11 @@ spec:
               containerPort: 8443
           resources:
             limits:
-              cpu: 2
-              memory: 1Gi
-            requests:
               cpu: 500m
               memory: 200Mi
+            requests:
+              cpu: 200m
+              memory: 100Mi
           volumeMounts:
             - name: sidecar-config
               mountPath: /etc/greymatter
