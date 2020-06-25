@@ -8,7 +8,7 @@ metadata:
   name: edge
   namespace: edge
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: edge
