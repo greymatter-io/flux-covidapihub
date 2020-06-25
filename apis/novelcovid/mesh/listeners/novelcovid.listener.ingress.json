@@ -7,6 +7,13 @@
   "port": 8443,
   "protocol": "http_auto",
   "active_http_filters": ["gm.metrics", "gm.observables"],
+  "secret": {
+    "secret_key": "apis.identity",
+    "secret_name": "spiffe://covidapihub.io/ns/apis/sa/apis-sa",
+    "secret_validation_name": "spiffe://covidapihub.io",
+    "subject_names": ["spiffe://covidapihub.io/ns/edge/sa/edge"],
+    "ecdh_curves": ["X25519:P-256:P-521:P-384"]
+  },
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,

@@ -10,7 +10,5 @@ metadata:
 data:
   use-proxy-protocol: "true"
   http-snippet: |
-    proxy_cache_path /etc/nginx/cache levels=1:2 keys_zone=api:20m max_size=10g inactive=1m use_temp_path=off;
-    proxy_cache_key $request_uri;
-  
-    
+    proxy_cache_path /etc/nginx/cache levels=1:2 keys_zone=api:20m max_size=10g use_temp_path=off;
+    proxy_cache_key $scheme$request_method$host$request_uri;

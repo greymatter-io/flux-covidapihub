@@ -7,6 +7,7 @@ metadata:
   labels:
     cluster: disease-ingress
 spec:
+  replicas: 7
   selector:
     matchLabels:
       app.kubernetes.io/name: disease-ingress
@@ -31,6 +32,8 @@ spec:
           image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.33.0
           args:
             - /nginx-ingress-controller
+            - --election-id=ingress-controller-leader-disease
+            - --ingress-class=nginx-disease
             - --configmap=$(POD_NAMESPACE)/disease.nginx
             - --tcp-services-configmap=$(POD_NAMESPACE)/disease.tcp
             - --udp-services-configmap=$(POD_NAMESPACE)/disease.udp
@@ -53,6 +56,13 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+          resources:
+            limits:
+              cpu: 2
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 500Mi
           ports:
             - name: http
               containerPort: 80

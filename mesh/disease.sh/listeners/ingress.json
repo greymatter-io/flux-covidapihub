@@ -32,7 +32,7 @@
       }
     }
   },
-  "active_http_filters": ["gm.metrics", "gm.observables", "envoy.rbac"],
+  "active_http_filters": ["gm.metrics", "gm.observables"],
   "http_filters": {
     "gm_metrics": {
       "metrics_port": 8080,
@@ -49,31 +49,6 @@
       "useKafka": true,
       "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
       "useKafkaTLS": true
-    },
-    "envoy_rbac": {
-      "rules": {
-        "action": 1,
-        "policies": {
-          "1": {
-            "permissions": [
-              {
-                "any": true
-              }
-            ],
-            "principals": [
-              {
-                "header": {
-                  "name": "User-Agent",
-                  "safe_regex_match": {
-                    "google_re2": {},
-                    "regex": "WordPress.*"
-                  }
-                }
-              }
-            ]
-          }
-        }
-      }
     }
   }
 }

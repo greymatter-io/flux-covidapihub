@@ -17,5 +17,5 @@
   },
   "cors_config": null,
   "aliases": null,
-  "force_https": false
+  "force_https": true
 }

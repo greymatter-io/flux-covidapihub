@@ -22,7 +22,7 @@ rules:
     resources:
       - configmaps
     resourceNames:
-      - "ingress-controller-leader-nginx"
+      - ingress-controller-leader-disease-nginx-disease
     verbs:
       - get
       - update
