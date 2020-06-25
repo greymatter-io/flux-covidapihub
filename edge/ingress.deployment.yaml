@@ -5,6 +5,7 @@ metadata:
   name: ingress
   namespace: edge
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app.kubernetes.io/name: ingress
@@ -49,6 +50,13 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+          resources:
+            limits:
+              cpu: 1
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 500Mi
           ports:
             - name: http
               containerPort: 80
