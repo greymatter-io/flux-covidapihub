@@ -53,6 +53,7 @@ spec:
           image: "prom/prometheus:v2.16.0"
           imagePullPolicy: "IfNotPresent"
           args:
+            - --query.timeout=4m
             - --query.max-samples=5000000000
             - --storage.tsdb.retention.time=15d
             - --config.file=/etc/prometheus/prometheus.yaml
