@@ -64,6 +64,8 @@ spec:
           value: /dashboard
         - name: PORT
           value: "10080"
+        - name: REQUEST_TIMEOUT
+          value: "20000"
         ports:
         - name: dashboard
           containerPort: 10080
