@@ -10,7 +10,7 @@ spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: logstash
+      app: nginx-logstash
       cluster: observables.nginx-logstash
   serviceName: nginx-logstash
   template:
@@ -45,12 +45,13 @@ spec:
                   key: password
             - name: ES_HOST
               value: https://vpc-covidapihub-v4j46vkvupaulmzmhqzsnk5c5q.us-east-1.es.amazonaws.com:443
-
+           
           volumeMounts:
-            - name: logstash-data
+            - name: nginx-logstash-data
               mountPath: /usr/share/logstash/data
-            - name: logstash-pipelines
+            - name: nginx-logstash-pipelines
               mountPath: /usr/share/logstash/pipeline
+
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -62,7 +63,7 @@ spec:
     type: RollingUpdate
   volumeClaimTemplates:
     - metadata:
-        name: logstash-data
+        name: nginx-logstash-data
         namespace: observables
       spec:
         accessModes:

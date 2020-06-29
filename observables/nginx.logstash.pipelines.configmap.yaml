@@ -2,54 +2,26 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: logstash-pipelines
+  name: nginx-logstash-pipelines
   namespace: observables
 data:
   filter_main.conf: |-
     filter {
-      json {
-        source => "message"
-        remove_field => [
-          "message"
-        ]
-      }
-      split {
-        field => "xForwardedForIp"
-        terminator => ','
-      }
-      geoip {
-        source => "xForwardedForIp"
-      }
-      date {
-        match => [
-          "timestamp",
-          "UNIX"
-        ]
-      }
+      grok {
+          match => { "message" => "%{IPORHOST:remote_ip} - %{DATA:user_name} \[%{HTTPDATE:access_time}\] \"%{WORD:http_method} %{DATA:url} HTTP/%{NUMBER:http_version}\" %{NUMBER:response_code} %{NUMBER:body_sent_bytes} \"%{DATA:referrer}\" \"%{DATA:agent}\"" }
+              }
     }
   input_main.conf: |-
-    input {
-      kafka {
-        auto_offset_reset => earliest
-        bootstrap_servers => "${KAFKA_SERVERS}"
-        topics => [
-            "observables"
-        ]
-        security_protocol => SSL
+    input {  
+      beats {
+        # The port to listen on for filebeat connections.
+        port => 5044
+        # The IP address to listen for filebeat connections.
+        host => "0.0.0.0"
       }
     }
   output_main.conf: |-
     output {
-      elasticsearch {
-        ilm_enabled => false
-        hosts => [
-          "${ES_HOST}"
-        ]
-        user => "${ES_USERNAME}"
-        password => "${ES_PASSWORD}"
-        index => "observables-%{+YYYY.MM.dd}"
-        manage_template => true
-        template => "/usr/share/logstash/templates/observables.json"
-        template_name => "observables"
-      }
+      stdout { codec => rubydebug }
     }
+    
