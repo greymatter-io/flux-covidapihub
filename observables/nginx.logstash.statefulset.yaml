@@ -1,0 +1,72 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx-logstash
+  namespace: observables
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: logstash
+      cluster: observables.nginx-logstash
+  serviceName: nginx-logstash
+  template:
+    metadata:
+      labels:
+        app: nginx-logstash
+        cluster: observables.nginx-logstash
+    spec:
+      securityContext:
+        runAsUser: 2000
+        runAsGroup: 2000
+        fsGroup: 2000
+      containers:
+        - name: logstash
+          image: docker.elastic.co/logstash/logstash-oss:7.4.2
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 2Gi
+            requests:
+              memory: 1Gi
+          env:
+            - name: ES_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: logstash-elasticsearch
+                  key: username
+            - name: ES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: logstash-elasticsearch
+                  key: password
+            - name: ES_HOST
+              value: https://vpc-covidapihub-v4j46vkvupaulmzmhqzsnk5c5q.us-east-1.es.amazonaws.com:443
+
+          volumeMounts:
+            - name: logstash-data
+              mountPath: /usr/share/logstash/data
+            - name: logstash-pipelines
+              mountPath: /usr/share/logstash/pipeline
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - name: nginx-logstash-pipelines
+          configMap:
+            defaultMode: 420
+            name: nginx-logstash-pipelines
+  updateStrategy:
+    type: RollingUpdate
+  volumeClaimTemplates:
+    - metadata:
+        name: logstash-data
+        namespace: observables
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 2Gi
