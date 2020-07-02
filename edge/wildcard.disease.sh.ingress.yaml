@@ -6,6 +6,7 @@ metadata:
   namespace: edge
   annotations:
     kubernetes.io/ingress.class: nginx-disease
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
     nginx.ingress.kubernetes.io/backend-protocol: "https"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
