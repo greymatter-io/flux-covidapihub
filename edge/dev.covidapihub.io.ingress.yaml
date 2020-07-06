@@ -12,7 +12,7 @@ spec:
   tls:
     - hosts: 
       - dev.covidapihub.io
-      secretName: dev.covidapihub.io
+      secretName: dev.covidapihub
   rules:
     - host: dev.covidapihub.io
       http:
