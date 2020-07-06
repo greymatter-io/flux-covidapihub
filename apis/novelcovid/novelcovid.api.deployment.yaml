@@ -64,7 +64,7 @@ spec:
             cpu: 100m
             memory: 200Mi
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.3-dev"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.3"
         imagePullPolicy: IfNotPresent
         resources:
           limits:
