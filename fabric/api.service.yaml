@@ -8,7 +8,7 @@ spec:
   ports:
     - port: 8443
       protocol: TCP
-      targetPort: sidecar
+      targetPort: control-ingress
   selector:
     app: api
   type: ClusterIP
