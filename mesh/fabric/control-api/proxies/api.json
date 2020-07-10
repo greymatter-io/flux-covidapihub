@@ -1,8 +1,8 @@
 {
   "zone_key": "default.zone",
   "proxy_key": "api.proxy",
-  "domain_keys": ["api.ingress.domain"],
-  "listener_keys": ["api.ingress.listener"],
+  "domain_keys": ["public.api.ingress.domain"],
+  "listener_keys": ["public.api.ingress.listener"],
   "name": "fabric.api",
   "listeners": null
 }

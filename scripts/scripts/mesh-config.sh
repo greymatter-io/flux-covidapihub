@@ -10,7 +10,7 @@ if [[ $ENV == "k3d" && "$(kubectl config current-context)" != "greymatter" ]]; t
     exit 1
 fi
 
-if [[ $ENV == "prod" && "$(kubectl config current-context)" = arn:aws:eks:*  ]]; then
+if [[ $ENV == "prod" && "$(kubectl config current-context)" = arn:aws:eks:* ]]; then
     echo "🍀🍀🍀🍀🍀 Just so you know, you are changing production 🍀🍀🍀🍀🍀"
     source ./scripts/scripts/credentials.sh
     if [ -z "$ClientId" ] || [ -z "$ClientSecret" ]; then
@@ -57,7 +57,7 @@ create_or_update() {
 
 delay=0.01
 objects="domains clusters listeners proxies rules routes"
-meshfolders=(mesh/edge mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/kibana mesh/website)
+meshfolders=(mesh/edge mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/kibana mesh/website mesh/fabric/control-api)
 for meshfolder in "${meshfolders[@]}"; do
     cd $meshfolder
     for folder in $objects; do
@@ -69,7 +69,7 @@ for meshfolder in "${meshfolders[@]}"; do
             if [[ $object == "listener" && $ENV == "k3d" ]]; then
                 value=$(<$file)
                 value=$(jq '.http_filters.gm_observables.useKafka = false' <<<"$value")
-                echo "$value" > /tmp/listener.json
+                echo "$value" >/tmp/listener.json
                 create_or_update listener /tmp/listener.json
                 sleep $delay
             else
