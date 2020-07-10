@@ -36,7 +36,11 @@ spec:
             - name: metrics
               containerPort: 8080
             - name: sidecar
+              containerPort: 9443
+              protocol: TCP
+            - name: control-ingress
               containerPort: 8443
+              protocol: TCP
           resources:
             limits:
               memory: 4Gi

@@ -5,7 +5,7 @@
   "path": "/api/latest/",
   "prefix_rewrite": "/",
   "redirects": null,
-  "shared_rules_key": "",
+  "shared_rules_key": "edge.api.rules",
   "rules": null,
   "response_data": {},
   "cohort_seed": null,
