@@ -49,33 +49,6 @@
                 }
               }
             ]
-          },
-          "1": {
-            "permissions": [
-              {
-                "or_rules": {
-                  "rules": [
-                    {
-                      "header": {
-                        "name": ":method",
-                        "exact_match": "GET"
-                      }
-                    },
-                    {
-                      "header": {
-                        "name": ":method",
-                        "exact_match": "HEAD"
-                      }
-                    }
-                  ]
-                }
-              }
-            ],
-            "principals": [
-              {
-                "any": true
-              }
-            ]
           }
         }
       }
