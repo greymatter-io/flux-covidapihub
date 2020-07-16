@@ -57,7 +57,7 @@ spec:
           mountPath: /app/static
           readOnly: true
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.4"
+        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.4-ubuntu"
         imagePullPolicy: IfNotPresent
         args:
         - -c
