@@ -1378,6 +1378,126 @@ spec:
               value: ""
             - name: SERVICE_49_METRICS_PORT
               value: "8080"
+            - name: SERVICE_50_CLUSTER_NAME
+              value: sense.catalog
+            - name: SERVICE_50_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_50_NAME
+              value: Decipher Internal - Catalog Service
+            - name: SERVICE_50_OWNER
+              value: Decipher Technology Studios
+            - name: SERVICE_50_RUNTIME
+              value: "Go"
+            - name: SERVICE_50_DOCUMENTATION
+              value: "/catalog/latest/"
+            - name: SERVICE_50_VERSION
+              value: "latest"
+            - name: SERVICE_50_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Decipher Internal - Grey Matter Catalog\\\",\\\"url\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"description\\\":\\\"Grey Matter Catalog provides summarized metadata about services running within a service mesh.\\\",\\\"source\\\":\\\"Decipher Technology Studios\\\",\\\"contentType\\\":[\\\"Grey Matter\\\"],\\\"homePage\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+            - name: SERVICE_50_PROMETHEUS_JOB
+              value: sense.catalog
+            - name: SERVICE_50_MAX_INSTANCES
+              value: "3"
+            - name: SERVICE_50_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_50_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_50_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_50_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_50_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_51_CLUSTER_NAME
+              value: edge.edge
+            - name: SERVICE_51_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_51_NAME
+              value: Decipher Internal - API Hub Edge
+            - name: SERVICE_51_OWNER
+              value: Decipher Technology Studios
+            - name: SERVICE_51_RUNTIME
+              value: "GO"
+            - name: SERVICE_51_DOCUMENTATION
+              value: ""
+            - name: SERVICE_51_VERSION
+              value: "latest"
+            - name: SERVICE_51_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Decipher Internal - API Hub Edge\\\",\\\"url\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"description\\\":\\\"The Grey Matter Edge handles north/south traffic flowing through the mesh.\\\",\\\"source\\\":\\\"Decipher Technology Studios\\\",\\\"contentType\\\":[\\\"Grey Matter\\\"],\\\"homePage\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+            - name: SERVICE_51_PROMETHEUS_JOB
+              value: sense.catalog
+            - name: SERVICE_51_MAX_INSTANCES
+              value: "8"
+            - name: SERVICE_51_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_51_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_51_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_51_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_51_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_52_CLUSTER_NAME
+              value: disease
+            - name: SERVICE_52_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_52_NAME
+              value: Decipher Internal - NovelCovid Edge
+            - name: SERVICE_52_OWNER
+              value: Decipher Technology Studios
+            - name: SERVICE_52_RUNTIME
+              value: "Go"
+            - name: SERVICE_52_DOCUMENTATION
+              value: ""
+            - name: SERVICE_52_VERSION
+              value: "latest"
+            - name: SERVICE_52_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Decipher Internal - NovelCovid Edge\\\",\\\"url\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"description\\\":\\\"The Grey Matter Edge handles north/south traffic flowing through the mesh.\\\",\\\"source\\\":\\\"Decipher Technology Studios\\\",\\\"contentType\\\":[\\\"Grey Matter\\\"],\\\"homePage\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+            - name: SERVICE_52_PROMETHEUS_JOB
+              value: sense.catalog
+            - name: SERVICE_52_MAX_INSTANCES
+              value: "8"
+            - name: SERVICE_52_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_52_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_52_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_52_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_52_METRICS_PORT
+              value: "8080"
+            - name: SERVICE_53_CLUSTER_NAME
+              value: sense.prometheus
+            - name: SERVICE_53_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_53_NAME
+              value: Decipher Internal - Prometheus
+            - name: SERVICE_53_OWNER
+              value: Decipher Technology Studios
+            - name: SERVICE_53_RUNTIME
+              value: ""
+            - name: SERVICE_53_DOCUMENTATION
+              value: "/prometheus/latest/"
+            - name: SERVICE_53_VERSION
+              value: "latest"
+            - name: SERVICE_53_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Decipher Internal - Prometheus\\\",\\\"url\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"description\\\":\\\"All collected metrics are stored in a Prometheus server inside the mesh.\\\",\\\"source\\\":\\\"Decipher Technology Studios\\\",\\\"contentType\\\":[\\\"Grey Matter\\\"],\\\"homePage\\\":\\\"https://greymatter.io/grey-matter\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"\\\"],\\\"format\\\":[\\\"\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+            - name: SERVICE_53_PROMETHEUS_JOB
+              value: sense.prometheus
+            - name: SERVICE_53_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_53_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_53_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_53_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_53_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_53_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
