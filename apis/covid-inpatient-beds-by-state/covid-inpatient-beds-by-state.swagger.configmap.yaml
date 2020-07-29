@@ -9,7 +9,7 @@ data:
     info:
       description: |-
           ## Estimated Inpatient Beds Occupied by COVID-19 Patients by State Timeseries
-          Details about this dataset: []()
+          Details about this dataset: [https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state](https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state)
           ## Grey Matter apier
           Making CSV and Excel data more accessible by providing the contents in JSON
           format. The added functionalities are:
