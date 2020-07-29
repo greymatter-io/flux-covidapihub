@@ -1,0 +1,24 @@
+{
+    "zone_key": "default.zone",
+    "shared_rules_key": "edge.inpatient-beds-by-state.rules",
+    "name": "edge.inpatient-beds-by-state",
+    "default": {
+        "light": [
+            {
+                "constraint_key": "",
+                "cluster_key": "edge.inpatient-beds-by-state.cluster",
+                "metadata": null,
+                "properties": null,
+                "response_data": {},
+                "weight": 1
+            }
+        ],
+        "dark": null,
+        "tap": null
+    },
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "properties": null,
+    "retry_policy": null
+}

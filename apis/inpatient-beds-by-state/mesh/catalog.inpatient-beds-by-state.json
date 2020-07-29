@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.inpatient-beds-by-state",
+ "zoneName": "default.zone",
+ "name": "Estimated Inpatient Beds Occupied by State Timeseries",
+ "version": "1.0",
+ "owner": "Department of Health and Human Services",
+ "capability": ""\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/reported_inpatient_all_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied for the given state and date\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Data Dictionary:\\\"],\\\"format\\\":[\\\"1. state (string): The two digit state code\\\"],\\\"updates\\\":[\\\"\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/inpatient-beds-by-state/docs/",
+ "prometheusJob": "apis.inpatient-beds-by-state",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

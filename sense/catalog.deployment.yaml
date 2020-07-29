@@ -1288,6 +1288,36 @@ spec:
               value: ""
             - name: SERVICE_46_METRICS_PORT
               value: "8080"
+            - name: SERVICE_47_CLUSTER_NAME
+              value: apis.inpatient-beds-by-state
+            - name: SERVICE_47_ZONE_NAME
+              value: default.zone
+            - name: SERVICE_47_NAME
+              value: Estimated Inpatient Beds Occupied by State Timeseries
+            - name: SERVICE_47_OWNER
+              value: Department of Health and Human Services
+            - name: SERVICE_47_RUNTIME
+              value: "Node"
+            - name: SERVICE_47_DOCUMENTATION
+              value: "/apis/inpatient-beds-by-state/docs/"
+            - name: SERVICE_47_VERSION
+              value: "latest"
+            - name: SERVICE_47_CAPABILITY
+              value: "\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/reported_inpatient_all_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied for the given state and date\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"Data Dictionary:\\\"],\\\"format\\\":[\\\"1. state (string): The two digit state code\\\"],\\\"updates\\\":[\\\"\\\"]}\""
+            - name: SERVICE_47_PROMETHEUS_JOB
+              value: apis.inpatient-beds-by-state
+            - name: SERVICE_47_MAX_INSTANCES
+              value: "2"
+            - name: SERVICE_47_MIN_INSTANCES
+              value: "1"
+            - name: SERVICE_47_ENABLE_INSTANCE_METRICS
+              value: "true"
+            - name: SERVICE_47_ENABLE_HISTORICAL_METRICS
+              value: "true"
+            - name: SERVICE_47_METRICS_TEMPLATE
+              value: ""
+            - name: SERVICE_47_METRICS_PORT
+              value: "8080"
           ports:
             - name: catalog
               containerPort: 10080
