@@ -1,0 +1,17 @@
+{
+ "clusterName": "apis.icu-beds-by-state",
+ "zoneName": "default.zone",
+ "name": "Estimated ICU Beds Occupied by State Timeseries",
+ "version": "1.0",
+ "owner": "Department of Health and Human Services",
+ "capability": ""\"{\\\"name\\\":\\\"Estimated ICU Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/icu_final_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of ICU beds occupied for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""",
+ "runtime": "GO",
+ "documentation": "/apis/icu-beds-by-state/docs/",
+ "prometheusJob": "apis.icu-beds-by-state",
+ "minInstances": 1,
+ "maxInstances": 2,
+ "authorized": true,
+ "enableInstanceMetrics": true,
+ "enableHistoricalMetrics": true,
+ "metricsPort": 8080
+ }

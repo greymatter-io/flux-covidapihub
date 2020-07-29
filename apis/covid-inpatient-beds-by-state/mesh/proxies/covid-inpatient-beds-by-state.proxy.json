@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "covid-inpatient-beds-by-state.proxy",
+    "domain_keys": [
+        "covid-inpatient-beds-by-state.apis.domain"
+    ],
+    "listener_keys": [
+        "covid-inpatient-beds-by-state.apis.listener"
+    ],
+    "name": "apis.covid-inpatient-beds-by-state",
+    "listeners": null
+}

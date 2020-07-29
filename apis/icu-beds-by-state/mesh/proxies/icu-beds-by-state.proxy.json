@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "icu-beds-by-state.proxy",
+    "domain_keys": [
+        "icu-beds-by-state.apis.domain"
+    ],
+    "listener_keys": [
+        "icu-beds-by-state.apis.listener"
+    ],
+    "name": "apis.icu-beds-by-state",
+    "listeners": null
+}
