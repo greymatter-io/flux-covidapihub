@@ -22,7 +22,7 @@ spec:
       serviceAccountName: dashboard
       containers:
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
         imagePullPolicy: IfNotPresent
         args:
         - -c
@@ -47,7 +47,7 @@ spec:
         - name: METRICS_KEY_FUNCTION
           value: depth
       - name: dashboard
-        image: docker-dev.production.deciphernow.com/deciphernow/gm-dashboard:covidapihub
+        image: docker.greymatter.io/development/gm-dashboard:covidapihub
         imagePullPolicy: Always
         env:
         - name: FABRIC_SERVER
