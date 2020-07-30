@@ -1,8 +1,8 @@
 {
   "zone_key": "default.zone",
   "domain_key": "edge.ingress.domain",
-  "route_key": "edge.ingress.novelcovid.route",
-  "path": "/apis/novelcovid/",
+  "route_key": "edge.to.novelcovid.route",
+  "path": "/edge-novelcovid",
   "prefix_rewrite": "/",
   "redirects": null,
   "shared_rules_key": "edge.novelcovid.rules",

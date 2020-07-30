@@ -12,7 +12,7 @@
         "key_path": "/etc/tls/edge.svc.key"
       }
     ],
-    "trust_file": "/etc/tls/ca.crt",
+    "trust_file": "/etc/tls/ca.crt", 
     "require_client_certs": false
   },
   "cors_config": null,

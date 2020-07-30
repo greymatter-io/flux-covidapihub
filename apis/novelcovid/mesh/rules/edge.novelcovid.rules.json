@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "edge.novelcovid.rules",
+  "shared_rules_key": "edge.novelcovid.api.rules",
   "name": "edge.novelcovid",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "edge.novelcovid.cluster",
+        "cluster_key": "edge.to.novelcovid.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},
