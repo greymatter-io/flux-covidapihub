@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "disease.traffic.rules",
-  "name": "disease.traffic",
+  "shared_rules_key": "edge.rules",
+  "name": "edge.edge",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "disease.internal.cluster",
+        "cluster_key": "edge.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},
@@ -20,9 +20,5 @@
   "response_data": {},
   "cohort_seed": null,
   "properties": null,
-  "retry_policy": {
-    "num_retries": 2,
-    "per_try_timeout_msec": 10000,
-    "timeout_msec": 20000
-  }
+  "retry_policy": null
 }

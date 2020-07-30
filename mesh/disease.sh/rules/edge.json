@@ -1,12 +1,12 @@
 {
   "zone_key": "default.zone",
-  "shared_rules_key": "disease.traffic.rules",
-  "name": "disease.traffic",
+  "shared_rules_key": "edge.traffic.rules",
+  "name": "disease.edge",
   "default": {
     "light": [
       {
         "constraint_key": "",
-        "cluster_key": "disease.internal.cluster",
+        "cluster_key": "edge.novelcovid.cluster",
         "metadata": null,
         "properties": null,
         "response_data": {},

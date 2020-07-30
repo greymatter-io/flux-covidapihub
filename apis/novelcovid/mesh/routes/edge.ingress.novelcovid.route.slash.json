@@ -5,7 +5,7 @@
   "path": "/apis/novelcovid",
   "prefix_rewrite": "/apis/novelcovid/",
   "redirects": null,
-  "shared_rules_key": "edge.novelcovid.rules",
+  "shared_rules_key": "edge.novelcovid.api.rules",
   "rules": null,
   "response_data": {},
   "cohort_seed": null,
