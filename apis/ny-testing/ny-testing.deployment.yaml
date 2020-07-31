@@ -22,7 +22,7 @@ spec:
       serviceAccountName: apis-sa
       containers:
         - name: ny-testing-proxy
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+          image: "docker.greymatter.io/development/gm-proxy:1.4.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
