@@ -77,7 +77,7 @@ spec:
           mountPath: /run/spire/sockets
           readOnly: false
       imagePullSecrets:
-      - name: docker-dev.production.deciphernow.com
+      - name: docker.greymatter.io
       volumes:
       - name: spire-socket
         hostPath:
