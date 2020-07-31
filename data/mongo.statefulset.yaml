@@ -78,7 +78,7 @@ spec:
           configMap:
             name: data-mongo-init
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
         - name: index.docker.io
   volumeClaimTemplates:
   - metadata:

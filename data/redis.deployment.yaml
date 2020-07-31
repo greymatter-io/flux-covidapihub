@@ -43,7 +43,7 @@ spec:
               cpu: 100m
               memory: 128Mi
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
         - name: index.docker.io
       dnsPolicy: ClusterFirst
       restartPolicy: Always
