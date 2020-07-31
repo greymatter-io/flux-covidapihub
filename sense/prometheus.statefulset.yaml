@@ -83,7 +83,7 @@ spec:
               mountPath: /data
               subPath: ""
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
         - name: index.docker.io
       securityContext:
         fsGroup: 65534

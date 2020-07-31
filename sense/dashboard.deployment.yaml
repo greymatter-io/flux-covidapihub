@@ -71,7 +71,7 @@ spec:
           containerPort: 10080
           protocol: TCP
       imagePullSecrets:
-      - name: docker-dev.production.deciphernow.com
+      - name: docker.greymatter.io
       - name: index.docker.io
       volumes:
       - name: sidecar-config
