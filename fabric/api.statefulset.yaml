@@ -25,7 +25,7 @@ spec:
       serviceAccount: api
       containers:
         - name: sidecar
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+          image: "docker.greymatter.io/development/gm-proxy:1.4.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -54,7 +54,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
         - name: api
-          image: docker-dev.production.deciphernow.com/deciphernow/gm-control-api:1.4.3
+          image: docker.greymatter.io/development/gm-control-api:1.4.3
           imagePullPolicy: IfNotPresent
           env:
             - name: GM_CONTROL_API_ADDRESS
@@ -80,7 +80,7 @@ spec:
               mountPath: /var/lib/greymatter
               readOnly: false
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
       securityContext:
         runAsUser: 100
         runAsGroup: 101
