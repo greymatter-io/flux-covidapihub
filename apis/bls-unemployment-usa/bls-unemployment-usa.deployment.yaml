@@ -22,7 +22,7 @@ spec:
       serviceAccountName: apis-sa
       containers:
         - name: bls-unemployment-usa-proxy
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+          image: "docker.greymatter.io/development/gm-proxy:1.4.2"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -42,7 +42,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
       volumes:
         - name: spire-socket
           hostPath:
