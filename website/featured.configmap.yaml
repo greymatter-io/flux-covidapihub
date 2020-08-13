@@ -99,45 +99,45 @@ data:
       ],
       "apis": [
         {
-          "name": "CDC Number of US Cases And Deaths",
-          "url": "https://covidapihub.io/dashboard/#/cdc-number-of-us-cases-and-deaths-v1-0",
-          "description": "Actual number of examined and infected people by COVID-19 in the USA from CDC.",
-          "source": "CDC",
+          "name": "disease.sh - Open Disease Data",
+          "url": "https://covidapihub.io/dashboard/#/novelcovid-vlatest",
+          "description": "An API for current cases and more about COVID-19 and Influenza",
+          "source": "disease.sh",
           "contentType": [
             "Health"
           ],
-          "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-          "thumbnail": "https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg",
+          "homePage": "https://disease.sh/",
+          "thumbnail": "https://github.com/disease-sh/API/blob/master/public/assets/img/icon.jpg?raw=true",
           "coverage": [
-            "US"
+            "World"
           ],
           "format": [
             "JSON"
           ],
           "updates": [
-            "5 Minutes"
+            "Daily"
           ],
           "paid": false,
           "keyRequired": false
         },
         {
-          "name": "BLS Unemployment Statistics US Totals",
-          "url": "https://covidapihub.io/dashboard/#/bls-unemployment-statistics-us-totals-v1-0",
-          "description": "The most current 14 months of unemployment statistics from the U.S. Bureau of Labor Statistics (BLS).",
-          "source": "U.S. Bureau of Labor Statistics",
+          "name": "COVID-19 Estimated Patient Impact",
+          "url": "https://covidapihub.io/dashboard/#/estimated-icu-beds-occupied-by-state-timeseries-vlatest",
+          "description": "Statistical estimation with a 95% confidence interval for number and percentage of ICU beds occupied for the given state and date.",
+          "source": "Health Department",
           "contentType": [
-            "Governance"
+            "Health"
           ],
           "homePage": "https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u",
-          "thumbnail": "https://pbs.twimg.com/profile_images/1146076978212200448/F72U6f8S_400x400.png",
+          "thumbnail": "https://healthdata.gov/sites/default/files/styles/group_medium/public/US-DeptOfHHS-Seal1_0.jpg",
           "coverage": [
             "US"
           ],
           "format": [
-            "JSON"
+            "JSON", "CSV"
           ],
           "updates": [
-            "5 Minutes"
+            "Weekly"
           ],
           "paid": false,
           "keyRequired": false
@@ -151,7 +151,7 @@ data:
             "Health"
           ],
           "homePage": "https://apify.com/petrpatek/covid-usa-cdc",
-          "thumbnail": "https://www.census.gov/etc/designs/census/images/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg",
+          "thumbnail": "https://www.census.gov/etc.clientlibs/census/clientlibs/census-pattern-library/resources/images/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg",
           "coverage": [
             "World"
           ],

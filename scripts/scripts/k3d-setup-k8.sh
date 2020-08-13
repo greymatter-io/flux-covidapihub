@@ -40,7 +40,7 @@ ObjectivesPostgresPassword="greymatter"
 ObjectivesPostgresPort="5432"
 
 for folder in "${folders[@]}"; do
-    kubectl create secret docker-registry docker-dev.production.deciphernow.com --namespace $folder --docker-server=docker-dev.production.deciphernow.com --docker-username=$DockerProductionUsername --docker-password=$DockerProductionPassword
+    kubectl create secret docker-registry docker.greymatter.io --namespace $folder --docker-server=docker.greymatter.io --docker-username=$DockerProductionUsername --docker-password=$DockerProductionPassword
     kubectl create secret docker-registry index.docker.io --namespace $folder --docker-server=index.docker.io --docker-username=$IndexDockerUsername --docker-password=$IndexDockerPassword --docker-email=$IndexDockerUsername
 done
 
