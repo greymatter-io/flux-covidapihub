@@ -39,3 +39,6 @@ data:
       username: david.tillery
       groups:
         - system:masters
+    - userarn: arn:aws:iam::153757265334:user/covidapihub.developer
+      username: developer
+      groups: []
