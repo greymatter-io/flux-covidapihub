@@ -32,5 +32,3 @@ rules:
       - "describe"
       - "get"
       - "list"
-      - "patch"
-      - "update"
