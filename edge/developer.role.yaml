@@ -22,8 +22,6 @@ rules:
       - "extensions"
     resources:
       - "pods"
-      - "pods/attach"
-      - "pods/exec"
       - "pods/log"
       - "pods/portforward"
     verbs:
