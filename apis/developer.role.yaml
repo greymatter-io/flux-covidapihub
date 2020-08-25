@@ -21,7 +21,6 @@ rules:
       - "batch"
       - "extensions"
     resources:
-      - "cronjobs"
       - "pods"
       - "pods/attach"
       - "pods/exec"
