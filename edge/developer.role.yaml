@@ -27,8 +27,6 @@ rules:
       - "pods/log"
       - "pods/portforward"
     verbs:
-      - "create"
-      - "delete"
       - "describe"
       - "get"
       - "list"
