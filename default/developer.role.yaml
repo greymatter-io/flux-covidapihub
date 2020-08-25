@@ -1,0 +1,31 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: developer-role
+rules:
+  - apiGroups:
+      - ""
+      - "apps"
+      - "batch"
+      - "extensions"
+    resources:
+      - "configmaps"
+      - "secrets"
+    verbs:
+      - "describe"
+      - "list"
+      - "watch"
+  - apiGroups:
+      - ""
+      - "apps"
+      - "batch"
+      - "extensions"
+    resources:
+      - "pods"
+      - "pods/log"
+      - "pods/portforward"
+    verbs:
+      - "create"
+      - "describe"
+      - "get"
+      - "list"
