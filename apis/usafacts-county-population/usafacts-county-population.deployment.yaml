@@ -57,7 +57,7 @@ spec:
           mountPath: /app/static
           readOnly: true
       - name: sidecar
-        image: "docker.greymatter.io/development/gm-proxy:1.4.5-ubuntu"
+        image: "docker.greymatter.io/development/gm-proxy:1.4.5"
         imagePullPolicy: IfNotPresent
         args:
         - -c
