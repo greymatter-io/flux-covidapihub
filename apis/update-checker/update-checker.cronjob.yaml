@@ -1,0 +1,29 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: update-checker
+  namespace: apis
+spec:
+  # Every 6 hours
+  schedule: "0 */6 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: update-checker
+            image: novelcovid/novelcovid-api
+            command:
+              - npm
+              - run
+              - updateCheck
+            imagePullPolicy: Always
+            env:
+            - name: WEBHOOK_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: discord-token
+                  key: WEBHOOK_TOKEN
+          restartPolicy: Never
+          imagePullSecrets:
+           - name: docker.greymatter.io
