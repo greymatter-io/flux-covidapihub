@@ -11,6 +11,8 @@ rules:
       - "extensions"
     resources:
       - "configmaps"
+      - "cronjobs"
+      - "jobs"
     verbs:
       - "describe"
       - "get"
