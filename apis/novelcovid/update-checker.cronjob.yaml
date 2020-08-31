@@ -7,7 +7,6 @@ metadata:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.update-checker: glob:sha-*
 spec:
-  successfulJobsHistoryLimit: 4
   # Every 6 hours
   schedule: "0 */6 * * *"
   jobTemplate:
