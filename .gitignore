@@ -2,3 +2,4 @@ scripts/scripts/credentials.sh
 *.secret.yaml
 .DS_Store
 *catalog.envvars.yaml
+.idea
