@@ -23,11 +23,11 @@ spec:
             - updateCheck
             imagePullPolicy: Always
             env:
-            - name: WEBHOOK_TOKEN
+            - name: UPDATE_WEBHOOK
               valueFrom:
                 secretKeyRef:
                   name: discord-token
-                  key: WEBHOOK_TOKEN
+                  key: UPDATE_WEBHOOK
           restartPolicy: Never
           imagePullSecrets:
           - name: docker.greymatter.io
