@@ -35,19 +35,19 @@ spec:
       - name: apier
         env:
         - name: SHEET_NAME
-          value: 
+          value: "Vote By Mail"
         - name: FLASK_APP
           value: app/main.py
         - name: SHEET_SKIP_ROWS
           value: 
         - name: SOURCE_FORMAT
-          value: csv
+          value: excel
         - name: FLASK_DEBUG
           value: "0"
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: https://docs.google.com/spreadsheets/d/1zu9qEWI8PsOI_i8nI_S29HDGHlIp2lfVMsGxpQ5tvAQ/export?format=csv&gid=0
+          value: https://docs.google.com/spreadsheets/d/1zu9qEWI8PsOI_i8nI_S29HDGHlIp2lfVMsGxpQ5tvAQ/export?format=xlsx
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:
