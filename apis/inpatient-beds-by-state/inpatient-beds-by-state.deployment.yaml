@@ -47,7 +47,7 @@ spec:
         - name: RUN
           value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
-          value: https://healthdata.gov/sites/default/files/reported_inpatient_all_20200720_0537.csv
+          value: https://healthdata.gov/sites/default/files/estimated_inpatient_all_20200923_1110.csv
         image: covidapihub/apier:latest
         imagePullPolicy: Always
         ports:

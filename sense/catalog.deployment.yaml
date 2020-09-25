@@ -1303,7 +1303,7 @@ spec:
             - name: SERVICE_47_VERSION
               value: "latest"
             - name: SERVICE_47_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/reported_inpatient_all_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_47_PROMETHEUS_JOB
               value: apis.inpatient-beds-by-state
             - name: SERVICE_47_MAX_INSTANCES
@@ -1333,7 +1333,7 @@ spec:
             - name: SERVICE_48_VERSION
               value: "latest"
             - name: SERVICE_48_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by COVID-19 Patients by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/inpatient_covid_final_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied by COVID-19 patients for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Estimated Inpatient Beds Occupied by COVID-19 Patients by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of inpatient beds occupied by COVID-19 patients for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_48_PROMETHEUS_JOB
               value: apis.covid-inpatient-beds-by-state
             - name: SERVICE_48_MAX_INSTANCES
@@ -1363,7 +1363,7 @@ spec:
             - name: SERVICE_49_VERSION
               value: "latest"
             - name: SERVICE_49_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"Estimated ICU Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/sites/default/files/icu_final_20200720_0537.csv\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of ICU beds occupied for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
+              value: "\"{\\\"name\\\":\\\"Estimated ICU Beds Occupied by State Timeseries\\\",\\\"url\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"description\\\":\\\"Statistical estimation with a 95% confidence interval for number and percentage of ICU beds occupied for the given state and date.\\\",\\\"source\\\":\\\"Department of Health and Human Services\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://healthdata.gov/dataset/covid-19-estimated-patient-impact-and-hospital-capacity-state\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV, JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_49_PROMETHEUS_JOB
               value: apis.icu-beds-by-state
             - name: SERVICE_49_MAX_INSTANCES
