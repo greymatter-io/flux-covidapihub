@@ -3,7 +3,7 @@
     "domain_key": "cdc-excess-deaths.apis.domain",
     "route_key": "cdc-excess-deaths.local.route",
     "path": "/",
-    "prefix_rewrite": "",
+    "prefix_rewrite": "/resource/xkkf-xrst.json",
     "redirects": null,
     "shared_rules_key": "cdc-excess-deaths.local.rules",
     "rules": null,

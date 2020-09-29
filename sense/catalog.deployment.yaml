@@ -133,11 +133,11 @@ spec:
             - name: SERVICE_2_METRICS_PORT
               value: "8080"
             - name: SERVICE_3_CLUSTER_NAME
-              value: apis.cdc-cases-by-state
+              value: apis.cdc-cases-and-deaths-by-state
             - name: SERVICE_3_ZONE_NAME
               value: default.zone
             - name: SERVICE_3_NAME
-              value: "CDC Number of Cases by State"
+              value: "CDC United States COVID-19 Cases and Deaths by State over Time"
             - name: SERVICE_3_VERSION
               value: "1.0"
             - name: SERVICE_3_OWNER
@@ -145,11 +145,11 @@ spec:
             - name: SERVICE_3_RUNTIME
               value: "Node"
             - name: SERVICE_3_DOCUMENTATION
-              value: "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html#anchor_1586784349"
+              value: "https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36"
             - name: SERVICE_3_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC Number of Cases by State\\\",\\\"url\\\":\\\"https://api.apify.com/v2/datasets/FIbyK6uHUntt2kNy3/items?format=json&clean=1\\\",\\\"description\\\":\\\"Actual number of examined and infected people by COVID-19 by state from CDC\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://apify.com/petrpatek/covid-usa-cdc\\\",\\\"thumbnail\\\":\\\"https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"5 Minutes\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+              value: "\"{\\\"name\\\":\\\"CDC United States COVID-19 Cases and Deaths by State over Time\\\",\\\"url\\\":\\\"https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36\\\",\\\"description\\\":\\\"CDC reports aggregate counts of COVID-19 cases and death numbers daily online.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"https://covidapihub.io/static/media/US_CDC_logo.ae26b0ed.svg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Daily\\\"]}\""
             - name: SERVICE_3_PROMETHEUS_JOB
-              value: apis.cdc-cases-by-state
+              value: apis.cdc-cases-and-deaths-by-state
             - name: SERVICE_3_MAX_INSTANCES
               value: "2"
             - name: SERVICE_3_MIN_INSTANCES
@@ -163,23 +163,23 @@ spec:
             - name: SERVICE_3_METRICS_PORT
               value: "8080"
             - name: SERVICE_4_CLUSTER_NAME
-              value: apis.cdc-death-counts-by-state
+              value: apis.cdc-conditions-contributing-to-deaths
             - name: SERVICE_4_VERSION
               value: "1.0"
             - name: SERVICE_4_ZONE_NAME
               value: default.zone
             - name: SERVICE_4_NAME
-              value: "CDC Death Counts by State"
+              value: "CDC Conditions contributing to deaths involving coronavirus disease 2019 (COVID-19), by age group and state, United States"
             - name: SERVICE_4_OWNER
               value: "CDC"
             - name: SERVICE_4_RUNTIME
               value: "Node"
             - name: SERVICE_4_DOCUMENTATION
-              value: "https://dev.socrata.com/foundry/data.cdc.gov/hc4f-j6nb"
+              value: "https://data.cdc.gov/NCHS/Conditions-contributing-to-deaths-involving-corona/hk9y-quqm"
             - name: SERVICE_4_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC - Death counts by state\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/hc4f-j6nb.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Daily\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+              value: "\"{\\\"name\\\":\\\"CDC - Conditions contributing to deaths involving coronavirus disease 2019 (COVID-19), by age group and state, United States\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/hk9y-quqm.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"https://covidapihub.io/static/media/US_CDC_logo.ae26b0ed.svg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_4_PROMETHEUS_JOB
-              value: apis.cdc-death-counts-by-state
+              value: apis.cdc-conditions-contributing-to-deaths
             - name: SERVICE_4_MAX_INSTANCES
               value: "2"
             - name: SERVICE_4_MIN_INSTANCES
@@ -193,23 +193,23 @@ spec:
             - name: SERVICE_4_METRICS_PORT
               value: "8080"
             - name: SERVICE_5_CLUSTER_NAME
-              value: apis.cdc-provisional-death-counts
+              value: apis.cdc-provisional-death-counts-by-sex-age-state
             - name: SERVICE_5_VERSION
               value: "1.0"
             - name: SERVICE_5_ZONE_NAME
               value: default.zone
             - name: SERVICE_5_NAME
-              value: "CDC Provisional Death Counts for Coronavirus"
+              value: "CDC Provisional COVID-19 Death Counts by Sex, Age, and State"
             - name: SERVICE_5_OWNER
               value: "CDC"
             - name: SERVICE_5_RUNTIME
               value: "Node"
             - name: SERVICE_5_DOCUMENTATION
-              value: "https://dev.socrata.com/foundry/data.cdc.gov/pj7m-y5uh"
+              value: "https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-S/9bhg-hcku"
             - name: SERVICE_5_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC - Provisional Death Counts for Coronavirus Disease\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/pj7m-y5uh.json\\\",\\\"description\\\":\\\"Provides a weekly summary of deaths with coronavirus disease 2019 (COVID-19) by select geographic and demographic variables. In this release, counts of deaths are provided by the race and Hispanic origin of the decedent.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Provisional-Death-Counts-for-Coronavirus-Disease-C/pj7m-y5uh\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Weekly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+              value: "\"{\\\"name\\\":\\\"CDC - Provisional COVID-19 Death Counts by Sex, Age, and State \\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/9bhg-hcku.json\\\",\\\"description\\\":\\\"Deaths involving coronavirus disease 2019 (COVID-19), pneumonia, and influenza reported to NCHS by sex and age group and state.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"https://covidapihub.io/static/media/US_CDC_logo.ae26b0ed.svg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_5_PROMETHEUS_JOB
-              value: apis.cdc-provisional-death-counts
+              value: apis.cdc-provisional-death-counts-by-sex-age-state
             - name: SERVICE_5_MAX_INSTANCES
               value: "2"
             - name: SERVICE_5_MIN_INSTANCES
@@ -223,23 +223,23 @@ spec:
             - name: SERVICE_5_METRICS_PORT
               value: "8080"
             - name: SERVICE_6_CLUSTER_NAME
-              value: apis.cdc-social-vulnerability-index
+              value: apis.cdc-provisional-death-counts-by-week
             - name: SERVICE_6_VERSION
               value: "1.0"
             - name: SERVICE_6_ZONE_NAME
               value: default.zone
             - name: SERVICE_6_NAME
-              value: "CDC Social Vulnerability Index"
+              value: "CDC Provisional COVID-19 Death Counts by Week Ending Date and State"
             - name: SERVICE_6_OWNER
               value: "CDC"
             - name: SERVICE_6_RUNTIME
               value: "Node"
             - name: SERVICE_6_DOCUMENTATION
-              value: "https://dev.socrata.com/foundry/data.cdc.gov/48va-t53r"
+              value: "https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab"
             - name: SERVICE_6_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC - Social Vulnerability Index\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/48va-t53r.json\\\",\\\"description\\\":\\\"SVI indicates the relative vulnerability of every U.S. Census tract, created to help public health officials and emergency response planners identify and map the communities that will most likely need support before, during, and after a hazardous event.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Governance\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/Health-Statistics/Social-Vulnerability-Index-2018-United-States-coun/48va-t53r\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON, CSV\\\"],\\\"updates\\\":[\\\"Yearly\\\"],\\\"paid\\\":\\\"\\\",\\\"keyRequired\\\":\\\"\\\"}\""
+              value: "\"{\\\"name\\\":\\\"CDC - Provisional COVID-19 Death Counts by Week Ending Date and State\\\",\\\"url\\\":\\\"https://data.cdc.gov/resource/r8kw-7aab.json\\\",\\\"description\\\":\\\"Deaths involving coronavirus disease 2019 (COVID-19), pneumonia, and influenza reported to NCHS by week ending date and by state\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"https://covidapihub.io/static/media/US_CDC_logo.ae26b0ed.svg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_6_PROMETHEUS_JOB
-              value: apis.cdc-social-vulnerability-index
+              value: apis.cdc-provisional-death-counts-by-week
             - name: SERVICE_6_MAX_INSTANCES
               value: "2"
             - name: SERVICE_6_MIN_INSTANCES
@@ -253,23 +253,24 @@ spec:
             - name: SERVICE_6_METRICS_PORT
               value: "8080"
             - name: SERVICE_7_CLUSTER_NAME
-              value: apis.cdc-us-cases
+              value: apis.cdc-excess-deaths
             - name: SERVICE_7_VERSION
               value: "1.0"
             - name: SERVICE_7_ZONE_NAME
               value: default.zone
             - name: SERVICE_7_NAME
-              value: "CDC Number of US Cases And Deaths"
+              value: CDC Excess Deaths Associated with COVID-19
             - name: SERVICE_7_OWNER
-              value: "CDC"
+              value: CDC
             - name: SERVICE_7_RUNTIME
               value: "Node"
             - name: SERVICE_7_DOCUMENTATION
-              value: "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html"
+              value: "https://data.cdc.gov/NCHS/Excess-Deaths-Associated-with-COVID-19/xkkf-xrst"
+
             - name: SERVICE_7_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC Number of US Cases And Deaths\\\",\\\"url\\\":\\\"https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true\\\",\\\"description\\\":\\\"Actual number of examined and infected people by COVID-19 in the USA from CDC\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://apify.com/petrpatek/covid-usa-cdc\\\",\\\"thumbnail\\\":\\\"https://newyork.salvationarmy.org/wp-content/uploads/Thumbnail-CDC.jpg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"5 Minutes\\\"],\\\"paid\\\":true,\\\"keyRequired\\\":true}\""
+              value: "\"{\\\"name\\\":\\\"CDC Excess Deaths Associated with COVID-19\\\",\\\"url\\\":\\\"https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD\\\",\\\"description\\\":\\\"Estimates of excess deaths can provide information about the burden of mortality potentially related to COVID-19, beyond the number of deaths that are directly attributed to COVID-19.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/\\\",\\\"thumbnail\\\":\\\"https://covidapihub.io/static/media/US_CDC_logo.ae26b0ed.svg\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"JSON\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
             - name: SERVICE_7_PROMETHEUS_JOB
-              value: apis.cdc-us-cases
+              value: apis.cdc-excess-deaths
             - name: SERVICE_7_MAX_INSTANCES
               value: "2"
             - name: SERVICE_7_MIN_INSTANCES
@@ -993,36 +994,6 @@ spec:
             - name: SERVICE_36_METRICS_TEMPLATE
               value: ""
             - name: SERVICE_36_METRICS_PORT
-              value: "8080"
-            - name: SERVICE_37_CLUSTER_NAME
-              value: apis.cdc-excess-deaths
-            - name: SERVICE_37_ZONE_NAME
-              value: default.zone
-            - name: SERVICE_37_NAME
-              value: CDC Excess Deaths Associated with COVID-19
-            - name: SERVICE_37_OWNER
-              value: CDC
-            - name: SERVICE_37_RUNTIME
-              value: "Node"
-            - name: SERVICE_37_DOCUMENTATION
-              value: "/apis/cdc-excess-deaths/docs/"
-            - name: SERVICE_37_VERSION
-              value: "latest"
-            - name: SERVICE_37_CAPABILITY
-              value: "\"{\\\"name\\\":\\\"CDC Excess Deaths Associated with COVID-19\\\",\\\"url\\\":\\\"https://data.cdc.gov/api/views/xkkf-xrst/rows.csv?accessType=DOWNLOAD\\\",\\\"description\\\":\\\"This visualization provides weekly data on excess deaths by jurisdiction of occurrence.\\\",\\\"source\\\":\\\"CDC\\\",\\\"contentType\\\":[\\\"Health\\\"],\\\"homePage\\\":\\\"https://data.cdc.gov/NCHS/Excess-Deaths-Associated-with-COVID-19/xkkf-xrst\\\",\\\"thumbnail\\\":\\\"\\\",\\\"coverage\\\":[\\\"US\\\"],\\\"format\\\":[\\\"CSV\\\"],\\\"updates\\\":[\\\"Weekly\\\"]}\""
-            - name: SERVICE_37_PROMETHEUS_JOB
-              value: apis.cdc-excess-deaths
-            - name: SERVICE_37_MAX_INSTANCES
-              value: "2"
-            - name: SERVICE_37_MIN_INSTANCES
-              value: "1"
-            - name: SERVICE_37_ENABLE_INSTANCE_METRICS
-              value: "true"
-            - name: SERVICE_37_ENABLE_HISTORICAL_METRICS
-              value: "true"
-            - name: SERVICE_37_METRICS_TEMPLATE
-              value: ""
-            - name: SERVICE_37_METRICS_PORT
               value: "8080"
             - name: SERVICE_38_CLUSTER_NAME
               value: apis.tweetbinder-by-day

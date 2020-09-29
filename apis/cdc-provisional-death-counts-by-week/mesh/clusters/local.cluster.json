@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "cluster_key": "cdc-excess-deaths.local.cluster",
+    "cluster_key": "cdc-provisional-death-counts-by-week.local.cluster",
     "name": "local",
     "instances": [
         {

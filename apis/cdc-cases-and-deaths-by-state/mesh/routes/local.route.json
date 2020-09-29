@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "cdc-cases-and-deaths-by-state.apis.domain",
+    "route_key": "cdc-cases-and-deaths-by-state.local.route",
+    "path": "/",
+    "prefix_rewrite": "/resource/9mfq-cb36.json",
+    "redirects": null,
+    "shared_rules_key": "cdc-cases-and-deaths-by-state.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}

@@ -3,25 +3,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: cdc-excess-deaths
-    cluster: apis.cdc-excess-deaths
-  name: cdc-excess-deaths
+    app: cdc-provisional-death-counts-by-sex-age-state
+    cluster: apis.cdc-provisional-death-counts-by-sex-age-state
+  name: cdc-provisional-death-counts-by-sex-age-state
   namespace: apis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdc-excess-deaths
-      cluster: apis.cdc-excess-deaths
+      app: cdc-provisional-death-counts-by-sex-age-state
+      cluster: apis.cdc-provisional-death-counts-by-sex-age-state
   template:
     metadata:
       labels:
-        app: cdc-excess-deaths
-        cluster: apis.cdc-excess-deaths
+        app: cdc-provisional-death-counts-by-sex-age-state
+        cluster: apis.cdc-provisional-death-counts-by-sex-age-state
     spec:
       serviceAccountName: apis-sa
       containers:
-        - name: cdc-excess-deaths-proxy
+        - name: cdc-provisional-death-counts-by-sex-age-state-proxy
           image: "docker.greymatter.io/development/gm-proxy:1.4.2"
           imagePullPolicy: IfNotPresent
           args:
@@ -50,4 +50,4 @@ spec:
             type: DirectoryOrCreate
         - name: sidecar-config
           configMap:
-            name: cdc-excess-deaths-sidecar
+            name: cdc-provisional-death-counts-by-sex-age-state-sidecar
