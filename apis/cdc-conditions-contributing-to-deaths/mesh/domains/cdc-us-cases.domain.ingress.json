@@ -10,7 +10,7 @@
     "custom_headers": [
       {
         "key": "Host",
-        "value": "api.apify.com"
+        "value": "data.cdc.gov"
       }
   ]
 }
