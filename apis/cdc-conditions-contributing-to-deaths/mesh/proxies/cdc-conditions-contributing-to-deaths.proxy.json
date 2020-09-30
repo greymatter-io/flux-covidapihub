@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cdc-conditions-contributing-to-deaths.proxy",
+    "domain_keys": [
+        "cdc-conditions-contributing-to-deaths.apis.domain"
+    ],
+    "listener_keys": [
+        "cdc-conditions-contributing-to-deaths.apis.listener"
+    ],
+    "name": "apis.cdc-conditions-contributing-to-deaths",
+    "listeners": null
+}

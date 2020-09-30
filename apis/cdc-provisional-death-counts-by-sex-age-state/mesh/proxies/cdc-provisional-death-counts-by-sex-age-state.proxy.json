@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "cdc-provisional-death-counts-by-sex-age-state.proxy",
+    "domain_keys": [
+        "cdc-provisional-death-counts-by-sex-age-state.apis.domain"
+    ],
+    "listener_keys": [
+        "cdc-provisional-death-counts-by-sex-age-state.apis.listener"
+    ],
+    "name": "apis.cdc-provisional-death-counts-by-sex-age-state",
+    "listeners": null
+}

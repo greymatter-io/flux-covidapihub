@@ -1,4 +1,3 @@
 #!/bin/bash
-export KUBECONFIG="$(k3d get-kubeconfig --name='greymatter')"
-kubectl config use-context greymatter
+export KUBECONFIG=~/.k3d/kubeconfig-greymatter.yaml
 kubectl config current-context

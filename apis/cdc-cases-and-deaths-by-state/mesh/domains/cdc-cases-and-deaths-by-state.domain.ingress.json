@@ -1,6 +1,6 @@
 {
     "zone_key": "default.zone",
-    "domain_key": "cdc-excess-deaths.apis.domain",
+    "domain_key": "cdc-cases-and-deaths-by-state.apis.domain",
     "name": "*",
     "port": 8443,
     "gzip_enabled": false,

@@ -1,0 +1,13 @@
+{
+    "zone_key": "default.zone",
+    "domain_key": "cdc-provisional-death-counts-by-sex-age-state.apis.domain",
+    "route_key": "cdc-provisional-death-counts-by-sex-age-state.local.route",
+    "path": "/",
+    "prefix_rewrite": "/resource/9bhg-hcku.json",
+    "redirects": null,
+    "shared_rules_key": "cdc-provisional-death-counts-by-sex-age-state.local.rules",
+    "rules": null,
+    "response_data": {},
+    "cohort_seed": null,
+    "retry_policy": null
+}
