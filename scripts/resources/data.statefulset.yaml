@@ -20,7 +20,7 @@ spec:
       serviceAccountName: data
       containers:
       - name: data
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-data:1.1.0"
+        image: "docker.greymatter.io/development/gm-data:1.1.0"
         imagePullPolicy: IfNotPresent
         resources:
           limits:
@@ -102,7 +102,7 @@ spec:
           - name: data-pvc
             mountPath: /app/buckets/decipher-quickstart-helm/data
       - name: sidecar
-        image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
         imagePullPolicy: IfNotPresent
         args:
           - -c
@@ -127,7 +127,7 @@ spec:
         - name: METRICS_KEY_FUNCTION
           value: depth
       imagePullSecrets:
-        - name: docker-dev.production.deciphernow.com
+        - name: docker.greymatter.io
         - name: index.docker.io
       volumes:
       - name: spire-socket
