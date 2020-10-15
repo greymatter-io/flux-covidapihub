@@ -16,7 +16,7 @@ spec:
         spec:
           containers:
           - name: update-checker
-            image: novelcovid/novelcovid-api:sha-a41d7f1
+            image: novelcovid/novelcovid-api:sha-c42c90b
             command:
             - npm
             - run
