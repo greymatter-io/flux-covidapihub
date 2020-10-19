@@ -8,14 +8,14 @@ data:
   users.json: |-
     {
       "users": [
-          {
-        "label": "CN=quickstart,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US",
+      {
+        "label": "%7B%22email%22:%22justin.ely@greymatter.io%22%7D",
         "values": {
           "email": [
-            "quickstart@deciphernow.com"
+            "justin.ely@greymatter.io"
           ],
           "org": [
-            "www.deciphernow.com"
+            "greymatter.io"
           ],
           "privilege": [
             "root"
@@ -23,13 +23,13 @@ data:
         }
       },
       {
-        "label": "CN=localuser,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "label": "%7B%22email%22:%22chris.holmes@greymatter.io%22%7D",
         "values": {
           "email": [
-            "localuser@deciphernow.com"
+            "chris.holmes@greymatter.io"
           ],
           "org": [
-            "www.deciphernow.com"
+            "greymatter.io"
           ],
           "privilege": [
             "root"
@@ -37,55 +37,41 @@ data:
         }
       },
       {
-        "label": "CN=gm-control,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "label": "%7B%22email%22:%22hiromi.suenaga@greymatter.io%22%7D",
         "values": {
           "email": [
-              "gm-control@deciphernow.com"
+            "hiromi.suenaga@greymatter.io"
           ],
           "org": [
-              "www.deciphernow.com"
+            "greymatter.io"
           ],
           "privilege": [
-              "root"
+            "root"
           ]
         }
       },
       {
-        "label": "CN=gm-catalog,OU=Engineering,O=Decipher Technology Studios,=Alexandria,=Virginia,C=US",
+        "label": "%7B%22email%22:%22kaitlin.moreno@greymatter.io%22%7D",
         "values": {
           "email": [
-              "engineering@deciphernow.com"
+            "kaitlin.moreno@greymatter.io"
           ],
           "org": [
-              "www.deciphernow.com"
+            "greymatter.io"
           ],
           "privilege": [
-              "root"
+            "root"
           ]
         }
       },
       {
-        "label": "CN=greymatter,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US",
+        "label": "%7B%22email%22:%22coleman.mcfarland@greymatter.io%22%7D",
         "values": {
           "email": [
-              "engineering@deciphernow.com"
+              "coleman.mcfarland@deciphernow.com"
           ],
           "org": [
-              "www.deciphernow.com"
-          ],
-          "privilege": [
-              "root"
-          ]
-        }
-      },
-      {
-        "label": "O=SPIRE,C=US",
-        "values": {
-          "email": [
-              "engineering@deciphernow.com"
-          ],
-          "org": [
-              "www.deciphernow.com"
+              "greymatter.io"
           ],
           "privilege": [
               "root"
