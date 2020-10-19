@@ -65,7 +65,7 @@ spec:
         - name: CLIENT_JWT_PREFIX
           value: "/jwt"
         - name: CLIENT_PREFIX
-          value: "/services/data/1.0.0"
+          value: "/data/latest"
         - name: GMDATA_NAMESPACE
           value: "home"
         - name: GMDATA_NAMESPACE_USERFIELD
