@@ -59,7 +59,7 @@ spec:
         - name: CLIENT_JWT_ENDPOINT_PORT
           value: "10909"
         - name: CLIENT_JWT_ENDPOINT_PREFIX
-          value: ""
+          value: "/jwt"
         - name: CLIENT_JWT_ENDPOINT_USE_TLS
           value: "false"
         - name: CLIENT_JWT_PREFIX
