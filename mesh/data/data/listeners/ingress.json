@@ -38,6 +38,21 @@
           "0": {
             "permissions": [
               {
+                "any": true
+              }
+            ],
+            "principals": [
+              {
+                "header": {
+                  "name": "access_token",
+                  "present_match": true
+                }
+              }
+            ]
+          },
+          "1": {
+            "permissions": [
+              {
                 "or_rules": {
                   "rules": [
                     {
