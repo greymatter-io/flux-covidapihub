@@ -8,6 +8,8 @@ metadata:
     app.kubernetes.io/name: ingress
     app.kubernetes.io/part-of: ingress
 data:
+  client-max-body-size: 0
+  proxy-buffering: "false"
   use-proxy-protocol: "true"
   http-snippet: |
     proxy_cache_path /etc/nginx/cache levels=1:2 keys_zone=api:20m max_size=10g use_temp_path=off;
