@@ -20,7 +20,7 @@ spec:
       serviceAccountName: jwt
       containers:
       - name: jwt-security
-        image: "docker.greymatter.io/development/gm-jwt-security:1.0.2-dev"
+        image: "docker.greymatter.io/development/gm-jwt-security:1.1.1"
         imagePullPolicy: IfNotPresent
         resources:
           limits:

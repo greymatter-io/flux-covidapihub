@@ -3,9 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.apier: glob:sha-*
-    fluxcd.io/tag.sidecar: glob:1.4*
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.21.0 ()
   creationTimestamp:
@@ -57,7 +54,7 @@ spec:
           mountPath: /app/static
           readOnly: true
       - name: sidecar
-        image: "docker.greymatter.io/development/gm-proxy:1.4.6-dev"
+        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
         imagePullPolicy: IfNotPresent
         args:
         - -c
