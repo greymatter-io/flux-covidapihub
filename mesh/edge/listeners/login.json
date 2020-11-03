@@ -18,6 +18,13 @@
         "location": "cookie",
         "key": "access_token"
       },
+      "userInfo": {
+        "location": "header",
+        "key": "USER_DN",
+        "claims": [
+          "email"
+        ]
+      },
       "provider": "https://accounts.google.com",
       "enforce": false
     },

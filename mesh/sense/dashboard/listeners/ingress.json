@@ -44,8 +44,20 @@
             "principals": [
               {
                 "header": {
-                  "name": "access_token",
-                  "present_match": true
+                    "name": "USER_DN",
+                    "safe_regex_match": {
+                        "google_re2": {},
+                        "regex": ".*@greymatter\\.io.*"
+                    }
+                }
+              },
+              {
+                "header": {
+                    "name": "USER_DN",
+                    "safe_regex_match": {
+                        "google_re2": {},
+                        "regex": ".*@antbrains\\.com.*"
+                    }
                 }
               }
             ]
