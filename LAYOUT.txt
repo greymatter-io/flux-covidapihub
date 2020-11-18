@@ -1,0 +1,1431 @@
+.
+├── apis
+│  ├── acaps-gov-response
+│  │  ├── acaps-gov-response.deployment.yaml
+│  │  ├── acaps-gov-response.sidecar.configmap.yaml
+│  │  ├── acaps-gov-response.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.acaps-gov-response.json
+│  │     ├── clusters
+│  │     │  ├── edge.acaps-gov-response.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── acaps-gov-response.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── acaps-gov-response.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── acaps-gov-response.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.acaps-gov-response.route.json
+│  │     │  ├── edge.acaps-gov-response.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.acaps-gov-response.rules.json
+│  │        └── local.rules.json
+│  ├── apis.serviceaccount.yaml
+│  ├── bing-covid
+│  │  ├── bing-covid.deployment.yaml
+│  │  ├── bing-covid.sidecar.configmap.yaml
+│  │  ├── bing-covid.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.bing-covid.json
+│  │     ├── clusters
+│  │     │  ├── edge.bing-covid.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── bing-covid.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── bing-covid.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── bing-covid.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.bing-covid.route.json
+│  │     │  ├── edge.bing-covid.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.bing-covid.rules.json
+│  │        └── local.rules.json
+│  ├── bls-unemployment-states
+│  │  ├── bls-unemployment-states.deployment.yaml
+│  │  ├── bls-unemployment-states.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.bls-unemployment-states.json
+│  │     ├── clusters
+│  │     │  ├── edge.bls-unemployment-states.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── bls-unemployment-states.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── bls-unemployment-states.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── bls-unemployment-states.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.bls-unemployment-states.route.json
+│  │     │  ├── edge.bls-unemployment-states.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.bls-unemployment-states.rules.json
+│  │        └── local.rules.json
+│  ├── bls-unemployment-usa
+│  │  ├── bls-unemployment-usa.deployment.yaml
+│  │  ├── bls-unemployment-usa.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.bls-unemployment-usa.json
+│  │     ├── clusters
+│  │     │  ├── edge.bls-unemployment-usa.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── bls-unemployment-usa.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── bls-unemployment-usa.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── bls-unemployment-usa.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.bls-unemployment-usa.route.json
+│  │     │  ├── edge.bls-unemployment-usa.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.bls-unemployment-usa.rules.json
+│  │        └── local.rules.json
+│  ├── bu-state-policies
+│  │  ├── bu-state-policies.deployment.yaml
+│  │  ├── bu-state-policies.sidecar.configmap.yaml
+│  │  ├── bu-state-policies.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.bu-state-policies.json
+│  │     ├── clusters
+│  │     │  ├── edge.bu-state-policies.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── bu-state-policies.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── bu-state-policies.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── bu-state-policies.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.bu-state-policies.route.json
+│  │     │  ├── edge.bu-state-policies.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.bu-state-policies.rules.json
+│  │        └── local.rules.json
+│  ├── cdc-cases-and-deaths-by-state
+│  │  ├── cdc-cases-and-deaths-by-state.deployment.yaml
+│  │  ├── cdc-cases-and-deaths-by-state.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── clusters
+│  │     │  ├── edge.cdc-cases-and-deaths-by-state.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cdc-cases-and-deaths-by-state.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cdc-cases-and-deaths-by-state.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cdc-cases-and-deaths-by-state.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cdc-cases-and-deaths-by-state.route.json
+│  │     │  ├── edge.cdc-cases-and-deaths-by-state.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cdc-cases-and-deaths-by-state.rules.json
+│  │        └── local.rules.json
+│  ├── cdc-conditions-contributing-to-deaths
+│  │  ├── cdc-conditions-contributing-to-deaths.deployment.yaml
+│  │  ├── cdc-conditions-contributing-to-deaths.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── clusters
+│  │     │  ├── edge.cdc-conditions-contributing-to-deaths.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cdc-conditions-contributing-to-deaths.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cdc-conditions-contributing-to-deaths.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cdc-conditions-contributing-to-deaths.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cdc-conditions-contributing-to-deaths.route.json
+│  │     │  ├── edge.cdc-conditions-contributing-to-deaths.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cdc-conditions-contributing-to-deaths.rules.json
+│  │        └── local.rules.json
+│  ├── cdc-excess-deaths
+│  │  ├── cdc-excess-deaths.deployment.yaml
+│  │  ├── cdc-excess-deaths.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── clusters
+│  │     │  ├── edge.cdc-excess-deaths.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cdc-excess-deaths.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cdc-excess-deaths.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cdc-excess-deaths.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cdc-excess-deaths.route.json
+│  │     │  ├── edge.cdc-excess-deaths.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cdc-excess-deaths.rules.json
+│  │        └── local.rules.json
+│  ├── cdc-provisional-death-counts-by-sex-age-state
+│  │  ├── cdc-provisional-death-counts-by-sex-age-state.deployment.yaml
+│  │  ├── cdc-provisional-death-counts-by-sex-age-state.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── clusters
+│  │     │  ├── edge.cdc-provisional-death-counts-by-sex-age-state.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cdc-provisional-death-counts-by-sex-age-state.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cdc-provisional-death-counts-by-sex-age-state.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cdc-provisional-death-counts-by-sex-age-state.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cdc-provisional-death-counts-by-sex-age-state.route.json
+│  │     │  ├── edge.cdc-provisional-death-counts-by-sex-age-state.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cdc-provisional-death-counts-by-sex-age-state.rules.json
+│  │        └── local.rules.json
+│  ├── cdc-provisional-death-counts-by-week
+│  │  ├── cdc-provisional-death-counts-by-week.deployment.yaml
+│  │  ├── cdc-provisional-death-counts-by-week.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── clusters
+│  │     │  ├── edge.cdc-provisional-death-counts-by-week.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cdc-provisional-death-counts-by-week.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cdc-provisional-death-counts-by-week.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cdc-provisional-death-counts-by-week.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cdc-provisional-death-counts-by-week.route.json
+│  │     │  ├── edge.cdc-provisional-death-counts-by-week.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cdc-provisional-death-counts-by-week.rules.json
+│  │        └── local.rules.json
+│  ├── cds-data
+│  │  ├── cds-data.deployment.yaml
+│  │  ├── cds-data.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.cds-data.json
+│  │     ├── clusters
+│  │     │  ├── edge.cds-data.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cds-data.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cds-data.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cds-data.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cds-data.route.json
+│  │     │  ├── edge.cds-data.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cds-data.rules.json
+│  │        └── local.rules.json
+│  ├── cds-timeseries
+│  │  ├── cds-timeseries.deployment.yaml
+│  │  ├── cds-timeseries.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.cds-timeseries.json
+│  │     ├── clusters
+│  │     │  ├── edge.cds-timeseries.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cds-timeseries.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cds-timeseries.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cds-timeseries.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cds-timeseries.route.json
+│  │     │  ├── edge.cds-timeseries.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cds-timeseries.rules.json
+│  │        └── local.rules.json
+│  ├── cds-timeseries-by-location
+│  │  ├── cds-timeseries-by-location.deployment.yaml
+│  │  ├── cds-timeseries-by-location.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.cds-timeseries-by-location.json
+│  │     ├── clusters
+│  │     │  ├── edge.cds-timeseries-by-location.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cds-timeseries-by-location.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cds-timeseries-by-location.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cds-timeseries-by-location.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cds-timeseries-by-location.route.json
+│  │     │  ├── edge.cds-timeseries-by-location.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cds-timeseries-by-location.rules.json
+│  │        └── local.rules.json
+│  ├── cms-hospitals-with-medicare
+│  │  ├── cms-hospitals-with-medicare.deployment.yaml
+│  │  ├── cms-hospitals-with-medicare.sidecar.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.cms-hospitals-with-medicare.json
+│  │     ├── clusters
+│  │     │  ├── edge.cms-hospitals-with-medicare.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── cms-hospitals-with-medicare.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── cms-hospitals-with-medicare.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── cms-hospitals-with-medicare.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.cms-hospitals-with-medicare.route.json
+│  │     │  ├── edge.cms-hospitals-with-medicare.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.cms-hospitals-with-medicare.rules.json
+│  │        └── local.rules.json
+│  ├── covid-inpatient-beds-by-state
+│  │  ├── covid-inpatient-beds-by-state.deployment.yaml
+│  │  ├── covid-inpatient-beds-by-state.sidecar.configmap.yaml
+│  │  ├── covid-inpatient-beds-by-state.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.covid-inpatient-beds-by-state.json
+│  │     ├── clusters
+│  │     │  ├── edge.covid-inpatient-beds-by-state.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── covid-inpatient-beds-by-state.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── covid-inpatient-beds-by-state.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── covid-inpatient-beds-by-state.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.covid-inpatient-beds-by-state.route.json
+│  │     │  ├── edge.covid-inpatient-beds-by-state.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.covid-inpatient-beds-by-state.rules.json
+│  │        └── local.rules.json
+│  ├── developer.role.yaml
+│  ├── developer.rolebinding.yaml
+│  ├── docker.greymatter.io.sealedsecret.yaml
+│  ├── finance-policy-responses
+│  │  ├── finance-policy-responses.deployment.yaml
+│  │  ├── finance-policy-responses.sidecar.configmap.yaml
+│  │  ├── finance-policy-responses.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.finance-policy-responses.json
+│  │     ├── clusters
+│  │     │  ├── edge.finance-policy-responses.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── finance-policy-responses.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── finance-policy-responses.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── finance-policy-responses.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.finance-policy-responses.route.json
+│  │     │  ├── edge.finance-policy-responses.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.finance-policy-responses.rules.json
+│  │        └── local.rules.json
+│  ├── google-mobility-reports
+│  │  ├── google-mobility-reports.deployment.yaml
+│  │  ├── google-mobility-reports.sidecar.configmap.yaml
+│  │  ├── google-mobility-reports.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.google-mobility-reports.json
+│  │     ├── clusters
+│  │     │  ├── edge.google-mobility-reports.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── google-mobility-reports.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── google-mobility-reports.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── google-mobility-reports.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.google-mobility-reports.route.json
+│  │     │  ├── edge.google-mobility-reports.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.google-mobility-reports.rules.json
+│  │        └── local.rules.json
+│  ├── icu-beds-by-state
+│  │  ├── icu-beds-by-state.deployment.yaml
+│  │  ├── icu-beds-by-state.sidecar.configmap.yaml
+│  │  ├── icu-beds-by-state.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.icu-beds-by-state.json
+│  │     ├── clusters
+│  │     │  ├── edge.icu-beds-by-state.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── icu-beds-by-state.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── icu-beds-by-state.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── icu-beds-by-state.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.icu-beds-by-state.route.json
+│  │     │  ├── edge.icu-beds-by-state.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.icu-beds-by-state.rules.json
+│  │        └── local.rules.json
+│  ├── inform-mid2020
+│  │  ├── inform-mid2020.deployment.yaml
+│  │  ├── inform-mid2020.sidecar.configmap.yaml
+│  │  ├── inform-mid2020.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.inform-mid2020.json
+│  │     ├── clusters
+│  │     │  ├── edge.inform-mid2020.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── inform-mid2020.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── inform-mid2020.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── inform-mid2020.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.inform-mid2020.route.json
+│  │     │  ├── edge.inform-mid2020.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.inform-mid2020.rules.json
+│  │        └── local.rules.json
+│  ├── inform-p2p-index
+│  │  ├── inform-p2p-index.deployment.yaml
+│  │  ├── inform-p2p-index.sidecar.configmap.yaml
+│  │  ├── inform-p2p-index.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.inform-p2p-index.json
+│  │     ├── clusters
+│  │     │  ├── edge.inform-p2p-index.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── inform-p2p-index.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── inform-p2p-index.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── inform-p2p-index.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.inform-p2p-index.route.json
+│  │     │  ├── edge.inform-p2p-index.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.inform-p2p-index.rules.json
+│  │        └── local.rules.json
+│  ├── inform-risk-index
+│  │  ├── inform-risk-index.deployment.yaml
+│  │  ├── inform-risk-index.sidecar.configmap.yaml
+│  │  ├── inform-risk-index.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.inform-risk-index.json
+│  │     ├── clusters
+│  │     │  ├── edge.inform-risk-index.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── inform-risk-index.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── inform-risk-index.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── inform-risk-index.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.inform-risk-index.route.json
+│  │     │  ├── edge.inform-risk-index.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.inform-risk-index.rules.json
+│  │        └── local.rules.json
+│  ├── inpatient-beds-by-state
+│  │  ├── inpatient-beds-by-state.deployment.yaml
+│  │  ├── inpatient-beds-by-state.sidecar.configmap.yaml
+│  │  ├── inpatient-beds-by-state.swagger.configmap.yaml
+│  │  └── mesh
+│  │     ├── catalog.inpatient-beds-by-state.json
+│  │     ├── clusters
+│  │     │  ├── edge.inpatient-beds-by-state.cluster.json
+│  │     │  └── local.cluster.json
+│  │     ├── domains
+│  │     │  └── inpatient-beds-by-state.domain.ingress.json
+│  │     ├── listeners
+│  │     │  └── inpatient-beds-by-state.listener.ingress.json
+│  │     ├── proxies
+│  │     │  └── inpatient-beds-by-state.proxy.json
+│  │     ├── routes
+│  │     │  ├── edge.inpatient-beds-by-state.route.json
+│  │     │  ├── edge.inpatient-beds-by-state.route.slash.json
+│  │     │  └── local.route.json
+│  │     └── rules
+│  │        ├── edge.inpatient-beds-by-state.rules.json
+│  │        └── local.rules.json
+│  ├── limit.range.yaml
+│  ├── namespace.yaml
+│  ├── non-pharmaceutical-csv
+│  │  ├── mesh
+│  │  │  ├── catalog.non-pharmaceutical-csv.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.non-pharmaceutical-csv.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── non-pharmaceutical-csv.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── non-pharmaceutical-csv.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── non-pharmaceutical-csv.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.non-pharmaceutical-csv.route.json
+│  │  │  │  ├── edge.non-pharmaceutical-csv.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.non-pharmaceutical-csv.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── non-pharmaceutical-csv.deployment.yaml
+│  │  ├── non-pharmaceutical-csv.sidecar.configmap.yaml
+│  │  └── non-pharmaceutical-csv.swagger.configmap.yaml
+│  ├── novelcovid
+│  │  ├── api.sealedsecret.yaml
+│  │  ├── discord-token.sealedsecret.yaml
+│  │  ├── mesh
+│  │  │  ├── catalog.novelcovid.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.to.novelcovid.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── novelcovid.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── novelcovid.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── novelcovid.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.ingress.novelcovid.route.json
+│  │  │  │  ├── edge.ingress.novelcovid.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.novelcovid.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── novelcovid.api.deployment.yaml
+│  │  ├── novelcovid.api.sidecar.configmap.yaml
+│  │  ├── novelcovid.scraper.deployment.yaml
+│  │  └── update-checker.cronjob.yaml
+│  ├── ny-testing
+│  │  ├── mesh
+│  │  │  ├── catalog.ny-testing.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.ny-testing.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── ny-testing.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── ny-testing.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── ny-testing.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.ny-testing.route.json
+│  │  │  │  ├── edge.ny-testing.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.ny-testing.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── ny-testing.deployment.yaml
+│  │  └── ny-testing.sidecar.configmap.yaml
+│  ├── nytimes-us
+│  │  ├── mesh
+│  │  │  ├── catalog.nytimes-us.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.nytimes-us.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── nytimes-us.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── nytimes-us.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── nytimes-us.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.nytimes-us.route.json
+│  │  │  │  ├── edge.nytimes-us.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.nytimes-us.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── nytimes-us.deployment.yaml
+│  │  ├── nytimes-us.sidecar.configmap.yaml
+│  │  └── nytimes-us.swagger.configmap.yaml
+│  ├── nytimes-us-counties
+│  │  ├── mesh
+│  │  │  ├── catalog.nytimes-us-counties.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.nytimes-us-counties.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── nytimes-us-counties.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── nytimes-us-counties.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── nytimes-us-counties.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.nytimes-us-counties.route.json
+│  │  │  │  ├── edge.nytimes-us-counties.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.nytimes-us-counties.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── nytimes-us-counties.deployment.yaml
+│  │  ├── nytimes-us-counties.sidecar.configmap.yaml
+│  │  └── nytimes-us-counties.swagger.configmap.yaml
+│  ├── nytimes-us-states
+│  │  ├── mesh
+│  │  │  ├── catalog.nytimes-us-states.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.nytimes-us-states.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── nytimes-us-states.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── nytimes-us-states.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── nytimes-us-states.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.nytimes-us-states.route.json
+│  │  │  │  ├── edge.nytimes-us-states.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.nytimes-us-states.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── nytimes-us-states.deployment.yaml
+│  │  ├── nytimes-us-states.sidecar.configmap.yaml
+│  │  └── nytimes-us-states.swagger.configmap.yaml
+│  ├── opendata-eu
+│  │  ├── mesh
+│  │  │  ├── catalog.opendata-eu.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.opendata-eu.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── opendata-eu.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── opendata-eu.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── opendata-eu.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.opendata-eu.route.json
+│  │  │  │  ├── edge.opendata-eu.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.opendata-eu.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── opendata-eu.deployment.yaml
+│  │  └── opendata-eu.sidecar.configmap.yaml
+│  ├── our-world-in-data-coronavirus-dataset
+│  │  ├── mesh
+│  │  │  ├── catalog.our-world-in-data-coronavirus-dataset.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.our-world-in-data-coronavirus-dataset.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── our-world-in-data-coronavirus-dataset.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── our-world-in-data-coronavirus-dataset.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── our-world-in-data-coronavirus-dataset.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.our-world-in-data-coronavirus-dataset.route.json
+│  │  │  │  ├── edge.our-world-in-data-coronavirus-dataset.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.our-world-in-data-coronavirus-dataset.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── our-world-in-data-coronavirus-dataset.deployment.yaml
+│  │  ├── our-world-in-data-coronavirus-dataset.sidecar.configmap.yaml
+│  │  └── our-world-in-data-coronavirus-dataset.swagger.configmap.yaml
+│  ├── our-world-in-data-testing
+│  │  ├── mesh
+│  │  │  ├── catalog.our-world-in-data-testing.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.our-world-in-data-testing.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── our-world-in-data-testing.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── our-world-in-data-testing.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── our-world-in-data-testing.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.our-world-in-data-testing.route.json
+│  │  │  │  ├── edge.our-world-in-data-testing.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.our-world-in-data-testing.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── our-world-in-data-testing.deployment.yaml
+│  │  ├── our-world-in-data-testing.sidecar.configmap.yaml
+│  │  └── our-world-in-data-testing.swagger.configmap.yaml
+│  ├── oxford-gov-response
+│  │  ├── mesh
+│  │  │  ├── catalog.oxford-gov-response.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.oxford-gov-response.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── oxford-gov-response.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── oxford-gov-response.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── oxford-gov-response.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.oxford-gov-response.route.json
+│  │  │  │  ├── edge.oxford-gov-response.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.oxford-gov-response.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── oxford-gov-response.deployment.yaml
+│  │  ├── oxford-gov-response.sidecar.configmap.yaml
+│  │  └── oxford-gov-response.swagger.configmap.yaml
+│  ├── tweetbinder-1000-rts
+│  │  ├── mesh
+│  │  │  ├── catalog.tweetbinder-1000-rts.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.tweetbinder-1000-rts.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── tweetbinder-1000-rts.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── tweetbinder-1000-rts.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── tweetbinder-1000-rts.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.tweetbinder-1000-rts.route.json
+│  │  │  │  ├── edge.tweetbinder-1000-rts.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.tweetbinder-1000-rts.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── tweetbinder-1000-rts.deployment.yaml
+│  │  ├── tweetbinder-1000-rts.sidecar.configmap.yaml
+│  │  └── tweetbinder-1000-rts.swagger.configmap.yaml
+│  ├── tweetbinder-by-day
+│  │  ├── mesh
+│  │  │  ├── catalog.tweetbinder-by-day.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.tweetbinder-by-day.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── tweetbinder-by-day.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── tweetbinder-by-day.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── tweetbinder-by-day.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.tweetbinder-by-day.route.json
+│  │  │  │  ├── edge.tweetbinder-by-day.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.tweetbinder-by-day.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── tweetbinder-by-day.deployment.yaml
+│  │  ├── tweetbinder-by-day.sidecar.configmap.yaml
+│  │  └── tweetbinder-by-day.swagger.configmap.yaml
+│  ├── tweetbinder-by-who
+│  │  ├── mesh
+│  │  │  ├── catalog.tweetbinder-by-who.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.tweetbinder-by-who.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── tweetbinder-by-who.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── tweetbinder-by-who.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── tweetbinder-by-who.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.tweetbinder-by-who.route.json
+│  │  │  │  ├── edge.tweetbinder-by-who.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.tweetbinder-by-who.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── tweetbinder-by-who.deployment.yaml
+│  │  ├── tweetbinder-by-who.sidecar.configmap.yaml
+│  │  └── tweetbinder-by-who.swagger.configmap.yaml
+│  ├── unicef-indicators-handwashing
+│  │  ├── mesh
+│  │  │  ├── catalog.unicef-indicators-handwashing.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.unicef-indicators-handwashing.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── unicef-indicators-handwashing.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── unicef-indicators-handwashing.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── unicef-indicators-handwashing.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.unicef-indicators-handwashing.route.json
+│  │  │  │  ├── edge.unicef-indicators-handwashing.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.unicef-indicators-handwashing.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── unicef-indicators-handwashing.deployment.yaml
+│  │  ├── unicef-indicators-handwashing.sidecar.configmap.yaml
+│  │  └── unicef-indicators-handwashing.swagger.configmap.yaml
+│  ├── us-census-economic-indicators
+│  │  ├── mesh
+│  │  │  ├── catalog.us-census-economic-indicators.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.us-census-economic-indicators.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── us-census-economic-indicators.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── us-census-economic-indicators.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── us-census-economic-indicators.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.us-census-economic-indicators.route.json
+│  │  │  │  ├── edge.us-census-economic-indicators.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.us-census-economic-indicators.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── us-census-economic-indicators.deployment.yaml
+│  │  └── us-census-economic-indicators.sidecar.configmap.yaml
+│  ├── us-census-healthins
+│  │  ├── mesh
+│  │  │  ├── catalog.us-census-healthins.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.us-census-healthins.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── us-census-healthins.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── us-census-healthins.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── us-census-healthins.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.us-census-healthins.route.json
+│  │  │  │  ├── edge.us-census-healthins.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.us-census-healthins.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── us-census-healthins.deployment.yaml
+│  │  └── us-census-healthins.sidecar.configmap.yaml
+│  ├── us-census-population
+│  │  ├── mesh
+│  │  │  ├── catalog.us-census-population.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.us-census-population.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── us-census-population.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── us-census-population.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── us-census-population.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.us-census-population.route.json
+│  │  │  │  ├── edge.us-census-population.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.us-census-population.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── us-census-population.deployment.yaml
+│  │  └── us-census-population.sidecar.configmap.yaml
+│  ├── usa-spending
+│  │  ├── mesh
+│  │  │  ├── catalog.usa-spending.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.usa-spending.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── usa-spending.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── usa-spending.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── usa-spending.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.usa-spending.route.json
+│  │  │  │  ├── edge.usa-spending.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.usa-spending.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── usa-spending.deployment.yaml
+│  │  └── usa-spending.sidecar.configmap.yaml
+│  ├── usafacts-confirmed-cases
+│  │  ├── mesh
+│  │  │  ├── catalog.usafacts-confirmed-cases.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.usafacts-confirmed-cases.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── usafacts-confirmed-cases.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── usafacts-confirmed-cases.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── usafacts-confirmed-cases.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.usafacts-confirmed-cases.route.json
+│  │  │  │  ├── edge.usafacts-confirmed-cases.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.usafacts-confirmed-cases.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── usafacts-confirmed-cases.deployment.yaml
+│  │  ├── usafacts-confirmed-cases.sidecar.configmap.yaml
+│  │  └── usafacts-confirmed-cases.swagger.configmap.yaml
+│  ├── usafacts-coronavirus-deaths
+│  │  ├── mesh
+│  │  │  ├── catalog.usafacts-coronavirus-deaths.json
+│  │  │  ├── clusters
+│  │  │  │  ├── edge.usafacts-coronavirus-deaths.cluster.json
+│  │  │  │  └── local.cluster.json
+│  │  │  ├── domains
+│  │  │  │  └── usafacts-coronavirus-deaths.domain.ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── usafacts-coronavirus-deaths.listener.ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── usafacts-coronavirus-deaths.proxy.json
+│  │  │  ├── routes
+│  │  │  │  ├── edge.usafacts-coronavirus-deaths.route.json
+│  │  │  │  ├── edge.usafacts-coronavirus-deaths.route.slash.json
+│  │  │  │  └── local.route.json
+│  │  │  └── rules
+│  │  │     ├── edge.usafacts-coronavirus-deaths.rules.json
+│  │  │     └── local.rules.json
+│  │  ├── usafacts-coronavirus-deaths.deployment.yaml
+│  │  ├── usafacts-coronavirus-deaths.sidecar.configmap.yaml
+│  │  └── usafacts-coronavirus-deaths.swagger.configmap.yaml
+│  └── usafacts-county-population
+│     ├── mesh
+│     │  ├── catalog.usafacts-county-population.json
+│     │  ├── clusters
+│     │  │  ├── edge.usafacts-county-population.cluster.json
+│     │  │  └── local.cluster.json
+│     │  ├── domains
+│     │  │  └── usafacts-county-population.domain.ingress.json
+│     │  ├── listeners
+│     │  │  └── usafacts-county-population.listener.ingress.json
+│     │  ├── proxies
+│     │  │  └── usafacts-county-population.proxy.json
+│     │  ├── routes
+│     │  │  ├── edge.usafacts-county-population.route.json
+│     │  │  ├── edge.usafacts-county-population.route.slash.json
+│     │  │  └── local.route.json
+│     │  └── rules
+│     │     ├── edge.usafacts-county-population.rules.json
+│     │     └── local.rules.json
+│     ├── usafacts-county-population.deployment.yaml
+│     ├── usafacts-county-population.sidecar.configmap.yaml
+│     └── usafacts-county-population.swagger.configmap.yaml
+├── cert-manager
+│  ├── cert-manager.cainjector.clusterrole.yaml
+│  ├── cert-manager.cainjector.clusterrolebinding.yaml
+│  ├── cert-manager.cainjector.deployment.yaml
+│  ├── cert-manager.cainjector.leaderelection.role.yaml
+│  ├── cert-manager.cainjector.leaderelection.rolebinding.yaml
+│  ├── cert-manager.cainjector.serviceaccount.yaml
+│  ├── cert-manager.cluster-issuer.letsencrypt.production.disease.yaml
+│  ├── cert-manager.cluster-issuer.letsencrypt.production.yaml
+│  ├── cert-manager.cluster-issuer.letsencrypt.staging.yaml
+│  ├── cert-manager.controller.certificates.clusterrole.yaml
+│  ├── cert-manager.controller.certificates.clusterrolebinding.yaml
+│  ├── cert-manager.controller.challenges.clusterrole.yaml
+│  ├── cert-manager.controller.challenges.clusterrolebinding.yaml
+│  ├── cert-manager.controller.clusterissuers.clusterrole.yaml
+│  ├── cert-manager.controller.clusterissuers.clusterrolebinding.yaml
+│  ├── cert-manager.controller.ingress.shim.clusterrole.yaml
+│  ├── cert-manager.controller.ingress.shim.clusterrolebinding.yaml
+│  ├── cert-manager.controller.issuers.clusterrole.yaml
+│  ├── cert-manager.controller.issuers.clusterrolebinding.yaml
+│  ├── cert-manager.controller.orders.clusterrole.yaml
+│  ├── cert-manager.controller.orders.clusterrolebinding.yaml
+│  ├── cert-manager.deployment.yaml
+│  ├── cert-manager.edit.clusterrole.yaml
+│  ├── cert-manager.leaderelection.role.yaml
+│  ├── cert-manager.leaderelection.rolebinding.yaml
+│  ├── cert-manager.namespace.yaml
+│  ├── cert-manager.service.yaml
+│  ├── cert-manager.serviceaccount.yaml
+│  ├── cert-manager.view.clusterrole.yaml
+│  ├── cert-manager.webhook.deployment.yaml
+│  ├── cert-manager.webhook.mutatingwebhookconfiguration.yaml
+│  ├── cert-manager.webhook.service.yaml
+│  ├── cert-manager.webhook.serviceaccount.yaml
+│  ├── cert-manager.webhook.validatingwebhookconfiguration.yaml
+│  ├── certificaterequests.cert-manager.io.customresourcedefinition.yaml
+│  ├── certificates.cert-manager.io.customresourcedefinition.yaml
+│  ├── challenges.acme.cert-manager.io.customresourcedefinition.yaml
+│  ├── clusterissuers.cert-manager.io.customresourcedefinition.yaml
+│  ├── issuers.cert-manager.io.customresourcedefinition.yaml
+│  ├── limit.range.yaml
+│  ├── orders.acme.cert-manager.io.customresourcedefinition.yaml
+│  ├── README.md
+│  └── split.rb
+├── data
+│  ├── data.sealedsecret.yaml
+│  ├── data.serviceaccount.yaml
+│  ├── data.sidecar.configmap.yaml
+│  ├── data.statefulset.yaml
+│  ├── docker.greymatter.io.sealedsecret.yaml
+│  ├── index.docker.io.sealedsecret.yaml
+│  ├── jwt.deployment.yaml
+│  ├── jwt.sealedsecret.yaml
+│  ├── jwt.serviceaccount.yaml
+│  ├── jwt.sidecar.configmap.yaml
+│  ├── jwt.users.configmap.yaml
+│  ├── limit.range.yaml
+│  ├── mongo.certs.sealedsecret.yaml
+│  ├── mongo.configmap.yaml
+│  ├── mongo.sealedsecret.yaml
+│  ├── mongo.service.yaml
+│  ├── mongo.statefulset.yaml
+│  ├── namespace.yaml
+│  ├── redis.deployment.yaml
+│  ├── redis.sealedsecret.yaml
+│  └── redis.service.yaml
+├── default
+│  ├── developer.role.yaml
+│  └── developer.rolebinding.yaml
+├── docs
+│  └── Access Control.md
+├── edge
+│  ├── api.caw.sh.ingress.yaml
+│  ├── covidapihub.io.ingress.yaml
+│  ├── dev.covidapihub.io.ingress.yaml
+│  ├── dev.covidapihub.sealedsecret.yaml
+│  ├── developer.role.yaml
+│  ├── developer.rolebinding.yaml
+│  ├── disease.ingress.clusterrole.yaml
+│  ├── disease.ingress.clusterrolebinding.yaml
+│  ├── disease.ingress.deployment.yaml
+│  ├── disease.ingress.nginx.configmap.yaml
+│  ├── disease.ingress.role.yaml
+│  ├── disease.ingress.rolebinding.yaml
+│  ├── disease.ingress.serviceaccount.yaml
+│  ├── disease.ingress.svc.yaml
+│  ├── disease.ingress.tcp.configmap.yaml
+│  ├── disease.ingress.udp.configmap.yaml
+│  ├── disease.proxy.configmap.yaml
+│  ├── disease.proxy.deployment.yaml
+│  ├── disease.proxy.svc.yaml
+│  ├── disease.sh.ingress.yaml
+│  ├── edge.deployment.yaml
+│  ├── edge.service.yaml
+│  ├── edge.serviceaccount.yaml
+│  ├── edge.sidecar.configmap.yaml
+│  ├── edge.svc.sealedsecret.yaml
+│  ├── ingress.clusterrole.yaml
+│  ├── ingress.clusterrolebinding.yaml
+│  ├── ingress.deployment.yaml
+│  ├── ingress.nginx.configmap.yaml
+│  ├── ingress.role.yaml
+│  ├── ingress.rolebinding.yaml
+│  ├── ingress.serviceaccount.yaml
+│  ├── ingress.svc.yaml
+│  ├── ingress.tcp.configmap.yaml
+│  ├── ingress.udp.configmap.yaml
+│  ├── limit.range.yaml
+│  ├── namespace.yaml
+│  ├── ratelimit.configmap.yaml
+│  ├── ratelimit.deployment.yaml
+│  ├── ratelimit.service.yaml
+│  ├── redis.deployment.yaml
+│  ├── redis.sealedsecret.yaml
+│  └── redis.service.yaml
+├── fabric
+│  ├── api.service.yaml
+│  ├── api.serviceaccount.yaml
+│  ├── api.sidecar.configmap.yaml
+│  ├── api.statefulset.yaml
+│  ├── control.clusterrole.yaml
+│  ├── control.clusterrolebinding.yaml
+│  ├── control.deployment.yaml
+│  ├── control.service.yaml
+│  ├── control.serviceaccount.yaml
+│  ├── control.sidecar.configmap.yaml
+│  ├── docker.greymatter.io.sealedsecret.yaml
+│  ├── index.docker.io.sealedsecret.yaml
+│  ├── limit.range.yaml
+│  └── namespace.yaml
+├── flux
+│  ├── flux.clusterrole.yaml
+│  ├── flux.clusterrolebinding.yaml
+│  ├── flux.deployment.yaml
+│  ├── flux.secret.yaml
+│  ├── flux.serviceaccount.yaml
+│  ├── limit.range.yaml
+│  ├── memcached.deployment.yaml
+│  ├── memcached.service.yaml
+│  └── namespace.yaml
+├── kube-system
+│  ├── aws.auth.configmap.yaml
+│  └── metrics.server.components.yaml
+├── kubeseal
+│  ├── controller.clusterrole.yaml
+│  ├── controller.clusterrolebinding.yaml
+│  ├── controller.deployment.yaml
+│  ├── controller.role.yaml
+│  ├── controller.rolebinding.yaml
+│  ├── controller.service.yaml
+│  ├── controller.serviceaccount.yaml
+│  ├── limit.range.yaml
+│  ├── namespace.yaml
+│  ├── proxier.role.yaml
+│  ├── proxier.rolebinding.yaml
+│  └── sealedsecret.customresourcedefinition.yaml
+├── LAYOUT.txt
+├── Makefile
+├── mesh
+│  ├── data
+│  │  ├── data
+│  │  │  ├── clusters
+│  │  │  │  ├── jwt.json
+│  │  │  │  └── local.json
+│  │  │  ├── domains
+│  │  │  │  ├── egress.json
+│  │  │  │  └── ingress.json
+│  │  │  ├── listeners
+│  │  │  │  ├── egress.json
+│  │  │  │  └── ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── data.json
+│  │  │  ├── routes
+│  │  │  │  ├── jwt.json
+│  │  │  │  ├── jwt.slash.json
+│  │  │  │  └── local.json
+│  │  │  └── rules
+│  │  │     ├── jwt.json
+│  │  │     └── local.json
+│  │  └── jwt
+│  │     ├── clusters
+│  │     │  └── local.json
+│  │     ├── domains
+│  │     │  └── ingress.json
+│  │     ├── listeners
+│  │     │  └── ingress.json
+│  │     ├── proxies
+│  │     │  └── jwt.json
+│  │     ├── routes
+│  │     │  └── local.json
+│  │     └── rules
+│  │        └── local.json
+│  ├── disease.sh
+│  │  ├── clusters
+│  │  │  ├── edge.json
+│  │  │  └── internal.json
+│  │  ├── domains
+│  │  │  └── ingress.json
+│  │  ├── listeners
+│  │  │  └── ingress.json
+│  │  ├── proxies
+│  │  │  └── public.json
+│  │  ├── routes
+│  │  │  └── internal.json
+│  │  └── rules
+│  │     ├── edge.json
+│  │     └── traffic.json
+│  ├── edge
+│  │  ├── clusters
+│  │  │  ├── api.json
+│  │  │  ├── catalog.json
+│  │  │  ├── dashboard.json
+│  │  │  ├── data.json
+│  │  │  ├── edge.json
+│  │  │  ├── jwt.json
+│  │  │  ├── kibana.json
+│  │  │  ├── objectives.json
+│  │  │  ├── prometheus.json
+│  │  │  └── website.json
+│  │  ├── domains
+│  │  │  ├── ingress.json
+│  │  │  ├── login.json
+│  │  │  └── novelcovid.json
+│  │  ├── listeners
+│  │  │  ├── ingress.json
+│  │  │  ├── login.json
+│  │  │  └── novelcovid.json
+│  │  ├── proxies
+│  │  │  └── public.json
+│  │  ├── routes
+│  │  │  ├── api.json
+│  │  │  ├── api.slash.json
+│  │  │  ├── catalog.json
+│  │  │  ├── catalog.slash.json
+│  │  │  ├── dashboard.json
+│  │  │  ├── dashboard.slash.json
+│  │  │  ├── data.json
+│  │  │  ├── data.slash.json
+│  │  │  ├── edge.json
+│  │  │  ├── jwt.json
+│  │  │  ├── jwt.slash.json
+│  │  │  ├── kibana.json
+│  │  │  ├── kibana.slash.json
+│  │  │  ├── kibana.underscore.json
+│  │  │  ├── kibana.underscore.slash.json
+│  │  │  ├── novelcovid.edge.json
+│  │  │  ├── novelcovid.json
+│  │  │  ├── objectives.json
+│  │  │  ├── objectives.slash.json
+│  │  │  ├── prometheus.json
+│  │  │  ├── prometheus.slash.json
+│  │  │  └── website.json
+│  │  └── rules
+│  │     ├── api.json
+│  │     ├── catalog.json
+│  │     ├── dashboard.json
+│  │     ├── data.json
+│  │     ├── edge.json
+│  │     ├── jwt.json
+│  │     ├── kibana.json
+│  │     ├── novelcovid.edge.json
+│  │     ├── objectives.json
+│  │     ├── prometheus.json
+│  │     └── website.json
+│  ├── fabric
+│  │  └── control-api
+│  │     ├── clusters
+│  │     │  └── local.json
+│  │     ├── domains
+│  │     │  └── ingress.json
+│  │     ├── listeners
+│  │     │  └── ingress.json
+│  │     ├── proxies
+│  │     │  └── api.json
+│  │     ├── routes
+│  │     │  └── public.json
+│  │     └── rules
+│  │        └── public.json
+│  ├── kibana
+│  │  ├── clusters
+│  │  │  └── local.json
+│  │  ├── domains
+│  │  │  └── ingress.json
+│  │  ├── listeners
+│  │  │  └── ingress.json
+│  │  ├── proxies
+│  │  │  └── kibana.json
+│  │  ├── routes
+│  │  │  └── local.json
+│  │  └── rules
+│  │     └── local.json
+│  ├── sense
+│  │  ├── catalog
+│  │  │  ├── clusters
+│  │  │  │  ├── api.json
+│  │  │  │  ├── control.json
+│  │  │  │  ├── local.json
+│  │  │  │  └── website.json
+│  │  │  ├── domains
+│  │  │  │  ├── egress.json
+│  │  │  │  └── ingress.json
+│  │  │  ├── listeners
+│  │  │  │  ├── egress.json
+│  │  │  │  └── ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── catalog.json
+│  │  │  ├── routes
+│  │  │  │  ├── api.json
+│  │  │  │  ├── control.json
+│  │  │  │  ├── local.json
+│  │  │  │  ├── website.json
+│  │  │  │  └── website.slash.json
+│  │  │  └── rules
+│  │  │     ├── api.json
+│  │  │     ├── control.json
+│  │  │     ├── local.json
+│  │  │     └── website.json
+│  │  ├── dashboard
+│  │  │  ├── clusters
+│  │  │  │  └── local.json
+│  │  │  ├── domains
+│  │  │  │  └── ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── dashboard.json
+│  │  │  ├── routes
+│  │  │  │  └── local.json
+│  │  │  └── rules
+│  │  │     └── local.json
+│  │  ├── objectives
+│  │  │  ├── clusters
+│  │  │  │  └── local.json
+│  │  │  ├── domains
+│  │  │  │  └── ingress.json
+│  │  │  ├── listeners
+│  │  │  │  └── ingress.json
+│  │  │  ├── proxies
+│  │  │  │  └── objectives.json
+│  │  │  ├── routes
+│  │  │  │  └── local.json
+│  │  │  └── rules
+│  │  │     └── local.json
+│  │  └── prometheus
+│  │     ├── clusters
+│  │     │  └── local.json
+│  │     ├── domains
+│  │     │  └── ingress.json
+│  │     ├── listeners
+│  │     │  └── ingress.json
+│  │     ├── proxies
+│  │     │  └── prometheus.json
+│  │     ├── routes
+│  │     │  └── local.json
+│  │     └── rules
+│  │        └── local.json
+│  └── website
+│     ├── clusters
+│     │  └── local.json
+│     ├── domains
+│     │  └── wildcard.json
+│     ├── listeners
+│     │  └── ingress.json
+│     ├── proxies
+│     │  └── website.json
+│     ├── routes
+│     │  └── website.json
+│     └── rules
+│        └── website.json
+├── observables
+│  ├── docker.greymatter.io.sealedsecret.yaml
+│  ├── index.docker.io.sealedsecret.yaml
+│  ├── kibana.deployment.yaml
+│  ├── kibana.serviceaccount.yaml
+│  ├── kibana.sidecar.configmap.yaml
+│  ├── limit.range.yaml
+│  ├── logstash.clusterrole.yaml
+│  ├── logstash.clusterrolebinding.yaml
+│  ├── logstash.elasticsearch.sealedsecret.yaml
+│  ├── logstash.pipelines.configmap.yaml
+│  ├── logstash.serviceaccount.yaml
+│  ├── logstash.statefulset.yaml
+│  ├── logstash.templates.configmap.yaml
+│  └── namespace.yaml
+├── README.md
+├── scripts
+│  ├── helpers
+│  │  └── load-test.sh
+│  ├── makefile
+│  │  └── update-novelcovid.sh
+│  ├── resources
+│  │  ├── api_files
+│  │  │  ├── catalog.sh
+│  │  │  ├── csv.deployment.sh
+│  │  │  ├── deployment.sh
+│  │  │  ├── domain.csv.sh
+│  │  │  ├── domain.sh
+│  │  │  ├── edge.cluster.sh
+│  │  │  ├── edge.route.sh
+│  │  │  ├── edge.route.slash.sh
+│  │  │  ├── edge.rules.sh
+│  │  │  ├── listener.sh
+│  │  │  ├── local.cluster.csv.sh
+│  │  │  ├── local.cluster.sh
+│  │  │  ├── local.route.sh
+│  │  │  ├── local.rules.sh
+│  │  │  ├── proxy.sh
+│  │  │  ├── sidecar_configmap.sh
+│  │  │  └── swagger.configmap.sh
+│  │  ├── catalog.envvars.sh
+│  │  ├── Chart.yaml
+│  │  ├── dashboard.deployment.yaml
+│  │  ├── data.statefulset.yaml
+│  │  ├── edge.ingress.yaml
+│  │  ├── edge.service.yaml
+│  │  ├── limit.ranges.yaml
+│  │  ├── local.secrets.yaml
+│  │  ├── mesh.edge.domains.login.json
+│  │  ├── mesh.edge.listener.ingress.json
+│  │  ├── mesh.edge.listener.login.json
+│  │  └── values.yaml
+│  └── scripts
+│     ├── apply-new-api.sh
+│     ├── clean-acert.sh
+│     ├── clean-k3d.sh
+│     ├── clean-ports.sh
+│     ├── credentials.sh
+│     ├── credentials.template
+│     ├── delete-api.sh
+│     ├── delete-dashboard-pod.sh
+│     ├── fix-control-issue.sh
+│     ├── k3d-install-and-run.sh
+│     ├── k3d-setup-k8-api.sh
+│     ├── k3d-setup-k8.sh
+│     ├── kubeconfig-aws.sh
+│     ├── kubeconfig-k3d.sh
+│     ├── mesh-api.sh
+│     ├── mesh-config.sh
+│     ├── mesh-env.sh
+│     ├── new-api.sh
+│     └── new-csv.sh
+├── sense
+│  ├── catalog.deployment.yaml
+│  ├── catalog.serviceaccount.yaml
+│  ├── catalog.sidecar.configmap.yaml
+│  ├── dashboard.deployment.yaml
+│  ├── dashboard.serviceaccount.yaml
+│  ├── dashboard.sidecar.configmap.yaml
+│  ├── docker.greymatter.io.sealedsecret.yaml
+│  ├── index.docker.io.sealedsecret.yaml
+│  ├── limit.range.yaml
+│  ├── namespace.yaml
+│  ├── objectives.deployment.yaml
+│  ├── objectives.serviceaccount.yaml
+│  ├── objectives.sidecar.configmap.yaml
+│  ├── postgres.sealedsecret.yaml
+│  ├── prometheus.clusterrole.yaml
+│  ├── prometheus.clusterrolebinding.yaml
+│  ├── prometheus.config.configmap.yaml
+│  ├── prometheus.service.yaml
+│  ├── prometheus.serviceaccount.yaml
+│  ├── prometheus.sidecar.configmap.yaml
+│  └── prometheus.statefulset.yaml
+├── spire
+│  ├── agent.clusterrole.yaml
+│  ├── agent.clusterrolebinding.yaml
+│  ├── agent.configmap.yaml
+│  ├── agent.daemonset.yaml
+│  ├── agent.dev.yaml
+│  ├── agent.serviceaccount.yaml
+│  ├── limit.range.yaml
+│  ├── namespace.yaml
+│  ├── registrar.service.yaml
+│  ├── registrar.validatingwebhookconfiguration.yaml
+│  ├── server.bundle.configmap.yaml
+│  ├── server.ca.sealedsecret.yaml
+│  ├── server.clusterrole.yaml
+│  ├── server.clusterrolebinding.yaml
+│  ├── server.dev.yaml
+│  ├── server.postgres.sealedsecret.yaml
+│  ├── server.role.yaml
+│  ├── server.rolebinding.yaml
+│  ├── server.service.yaml
+│  ├── server.serviceaccount.yaml
+│  ├── server.statefulset.yaml
+│  ├── server.templates.configmap.yaml
+│  └── server.tls.sealedsecret.yaml
+└── website
+   ├── docker.greymatter.io.sealedsecret.yaml
+   ├── featured.configmap.yaml
+   ├── index.docker.io.sealedsecret.yaml
+   ├── limit.range.yaml
+   ├── namespace.yaml
+   ├── website.deployment.yaml
+   ├── website.serviceaccount.yaml
+   └── website.sidecar.configmap.yaml
