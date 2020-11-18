@@ -1,0 +1,2546 @@
+
+=========================
+NAMESPACE: apis
+
+-------------------------
+RESOURCE: deployment
+
+acaps-gov-response
+bing-covid
+bls-unemployment-states
+bls-unemployment-usa
+bu-state-policies
+cdc-cases-and-deaths-by-state
+cdc-conditions-contributing-to-deaths
+cdc-excess-deaths
+cdc-provisional-death-counts-by-sex-age-state
+cdc-provisional-death-counts-by-week
+cds-data
+cds-timeseries
+cds-timeseries-by-location
+cms-hospitals-with-medicare
+covid-inpatient-beds-by-state
+finance-policy-responses
+google-mobility-reports
+icu-beds-by-state
+inform-mid2020
+inform-p2p-index
+inform-risk-index
+inpatient-beds-by-state
+non-pharmaceutical-csv
+novelcovid.api
+novelcovid.scraper
+ny-testing
+nytimes-us
+nytimes-us-counties
+nytimes-us-states
+opendata-eu
+our-world-in-data-coronavirus-dataset
+our-world-in-data-testing
+oxford-gov-response
+tweetbinder-1000-rts
+tweetbinder-by-day
+tweetbinder-by-who
+unicef-indicators-handwashing
+us-census-economic-indicators
+us-census-healthins
+us-census-population
+usa-spending
+usafacts-confirmed-cases
+usafacts-coronavirus-deaths
+usafacts-county-population
+-------------------------
+RESOURCE: svc
+
+No resources
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+developer-role
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+apis-sa
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+acaps-gov-response-sidecar
+acaps-gov-response-swagger
+bing-covid-sidecar
+bing-covid-swagger
+bls-unemployment-states-sidecar
+bls-unemployment-usa-sidecar
+bu-state-policies-sidecar
+bu-state-policies-swagger
+cdc-cases-and-deaths-by-state-sidecar
+cdc-conditions-contributing-to-deaths-sidecar
+cdc-excess-deaths-sidecar
+cdc-provisional-death-counts-by-sex-age-state-sidecar
+cdc-provisional-death-counts-by-week-sidecar
+cds-data-sidecar
+cds-timeseries-by-location-sidecar
+cds-timeseries-sidecar
+cms-hospitals-with-medicare-sidecar
+covid-inpatient-beds-by-state-sidecar
+covid-inpatient-beds-by-state-swagger
+finance-policy-responses-sidecar
+finance-policy-responses-swagger
+google-mobility-reports-sidecar
+google-mobility-reports-swagger
+icu-beds-by-state-sidecar
+icu-beds-by-state-swagger
+inform-mid2020-sidecar
+inform-mid2020-swagger
+inform-p2p-index-sidecar
+inform-p2p-index-swagger
+inform-risk-index-sidecar
+inform-risk-index-swagger
+inpatient-beds-by-state-sidecar
+inpatient-beds-by-state-swagger
+non-pharmaceutical-csv-sidecar
+non-pharmaceutical-csv-swagger
+novelcovid-sidecar
+ny-testing-sidecar
+nytimes-us-counties-sidecar
+nytimes-us-counties-swagger
+nytimes-us-sidecar
+nytimes-us-states-sidecar
+nytimes-us-states-swagger
+nytimes-us-swagger
+opendata-eu-sidecar
+our-world-in-data-coronavirus-dataset-sidecar
+our-world-in-data-coronavirus-dataset-swagger
+our-world-in-data-testing-sidecar
+our-world-in-data-testing-swagger
+oxford-gov-response-sidecar
+oxford-gov-response-swagger
+trading-economics-api-sidecar
+tweetbinder-1000-rts-sidecar
+tweetbinder-1000-rts-swagger
+tweetbinder-by-day-sidecar
+tweetbinder-by-day-swagger
+tweetbinder-by-who-sidecar
+tweetbinder-by-who-swagger
+unicef-indicators-handwashing-sidecar
+unicef-indicators-handwashing-swagger
+us-census-economic-indicators-sidecar
+us-census-healthins-sidecar
+us-census-population-sidecar
+usa-spending-sidecar
+usafacts-confirmed-cases-sidecar
+usafacts-confirmed-cases-swagger
+usafacts-coronavirus-deaths-sidecar
+usafacts-coronavirus-deaths-swagger
+usafacts-county-population-sidecar
+usafacts-county-population-swagger
+-------------------------
+RESOURCE: sealedsecret
+
+api-secret
+discord-token
+docker.greymatter.io
+-------------------------
+RESOURCE: secret
+
+api-secret
+apis-sa-token-xpvhr
+default-token-kjkqc
+discord-token
+docker.greymatter.io
+index.docker.io
+
+=========================
+NAMESPACE: cert-manager
+
+-------------------------
+RESOURCE: deployment
+
+cert-manager
+cert-manager-cainjector
+cert-manager-webhook
+-------------------------
+RESOURCE: svc
+
+cert-manager
+cert-manager-webhook
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+cert-manager
+cert-manager-cainjector
+cert-manager-webhook
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+cert-manager-cainjector-token-mkrlj
+cert-manager-token-h8lxb
+cert-manager-webhook-ca
+cert-manager-webhook-tls
+cert-manager-webhook-token-lfwz4
+default-token-h2m77
+letsencrypt-production
+letsencrypt-production-disease
+letsencrypt-staging
+
+=========================
+NAMESPACE: data
+
+-------------------------
+RESOURCE: deployment
+
+jwt-security
+redis
+-------------------------
+RESOURCE: svc
+
+data-mongo
+redis
+-------------------------
+RESOURCE: pvc
+
+data-data-mongo-0
+data-pvc-data-0
+-------------------------
+RESOURCE: sts
+
+data
+data-mongo
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+data
+default
+jwt
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+data-mongo-init
+data-sidecar
+jwt-sidecar
+jwt-users
+test-sidecar
+-------------------------
+RESOURCE: sealedsecret
+
+data-secrets
+docker.greymatter.io
+index.docker.io
+jwt-security
+mongo-certs
+mongo-password
+redis-password
+-------------------------
+RESOURCE: secret
+
+data-secrets
+data-token-9vn8v
+default-token-kfzmv
+docker.greymatter.io
+index.docker.io
+jwt-security
+jwt-token-wjjcv
+mongo-certs
+mongo-password
+redis-password
+
+=========================
+NAMESPACE: default
+
+-------------------------
+RESOURCE: deployment
+
+No resources
+-------------------------
+RESOURCE: svc
+
+kubernetes
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+developer-role
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+control-certs
+controlapi-certs
+dashboard-certs
+data-secrets
+default-token-fgcbk
+docker.production.deciphernow.com
+docker.secret
+greymatter-edge-egress
+greymatter-edge-ingress
+internal-data-secrets
+internal-jwt-certs
+internal-jwt-security-secret
+internal-mongo-certs
+internal-mongo-password
+internal-redis-password
+jwt-certs
+jwt-security
+mongo-certs
+mongo-password
+postgres-credentials
+postgres-ssl-certs
+redis-password
+sh.helm.release.v1.secrets.v1
+sidecar-certs
+slo-certs
+wildcard.caw.sh
+
+=========================
+NAMESPACE: edge
+
+-------------------------
+RESOURCE: deployment
+
+disease
+disease-ingress
+edge
+grafana
+ingress
+prometheus-server
+ratelimit
+redis
+-------------------------
+RESOURCE: svc
+
+disease
+disease-ingress
+edge
+grafana
+ingress
+prometheus-server
+ratelimit
+redis
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+developer-role
+disease-ingress
+ingress
+prometheus-server
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+disease-ingress
+edge
+grafana
+ingress
+prometheus-server
+-------------------------
+RESOURCE: ingress
+
+api.caw.sh.ingress
+dev.covidapihub.io.ingress
+disease.sh.ingress
+edge
+-------------------------
+RESOURCE: cm
+
+disease
+disease.nginx
+disease.tcp
+disease.udp
+edge-sidecar
+ingress-controller-leader-disease-nginx-disease
+ingress-controller-leader-nginx
+nginx
+prometheus-configuration-bc6bcg7b65
+prometheus-configuration-c574mgmh89
+ratelimit
+tcp
+udp
+-------------------------
+RESOURCE: sealedsecret
+
+dev.covidapihub
+edge.svc
+redis
+-------------------------
+RESOURCE: secret
+
+api.caw.sh
+covidapihub.io
+default-token-ngnbq
+dev.covidapihub
+dev.covidapihub.certmanager
+disease-ingress-token-vnxb7
+disease.sh
+edge-token-gfsb5
+edge.svc
+grafana-token-tclh5
+index.docker.io
+ingress-token-9xpdv
+prometheus-server-token-g2nqx
+redis
+wildcard.caw.sh
+
+=========================
+NAMESPACE: fabric
+
+-------------------------
+RESOURCE: deployment
+
+control
+-------------------------
+RESOURCE: svc
+
+api
+control
+-------------------------
+RESOURCE: pvc
+
+api-data-api-0
+-------------------------
+RESOURCE: sts
+
+api
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+api
+control
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+api-sidecar
+control-sidecar
+-------------------------
+RESOURCE: sealedsecret
+
+docker.greymatter.io
+index.docker.io
+-------------------------
+RESOURCE: secret
+
+api-token-djdtm
+control-token-srqfh
+default-token-c4pvt
+docker.greymatter.io
+index.docker.io
+
+=========================
+NAMESPACE: flux
+
+-------------------------
+RESOURCE: deployment
+
+flux
+memcached
+-------------------------
+RESOURCE: svc
+
+memcached
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+flux
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-8fspl
+flux
+flux-token-r8n5t
+
+=========================
+NAMESPACE: kube-node-lease
+
+-------------------------
+RESOURCE: deployment
+
+No resources
+-------------------------
+RESOURCE: svc
+
+No resources
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-jhfq2
+
+=========================
+NAMESPACE: kube-public
+
+-------------------------
+RESOURCE: deployment
+
+No resources
+-------------------------
+RESOURCE: svc
+
+No resources
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+system:controller:bootstrap-signer
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-4t685
+
+=========================
+NAMESPACE: kube-system
+
+-------------------------
+RESOURCE: deployment
+
+coredns
+metrics-server
+-------------------------
+RESOURCE: svc
+
+kube-dns
+metrics-server
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+cert-manager-cainjector:leaderelection
+cert-manager:leaderelection
+eks:fargate-manager
+eks:node-manager
+extension-apiserver-authentication-reader
+system::leader-locking-kube-controller-manager
+system::leader-locking-kube-scheduler
+system:controller:bootstrap-signer
+system:controller:cloud-provider
+system:controller:token-cleaner
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+attachdetach-controller
+aws-cloud-provider
+aws-node
+certificate-controller
+clusterrole-aggregation-controller
+coredns
+cronjob-controller
+daemon-set-controller
+default
+deployment-controller
+disruption-controller
+eks-admin
+endpoint-controller
+expand-controller
+generic-garbage-collector
+horizontal-pod-autoscaler
+job-controller
+kube-proxy
+metrics-server
+namespace-controller
+node-controller
+persistent-volume-binder
+pod-garbage-collector
+pv-protection-controller
+pvc-protection-controller
+replicaset-controller
+replication-controller
+resourcequota-controller
+service-account-controller
+service-controller
+statefulset-controller
+ttl-controller
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+aws-auth
+cert-manager-cainjector-leader-election
+cert-manager-cainjector-leader-election-core
+cert-manager-controller
+coredns
+eks-certificates-controller
+extension-apiserver-authentication
+kube-proxy
+kube-proxy-config
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+attachdetach-controller-token-96l86
+aws-cloud-provider-token-xb486
+aws-node-token-4mn6f
+certificate-controller-token-klsj6
+clusterrole-aggregation-controller-token-k9lpf
+coredns-token-7qn6g
+cronjob-controller-token-t9n7r
+daemon-set-controller-token-4d5tg
+default-token-n2rcf
+deployment-controller-token-4zfwz
+disruption-controller-token-zb6kp
+eks-admin-token-td5wc
+endpoint-controller-token-ts97b
+expand-controller-token-65g7m
+generic-garbage-collector-token-7d9lf
+horizontal-pod-autoscaler-token-bdttc
+job-controller-token-jvt4p
+kube-proxy-token-rprg7
+metrics-server-token-hpqv9
+namespace-controller-token-fpmwm
+node-controller-token-d7ffv
+persistent-volume-binder-token-v56pp
+pod-garbage-collector-token-cxlbg
+pv-protection-controller-token-5hh67
+pvc-protection-controller-token-869g2
+replicaset-controller-token-9glz4
+replication-controller-token-c6t55
+resourcequota-controller-token-flks2
+service-account-controller-token-s6kk5
+service-controller-token-9jqtb
+statefulset-controller-token-cd4zc
+ttl-controller-token-vwqgj
+
+=========================
+NAMESPACE: kubernetes-dashboard
+
+-------------------------
+RESOURCE: deployment
+
+dashboard-metrics-scraper
+kubernetes-dashboard
+-------------------------
+RESOURCE: svc
+
+dashboard-metrics-scraper
+kubernetes-dashboard
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+kubernetes-dashboard
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+kubernetes-dashboard
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+kubernetes-dashboard-settings
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-zznlg
+kubernetes-dashboard-certs
+kubernetes-dashboard-csrf
+kubernetes-dashboard-key-holder
+kubernetes-dashboard-token-qjsd4
+
+=========================
+NAMESPACE: kubeseal
+
+-------------------------
+RESOURCE: deployment
+
+controller
+-------------------------
+RESOURCE: svc
+
+controller
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+controller
+proxier
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+controller
+default
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+No resources
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+controller-token-677sd
+default-token-clwsx
+sealed-secrets-key2fz4h
+sealed-secrets-keyb5jxj
+sealed-secrets-keyfkpc4
+sealed-secrets-keykjrll
+sealed-secrets-keykw2m7
+sealed-secrets-keypfkwz
+sealed-secrets-keypvr2n
+sealed-secrets-keyzbw6j
+
+=========================
+NAMESPACE: observables
+
+-------------------------
+RESOURCE: deployment
+
+kibana
+-------------------------
+RESOURCE: svc
+
+No resources
+-------------------------
+RESOURCE: pvc
+
+logstash-data-logstash-0
+-------------------------
+RESOURCE: sts
+
+logstash
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+kibana
+logstash
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+kibana-sidecar
+logstash-pipelines
+logstash-templates
+-------------------------
+RESOURCE: sealedsecret
+
+docker.greymatter.io
+index.docker.io
+logstash-elasticsearch
+-------------------------
+RESOURCE: secret
+
+default-token-zqjgv
+docker.greymatter.io
+index.docker.io
+kibana-token-8jl5d
+logstash-elasticsearch
+logstash-token-njxzf
+
+=========================
+NAMESPACE: prometheus
+
+-------------------------
+RESOURCE: deployment
+
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+-------------------------
+RESOURCE: svc
+
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-node-exporter
+prometheus-pushgateway
+prometheus-server
+-------------------------
+RESOURCE: pvc
+
+prometheus-alertmanager
+prometheus-server
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-node-exporter
+prometheus-pushgateway
+prometheus-server
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+prometheus-alertmanager
+prometheus-server
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-tck66
+prometheus-alertmanager-token-7ckqd
+prometheus-kube-state-metrics-token-b7hwq
+prometheus-node-exporter-token-p4x2h
+prometheus-pushgateway-token-nhctd
+prometheus-server-token-jpkv6
+sh.helm.release.v1.prometheus.v1
+
+=========================
+NAMESPACE: sense
+
+-------------------------
+RESOURCE: deployment
+
+catalog
+dashboard
+objectives
+-------------------------
+RESOURCE: svc
+
+prometheus
+-------------------------
+RESOURCE: pvc
+
+prometheus-data-prometheus-0
+-------------------------
+RESOURCE: sts
+
+prometheus
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+catalog
+dashboard
+default
+objectives
+prometheus
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+catalog-sidecar
+dashboard-sidecar
+objectives-sidecar
+prometheus-config
+prometheus-sidecar
+-------------------------
+RESOURCE: sealedsecret
+
+docker.greymatter.io
+index.docker.io
+objectives-postgres
+-------------------------
+RESOURCE: secret
+
+catalog-token-dnvdh
+dashboard-token-szn4x
+default-token-b5qzm
+docker.greymatter.io
+index.docker.io
+objectives-postgres
+objectives-token-z8nl2
+prometheus-token-45vr9
+
+=========================
+NAMESPACE: spire
+
+-------------------------
+RESOURCE: deployment
+
+No resources
+-------------------------
+RESOURCE: svc
+
+registrar
+server
+-------------------------
+RESOURCE: pvc
+
+server-data-server-0
+-------------------------
+RESOURCE: sts
+
+server
+-------------------------
+RESOURCE: role
+
+server
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+agent
+default
+server
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+agent-config
+server-bundle
+server-templates
+-------------------------
+RESOURCE: sealedsecret
+
+postgres
+server-ca
+server-tls
+-------------------------
+RESOURCE: secret
+
+agent-token-22968
+default-token-pb6m2
+postgres
+server-ca
+server-tls
+server-token-zzvhh
+
+=========================
+NAMESPACE: spire-dev
+
+-------------------------
+RESOURCE: deployment
+
+No resources
+-------------------------
+RESOURCE: svc
+
+registrar-dev
+server-dev
+-------------------------
+RESOURCE: pvc
+
+server-data-server-dev-0
+-------------------------
+RESOURCE: sts
+
+server-dev
+-------------------------
+RESOURCE: role
+
+server-dev
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+server-dev
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+server-bundle-dev
+server-config-dev
+-------------------------
+RESOURCE: sealedsecret
+
+No resources
+-------------------------
+RESOURCE: secret
+
+default-token-226mh
+server-ca-dev
+server-dev-token-tdkd9
+server-tls-dev
+
+=========================
+NAMESPACE: website
+
+-------------------------
+RESOURCE: deployment
+
+website
+-------------------------
+RESOURCE: svc
+
+No resources
+-------------------------
+RESOURCE: pvc
+
+No resources
+-------------------------
+RESOURCE: sts
+
+No resources
+-------------------------
+RESOURCE: role
+
+No resources
+-------------------------
+RESOURCE: clusterrolebinding
+
+aws-node
+cert-manager-cainjector
+cert-manager-controller-certificates
+cert-manager-controller-challenges
+cert-manager-controller-clusterissuers
+cert-manager-controller-ingress-shim
+cert-manager-controller-issuers
+cert-manager-controller-orders
+cluster-admin
+disease-ingress
+eks-admin
+eks:fargate-manager
+eks:kube-proxy
+eks:kube-proxy-fargate
+eks:kube-proxy-windows
+eks:node-bootstrapper
+eks:node-manager
+eks:podsecuritypolicy:authenticated
+fabric:control
+flux:flux
+ingress
+kubernetes-dashboard
+kubeseal:controller
+logstash
+metrics-server:system:auth-delegator
+prometheus-alertmanager
+prometheus-kube-state-metrics
+prometheus-pushgateway
+prometheus-server
+sense:prometheus
+spire-dev:agent-dev
+spire-dev:server-dev
+spire:agent
+spire:server
+system:basic-user
+system:controller:attachdetach-controller
+system:controller:certificate-controller
+system:controller:clusterrole-aggregation-controller
+system:controller:cronjob-controller
+system:controller:daemon-set-controller
+system:controller:deployment-controller
+system:controller:disruption-controller
+system:controller:endpoint-controller
+system:controller:expand-controller
+system:controller:generic-garbage-collector
+system:controller:horizontal-pod-autoscaler
+system:controller:job-controller
+system:controller:namespace-controller
+system:controller:node-controller
+system:controller:persistent-volume-binder
+system:controller:pod-garbage-collector
+system:controller:pv-protection-controller
+system:controller:pvc-protection-controller
+system:controller:replicaset-controller
+system:controller:replication-controller
+system:controller:resourcequota-controller
+system:controller:route-controller
+system:controller:service-account-controller
+system:controller:service-controller
+system:controller:statefulset-controller
+system:controller:ttl-controller
+system:coredns
+system:discovery
+system:kube-controller-manager
+system:kube-dns
+system:kube-scheduler
+system:metrics-server
+system:node
+system:node-proxier
+system:public-info-viewer
+system:volume-scheduler
+-------------------------
+RESOURCE: sa
+
+default
+website
+-------------------------
+RESOURCE: ingress
+
+No resources
+-------------------------
+RESOURCE: cm
+
+website-featured-data
+website-sidecar
+-------------------------
+RESOURCE: sealedsecret
+
+docker.greymatter.io
+index.docker.io
+-------------------------
+RESOURCE: secret
+
+default-token-7zbff
+docker.greymatter.io
+index.docker.io
+website-token-cj2q4

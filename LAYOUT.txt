@@ -1,3 +1,65 @@
+
+
+
+
+{
+  "database": "objectives",
+  "host": "covidapihub-spire.cnkwv7bcyhsc.us-east-1.rds.amazonaws.com",
+  "password": "deadlydisease",
+  "port": "5432",
+  "username": "postgres"
+}
+
+{
+  "database": "spire",
+  "host": "covidapihub-spire.cnkwv7bcyhsc.us-east-1.rds.amazonaws.com",
+  "password": "deadlydisease",
+  "port": "5432",
+  "username": "postgres"
+}
+
+create the namespaces first thing
+
+kubeseal
+cert-manager
+spire   ---wait
+fabric
+edge
+data
+sense
+apis
+website
+
+
+
+
+
+where do ingresses go, which namespace
+
+api-secret is unused?
+
+certmanager seems to mostly be self-managed, letsencrypt secrets
+configured via annotations
+
+data has pvcs, and stateful sets
+
+spire is in use
+
+edge ns: maybe consolidate after we deploy what exists
+   edge has cluster roles, etc
+   spire stuff not getting carried over?
+   ingress-controller-leader-* are cert manager managed
+   edge.svc - tls certs. rename?
+
+fabric
+
+kube-system metrics-server
+
+make postgres instances for spire
+
+spire-dev not needed
+
+
 .
 ├── apis
 │  ├── acaps-gov-response
