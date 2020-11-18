@@ -35,8 +35,8 @@ data:
     plugins {
       DataStore "sql" {
         plugin_data {
-          database_type = "postgres"
-          connection_string = "dbname={{ variable "POSTGRESQL_DATABASE" }} user={{ variable "POSTGRESQL_USERNAME" }} password={{ variable "POSTGRESQL_PASSWORD" }} host={{ variable "POSTGRESQL_HOST" }} port={{ variable "POSTGRESQL_PORT" }}"
+          database_type = "sqlite3"
+          connection_string = "/run/spire/data/datastore.sqlite3"
         }
       }
 

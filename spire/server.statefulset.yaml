@@ -25,39 +25,8 @@ spec:
           image: docker.io/deciphernow/templar:v0.1.0-dev
           args:
             - render
-            - --environment=POSTGRESQL_HOST
-            - --environment=POSTGRESQL_PORT
-            - --environment=POSTGRESQL_DATABASE
-            - --environment=POSTGRESQL_USERNAME
-            - --environment=POSTGRESQL_PASSWORD
             - "/tmp/templates/server.conf.tpl:/run/spire/config/server.conf:0400"
             - "/tmp/templates/registrar.conf.tpl:/run/spire/config/registrar.conf:0400"
-          env:
-            - name: POSTGRESQL_HOST
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: host
-            - name: POSTGRESQL_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: port
-            - name: POSTGRESQL_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: database
-            - name: POSTGRESQL_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: username
-            - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres
-                  key: password
           volumeMounts:
             - name: server-config
               mountPath: /run/spire/config
