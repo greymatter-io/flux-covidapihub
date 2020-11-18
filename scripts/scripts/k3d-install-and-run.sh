@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 if [ ! -f scripts/scripts/credentials.sh ]; then
     echo decipher email:
     read DockerProductionUsername
