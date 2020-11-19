@@ -72,7 +72,6 @@ spec:
           protocol: TCP
       imagePullSecrets:
       - name: docker.greymatter.io
-      - name: index.docker.io
       volumes:
       - name: sidecar-config
         configMap:

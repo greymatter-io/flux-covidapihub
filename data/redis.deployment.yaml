@@ -42,9 +42,6 @@ spec:
             requests:
               cpu: 100m
               memory: 128Mi
-      imagePullSecrets:
-        - name: docker.greymatter.io
-        - name: index.docker.io
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

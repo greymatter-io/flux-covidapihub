@@ -97,7 +97,6 @@ spec:
           value: depth
       imagePullSecrets:
         - name: docker.greymatter.io
-        - name: index.docker.io
       volumes:
       - name: spire-socket
         hostPath:

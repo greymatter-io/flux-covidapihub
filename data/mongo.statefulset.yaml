@@ -77,9 +77,6 @@ spec:
         - name: mongo-init
           configMap:
             name: data-mongo-init
-      imagePullSecrets:
-        - name: docker.greymatter.io
-        - name: index.docker.io
   volumeClaimTemplates:
   - metadata:
       name: data
