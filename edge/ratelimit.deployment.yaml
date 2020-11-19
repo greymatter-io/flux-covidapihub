@@ -34,10 +34,11 @@ spec:
           - name: REDIS_URL
             value: "redis.edge.svc:6379"
           - name: REDIS_AUTH
-            valueFrom:
-              secretKeyRef:
-                name: redis
-                key: password
+            value: password
+            #valueFrom:
+            #  secretKeyRef:
+            #    name: redis
+            #    key: password
 
           - name: RUNTIME_ROOT
             value: "/"

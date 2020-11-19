@@ -30,10 +30,11 @@ spec:
           image: docker.io/centos/redis-32-centos7
           env:
             - name: REDIS_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: redis
-                  key: password
+              value: password
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: redis
+              #    key: password
           imagePullPolicy: IfNotPresent
           resources:
             limits:
