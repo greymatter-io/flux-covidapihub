@@ -62,7 +62,6 @@ spec:
         - name: METRICS_KEY_FUNCTION
           value: depth
       imagePullSecrets:
-      - name: index.docker.io
       - name: docker.greymatter.io
       volumes:
       - name: sidecar-config

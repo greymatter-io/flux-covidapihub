@@ -95,7 +95,7 @@ spec:
               name: mongo-password
               key: database
         - name: MONGOHOST
-          value: "data-mongo-0.data-mongo.data.svc:27017"
+          value: "data-mongo:27017"
         - name: USES3
           value: "true"
         volumeMounts:
