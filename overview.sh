@@ -31,14 +31,14 @@ do
     echo ""
 
     list_resources $ns deployment 
-    list_resources $ns svc 
-    list_resources $ns pvc
+    # list_resources $ns svc 
+    # list_resources $ns pvc
     list_resources $ns sts 
-    list_resources $ns role
-    list_resources $ns clusterrolebinding
-    list_resources $ns sa
-    list_resources $ns ingress
-    list_resources $ns cm 
-    list_resources $ns sealedsecret
-    list_resources $ns secret 
+    # list_resources $ns role
+    # list_resources $ns clusterrolebinding
+    # list_resources $ns sa
+    # list_resources $ns ingress
+    # list_resources $ns cm 
+    # list_resources $ns sealedsecret
+    # list_resources $ns secret 
 done
