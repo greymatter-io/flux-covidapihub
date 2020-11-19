@@ -57,10 +57,10 @@ spec:
         - containerPort: 3000
         resources:
           limits:
-            cpu: 500m
+            # no cpu limit
             memory: 2Gi
           requests:
-            cpu: 500m
+            cpu: 100m
             memory: 200Mi
       restartPolicy: Always
       serviceAccountName: "apis-sa"

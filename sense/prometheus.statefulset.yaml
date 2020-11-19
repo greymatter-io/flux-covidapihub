@@ -74,8 +74,8 @@ spec:
               cpu: 1000m
               memory: 12Gi
             requests:
-              cpu: 500m
-              memory: 8Gi
+              cpu: 100m
+              memory: 4Gi
           volumeMounts:
             - name: prometheus-config
               mountPath: /etc/prometheus
