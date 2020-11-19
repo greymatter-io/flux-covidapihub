@@ -11,7 +11,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   externalTrafficPolicy: Cluster
-  type: LoadBalancer
+  type: NodePort
   selector:
     app.kubernetes.io/name: ingress
     app.kubernetes.io/part-of: ingress

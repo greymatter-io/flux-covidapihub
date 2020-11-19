@@ -12,7 +12,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-eip-allocation: eipalloc-0519bb158d65945a2
 spec:
   externalTrafficPolicy: Cluster
-  type: LoadBalancer
+  type: NodePort
   selector:
     app.kubernetes.io/name: disease-ingress
     app.kubernetes.io/part-of: disease-ingress
