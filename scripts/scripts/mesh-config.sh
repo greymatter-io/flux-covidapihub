@@ -5,19 +5,19 @@ greymatter version
 
 source ./scripts/scripts/mesh-env.sh
 
-if [[ $ENV == "k3d" && "$(kubectl config current-context)" != "greymatter" ]]; then
-    echo "⛔️⛔️⛔️⛔️⛔ You are about to apply mesh configs to non-k3d environment ⛔️⛔️⛔️⛔️⛔️"
-    exit 1
-fi
+# if [[ $ENV == "k3d" && "$(kubectl config current-context)" != "greymatter" ]]; then
+#     echo "⛔️⛔️⛔️⛔️⛔ You are about to apply mesh configs to non-k3d environment ⛔️⛔️⛔️⛔️⛔️"
+#     exit 1
+# fi
 
-if [[ $ENV == "prod" && "$(kubectl config current-context)" = arn:aws:eks:* ]]; then
-    echo "🍀🍀🍀🍀🍀 Just so you know, you are changing production 🍀🍀🍀🍀🍀"
-    source ./scripts/scripts/credentials.sh
-    if [ -z "$ClientId" ] || [ -z "$ClientSecret" ]; then
-        echo "⛔️ You do not have OIDC client ID and secret set in your credentials.sh"
-        exit 1
-    fi
-fi
+# if [[ $ENV == "prod" && "$(kubectl config current-context)" = arn:aws:eks:* ]]; then
+#     echo "🍀🍀🍀🍀🍀 Just so you know, you are changing production 🍀🍀🍀🍀🍀"
+#     source ./scripts/scripts/credentials.sh
+#     if [ -z "$ClientId" ] || [ -z "$ClientSecret" ]; then
+#         echo "⛔️ You do not have OIDC client ID and secret set in your credentials.sh"
+#         exit 1
+#     fi
+# fi
 
 listener=$(lsof -t -i:10080)
 if [ ! -z "$listener" ]; then
@@ -57,7 +57,7 @@ create_or_update() {
 
 delay=0.01
 objects="domains clusters listeners proxies rules routes"
-meshfolders=(mesh/edge mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/kibana mesh/website mesh/fabric/control-api)
+meshfolders=(mesh/edge mesh/disease.sh mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/website mesh/fabric/control-api)
 for meshfolder in "${meshfolders[@]}"; do
     cd $meshfolder
     for folder in $objects; do
@@ -90,9 +90,9 @@ if [[ $ENV == "k3d" ]]; then
 
 fi
 
-if [[ $ENV == "prod" ]]; then
-    cp mesh/edge/listeners/login.json /tmp/login.json
-    sed -i '' "s/CLIENT_ID_REDACTED/${ClientId}/g" /tmp/login.json
-    sed -i '' "s/CLIENT_SECRET_REDACTED/${ClientSecret}/g" /tmp/login.json
-    create_or_update listener /tmp/login.json
-fi
+# if [[ $ENV == "prod" ]]; then
+cp mesh/edge/listeners/login.json /tmp/login.json
+sed -i '' "s/CLIENT_ID_REDACTED/${ClientId}/g" /tmp/login.json
+sed -i '' "s/CLIENT_SECRET_REDACTED/${ClientSecret}/g" /tmp/login.json
+create_or_update listener /tmp/login.json
+# fi

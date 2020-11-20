@@ -3,7 +3,7 @@
 NAME=$1
 
 #define the template.
-cat  << EOF
+cat <<EOF
 {
     "zone_key": "default.zone",
     "listener_key": "$NAME.apis.listener",
@@ -44,7 +44,7 @@ cat  << EOF
             "topic": "apis.$NAME",
             "eventTopic": "observables",
             "useKafka": true,
-            "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
+            "kafkaServerConnection": "b-1.covidapihub-msk.6s1o6w.c9.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-msk.6s1o6w.c9.kafka.us-east-1.amazonaws.com:9094",
             "useKafkaTLS": true
         }
     },
