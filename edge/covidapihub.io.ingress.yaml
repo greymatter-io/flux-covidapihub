@@ -18,7 +18,7 @@ spec:
         - www-covidapihub-io.greymatter.services
       secretName: covidapihub.io
   rules:
-    - host: covidapihub.io
+    - host: covidapihub-io.greymatter.services
       http:
         paths:
           - path: /login
@@ -33,7 +33,7 @@ spec:
             backend:
               serviceName: edge
               servicePort: 8443
-    - host: www.covidapihub.io
+    - host: www-covidapihub-io.greymatter.services
       http:
         paths:
           - path: /(.*)

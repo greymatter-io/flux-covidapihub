@@ -27,7 +27,7 @@ spec:
         #- api.caw.sh
       secretName: api.caw.sh
   rules:
-    - host: api.caw.sh
+    - host: api-caw-sh.greymatter.services
       http:
         paths:
           - path: /
