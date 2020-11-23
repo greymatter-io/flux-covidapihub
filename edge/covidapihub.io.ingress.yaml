@@ -14,8 +14,8 @@ metadata:
 spec:
   tls:
     - hosts:
-        - covidapihub.io
-        - www.covidapihub.io
+        - covidapihub-io.greymatter.services
+        - www-covidapihub-io.greymatter.services
       secretName: covidapihub.io
   rules:
     - host: covidapihub.io

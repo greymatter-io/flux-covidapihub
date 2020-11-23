@@ -23,7 +23,8 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - api.caw.sh
+      - api-caw-sh.greymatter.services
+        #- api.caw.sh
       secretName: api.caw.sh
   rules:
     - host: api.caw.sh

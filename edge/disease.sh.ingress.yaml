@@ -23,11 +23,11 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - disease.sh
-      - www.disease.sh
-      - 9kzzzfwgnwgef8dc.disease.sh
-      - ev3klr6bchdcdowp.disease.sh
-      - tvf5ksnujo01bafz.disease.sh
+      - disease-sh.greymatter.services
+      - www-disease-sh.greymatter.services
+      - 9kzzzfwgnwgef8dc-disease-sh.greymatter.services
+      - ev3klr6bchdcdowp-disease-sh.greymatter.services
+      - tvf5ksnujo01bafz-disease-sh.greymatter.services
       secretName: disease.sh
   rules:
     - host: disease.sh
