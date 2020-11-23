@@ -5,15 +5,6 @@ greymatter version
 
 source ./scripts/scripts/mesh-env.sh
 
-if [[ $ENV == "k3d" && "$(kubectl config current-context)" != "greymatter" ]]; then
-    echo "⛔️⛔️⛔️⛔️⛔ You are about to apply mesh configs to non-k3d environment ⛔️⛔️⛔️⛔️⛔️"
-    exit 1
-fi
-
-if [[ $ENV == "prod" && "$(kubectl config current-context)" = arn:aws:eks:*  ]]; then
-    echo "🍀🍀🍀🍀🍀 Just so you know, you are changing production 🍀🍀🍀🍀🍀"
-fi
-
 listener=$(lsof -t -i:10080)
 if [ ! -z "$listener" ]; then
     echo "Killing a process (pid $listener) using port 10080"
