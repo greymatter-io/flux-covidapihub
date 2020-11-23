@@ -30,35 +30,35 @@ spec:
       - tvf5ksnujo01bafz-disease-sh.greymatter.services
       secretName: disease.sh
   rules:
-    - host: disease.sh
+    - host: disease-sh
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: www.disease.sh
+    - host: www-disease-sh
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: 9kzzzfwgnwgef8dc.disease.sh
+    - host: 9kzzzfwgnwgef8dc-disease-sh
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: ev3klr6bchdcdowp.disease.sh
+    - host: ev3klr6bchdcdowp-disease-sh
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: tvf5ksnujo01bafz.disease.sh
+    - host: tvf5ksnujo01bafz-disease-sh
       http:
         paths:
           - path: /
