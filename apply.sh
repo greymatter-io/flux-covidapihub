@@ -14,6 +14,8 @@
 
 # kubectl create namespace data
 # for f in data/*.yaml; do kubectl apply -f $f; done
+# kubectl create namespace cert-manager
+for f in cert-manager/*.yaml; do kubectl apply -f $f; done
 
-kubectl create namespace edge
-for f in edge/*.yaml; do kubectl apply -f $f; done
+# kubectl create namespace edge
+# for f in edge/*.yaml; do kubectl apply -f $f; done
