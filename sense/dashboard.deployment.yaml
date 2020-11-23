@@ -51,15 +51,15 @@ spec:
         imagePullPolicy: Always
         env:
         - name: FABRIC_SERVER
-          value: https://covidapihub.io/catalog/latest/
+          value: /catalog/latest/
         - name: CONFIG_SERVER
-          value: https://covidapihub.io/api/latest/v1.0/
+          value: /api/latest/v1.0/
         - name: USE_PROMETHEUS
           value: "true"
         - name: OBJECTIVES_SERVER
-          value: https://covidapihub.io/objectives/latest/
+          value: /objectives/latest/
         - name: PROMETHEUS_SERVER
-          value: https://covidapihub.io/prometheus/latest/api/v1/
+          value: /prometheus/latest/api/v1/
         - name: BASE_URL
           value: /dashboard
         - name: PORT
