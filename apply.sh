@@ -28,5 +28,9 @@ for f in apis/*.yaml; do kubectl apply -f $f; done
 
 for f in apis/*/*.yaml; do kubectl apply -f $f; done
 
+for f in novelcovid/*/*.yaml; do kubectl apply -f $f; done
+
+for f in novelcovid/*.yaml; do kubectl apply -f $f; done
+
 ./mesh-config.sh
 ./mesh-api.sh
