@@ -8,7 +8,7 @@ metadata:
   labels:
     io.kompose.service: redis
   name: redis
-  namespace: reporter
+  namespace: apis
 spec:
   replicas: 1
   selector:
@@ -29,26 +29,22 @@ spec:
       containers:
       - args:
         - redis-server
-        - --requirepass
-        - "$(REDIS_PASSWORD)"
-        - --port
-        - "$(REDIS_PORT)"
-        env:
-        - name: REDIS_HOST
-          valueFrom:
-            configMapKeyRef:
-              key: REDIS_HOST
-              name: env
-        - name: REDIS_PASSWORD
-          valueFrom:
-            configMapKeyRef:
-              key: REDIS_PASSWORD
-              name: env
-        - name: REDIS_PORT
-          valueFrom:
-            configMapKeyRef:
-              key: REDIS_PORT
-              name: env
+          #env:
+            #- name: REDIS_HOST
+            #  valueFrom:
+            #    configMapKeyRef:
+            #      key: REDIS_HOST
+            #      name: env
+            #- name: REDIS_PASSWORD
+            #  valueFrom:
+            #    configMapKeyRef:
+            #      key: REDIS_PASSWORD
+            #      name: env
+            #- name: REDIS_PORT
+            #  valueFrom:
+            #    configMapKeyRef:
+            #      key: REDIS_PORT
+            #      name: env
         image: redis:5.0.8-buster
         imagePullPolicy: "Always"
         name: redis

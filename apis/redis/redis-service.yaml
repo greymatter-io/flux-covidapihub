@@ -8,7 +8,7 @@ metadata:
   labels:
     io.kompose.service: redis
   name: redis
-  namespace: reporter
+  namespace: apis
 spec:
   ports:
   - name: "6379"
