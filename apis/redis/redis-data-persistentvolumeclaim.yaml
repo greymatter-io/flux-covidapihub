@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: redis-data
+  name: redis-data
+  namespace: reporter
+spec:
+  accessModes:
+  - ReadWrite
+  resources:
+    requests:
+      storage: 20GB
+status: {}
