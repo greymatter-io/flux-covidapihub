@@ -2,9 +2,10 @@
 
 # PREREQS:
 # - create all namespaces
-# - apply kubeseal resources
+# - apply kubeseal resources and grab private key from kubeseal logs on startup
 # - create and apply all secrets using kubeseal private key
-# - create kafka and update all mesh configs
+# - create kafka and update all mesh configs with the connection string
+# - create postgres instance for slo and create objectives-postgres secret with creds
 
 set -eux pipefail
 
