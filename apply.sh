@@ -32,5 +32,5 @@ for f in novelcovid/*/*.yaml; do kubectl apply -f $f; done
 
 for f in novelcovid/*.yaml; do kubectl apply -f $f; done
 
-./mesh-config.sh
-./mesh-api.sh
+./scripts/scripts/mesh-config.sh
+./scripts/scripts/mesh-api.sh
