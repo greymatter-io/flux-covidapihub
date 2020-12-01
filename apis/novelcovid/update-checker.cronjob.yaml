@@ -30,26 +30,26 @@ spec:
             - name: NYT_INTERVAL
               value: "864e5"
             - name: REDIS_HOST
-              value: novelcovid-redis.dvd05s.0001.use1.cache.amazonaws.com
+              value: redis.apis.svc.cluster.local
             - name: REDIS_PORT
               value: "6379"
             - name: SERVER_PORT
               value: "3000"
-            - name: MAILGUN_API_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: api-secret
-                  key: MAILGUN_API_KEY
-            - name: CAPTCHA_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: api-secret
-                  key: CAPTCHA_SECRET
-            - name: UPDATE_WEBHOOK
-              valueFrom:
-                secretKeyRef:
-                  name: discord-token
-                  key: UPDATE_WEBHOOK
+            # - name: MAILGUN_API_KEY
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: api-secret
+            #       key: MAILGUN_API_KEY
+            # - name: CAPTCHA_SECRET
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: api-secret
+            #       key: CAPTCHA_SECRET
+            # - name: UPDATE_WEBHOOK
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: discord-token
+            #       key: UPDATE_WEBHOOK
           restartPolicy: Never
           imagePullSecrets:
           - name: docker.greymatter.io
