@@ -25,15 +25,11 @@ for f in website/*.yaml; do kubectl apply -f $f; done
 
 for f in data/*.yaml; do kubectl apply -f $f; done
 
-for f in edge/*.yaml; do kubectl apply -f $f; done
-
 for f in apis/*.yaml; do kubectl apply -f $f; done
 
-for f in apis/*/*.yaml; do kubectl apply -f $f; done
+for f in apis/*/*/*.yaml; do kubectl apply -f $f; done
 
-for f in novelcovid/*/*.yaml; do kubectl apply -f $f; done
-
-for f in novelcovid/*.yaml; do kubectl apply -f $f; done
+for f in edge/*.yaml; do kubectl apply -f $f; done
 
 ./scripts/scripts/mesh-config.sh
 ./scripts/scripts/mesh-api.sh
