@@ -14,11 +14,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - covidapihub-io.greymatter.services
-        - www-covidapihub-io.greymatter.services
+        - covidapihub-io-one-three.greymatter.services
+        - www-covidapihub-io-one-three.greymatter.services
       secretName: covidapihub.io
   rules:
-    - host: covidapihub-io.greymatter.services
+    - host: covidapihub-io-one-three.greymatter.services
       http:
         paths:
           - path: /login
@@ -33,7 +33,7 @@ spec:
             backend:
               serviceName: edge
               servicePort: 8443
-    - host: www-covidapihub-io.greymatter.services
+    - host: www-covidapihub-io-one-three.greymatter.services
       http:
         paths:
           - path: /(.*)

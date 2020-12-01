@@ -23,42 +23,42 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - disease-sh.greymatter.services
-      - www-disease-sh.greymatter.services
-      - 9kzzzfwgnwgef8dc-disease-sh.greymatter.services
-      - ev3klr6bchdcdowp-disease-sh.greymatter.services
-      - tvf5ksnujo01bafz-disease-sh.greymatter.services
+      - disease-sh-one-three.greymatter.services
+      - www-disease-sh-one-three.greymatter.services
+      - 9kzzzfwgnwgef8dc-disease-sh-one-three.greymatter.services
+      - ev3klr6bchdcdowp-disease-sh-one-three.greymatter.services
+      - tvf5ksnujo01bafz-disease-sh-one-three.greymatter.services
       secretName: disease.sh
   rules:
-    - host: disease-sh.greymatter.services
+    - host: disease-sh-one-three.greymatter.services
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: www-disease-sh.greymatter.services
+    - host: www-disease-sh-one-three.greymatter.services
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: 9kzzzfwgnwgef8dc-disease-sh.greymatter.services
+    - host: 9kzzzfwgnwgef8dc-disease-sh-one-three.greymatter.services
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: ev3klr6bchdcdowp-disease-sh.greymatter.services
+    - host: ev3klr6bchdcdowp-disease-sh-one-three.greymatter.services
       http:
         paths:
           - path: /
             backend:
               serviceName: disease
               servicePort: 8443
-    - host: tvf5ksnujo01bafz-disease-sh.greymatter.services
+    - host: tvf5ksnujo01bafz-disease-sh-one-three.greymatter.services
       http:
         paths:
           - path: /
