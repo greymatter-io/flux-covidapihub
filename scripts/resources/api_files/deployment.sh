@@ -28,7 +28,7 @@ spec:
       serviceAccountName: apis-sa
       containers:
         - name: $NAME-proxy
-          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.4.2"
+          image: "docker-dev.production.deciphernow.com/deciphernow/gm-proxy:1.5.1"
           imagePullPolicy: IfNotPresent
           args:
             - -c

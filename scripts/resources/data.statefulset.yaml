@@ -102,7 +102,7 @@ spec:
           - name: data-pvc
             mountPath: /app/buckets/decipher-quickstart-helm/data
       - name: sidecar
-        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
+        image: "docker.greymatter.io/development/gm-proxy:1.5.1"
         imagePullPolicy: IfNotPresent
         args:
           - -c

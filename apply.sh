@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # PREREQS:
-# - create all namespaces
+# - create all namespaces except for spire
 # - apply kubeseal resources and grab private key from kubeseal logs on startup
 # - create and apply all secrets using kubeseal private key
 # - create kafka and update all mesh configs with the connection string
@@ -12,6 +12,8 @@ set -eux pipefail
 cd ~/Decipher/helm-charts/spire
 git checkout copy-covid && git pull
 make spire
+
+cd ~/Decipher/flux-covidapihub
 
 for f in cert-manager/*.yaml; do kubectl apply -f $f; done
 

@@ -25,7 +25,7 @@ spec:
       serviceAccount: api
       containers:
         - name: sidecar
-          image: "docker.greymatter.io/development/gm-proxy:1.4.2"
+          image: "docker.greymatter.io/development/gm-proxy:1.5.1"
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -54,7 +54,7 @@ spec:
               mountPath: /run/spire/sockets
               readOnly: false
         - name: api
-          image: docker.greymatter.io/development/gm-control-api:1.4.4
+          image: docker.greymatter.io/development/gm-control-api:1.5.0
           imagePullPolicy: IfNotPresent
           env:
             - name: GM_CONTROL_API_ADDRESS
@@ -71,6 +71,11 @@ spec:
               value: "default.zone"
             - name: GM_CONTROL_API_ZONE_NAME
               value: "default.zone"
+            - name: GM_CONTROL_API_EXPERIMENTS
+              value: "true"
+            - name: GM_CONTROL_API_BASE_URL
+              value: '/api/latest/'
+              
           ports:
             - name: http
               containerPort: 10080

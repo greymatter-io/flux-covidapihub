@@ -64,7 +64,7 @@ spec:
             cpu: 100m
             memory: 200Mi
       - name: sidecar
-        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
+        image: "docker.greymatter.io/development/gm-proxy:1.5.1"
         imagePullPolicy: IfNotPresent
         resources:
           limits:

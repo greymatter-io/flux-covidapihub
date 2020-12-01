@@ -22,7 +22,7 @@ spec:
       serviceAccountName: control
       containers:
         - name: sidecar
-          image: docker.greymatter.io/development/gm-proxy:1.4.2
+          image: docker.greymatter.io/development/gm-proxy:1.5.1
           imagePullPolicy: IfNotPresent
           args:
             - -c
@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: control
-          image: docker.greymatter.io/development/gm-control:1.4.2
+          image: docker.greymatter.io/development/gm-control:1.5.2
           imagePullPolicy: IfNotPresent
           env:
             - name: GM_CONTROL_API_HOST
