@@ -57,7 +57,7 @@ create_or_update() {
 
 delay=0.01
 objects="domains clusters listeners proxies rules routes"
-meshfolders=(mesh/fabric/control-api)
+meshfolders=(mesh/edge mesh/disease.sh mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/website mesh/fabric/control-api)
 for meshfolder in "${meshfolders[@]}"; do
     cd $meshfolder
     for folder in $objects; do
