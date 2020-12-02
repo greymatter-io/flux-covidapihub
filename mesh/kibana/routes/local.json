@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "kibana.ingress.domain",
-    "route_key": "kibana.local.route",
-    "path": "/",
-    "prefix_rewrite": "/_plugin/kibana/",
-    "redirects": null,
-    "shared_rules_key": "kibana.local.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "kibana.ingress.domain",
+  "route_key": "kibana.local.route",
+  "path": "/",
+  "prefix_rewrite": "/_plugin/kibana/",
+  "redirects": null,
+  "shared_rules_key": "kibana.local.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

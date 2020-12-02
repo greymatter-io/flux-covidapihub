@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "data.egress.domain",
-    "route_key": "data.jwt-security.route.slash",
-    "path": "/jwt",
-    "prefix_rewrite": "/jwt/",
-    "redirects": null,
-    "shared_rules_key": "data.jwt-security.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "data.egress.domain",
+  "route_key": "data.jwt-security.route.slash",
+  "path": "/jwt",
+  "prefix_rewrite": "/jwt/",
+  "redirects": null,
+  "shared_rules_key": "data.jwt-security.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

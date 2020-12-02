@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "cdc-provisional-death-counts-by-week.apis.domain",
-    "route_key": "cdc-provisional-death-counts-by-week.local.route",
-    "path": "/",
-    "prefix_rewrite": "/resource/r8kw-7aab.json",
-    "redirects": null,
-    "shared_rules_key": "cdc-provisional-death-counts-by-week.local.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "cdc-provisional-death-counts-by-week.apis.domain",
+  "route_key": "cdc-provisional-death-counts-by-week.local.route",
+  "path": "/",
+  "prefix_rewrite": "/resource/r8kw-7aab.json",
+  "redirects": null,
+  "shared_rules_key": "cdc-provisional-death-counts-by-week.local.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

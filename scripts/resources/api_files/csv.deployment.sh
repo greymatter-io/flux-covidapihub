@@ -2,7 +2,7 @@
 
 NAME=$1
 CSV_URL=$2
-SHEET_NAME=$3
+SHEETS=$3
 SKIP_ROWS=$4
 SOURCE_FORMAT=$5
 
@@ -44,24 +44,21 @@ spec:
       containers:
       - name: apier
         env:
-        - name: SHEET_NAME
-          value: $SHEET_NAME
-        - name: FLASK_APP
-          value: app/main.py
+        - name: SHEETS
+          value: $SHEETS
+
         - name: SHEET_SKIP_ROWS
           value: $SKIP_ROWS
         - name: SOURCE_FORMAT
           value: $SOURCE_FORMAT
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
+
+
         - name: SOURCE_URL
           value: $CSV_URL
-        image: covidapihub/apier:latest
+        image: docker.greymatter.io/development/gm-apier:2.0.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         volumeMounts:
           - name: swagger-static
             mountPath: /app/static

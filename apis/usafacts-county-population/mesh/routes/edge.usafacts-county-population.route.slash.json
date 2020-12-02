@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.usafacts-county-population.slash.route",
-    "path": "/apis/usafacts-county-population",
-    "prefix_rewrite": "/apis/usafacts-county-population/",
-    "redirects": null,
-    "shared_rules_key": "edge.usafacts-county-population.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.usafacts-county-population.slash.route",
+  "path": "/apis/usafacts-county-population",
+  "prefix_rewrite": "/apis/usafacts-county-population/",
+  "redirects": null,
+  "shared_rules_key": "edge.usafacts-county-population.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

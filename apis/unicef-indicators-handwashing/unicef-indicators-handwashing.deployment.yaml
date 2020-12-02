@@ -34,24 +34,18 @@ spec:
       containers:
       - name: apier
         env:
-        - name: SHEET_NAME
-          value: Dataset
+        - name: SHEETS
+          value: "Dataset"
         - name: SHEET_SKIP_ROWS
           value: 0,1,2,3,4,5,6
         - name: SOURCE_FORMAT
-          value: xlsx
-        - name: FLASK_APP
-          value: app/main.py
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
+          value: excel
         - name: SOURCE_URL
           value: https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel
-        image: covidapihub/apier:latest
+        image: docker.greymatter.io/development/gm-apier:2.0.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         volumeMounts:
           - name: swagger-static
             mountPath: /app/static

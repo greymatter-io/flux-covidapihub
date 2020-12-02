@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.usafacts-confirmed-cases.slash.route",
-    "path": "/apis/usafacts-confirmed-cases",
-    "prefix_rewrite": "/apis/usafacts-confirmed-cases/",
-    "redirects": null,
-    "shared_rules_key": "edge.usafacts-confirmed-cases.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.usafacts-confirmed-cases.slash.route",
+  "path": "/apis/usafacts-confirmed-cases",
+  "prefix_rewrite": "/apis/usafacts-confirmed-cases/",
+  "redirects": null,
+  "shared_rules_key": "edge.usafacts-confirmed-cases.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

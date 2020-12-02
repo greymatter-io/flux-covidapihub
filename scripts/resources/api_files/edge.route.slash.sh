@@ -3,7 +3,7 @@
 NAME=$1
 
 #define the template.
-cat  << EOF
+cat <<EOF
 {
     "zone_key": "default.zone",
     "domain_key": "edge.ingress.domain",
@@ -14,7 +14,6 @@ cat  << EOF
     "shared_rules_key": "edge.$NAME.rules",
     "rules": null,
     "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+    "cohort_seed": null
 }
 EOF

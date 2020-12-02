@@ -22,7 +22,6 @@ if [[ "$skiprows" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     read skip_rows
 fi
 
-
 echo Display Name:
 read display_name
 echo Owner:
@@ -66,7 +65,7 @@ scripts/resources/api_files/domain.csv.sh $name "0.0.0.0" >apis/$name/mesh/domai
 scripts/resources/api_files/listener.sh $name >apis/$name/mesh/listeners/$name.listener.ingress.json
 scripts/resources/api_files/proxy.sh $name >apis/$name/mesh/proxies/$name.proxy.json
 scripts/resources/api_files/edge.cluster.sh $name >apis/$name/mesh/clusters/edge.$name.cluster.json
-scripts/resources/api_files/local.cluster.csv.sh $name "0.0.0.0" "80" >apis/$name/mesh/clusters/local.cluster.json
+scripts/resources/api_files/local.cluster.csv.sh $name "0.0.0.0" "8000" >apis/$name/mesh/clusters/local.cluster.json
 scripts/resources/api_files/edge.rules.sh $name >apis/$name/mesh/rules/edge.$name.rules.json
 scripts/resources/api_files/local.rules.sh $name >apis/$name/mesh/rules/local.rules.json
 scripts/resources/api_files/edge.route.sh $name >apis/$name/mesh/routes/edge.$name.route.json

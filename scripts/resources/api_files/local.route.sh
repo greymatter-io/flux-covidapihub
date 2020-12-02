@@ -4,7 +4,7 @@ NAME=$1
 ROUTE_PATH=$2
 
 #define the template.
-cat  << EOF
+cat <<EOF
 {
     "zone_key": "default.zone",
     "domain_key": "$NAME.apis.domain",
@@ -15,7 +15,6 @@ cat  << EOF
     "shared_rules_key": "$NAME.local.rules",
     "rules": null,
     "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+    "cohort_seed": null
 }
 EOF

@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.us-census-economic-indicators.slash.route",
-    "path": "/apis/us-census-economic-indicators",
-    "prefix_rewrite": "/apis/us-census-economic-indicators/",
-    "redirects": null,
-    "shared_rules_key": "edge.us-census-economic-indicators.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.us-census-economic-indicators.slash.route",
+  "path": "/apis/us-census-economic-indicators",
+  "prefix_rewrite": "/apis/us-census-economic-indicators/",
+  "redirects": null,
+  "shared_rules_key": "edge.us-census-economic-indicators.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

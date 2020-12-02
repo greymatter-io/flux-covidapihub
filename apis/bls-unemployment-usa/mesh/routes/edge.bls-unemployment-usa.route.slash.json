@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.bls-unemployment-usa.slash.route",
-    "path": "/apis/bls-unemployment-usa",
-    "prefix_rewrite": "/apis/bls-unemployment-usa/",
-    "redirects": null,
-    "shared_rules_key": "edge.bls-unemployment-usa.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.bls-unemployment-usa.slash.route",
+  "path": "/apis/bls-unemployment-usa",
+  "prefix_rewrite": "/apis/bls-unemployment-usa/",
+  "redirects": null,
+  "shared_rules_key": "edge.bls-unemployment-usa.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

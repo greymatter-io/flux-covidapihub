@@ -32,46 +32,40 @@ spec:
     spec:
       serviceAccountName: apis-sa
       containers:
-      - name: apier
-        env:
-        - name: SHEET_NAME
-          value: Database
-        - name: FLASK_APP
-          value: app/main.py
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
-        - name: SOURCE_URL
-          value: https://www.acaps.org/sites/acaps/files/resources/files/acaps_covid19_goverment_measures_dataset.xlsx
-        image: covidapihub/apier:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-        volumeMounts:
-          - name: swagger-static
-            mountPath: /app/static
-            readOnly: true
-      - name: sidecar
-        image: "docker.greymatter.io/development/gm-proxy:1.5.1"
-        imagePullPolicy: IfNotPresent
-        args:
-          - -c
-          - /etc/greymatter/config.yaml
-        command:
-          - /app/gm-proxy
-        ports:
-          - name: metrics
-            containerPort: 8080
-          - name: sidecar
-            containerPort: 8443
-        volumeMounts:
-          - name: sidecar-config
-            mountPath: /etc/greymatter
-            readOnly: true
-          - name: spire-socket
-            mountPath: /run/spire/sockets
-            readOnly: false
+        - name: apier
+          env:
+            - name: SHEETS
+              value: Database
+            - name: SOURCE_URL
+              value: https://www.acaps.org/sites/acaps/files/resources/files/acaps_covid19_goverment_measures_dataset.xlsx
+          image: docker.greymatter.io/development/gm-apier:2.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          volumeMounts:
+            - name: swagger-static
+              mountPath: /app/static
+              readOnly: true
+        - name: sidecar
+          image: "docker.greymatter.io/development/gm-proxy:1.5.1"
+          imagePullPolicy: IfNotPresent
+          args:
+            - -c
+            - /etc/greymatter/config.yaml
+          command:
+            - /app/gm-proxy
+          ports:
+            - name: metrics
+              containerPort: 8080
+            - name: sidecar
+              containerPort: 8443
+          volumeMounts:
+            - name: sidecar-config
+              mountPath: /etc/greymatter
+              readOnly: true
+            - name: spire-socket
+              mountPath: /run/spire/sockets
+              readOnly: false
       imagePullSecrets:
         - name: docker.greymatter.io
       volumes:

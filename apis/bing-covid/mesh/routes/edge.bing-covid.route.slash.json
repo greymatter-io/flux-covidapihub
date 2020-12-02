@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.bing-covid.slash.route",
-    "path": "/apis/bing-covid",
-    "prefix_rewrite": "/apis/bing-covid/",
-    "redirects": null,
-    "shared_rules_key": "edge.bing-covid.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.bing-covid.slash.route",
+  "path": "/apis/bing-covid",
+  "prefix_rewrite": "/apis/bing-covid/",
+  "redirects": null,
+  "shared_rules_key": "edge.bing-covid.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

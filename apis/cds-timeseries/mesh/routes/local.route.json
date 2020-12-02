@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "cds-timeseries.apis.domain",
-    "route_key": "cds-timeseries.local.route",
-    "path": "/",
-    "prefix_rewrite": "/timeseries.json",
-    "redirects": null,
-    "shared_rules_key": "cds-timeseries.local.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "cds-timeseries.apis.domain",
+  "route_key": "cds-timeseries.local.route",
+  "path": "/",
+  "prefix_rewrite": "/timeseries.json",
+  "redirects": null,
+  "shared_rules_key": "cds-timeseries.local.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

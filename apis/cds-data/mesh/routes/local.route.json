@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "cds-data.apis.domain",
-    "route_key": "cds-data.local.route",
-    "path": "/",
-    "prefix_rewrite": "/data.json",
-    "redirects": null,
-    "shared_rules_key": "cds-data.local.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "cds-data.apis.domain",
+  "route_key": "cds-data.local.route",
+  "path": "/",
+  "prefix_rewrite": "/data.json",
+  "redirects": null,
+  "shared_rules_key": "cds-data.local.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

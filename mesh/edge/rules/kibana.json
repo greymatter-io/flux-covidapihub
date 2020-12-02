@@ -19,6 +19,5 @@
   "rules": null,
   "response_data": {},
   "cohort_seed": null,
-  "properties": null,
-  "retry_policy": null
+  "properties": null
 }

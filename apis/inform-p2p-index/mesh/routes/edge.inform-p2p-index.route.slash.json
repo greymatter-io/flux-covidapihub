@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.inform-p2p-index.slash.route",
-    "path": "/apis/inform-p2p-index",
-    "prefix_rewrite": "/apis/inform-p2p-index/",
-    "redirects": null,
-    "shared_rules_key": "edge.inform-p2p-index.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.inform-p2p-index.slash.route",
+  "path": "/apis/inform-p2p-index",
+  "prefix_rewrite": "/apis/inform-p2p-index/",
+  "redirects": null,
+  "shared_rules_key": "edge.inform-p2p-index.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

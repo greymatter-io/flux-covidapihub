@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "cdc-conditions-contributing-to-deaths.apis.domain",
-    "route_key": "cdc-conditions-contributing-to-deaths.local.route",
-    "path": "/",
-    "prefix_rewrite": "/resource/hk9y-quqm.json",
-    "redirects": null,
-    "shared_rules_key": "cdc-conditions-contributing-to-deaths.local.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "cdc-conditions-contributing-to-deaths.apis.domain",
+  "route_key": "cdc-conditions-contributing-to-deaths.local.route",
+  "path": "/",
+  "prefix_rewrite": "/resource/hk9y-quqm.json",
+  "redirects": null,
+  "shared_rules_key": "cdc-conditions-contributing-to-deaths.local.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

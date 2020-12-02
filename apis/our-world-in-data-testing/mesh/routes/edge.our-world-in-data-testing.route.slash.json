@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.our-world-in-data-testing.slash.route",
-    "path": "/apis/our-world-in-data-testing",
-    "prefix_rewrite": "/apis/our-world-in-data-testing/",
-    "redirects": null,
-    "shared_rules_key": "edge.our-world-in-data-testing.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.our-world-in-data-testing.slash.route",
+  "path": "/apis/our-world-in-data-testing",
+  "prefix_rewrite": "/apis/our-world-in-data-testing/",
+  "redirects": null,
+  "shared_rules_key": "edge.our-world-in-data-testing.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

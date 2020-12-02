@@ -19,10 +19,5 @@
   "rules": null,
   "response_data": {},
   "cohort_seed": null,
-  "properties": null,
-  "retry_policy": {
-    "num_retries": 4,
-    "per_try_timeout_msec": 60000,
-    "timeout_msec": 60000
-  }
+  "properties": null
 }

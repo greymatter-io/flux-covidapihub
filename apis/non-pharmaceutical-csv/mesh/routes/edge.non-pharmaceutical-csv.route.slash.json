@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.non-pharmaceutical-csv.slash.route",
-    "path": "/apis/non-pharmaceutical-csv",
-    "prefix_rewrite": "/apis/non-pharmaceutical-csv/",
-    "redirects": null,
-    "shared_rules_key": "edge.non-pharmaceutical-csv.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.non-pharmaceutical-csv.slash.route",
+  "path": "/apis/non-pharmaceutical-csv",
+  "prefix_rewrite": "/apis/non-pharmaceutical-csv/",
+  "redirects": null,
+  "shared_rules_key": "edge.non-pharmaceutical-csv.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

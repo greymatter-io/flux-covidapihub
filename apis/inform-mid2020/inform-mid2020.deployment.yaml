@@ -34,24 +34,18 @@ spec:
       containers:
       - name: apier
         env:
-        - name: SHEET_NAME
-          value: INFORM Risk Mid2020 (a-z)
-        - name: FLASK_APP
-          value: app/main.py
+        - name: SHEETS
+          value: "INFORM Risk Mid2020 (a-z)"
         - name: SHEET_SKIP_ROWS
-          value: 0,2,194,195,196,197
+          value: 0,2
         - name: SOURCE_FORMAT
-          value: XLSX
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
+          value: excel
         - name: SOURCE_URL
           value: https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/2020/INFORM_Risk_Mid2020_v041.xlsx?ver=2020-04-03-170624-200
-        image: covidapihub/apier:latest
+        image: docker.greymatter.io/development/gm-apier:2.0.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         volumeMounts:
           - name: swagger-static
             mountPath: /app/static

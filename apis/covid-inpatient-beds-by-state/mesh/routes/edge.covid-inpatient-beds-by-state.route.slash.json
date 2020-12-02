@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.covid-inpatient-beds-by-state.slash.route",
-    "path": "/apis/covid-inpatient-beds-by-state",
-    "prefix_rewrite": "/apis/covid-inpatient-beds-by-state/",
-    "redirects": null,
-    "shared_rules_key": "edge.covid-inpatient-beds-by-state.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.covid-inpatient-beds-by-state.slash.route",
+  "path": "/apis/covid-inpatient-beds-by-state",
+  "prefix_rewrite": "/apis/covid-inpatient-beds-by-state/",
+  "redirects": null,
+  "shared_rules_key": "edge.covid-inpatient-beds-by-state.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

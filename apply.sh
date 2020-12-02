@@ -33,3 +33,5 @@ for f in edge/*.yaml; do kubectl apply -f $f; done
 
 ./scripts/scripts/mesh-config.sh
 ./scripts/scripts/mesh-api.sh
+
+bs update-kops-cluster-sgs --cluster-name covidhub.upgrade.k8s.local

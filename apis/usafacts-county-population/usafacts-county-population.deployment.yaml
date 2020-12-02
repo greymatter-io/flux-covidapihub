@@ -35,20 +35,12 @@ spec:
       containers:
       - name: apier
         env:
-        - name: SHEET_NAME
-          value:
-        - name: FLASK_APP
-          value: app/main.py
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
           value: https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv
         image: covidapihub/apier:sha-3be813a
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         volumeMounts:
         - name: swagger-static
           mountPath: /app/static

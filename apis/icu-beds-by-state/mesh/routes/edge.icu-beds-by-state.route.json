@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.icu-beds-by-state.route",
-    "path": "/apis/icu-beds-by-state/",
-    "prefix_rewrite": "/",
-    "redirects": null,
-    "shared_rules_key": "edge.icu-beds-by-state.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.icu-beds-by-state.route",
+  "path": "/apis/icu-beds-by-state/",
+  "prefix_rewrite": "/",
+  "redirects": null,
+  "shared_rules_key": "edge.icu-beds-by-state.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }

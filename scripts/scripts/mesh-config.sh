@@ -57,7 +57,7 @@ create_or_update() {
 
 delay=0.01
 objects="domains clusters listeners proxies rules routes"
-meshfolders=(mesh/edge mesh/disease.sh mesh/data/data mesh/data/jwt mesh/sense/catalog mesh/sense/dashboard mesh/sense/objectives mesh/sense/prometheus mesh/website mesh/fabric/control-api)
+meshfolders=(mesh/fabric/control-api)
 for meshfolder in "${meshfolders[@]}"; do
     cd $meshfolder
     for folder in $objects; do
@@ -91,8 +91,8 @@ if [[ $ENV == "k3d" ]]; then
 fi
 
 # if [[ $ENV == "prod" ]]; then
-cp mesh/edge/listeners/login.json /tmp/login.json
-sed -i '' "s/CLIENT_ID_REDACTED/${ClientId}/g" /tmp/login.json
-sed -i '' "s/CLIENT_SECRET_REDACTED/${ClientSecret}/g" /tmp/login.json
-create_or_update listener /tmp/login.json
+# cp mesh/edge/listeners/login.json /tmp/login.json
+# sed -i '' "s/CLIENT_ID_REDACTED/${ClientId}/g" /tmp/login.json
+# sed -i '' "s/CLIENT_SECRET_REDACTED/${ClientSecret}/g" /tmp/login.json
+# create_or_update listener /tmp/login.json
 # fi

@@ -34,20 +34,12 @@ spec:
       containers:
       - name: apier
         env:
-        - name: SHEET_NAME
-          value: 
-        - name: FLASK_APP
-          value: app/main.py
-        - name: FLASK_DEBUG
-          value: "0"
-        - name: RUN
-          value: flask run --host=0.0.0.0 --port=80
         - name: SOURCE_URL
           value: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
-        image: covidapihub/apier:latest
+        image: docker.greymatter.io/development/gm-apier:2.0.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8000
         volumeMounts:
           - name: swagger-static
             mountPath: /app/static

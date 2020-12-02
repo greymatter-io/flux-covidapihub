@@ -8,6 +8,5 @@
   "shared_rules_key": "edge.novelcovid.rules",
   "rules": null,
   "response_data": {},
-  "cohort_seed": null,
-  "retry_policy": null
+  "cohort_seed": null
 }

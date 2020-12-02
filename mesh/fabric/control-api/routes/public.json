@@ -8,6 +8,5 @@
   "shared_rules_key": "public.api.ingress.rules",
   "rules": null,
   "response_data": {},
-  "cohort_seed": null,
-  "retry_policy": null
+  "cohort_seed": null
 }

@@ -1,13 +1,12 @@
 {
-    "zone_key": "default.zone",
-    "domain_key": "edge.ingress.domain",
-    "route_key": "edge.nytimes-us-counties.route",
-    "path": "/apis/nytimes-us-counties/",
-    "prefix_rewrite": "/",
-    "redirects": null,
-    "shared_rules_key": "edge.nytimes-us-counties.rules",
-    "rules": null,
-    "response_data": {},
-    "cohort_seed": null,
-    "retry_policy": null
+  "zone_key": "default.zone",
+  "domain_key": "edge.ingress.domain",
+  "route_key": "edge.nytimes-us-counties.route",
+  "path": "/apis/nytimes-us-counties/",
+  "prefix_rewrite": "/",
+  "redirects": null,
+  "shared_rules_key": "edge.nytimes-us-counties.rules",
+  "rules": null,
+  "response_data": {},
+  "cohort_seed": null
 }
