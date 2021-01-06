@@ -42,7 +42,7 @@ spec:
           value: excel
         - name: SOURCE_URL
           value: https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,WASH_HEALTHCARE_FACILITY,1.0/.WS_HCF_H-L...?format=excel
-        image: docker.greymatter.io/development/gm-apier:2.0.0
+        image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

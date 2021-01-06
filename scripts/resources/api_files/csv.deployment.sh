@@ -55,7 +55,7 @@ spec:
 
         - name: SOURCE_URL
           value: $CSV_URL
-        image: docker.greymatter.io/development/gm-apier:2.0.0
+        image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

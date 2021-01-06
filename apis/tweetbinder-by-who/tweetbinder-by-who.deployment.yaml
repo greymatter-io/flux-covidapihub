@@ -38,7 +38,7 @@ spec:
           value: csv
         - name: SOURCE_URL
           value: https://docs.google.com/spreadsheets/d/1iP8dNUeePtLds0rhMbi1E9YaUqKIJ6F_c6zYG37yTXM/export?format=csv&gid=239842308
-        image: docker.greymatter.io/development/gm-apier:2.0.0
+        image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

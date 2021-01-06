@@ -47,7 +47,7 @@ spec:
           - name: METRICS_KEY_FUNCTION
             value: depth
         - name: catalog
-          image: docker.greymatter.io/development/gm-catalog:1.2.0
+          image: docker.greymatter.io/development/gm-catalog:1.2.2
           imagePullPolicy: IfNotPresent
           env:
             - name: CONFIG_SOURCE

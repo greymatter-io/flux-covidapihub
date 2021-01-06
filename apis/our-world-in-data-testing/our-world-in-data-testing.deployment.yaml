@@ -36,7 +36,7 @@ spec:
         env:
         - name: SOURCE_URL
           value: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv
-        image: docker.greymatter.io/development/gm-apier:2.0.0
+        image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

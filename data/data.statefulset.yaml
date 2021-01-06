@@ -20,7 +20,7 @@ spec:
       serviceAccountName: data
       containers:
       - name: data
-        image: "docker.greymatter.io/development/gm-data:1.1.4"
+        image: "docker.greymatter.io/development/gm-data:1.1.5"
         imagePullPolicy: IfNotPresent
         resources:
           limits:

@@ -40,7 +40,7 @@ spec:
               value: excel
             - name: SOURCE_URL
               value: https://docs.google.com/spreadsheets/d/1zu9qEWI8PsOI_i8nI_S29HDGHlIp2lfVMsGxpQ5tvAQ/export?format=xlsx
-          image: docker.greymatter.io/development/gm-apier:2.0.0
+          image: docker.greymatter.io/development/gm-apier:2.0.3
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
