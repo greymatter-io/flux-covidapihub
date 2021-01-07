@@ -29,7 +29,7 @@
       "topic": "apis.acaps-gov-response",
       "eventTopic": "observables",
       "useKafka": true,
-      "kafkaServerConnection": "b-1.covidapihub-msk.6s1o6w.c9.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-msk.6s1o6w.c9.kafka.us-east-1.amazonaws.com:9094",
+      "kafkaServerConnection": "b-3.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-1.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094,b-2.covidapihub-observable.y8lgoi.c6.kafka.us-east-1.amazonaws.com:9094",
       "useKafkaTLS": true
     }
   },
