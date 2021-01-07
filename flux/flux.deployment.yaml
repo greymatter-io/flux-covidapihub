@@ -54,10 +54,10 @@ spec:
             - --memcached-service=
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-url=git@github.com:greymatter-io/flux-covidapihub
-            - --git-branch=master
+            - --git-branch=cutover_cluster
             - --git-label=flux
-            - --git-user=joshua-rutherford
-            - --git-email=joshua-rutherford@users.noreply.github.com
+            - --git-user=greymatter-ci
+            - --git-email=greymatter-ci@users.noreply.github.com
             - --k8s-secret-name=flux
             - --listen-metrics=:3031
             - --sync-garbage-collection
