@@ -1,14 +1,14 @@
-apiVersion: v1
-kind: LimitRange
-metadata:
-  name: apis-lr
-  namespace: apis
-spec:
-  limits:
-  - default:
-      cpu: 40m
-      memory: 512Mi
-    defaultRequest:
-      cpu: 20m
-      memory: 100Mi
-    type: Container
+#apiVersion: v1
+#kind: LimitRange
+#metadata:
+#  name: apis-lr
+#  namespace: apis
+#spec:
+#  limits:
+#  - default:
+#      cpu: 40m
+#      memory: 512Mi
+#    defaultRequest:
+#      cpu: 20m
+#      memory: 100Mi
+#    type: Container
