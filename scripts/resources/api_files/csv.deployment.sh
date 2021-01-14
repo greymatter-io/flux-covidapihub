@@ -46,15 +46,14 @@ spec:
         env:
         - name: SHEETS
           value: $SHEETS
-
         - name: SHEET_SKIP_ROWS
           value: $SKIP_ROWS
         - name: SOURCE_FORMAT
           value: $SOURCE_FORMAT
-
-
         - name: SOURCE_URL
           value: $CSV_URL
+        - name: REDOC_URL
+          value: /docs
         image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:

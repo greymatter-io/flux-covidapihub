@@ -38,6 +38,8 @@ spec:
           value: "Raw data"
         - name: SOURCE_URL
           value: https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/936261/covid-fci-data.xlsx
+        - name: REDOC_URL
+          value: /docs
         image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:

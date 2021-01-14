@@ -36,6 +36,8 @@ spec:
           env:
             - name: SOURCE_URL
               value: https://github.com/microsoft/Bing-COVID-19-Data/raw/master/data/Bing-COVID19-Data.csv
+            - name: REDOC_URL
+              value: /docs
           image: docker.greymatter.io/development/gm-apier:2.0.3
           imagePullPolicy: Always
           ports:

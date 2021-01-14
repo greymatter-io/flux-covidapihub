@@ -40,6 +40,8 @@ spec:
           value: 0,2,194,195,196,197
         - name: SOURCE_URL
           value: https://drmkc.jrc.ec.europa.eu/inform-index/Portals/0/InfoRM/Epidemic/INFORM%20COVID-19%20RISK%20INDEX%20v012.xlsx
+        - name: REDOC_URL
+          value: /docs
         image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:

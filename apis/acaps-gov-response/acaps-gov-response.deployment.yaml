@@ -38,6 +38,8 @@ spec:
               value: Database
             - name: SOURCE_URL
               value: https://www.acaps.org/sites/acaps/files/resources/files/acaps_covid19_goverment_measures_dataset.xlsx
+            - name: REDOC_URL
+              value: /docs
           image: docker.greymatter.io/development/gm-apier:2.0.3
           imagePullPolicy: Always
           ports:

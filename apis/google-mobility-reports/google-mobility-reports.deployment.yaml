@@ -34,11 +34,10 @@ spec:
       containers:
       - name: apier
         env:
-
-
-
         - name: SOURCE_URL
           value: https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv
+        - name: REDOC_URL
+          value: /docs
         image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:

@@ -37,7 +37,9 @@ spec:
         env:
         - name: SOURCE_URL
           value: https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv
-        image: covidapihub/apier:sha-3be813a
+        - name: REDOC_URL
+          value: /docs
+        image: docker.greymatter.io/development/gm-apier:2.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
