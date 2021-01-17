@@ -50,7 +50,7 @@ spec:
             secretKeyRef:
               name: api-secret
               key: CAPTCHA_SECRET
-        image: novelcovid/novelcovid-api:sha-0d39ebc
+        image: novelcovid/novelcovid-api:sha-5a8d4d2
         imagePullPolicy: "Always"
         name: scraper
         ports:
