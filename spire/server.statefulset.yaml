@@ -92,6 +92,13 @@ spec:
           ports:
             - name: server
               containerPort: 8443
+          resources:
+            limits:
+              cpu: 200m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 54Mi
           volumeMounts:
             - name: server-config
               mountPath: /run/spire/config
