@@ -44,6 +44,6 @@ data:
             Name http
             Host lad.anomaly-detection.svc
             Port 8080
-            URI /logs/fluentbit
+            URI /logs/fluent
             Format json_lines
             Match *
