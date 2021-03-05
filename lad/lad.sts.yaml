@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: lad
+  namespace: anomaly-detection
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: lad
+      greymatter.io/control: anomaly-detection-lad
+  serviceName: lad
+  template:
+    metadata:
+      labels:
+        deployment: lad
+        greymatter.io/control: anomaly-detection-lad
+    spec:
+      containers:
+      - image: docker.greymatter.io/internal/sense-lad:latest
+        imagePullPolicy: Always
+        name: lad
+        env:
+          - name: LAD_INFERENCE_THREADS
+            value: "3"
+          - name: LAD_TRAINING_THREADS
+            value: "3"
+          - name: LAD_COLLECT_FOR_HOURS
+            value: '72'
+        ports:
+        - containerPort: 8080
+          name: lad
+          protocol: TCP
+        resources:
+          limits:
+            cpu: '4'
+            memory: 5Gi
+          requests:
+            cpu: '3'
+            memory: 2Gi
+        volumeMounts:
+        - mountPath: /app/storage
+          name: lad-storage
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: docker.greymatter.io
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: lad
+      serviceAccountName: lad
+      terminationGracePeriodSeconds: 30
+  updateStrategy:
+    type: RollingUpdate
+  volumeClaimTemplates:
+  - metadata:
+      name: lad-storage
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 25Gi
