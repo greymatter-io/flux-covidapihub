@@ -19,6 +19,10 @@ spec:
         greymatter.io/control: anomaly-detection-lad
     spec:
       serviceAccountName: lad
+      securityContext:
+        runAsUser: 1001
+        runAsGroup: 0
+        fsGroup: 0
       containers:
       - name: lad
         image: docker.greymatter.io/internal/sense-lad:latest
@@ -55,7 +59,7 @@ spec:
       name: lad-storage
     spec:
       accessModes:
-      - ReadWriteOnce
+        - ReadWriteOnce
       resources:
         requests:
           storage: 25Gi
