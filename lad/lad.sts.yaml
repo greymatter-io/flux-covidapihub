@@ -24,6 +24,26 @@ spec:
         runAsGroup: 0
         fsGroup: 0
       containers:
+      - name: sidecar
+        image: "docker.greymatter.io/development/gm-proxy:1.4.2"
+        imagePullPolicy: IfNotPresent
+        args:
+          - -c
+          - /etc/greymatter/config.yaml
+        command:
+          - /app/gm-proxy
+        ports:
+          - name: metrics
+            containerPort: 8080
+          - name: sidecar
+            containerPort: 8443
+        volumeMounts:
+          - name: sidecar-config
+            mountPath: /etc/greymatter
+            readOnly: true
+          - name: spire-socket
+            mountPath: /run/spire/sockets
+            readOnly: false
       - name: lad
         image: docker.greymatter.io/internal/sense-lad:latest
         imagePullPolicy: Always
@@ -54,6 +74,14 @@ spec:
         - name: docker.greymatter.io
       dnsPolicy: ClusterFirst
       restartPolicy: Always
+      volumes:
+        - name: spire-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: DirectoryOrCreate
+        - name: sidecar-config
+          configMap:
+            name: lad-sidecar
   updateStrategy:
     type: RollingUpdate
   volumeClaimTemplates:
