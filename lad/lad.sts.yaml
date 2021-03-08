@@ -10,13 +10,13 @@ spec:
   selector:
     matchLabels:
       deployment: lad
-      greymatter.io/control: anomaly-detection-lad
+      cluster: anomaly-detection-lad
   serviceName: lad
   template:
     metadata:
       labels:
         deployment: lad
-        greymatter.io/control: anomaly-detection-lad
+        cluster: anomaly-detection-lad
     spec:
       serviceAccountName: lad
       securityContext:
@@ -34,6 +34,8 @@ spec:
             value: "3"
           - name: LAD_COLLECT_FOR_HOURS
             value: '72'
+          - name: LAD_KUBERNETES_CLUSTER_LABEL
+            value: 'cluster'
         ports:
           - containerPort: 8080
             name: lad
