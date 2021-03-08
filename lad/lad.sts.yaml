@@ -18,10 +18,15 @@ spec:
         deployment: lad
         greymatter.io/control: anomaly-detection-lad
     spec:
+      serviceAccountName: lad
+      securityContext:
+        runAsUser: 1001
+        runAsGroup: 0
+        fsGroup: 0
       containers:
-      - image: docker.greymatter.io/internal/sense-lad:latest
+      - name: lad
+        image: docker.greymatter.io/internal/sense-lad:latest
         imagePullPolicy: Always
-        name: lad
         env:
           - name: LAD_INFERENCE_THREADS
             value: "3"
@@ -30,9 +35,9 @@ spec:
           - name: LAD_COLLECT_FOR_HOURS
             value: '72'
         ports:
-        - containerPort: 8080
-          name: lad
-          protocol: TCP
+          - containerPort: 8080
+            name: lad
+            protocol: TCP
         resources:
           limits:
             cpu: '4'
@@ -41,17 +46,12 @@ spec:
             cpu: '2'
             memory: 2Gi
         volumeMounts:
-        - mountPath: /app/storage
-          name: lad-storage
-      dnsPolicy: ClusterFirst
+          - name: lad-storage
+            mountPath: /app/storage
       imagePullSecrets:
-      - name: docker.greymatter.io
+        - name: docker.greymatter.io
+      dnsPolicy: ClusterFirst
       restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      serviceAccount: lad
-      serviceAccountName: lad
-      terminationGracePeriodSeconds: 30
   updateStrategy:
     type: RollingUpdate
   volumeClaimTemplates:
@@ -59,7 +59,7 @@ spec:
       name: lad-storage
     spec:
       accessModes:
-      - ReadWriteOnce
+        - ReadWriteOnce
       resources:
         requests:
           storage: 25Gi
