@@ -1,0 +1,12 @@
+{
+    "zone_key": "default.zone",
+    "proxy_key": "lad.proxy",
+    "domain_keys": [
+        "lad.domain"
+    ],
+    "listener_keys": [
+        "lad.listener"
+    ],
+    "name": "lad.lad",
+    "listeners": null
+}
