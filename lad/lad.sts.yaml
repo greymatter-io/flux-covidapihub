@@ -10,13 +10,13 @@ spec:
   selector:
     matchLabels:
       deployment: lad
-      cluster: anomaly-detection-lad
+      cluster: lad.lad
   serviceName: lad
   template:
     metadata:
       labels:
         deployment: lad
-        cluster: anomaly-detection-lad
+        cluster: lad.lad
     spec:
       serviceAccountName: lad
       securityContext:
@@ -34,9 +34,9 @@ spec:
           - /app/gm-proxy
         ports:
           - name: metrics
-            containerPort: 8080
+            containerPort: 8081
           - name: sidecar
-            containerPort: 8443
+            containerPort: 10808
         volumeMounts:
           - name: sidecar-config
             mountPath: /etc/greymatter

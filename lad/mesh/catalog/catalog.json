@@ -1,0 +1,21 @@
+{
+  "clusterName": "lad.lad",
+  "zoneName": "default.zone",
+  "name": "Grey Matter Log Anomaly Detector (experimental)",
+  "version": "latest",
+  "owner": "Decipher",
+  "capability": "Experimental",
+  "runtime": "PYTHON",
+  "documentation": "/lad/latest/ui/index.html",
+  "prometheusJob": "lad.lad",
+  "minInstances": 1,
+  "maxInstances": 1,
+  "authorized": true,
+  "clusterID": "",
+  "meshID": "",
+  "enableInstanceMetrics": true,
+  "enableHistoricalMetrics": true,
+  "instances": [],
+  "metricsTemplate": "",
+  "metricsPort": 8081
+}
