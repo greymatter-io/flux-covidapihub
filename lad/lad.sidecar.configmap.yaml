@@ -8,7 +8,7 @@ data:
   config.yaml: |-
     node:
       id: "default"
-      cluster: "anomaly-detection-lad"
+      cluster: "lad.lad"
       locality:
         zone: default.zone
         region: default.region

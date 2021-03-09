@@ -13,4 +13,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    cluster: anomaly-detection-lad
+    cluster: lad.lad
