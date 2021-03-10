@@ -71,7 +71,7 @@ spec:
             - name: PORT
               value: "10080"
             - name: DEBUG
-              value: "true"
+              value: "false"
             - name: SERVICE_1_CLUSTER_NAME
               value: apis.bls-unemployment-states
             - name: SERVICE_1_VERSION
