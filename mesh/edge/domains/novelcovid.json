@@ -3,7 +3,7 @@
   "domain_key": "edge.novelcovid.domain",
   "name": "*",
   "port": 7443,
-  "redirects": [],
+  "redirects": null,
   "gzip_enabled": false,
   "ssl_config": {
     "cert_key_pairs": [
