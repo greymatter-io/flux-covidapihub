@@ -4,17 +4,21 @@ kind: Deployment
 metadata:
   name: ingress
   namespace: edge
+  labels:
+    cluster: edge-ingress
 spec:
   replicas: 3
   selector:
     matchLabels:
       app.kubernetes.io/name: ingress
       app.kubernetes.io/part-of: ingress
+      cluster: edge-ingress
   template:
     metadata:
       labels:
         app.kubernetes.io/name: ingress
         app.kubernetes.io/part-of: ingress
+        cluster: edge-ingress
       annotations:
         prometheus.io/port: "10254"
         prometheus.io/scrape: "true"
