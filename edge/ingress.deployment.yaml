@@ -17,6 +17,7 @@ spec:
       labels:
         app.kubernetes.io/name: ingress
         app.kubernetes.io/part-of: ingress
+        cluster: edge-ingress
       annotations:
         prometheus.io/port: "10254"
         prometheus.io/scrape: "true"
