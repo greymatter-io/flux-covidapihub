@@ -52,8 +52,6 @@ spec:
             value: "3"
           - name: LAD_TRAINING_THREADS
             value: "3"
-          - name: LAD_COLLECT_FOR_HOURS
-            value: '72'
           - name: LAD_KUBERNETES_CLUSTER_LABEL
             value: 'cluster'
         ports:
