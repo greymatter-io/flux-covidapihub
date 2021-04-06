@@ -45,7 +45,7 @@ spec:
             mountPath: /run/spire/sockets
             readOnly: false
       - name: lad
-        image: docker.greymatter.io/internal/sense-lad:latest
+        image: docker.greymatter.io/internal/sense-lad:sleepy
         imagePullPolicy: Always
         env:
           - name: LAD_INFERENCE_THREADS
