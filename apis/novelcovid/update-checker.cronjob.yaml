@@ -38,12 +38,13 @@ spec:
             - name: MAILGUN_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: api-secret
+                  name: api-secret-new
                   key: MAILGUN_API_KEY
+            # TODO can we get rid of CAPTCHA for this?
             - name: CAPTCHA_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: api-secret
+                  name: api-secret-new
                   key: CAPTCHA_SECRET
             - name: UPDATE_WEBHOOK
               valueFrom:
