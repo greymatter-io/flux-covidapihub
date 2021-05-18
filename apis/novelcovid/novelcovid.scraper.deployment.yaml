@@ -43,12 +43,12 @@ spec:
         - name: MAILGUN_API_KEY
           valueFrom:
             secretKeyRef:
-              name: api-secret
+              name: api-secret-new
               key: MAILGUN_API_KEY
         - name: CAPTCHA_SECRET
           valueFrom:
             secretKeyRef:
-              name: api-secret
+              name: api-secret-new
               key: CAPTCHA_SECRET
         image: novelcovid/novelcovid-api:sha-86468a0
         imagePullPolicy: "Always"
