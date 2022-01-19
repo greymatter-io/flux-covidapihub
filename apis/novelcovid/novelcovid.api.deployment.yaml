@@ -57,7 +57,7 @@ spec:
             secretKeyRef:
               name: api-secret-new
               key: CAPTCHA_TOKEN
-        image: novelcovid/novelcovid-api:sha-2eff9e8
+        image: novelcovid/novelcovid-api:sha-2bc7429
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
